@@ -12,49 +12,10 @@
             <field name="km"/>
             <field name="rendimiento" readonly="1"/>
             <field name="disel"/>
-            <!--field name="no_economico"/>
-            <field name="placa"/>
-            <field name="tipo"/>
-            
-            <field name="no_chasis"/>
-            <field name="f_registro"/>
-            <field name="empresa"/-->
+          
           </field>
         </field>
     </record>
-
-    <!--record id="flota_serrano_view_tree" model="ir.ui.view">
-        <field name="name">flota.serrano.view.tree</field>
-        <field name="model">flota.serrano</field>
-        <field name="arch" type="xml">
-            <tree string="Flota Tree">
-                <field name="marca"/>
-                            <field name="modelo"/>
-                            <field name="no_economico"/>
-                            <field name="placa"/>
-                            <field name="tipo"/>
-                            <field name="conductor"/>
-                            <field name="no_chasis"/>
-                            <field name="f_registro"/>
-                            <field name="empresa"/>
-            </tree>
-        </field>
-    </record>
-
-    <record id="flota_serrano_view_search" model="ir.ui.view">
-        <field name="name">flota.serrano.search</field>
-        <field name="model">flota.serrano</field>
-        <field name="arch" type="xml">
-            <search-->
-                <!--filter name="my_courses" string="My Courses" domain="[('responsible_id', '=', uid)]"/-->
-                <!--filter name="my_services" string="My Services" domain="[('x_cliente', '=', uid)]"/>
-                <group string="Group By"-->
-                    <!--filter name="by_responsible" string="Responsible" context="{'group_by': 'name'}"/-->
-                <!--/group-->
-            <!--/search>
-        </field>
-    </record>
-
 
     <record id="flota_serrano_action" model="ir.actions.act_window">
         <field name="name">Flota</field>
