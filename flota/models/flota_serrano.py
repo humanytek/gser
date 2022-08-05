@@ -4,9 +4,11 @@ class FlotaSerrano(models.Model):
 
     _inherit = "fleet.vehicle"
                     
-    tipo_vehiculo = fields.Char(
+    tipo_vehiculo = fields.Selection([
+        ('1','Tracto'),
+        ('2','Tracto2'),],
         string="Tipo de vehiculo",
-    )
+    )    
     no_economico = fields.Char(
         string="No. economico",
     )
@@ -20,5 +22,11 @@ class FlotaSerrano(models.Model):
     ) 
     file_poliza = fields.Binary(
         string="Carga Poliza",
+    )
+    vig_fm =fields.Date(
+        string="Vigencia Fisico-Mecanico",
+    ) 
+    file_fm = fields.Binary(
+        string="Carga Poliza F-Mecanico",
     )
 

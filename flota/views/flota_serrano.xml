@@ -17,6 +17,9 @@
       <field name="color" position="after">
         <field name="file_poliza"/>
         <field name="vig_poliza"/>
+        <field name="file_fm"/>
+        <field name="vig_fm"/>
+        vig_fm
       </field>
     </field>
   </record>
