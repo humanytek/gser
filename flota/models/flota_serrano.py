@@ -18,15 +18,22 @@ class FlotaSerrano(models.Model):
     )
     #Parte de modelo
     vig_poliza =fields.Date(
-        string="Vigencia de la poliza",
+        string="Vig. de la poliza",
     ) 
     file_poliza = fields.Binary(
         string="Carga Poliza",
     )
     vig_fm =fields.Date(
-        string="Vigencia Fisico-Mecanico",
+        string="Vig. Fisico-Mecanico",
     ) 
     file_fm = fields.Binary(
         string="Carga Poliza F-Mecanico",
     )
+    vig_contamin =fields.Date(
+        string="Vig.Emisiones",
+    ) 
+    file_contamin = fields.Binary(
+        string="Carga Emisiones",
+    )
+    
 
