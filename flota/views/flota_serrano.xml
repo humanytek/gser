@@ -5,13 +5,11 @@
         <field name="model">fleet-vehicle</field>
         <field name="inherit_id" ref="fleet_vehicle_view_form"></field>
         <field name="arch" type="xml">
-          <group name="Vehicle">
-            <field name="location" position="after">
-              <field name="tipo_vehiculo"/>
-              <field name="no_economico"/>
-              <field name="empresa"/>
-            </field>
-          </group>
+          <field name="location" position="after">
+            <field name="tipo_vehiculo"/>
+            <field name="no_economico"/>
+            <field name="empresa"/>
+          </field>
         </field>
     </record>
 
