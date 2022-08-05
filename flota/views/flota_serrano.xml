@@ -13,7 +13,10 @@
       <field name="co2_standard" position="after">
         <field name="capacidad_tanque"/>
       </field>
-
+      <!--Seccion de modelo-->
+      <field name="color" position="after">
+        <field name="vig_poliza"/>
+      </field>
     </field>
   </record>
 </odoo>
