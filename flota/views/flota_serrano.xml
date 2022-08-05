@@ -3,7 +3,7 @@
   <record id="flota_serrano_view_form" model="ir.ui.view">
     <field name="name">flota.serrano.view.form</field>
     <field name="model">fleet.vehicle</field>
-    <field name="inherit_id" ref="fleet_vehicle_view_form"></field>
+    <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"></field>
     <field name="arch" type="xml">
       <field name="location" position="after">
         <field name="tipo_vehiculo"/>
