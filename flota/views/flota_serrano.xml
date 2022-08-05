@@ -15,6 +15,7 @@
       </field>
       <!--Seccion de modelo-->
       <field name="color" position="after">
+        <field name="file_poliza"/>
         <field name="vig_poliza"/>
       </field>
     </field>

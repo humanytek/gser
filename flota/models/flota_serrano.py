@@ -18,3 +18,5 @@ class FlotaSerrano(models.Model):
     vig_poliza =fields.Date(
         string="Vigencia de la poliza",
     ) 
+    file_poliza = fields.binary('Documents')
+
