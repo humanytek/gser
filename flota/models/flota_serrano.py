@@ -1,3 +1,4 @@
+from tokenize import String
 from odoo import fields, models, api
 
 class FlotaSerrano(models.Model):
@@ -34,6 +35,12 @@ class FlotaSerrano(models.Model):
     ) 
     file_contamin = fields.Binary(
         string="Carga Emisiones",
+    )
+    file_circulacion = fields.Binary(
+        string ="Carga Circulación",
+    )
+    file_factura = fields.Binary(
+        string= "Carga de Factura",
     )
     
 
