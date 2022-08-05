@@ -10,8 +10,7 @@ class FlotaSerrano(models.Model):
     no_economico = fields.Char(
         string="No. economico",
     )
-    empresa = fields.Many2one(
-        comodel_name='res.company',
-        ondelete='set null',
-        index=True,
+    #Parte del motor
+    capacidad_tanque =fields.Integer(
+        string="Capacidad del Tanque",
     )
