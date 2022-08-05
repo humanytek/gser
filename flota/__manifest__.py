@@ -7,7 +7,6 @@
     'license': 'LGPL-3',
     'depends': [
         "fleet",
-        "res",
     ],
     'data': [
         # views
