@@ -6,23 +6,12 @@
     'website': '',
     'license': 'LGPL-3',
     'depends': [
-        "sale_management",
-        "hr",
+        "fleet",
+        "res",
     ],
     'data': [
-        # security
-        # data
-        # demo
-        'demo/flota_serrano.xml',
-        # reports
-        #'reports/openacademy_course.xml',
         # views
         'views/menus.xml',
         'views/flota_serrano.xml',
-        #'views/openacademy_session.xml',
-        #'views/openacademy_wizard.xml',
-        #'views/res_partner_category.xml',
-        #'views/res_partner.xml',
-        #
     ],
 }
