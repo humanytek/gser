@@ -11,7 +11,8 @@ class FlotaSerrano(models.Model):
         string="Modelo",
     )
     empresa = fields.Many2one(
-        comodel_name='res.company',
-        ondelete='set null',
-        index=True,
+        string="Empresa",
+        #comodel_name='res.company',
+       # ondelete='set null',
+       # index=True,
     )
