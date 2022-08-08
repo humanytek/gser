@@ -42,6 +42,4 @@ class FlotaSerrano(models.Model):
     file_factura = fields.Binary(
         string= "Carga de Factura",
     )
-    file_factura1 = fields.Binary(
-        string= "Carga de Factura1",
-    )
+   

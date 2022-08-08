@@ -23,7 +23,6 @@
             <field name="vig_contamin"/>
             <field name="file_circulacion"/>
             <field name="file_factura"/>
-            <field name="file_factura1"/>
       </field>
     </field>
   </record>
