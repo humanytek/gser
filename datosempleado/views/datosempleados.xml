@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
           <field name="work_email" position="after">
-            <notebook>
+            <page name="add_information" string="Documents Add" groups="hr.group_hr_user">
               <field name="domicilio"/>
               <field name="estudios"/>
               <field name="imss"/>
@@ -19,7 +19,7 @@
               <field name="recomendacion1"/>
               <field name="recomendacion2"/>
               <field name="emp_contrato"/>
-            </notebook>
+            </page>  
           </field>
         </field>
     </record>

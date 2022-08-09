@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 class datosEmpleados (models.Model):
     _inherit="hr.employee"
