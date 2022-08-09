@@ -6,20 +6,18 @@
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
           <field name="work_email" position="after">
-            <page>
-              <field name="domicilio"/>
-              <field name="estudios"/>
-              <field name="imss"/>
-              <field name="infonavit"/>
-              <field name="curp"/>
-              <field name="rfc"/>
-              <field name="ine"/>
-              <field name="no_antesedentes"/>
-              <field name="acta_nacimiento"/>
-              <field name="recomendacion1"/>
-              <field name="recomendacion2"/>
-              <field name="emp_contrato"/>
-            </page>  
+            <field name="domicilio"/>
+            <field name="estudios"/>
+            <field name="imss"/>
+            <field name="infonavit"/>
+            <field name="curp"/>
+            <field name="rfc"/>
+            <field name="ine"/>
+            <field name="no_antesedentes"/>
+            <field name="acta_nacimiento"/>
+            <field name="recomendacion1"/>
+            <field name="recomendacion2"/>
+            <field name="emp_contrato"/> 
           </field>
         </field>
     </record>
