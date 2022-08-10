@@ -8,7 +8,7 @@
           <!--field name="work_email" position="after"-->
           <page name="public" position="after">
             <group string="Location">
-                <group string="Documentación">
+                <field name="domicilio"/>
             </group>
           </page>
 
