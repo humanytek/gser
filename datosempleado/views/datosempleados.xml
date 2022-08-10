@@ -7,18 +7,18 @@
         <field name="arch" type="xml">
           <!--field name="work_email" position="after"-->
           <page name="public" position="after">
-            <group string="Location">
-                <field name="domicilio"/>
+            <group string="Documentación">
+              <group>
+                  <field name="domicilio"/>
+                  <field name="domicilio"/>
+                  <field name="estudios"/>
+                  <field name="imss"/>
+              </group>
             </group>
           </page>
 
           <!--page name="public" string="Documentos" position="after">
-            <group>
-              
-                <field name="domicilio"/>
-                <field name="estudios"/>
-                <field name="imss"/>
-              </group>
+            
               
               <field name="infonavit"/>
               <field name="curp"/>
