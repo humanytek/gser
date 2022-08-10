@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
           <!--field name="work_email" position="after"-->
-          <page name="public" string="ejemplo" position="left">
+          <page name="public" string="ejemplo" position="after">
             <field name="domicilio"/>
             <field name="estudios"/>
             <field name="imss"/>
