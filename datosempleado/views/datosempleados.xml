@@ -6,11 +6,14 @@
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
           <!--field name="work_email" position="after"-->
-          <page name="public" position="after">
+          <page name="public" string="Documentos" position="after">
             <group>
-              <field name="domicilio"/>
-              <field name="estudios"/>
-              <field name="imss"/>
+              <group string="Documentación">
+                <field name="domicilio"/>
+                <field name="estudios"/>
+                <field name="imss"/>
+              </group>
+              
               <field name="infonavit"/>
               <field name="curp"/>
               <field name="rfc"/>
