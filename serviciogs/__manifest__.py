@@ -5,7 +5,7 @@
     'website': '',
     'license': 'LGPL-3',
     'depends': [
-        "sale_management"
+        "project.task"
     ],
     'data': [
         # security

@@ -1,4 +1,4 @@
-from tokenize import String
+
 from odoo import fields, models, api
 
 class FlotaSerrano(models.Model):

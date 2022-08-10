@@ -2,16 +2,27 @@
 <odoo>
     <record id="serviciogser_view_form" model="ir.ui.view">
         <field name="name">serviciogser.view.form</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"></field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"></field>
         <field name="arch" type="xml">
-          <field name="partner_id" position="after">
-            <field name="marca"/>
-            <field name="modelo"/>
-            <field name="conductor"/>
-            <field name="km"/>
-            <field name="rendimiento" readonly="1"/>
+          <field name="tag_ids" position="after">
+
+            <field name="status_ruta"/>
+            <field name="contacto_facturacion"/>
+            <field name="email_facturacion"/>
+            <field name="km_ruta"/>
+            <field name="carga_ruta" readonly="1"/>
+            <field name="capacidad_ruta"/>
+            <field name="ejes_ruta"/>
+            <field name="producto_ruta"/>
+            <field name="ord_vent"/>
+            <field name="tipo_precio"/>
+            <field name="precio"/>
+            <field name="precio_disel"/>
+            <field name="rendimiento"/>
             <field name="disel"/>
+            <field name="caseta_efectivo"/>
+            <field name="caseta_llave"/>
             
           </field>
         </field>
