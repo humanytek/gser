@@ -5,7 +5,8 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
-          <field name="work_email" position="after">
+          <!--field name="work_email" position="after"-->
+          <page name="public" string="ejemplo" position="left">
             <field name="domicilio"/>
             <field name="estudios"/>
             <field name="imss"/>
@@ -18,7 +19,8 @@
             <field name="recomendacion1"/>
             <field name="recomendacion2"/>
             <field name="emp_contrato"/> 
-          </field>
+          </page>
+          <!--/field-->
         </field>
     </record>
 
