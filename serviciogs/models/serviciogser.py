@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
-    _inherit="project.project"
+    _inherit="project.task"
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
