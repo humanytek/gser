@@ -3,11 +3,10 @@
     <record id="serviciogser_view_form" model="ir.ui.view">
         <field name="name">serviciogser.view.form</field>
         <field name="model">project.proyect</field>
-        <field name="inherit_id" ref="project.view_project_kanban"></field>
+        <field name="inherit_id" ref="project_enterprise.project_task_view_form"></field>
         <field name="arch" type="xml">
-        
-
-          <field name="name" position="after">
+        <page name="public" position="after">
+            <field name="tag_ids" position="after">
             <field name="status_ruta"/>
             <field name="contacto_facturacion"/>
             <!--field name="email_facturacion"/>
