@@ -14,6 +14,7 @@
         # reports
         # views
         #'views/menus.xml',
+        #dfhhfsio
         'views/serviciogser.xml',
     ],
 }
