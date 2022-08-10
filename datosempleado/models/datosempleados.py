@@ -2,39 +2,39 @@ from odoo import fields, models
 
 class datosEmpleados (models.Model):
     _inherit="hr.employee"
-    domicilio = fields.Char(
-        string="Domicilio",
+    domicilio = fields.Binary(
+        string="Comp. Domicilio",
     )
-    estudios = fields.Char(
-        string="estudios",
+    estudios = fields.Binary(
+        string="Comp. Estudios",
     )
-    imss = fields.Char(
-        string="imss",
+    imss = fields.Binary(
+        string="IMSS",
     )
-    infonavit = fields.Char(
-        string="infonavit",
+    infonavit = fields.Binary(
+        string="Comp. Infonavit",
     )
-    curp = fields.Char(
-        string='curp',
+    curp = fields.Binary(
+        string='CURP',
     )
-    rfc = fields.Char(
-        string='ine',
+    rfc = fields.Binary(
+        string='RFC',
     )
-    ine = fields.Char(
-        string='ine',
+    ine = fields.Binary(
+        string='INE',
     )
-    no_antesedentes = fields.Char(
-        string='no_antesedentes',
+    no_antesedentes = fields.Binary(
+        string='Carta Antecedentes',
     )
-    acta_nacimiento = fields.Char(
-        string='acta_nacimiento',
+    acta_nacimiento = fields.Binary(
+        string='Acta de Nacimiento',
     )
-    recomendacion1 = fields.Char(
-        string='recomendacion1',
+    recomendacion1 = fields.Binary(
+        string='Carta de recomendación',
     )
-    recomendacion2 = fields.Char(
-        string='recomendacion2',
+    recomendacion2 = fields.Binary(
+        string='Carta de recomendación',
     )
-    emp_contrato = fields.Char(
-        string='emp_contrato',
+    emp_contrato = fields.Binary(
+        string='Contrato',
     )
