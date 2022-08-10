@@ -8,33 +8,25 @@
           <!--field name="work_email" position="after"-->
           <page name="public" position="after">
             <group string="Documentación">
-              <group string="Archivos">
-                <field name="domicilio"/>
-                <field name="domicilio"/>
-                <field name="estudios"/>
-                <field name="imss"/>
-              </group>
-              <group string="Archivos 2">
-                <field name="infonavit"/>
-                <field name="curp"/>
-                <field name="rfc"/>
-                <field name="ine"/>
+              <group>
+                <group string="Documentación Personal">
+                  <field name="domicilio"/>
+                  <field name="estudios"/>
+                  <field name="curp"/>
+                  <field name="rfc"/>
+                  <field name="ine"/>
+                  <field name="acta_nacimiento"/>
+                </group>
+                <group string="Referencias">
+                  <field name="infonavit"/>
+                  <field name="recomendacion1"/>
+                  <field name="recomendacion2"/>
+                  <field name="imss"/>
+                  <field name="emp_contrato"/> 
+                </group>
               </group>
             </group>
           </page>
-
-          <!--page name="public" string="Documentos" position="after">
-            
-              
-              
-              <field name="no_antesedentes"/>
-              <field name="acta_nacimiento"/>
-              <field name="recomendacion1"/>
-              <field name="recomendacion2"/>
-              <field name="emp_contrato"/> 
-            </group>
-          </page-->
-          <!--/field-->
         </field>
     </record>
 
