@@ -8,11 +8,17 @@
           <!--field name="work_email" position="after"-->
           <page name="public" position="after">
             <group string="Documentación">
-              <group>
-                  <field name="domicilio"/>
-                  <field name="domicilio"/>
-                  <field name="estudios"/>
-                  <field name="imss"/>
+              <group string="Archivos">
+                <field name="domicilio"/>
+                <field name="domicilio"/>
+                <field name="estudios"/>
+                <field name="imss"/>
+              </group>
+              <group string="Archivos 2">
+                <field name="infonavit"/>
+                <field name="curp"/>
+                <field name="rfc"/>
+                <field name="ine"/>
               </group>
             </group>
           </page>
@@ -20,10 +26,7 @@
           <!--page name="public" string="Documentos" position="after">
             
               
-              <field name="infonavit"/>
-              <field name="curp"/>
-              <field name="rfc"/>
-              <field name="ine"/>
+              
               <field name="no_antesedentes"/>
               <field name="acta_nacimiento"/>
               <field name="recomendacion1"/>
