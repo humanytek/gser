@@ -10,24 +10,48 @@
             <group string="Documentación">
               <group>
                 <group string="Documentación Personal">
+                  <field name="acta_nacimiento"/>
                   <field name="domicilio"/>
                   <field name="estudios"/>
                   <field name="curp"/>
                   <field name="rfc"/>
                   <field name="ine"/>
-                  <field name="acta_nacimiento"/>
                 </group>
-                <group string="Referencias">
+                <group string="Seguro">
+                  <field name="imss"/>
+                  <field name="alta_imss"/>
                   <field name="infonavit"/>
+                </group>
+                <group string="Contratos">
+                  <field name="emp_fechaIngreso"/>
+                  <field name="emp_contrato"/>
+                  <field name="emp_reglamento"/>
+                  <field name="emp_codigoetica"/>
+                  <field name="emp_bajafecha"/>
+                  <field name="emp_baja"/>
+                  <field name="emp_motivo_baja"/>
+                  <field name="no_antesedentes"/>
                   <field name="recomendacion1"/>
                   <field name="recomendacion2"/>
-                  <field name="imss"/>
-                  <field name="emp_contrato"/> 
+                </group>
+                <group string="Vehículo">
+                  <field name="licencia"/>
+                  <field name="vigencia"/>
+                  <field name="chofer_examen"/>
+                  <field name="vigencia_exam"/>
+                </group>
+                <group string="Responsibas">
+                  <field name="res_unidad"/>
+                  <field name="res_llavecaseta"/>
+                  <field name="res_llavedisel"/>
+                  <field name="res_telefono"/>
+                  <field name="res_equipo"/>
+                  <field name="res_resguardo1"/>
+                  <field name="res_resguardo2"/>
                 </group>
               </group>
             </group>
           </page>
         </field>
     </record>
-
-</odoo>
+</odoo>	
