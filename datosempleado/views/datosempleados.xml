@@ -6,9 +6,19 @@
         <field name="inherit_id" ref="hr.view_employee_form"></field>
         <field name="arch" type="xml">
           <!--field name="work_email" position="after"-->
-          <page name="public" string="Documentos" position="after">
+          <page name="public" string="Work Information2">
+            <div id="o_work1_employee_container"> <!-- These two div are used to position org_chart -->
+                <div id="o_work1_employee_main">
+                    <group string="Location">
+                        <group string="Documentación">
+                    </group>
+                </div>
+            </div>
+          </page>
+
+          <!--page name="public" string="Documentos" position="after">
             <group>
-              <group string="Documentación">
+              
                 <field name="domicilio"/>
                 <field name="estudios"/>
                 <field name="imss"/>
@@ -24,7 +34,7 @@
               <field name="recomendacion2"/>
               <field name="emp_contrato"/> 
             </group>
-          </page>
+          </page-->
           <!--/field-->
         </field>
     </record>
