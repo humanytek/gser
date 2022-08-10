@@ -17,9 +17,9 @@
             <field name="recomendacion1"/>
             <field name="recomendacion2"/>
             <field name="emp_contrato"/> 
-            <page>
-              <field name="domicilio"/>
-            </page>
+              <page>
+                <field name="domicilio"/>
+              </page>
           </field>
         </field>
     </record>
