@@ -5,7 +5,7 @@
     'website': '',
     'license': 'LGPL-3',
     'depends': [
-        "project.task"
+        "industry_fsm"
     ],
     'data': [
         # security
