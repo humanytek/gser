@@ -5,32 +5,35 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"></field>
         <field name="arch" type="xml">
-          <!--field name="partner_id" position="after"-->
+        <field name="partner_id" position="after">
+          <field name="contacto_facturacion"/>
+          <field name="email_facturacion"/>
+          <field name="ord_vent"/>
+        </field>
          <page name="description" position="after">
-            <group string="Facturacion">
+            <group string="Ruta">
               <group>
-                <group string="Documentación Personal">
-                  <field name="contacto_facturacion"/>
-                  <field name="email_facturacion"/>
+                <group string="Ruta">
+                  <field name="status_ruta"/>           
+                  <field name="km_ruta"/>
+                  <field name="carga_ruta" readonly="1"/>
+                  <field name="capacidad_ruta"/>
+                  <field name="ejes_ruta"/>
+                  <field name="producto_ruta"/>
                 </group>
               </group>
             </group>
           </page>
-            <!--field name="status_ruta"/>           
-            <field name="km_ruta"/>
-            <field name="carga_ruta" readonly="1"/>
-            <field name="capacidad_ruta"/>
-            <field name="ejes_ruta"/>
-            <field name="producto_ruta"/>
-            <field name="ord_vent"/>
-            <field name="tipo_precio"/>
+            
+            
+            <!--field name="tipo_precio"/>
             <field name="precio"/>
             <field name="precio_disel"/>
             <field name="rendimiento"/>
             <field name="disel"/>
             <field name="caseta_efectivo"/>
             <field name="caseta_llave"/-->
-          <!--/field-->
+          
         </field>
     </record>
 
