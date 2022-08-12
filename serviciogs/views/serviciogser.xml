@@ -7,8 +7,10 @@
         <field name="arch" type="xml">
           <field name="partner_id" position="after">
             <group>
-              <field name="contacto_facturacion"/>
-              <field name="email_facturacion"/>
+              <group>
+                <field name="contacto_facturacion"/>
+                <field name="email_facturacion"/>
+              </group>
             </group>
             <field name="status_ruta"/>           
             <field name="km_ruta"/>
