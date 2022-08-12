@@ -93,18 +93,23 @@ class servicioGSer (models.Model):
     caseta_llave = fields.Float(
         string="Caseta Llave",
     )
+    gasto_op = fields.Float(
+        string="Gasto Operador",
+    )
+    gasto_totalOper = fields.Float(
+        string="Gasto Total del Operador",
+    )
+    gasto_total = fields.Float(
+        string="Gasto Total",
+    )
+    
     #conductor = fields.Many2one(
     #    comodel_name='hr.employee',
     #    ondelete='set null',
     #    index=True,
     #)
+
     @api.depends("km_ruta", "rendimiento")
     def _compute_disel(self):
         for record in self:
             record.disel = record.km_ruta / record.rendimiento
-
-
-#empresa	Relasion Char
-
-#gasto_op	float
-#gasto_total	float

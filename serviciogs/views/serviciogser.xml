@@ -30,6 +30,10 @@
                   <field name="caseta_efectivo"/>
                   <field name="caseta_llave"/>
                 </group>
+                <group string="Gastos Totales">
+                  <field name="gasto_totalOper"/>
+                  <field name="gasto_total"/>
+                </group>
               </group>
             </group>
           </page>
