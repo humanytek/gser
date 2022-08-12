@@ -2,12 +2,11 @@
 <odoo>
     <record id="serviciogser_view_form" model="ir.ui.view">
         <field name="name">serviciogser.view.form</field>
-        <field name="model">project.task</field>
-        <field name="inherit_id" ref="project_enterprise.project_task_view_form"></field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="	project.edit_project"></field>
         <field name="arch" type="xml">
-          <field name="tag_ids" position="after">
+          <field name="partner_id" position="after">
             <field name="status_ruta"/>
-            <field name="contacto_facturacion"/>
             <field name="contacto_facturacion"/>
             <!--field name="email_facturacion"/>
             <field name="km_ruta"/>
