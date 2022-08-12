@@ -108,6 +108,15 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
+    @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
+    def _compute_gastoT(self):
+        for record in self:
+            record.gasto_total = (record.disel * record.precio_disel) + record.caseta_llave + record.caseta_efectivo + record.gasto_op
+
+    @api.depends("caseta_efectivo", "gasto_op")
+    def _compute_gastoopera(self):
+        for record in self:
+            record.gasto_totalOper = record.caseta_efectivo + record.gasto_op
 
     @api.depends("km_ruta", "rendimiento")
     def _compute_disel(self):
