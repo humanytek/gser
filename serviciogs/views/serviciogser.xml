@@ -16,24 +16,23 @@
                 <group string="Ruta">
                   <field name="status_ruta"/>           
                   <field name="km_ruta"/>
-                  <field name="carga_ruta" readonly="1"/>
+                  <field name="carga_ruta"/>
                   <field name="capacidad_ruta"/>
                   <field name="ejes_ruta"/>
                   <field name="producto_ruta"/>
                 </group>
+                <group string="Costos">
+                  <field name="tipo_precio"/>
+                  <field name="precio"/>
+                  <field name="precio_disel"/>
+                  <field name="rendimiento"/>
+                  <field name="disel"/>
+                  <field name="caseta_efectivo"/>
+                  <field name="caseta_llave"/>
+                </group>
               </group>
             </group>
           </page>
-            
-            
-            <!--field name="tipo_precio"/>
-            <field name="precio"/>
-            <field name="precio_disel"/>
-            <field name="rendimiento"/>
-            <field name="disel"/>
-            <field name="caseta_efectivo"/>
-            <field name="caseta_llave"/-->
-          
         </field>
     </record>
 
