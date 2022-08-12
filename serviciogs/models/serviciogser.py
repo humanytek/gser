@@ -97,9 +97,11 @@ class servicioGSer (models.Model):
         string="Gasto Operador",
     )
     gasto_totalOper = fields.Float(
+        compute='_compute_gastoopera',
         string="Gasto Total del Operador",
     )
     gasto_total = fields.Float(
+        compute='_compute_gastoT',
         string="Gasto Total",
     )
     
