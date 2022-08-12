@@ -29,6 +29,8 @@
                   <field name="disel"/>
                   <field name="caseta_efectivo"/>
                   <field name="caseta_llave"/>
+                  <field name="gasto_op"/>
+
                 </group>
                 <group string="Gastos Totales">
                   <field name="gasto_totalOper"/>
