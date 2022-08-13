@@ -6,7 +6,8 @@
     'license': 'LGPL-3',
     'depends': [
         "industry_fsm",
-        "project"
+        "project",
+        "sale_management"
     ],
     'data': [
         # security
