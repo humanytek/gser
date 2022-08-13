@@ -2,6 +2,7 @@ from odoo import fields, models, api
 
 class servicioGSer (models.Model):
     _inherit="project.project"
+    _inherit="sale.order"
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
@@ -64,9 +65,7 @@ class servicioGSer (models.Model):
         string="Producto",
     )
 
-    ord_vent = fields.Char(
-        string="Orden de venta",
-    )
+    
     tipo_precio = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
@@ -110,10 +109,7 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
-    @api.onchange('partner_id')
-    def onchangue_or_venta(self):
-        self.ord_vent = self.partner_id.name
-
+   
     @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
     def _compute_gastoT(self):
         for record in self:
@@ -128,3 +124,12 @@ class servicioGSer (models.Model):
     def _compute_disel(self):
         for record in self:
             record.disel = record.km_ruta / record.rendimiento
+
+class servicioGSerVenta (models.Model):
+    _inherit="sale.order"
+    ord_vent = fields.Char(
+        string="Orden de venta",
+    )
+    @api.onchange('partner_id')
+    def onchangue_or_venta(self):
+        self.ord_vent = self.partner_id.name
