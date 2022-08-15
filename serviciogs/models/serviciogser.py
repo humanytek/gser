@@ -1,6 +1,7 @@
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
+
     _inherit = ['project.project']
     status_ruta = fields.Selection([
         ('1','Activa'),
@@ -104,7 +105,7 @@ class servicioGSer (models.Model):
         compute='_compute_gastoT',
         string="Gasto Total",
     )
-    
+    #DJI
     #conductor = fields.Many2one(
     #    comodel_name='hr.employee',
     #    ondelete='set null',
