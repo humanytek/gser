@@ -1,3 +1,4 @@
+import string
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
@@ -65,7 +66,8 @@ class servicioGSer (models.Model):
         string="Producto",
     )
 
-    ord_vent = fields.Many2one(
+    ord_vent = fields.Char(
+        string ="Orden de venta",
         #comodel_name='order.sale',
         #ondelete='set null',
         #index=True,
