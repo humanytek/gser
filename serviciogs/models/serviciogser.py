@@ -12,8 +12,10 @@ class servicioGSer (models.Model):
     contacto_facturacion = fields.Char(
         string="Contacto Facturación",
     )
-    email_facturacion = fields.Char(
-        string="E-mail Facturación",
+    email_facturacion = fields.Many2one(
+        comodel_name='res.partner',
+        ondelete='set null',
+        index=True,
     )
     km_ruta = fields.Float(
         string="Kilometros",
