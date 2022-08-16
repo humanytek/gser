@@ -117,9 +117,9 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
-    @api.onchange('partner_id')
-    def onchangue_on_email(self):
-        self.email_facturacion = self.partner_id.email
+    #@api.onchange('partner_id')
+    #def onchangue_on_email(self):
+    #    self.email_facturacion = self.partner_id.email
 
     @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
     def _compute_gastoT(self):
