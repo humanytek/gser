@@ -13,7 +13,7 @@ class servicioGSer (models.Model):
         string="Contacto Facturación",
     )
     email_facturacion = fields.Many2one(
-        comodel_name='res.partner',
+        comodel_name='res.partner.email',
         ondelete='set null',
         index=True,
     )
@@ -117,9 +117,9 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
-    @api.onchange('partner_id')
-    def onchangue_or_venta(self):
-        self.ord_vent = self.partner_id.name
+    #@api.onchange('partner_id')
+    #def onchangue_or_venta(self):
+    #    self.ord_vent = self.partner_id.name
 
     @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
     def _compute_gastoT(self):
