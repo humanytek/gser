@@ -117,9 +117,12 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
-    #@api.onchange('partner_id')
-    #def onchangue_on_email(self):
-    #    self.email_facturacion = self.partner_id.email
+    @api.onchange('partner_id')
+    def onchangue_or_venta(self):
+        self.ord_vent = self.env['sale.order'].search([
+            ('partner_id', '=', self.partnet_id.id),
+            ('state', '=', "")],
+            orderby ='date_order desc', limit =2)
 
     @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
     def _compute_gastoT(self):
