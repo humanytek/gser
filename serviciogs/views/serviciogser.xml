@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
         <field name="partner_id" position="after">
           <field name="contacto_facturacion"/>
-          <field name="email_facturacion" domain="[('name', '=', 'partner_id')]"/>
+          <field name="email_facturacion" domain="[(name, '=', 'partner_id')]"/>
           <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
         </field>
          <page name="description" position="after">
