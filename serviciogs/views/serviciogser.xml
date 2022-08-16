@@ -8,7 +8,7 @@
         <field name="partner_id" position="after">
           <field name="contacto_facturacion"/>
           <field name="email_facturacion"/>
-          <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
+          <field name="ord_vent" domain="[('partner_id', '=', name)]"/>
         </field>
          <page name="description" position="after">
             <group string="Ruta">
