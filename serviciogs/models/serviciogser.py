@@ -118,11 +118,8 @@ class servicioGSer (models.Model):
     #    index=True,
     #)
     @api.onchange('partner_id')
-    def onchangue_or_venta(self):
-        self.ord_vent = self.env['sale.order'].search([
-            ('partner_id', '=', self.partnet_id.id),
-            ('state', '=', "")],
-            orderby ='date_order desc', limit =2)
+    def onchangue_ordventas(self):
+        self.ord_vent = self.partner_id.name
 
     @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
     def _compute_gastoT(self):
