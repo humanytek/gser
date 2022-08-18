@@ -68,14 +68,14 @@
         <field name="partner_id" position="after">
           <field name="datop" />
         </field>
-         <page name="description" position="after">
+         <!--page name="description" position="after">
             <group string="Ruta">
               <group>
                 <group string="Ruta">
                 </group>
               </group>
             </group>
-          </page>
+          </page-->
         </field>
     </record>
 
