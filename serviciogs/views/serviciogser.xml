@@ -36,6 +36,15 @@
                   <field name="gasto_totalOper"/>
                   <field name="gasto_total"/>
                 </group>
+                <group >
+                </group>
+                <group string="Origen">
+                  <field name="recogen"/>
+                  <field name="direccion_or"/>
+                  <field name="pais_or"/>
+                  <field name="estado_or"/>
+                  <field name="ciudad_or"/>
+                </group>
               </group>
             </group>
           </page>

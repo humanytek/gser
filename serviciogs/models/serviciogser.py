@@ -1,3 +1,5 @@
+from email.policy import strict
+import string
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
@@ -115,6 +117,30 @@ class servicioGSer (models.Model):
         string="Gasto Total",
     )
     
+    recogen = fields.Char(
+        string="Se recoge en:",
+    )
+    direccion_or= fields.Char(
+        string="Dirección origen:"
+    )
+    pais_or= fields.Many2one(
+        string ="País",
+        comodel_name='res.country',
+        ondelete='set null',
+        index=True,
+    )
+    estado_or= fields.Many2one(
+
+    )
+    ciudad_or= fields.Char(
+
+    )
+
+
+
+
+
+
     #@api.onchange('partner_id')
     #def onchangue_ordventas(self):
     #    self.ord_vent = self.partner_id
