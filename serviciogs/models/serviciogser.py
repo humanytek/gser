@@ -121,7 +121,7 @@ class servicioGSer (models.Model):
         string="Se recoge en:",
     )
     direccion_or= fields.Char(
-        string="Dirección origen:"
+        string="Dirección origen:",
     )
     pais_or= fields.Many2one(
         string ="País",
@@ -135,8 +135,8 @@ class servicioGSer (models.Model):
         ondelete='set null',
         index=True,
     )
-    ciudad_or= fields.char(
-        string ="Ciudad"
+    ciudad_or= fields.Char(
+        string ="Ciudad",
     )
     #ciudad_or= fields.Many2one(
     #    string ="Ciudad",
@@ -144,9 +144,6 @@ class servicioGSer (models.Model):
     #    ondelete='set null',
     #    index=True,
     #)
-
-
-
 
 
 
