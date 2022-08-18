@@ -1,4 +1,3 @@
-import string
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
@@ -15,7 +14,7 @@ class servicioGSer (models.Model):
     email_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
-        index=True,
+        index='email',
     )
     km_ruta = fields.Float(
         string="Kilometros",
@@ -69,7 +68,6 @@ class servicioGSer (models.Model):
     )
 
     ord_vent = fields.Many2one(
-        #string ="Orden de venta",
         comodel_name='sale.order',
         ondelete='set null',
         index=True,
@@ -111,12 +109,7 @@ class servicioGSer (models.Model):
         compute='_compute_gastoT',
         string="Gasto Total",
     )
-    #DJI
-    #conductor = fields.Many2one(
-    #    comodel_name='hr.employee',
-    #    ondelete='set null',
-    #    index=True,
-    #)
+    
     #@api.onchange('partner_id')
     #def onchangue_ordventas(self):
     #    self.ord_vent = self.partner_id
