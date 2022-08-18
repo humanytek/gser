@@ -144,7 +144,7 @@ class servicioGSer (models.Model):
     entregaD = fields.Char(
         string="Se entrega en:",
     )
-    direccion_or= fields.Char(
+    direccion_des= fields.Char(
         string="Dirección destino:",
     )
     pais_des= fields.Many2one(
