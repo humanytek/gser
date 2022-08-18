@@ -137,7 +137,7 @@ class servicioGSer (models.Model):
     )
     ciudad_or= fields.Many2one(
         string ="Ciudad",
-        comodel_name='res.country',
+        comodel_name='res.country.state',
         ondelete='set null',
         index=True,
     )
