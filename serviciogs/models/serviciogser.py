@@ -124,22 +124,51 @@ class servicioGSer (models.Model):
         string="Dirección origen:",
     )
     pais_or= fields.Many2one(
-        string ="País",
+        string ="País origen:",
         comodel_name='res.country',
         ondelete='set null',
         index=True,
     )
     estado_or= fields.Many2one(
-        string ="Estado",
+        string ="Estado origen:",
         comodel_name='res.country.state',
         ondelete='set null',
         index=True,
     )
     ciudad_or= fields.Char(
-        string ="Ciudad",
+        string ="Ciudad origen:",
         #comodel_name='res.country.city',
         #ondelete='set null',
         #index=True,
+    )
+    entregaD = fields.Char(
+        string="Se entrega en:",
+    )
+    direccion_or= fields.Char(
+        string="Dirección destino:",
+    )
+    pais_des= fields.Many2one(
+        string ="País destino:",
+        comodel_name='res.country',
+        ondelete='set null',
+        index=True,
+    )
+    estado_des= fields.Many2one(
+        string ="Estado destino:",
+        comodel_name='res.country.state',
+        ondelete='set null',
+        index=True,
+    )
+    ciudad_des= fields.Char(
+        string ="Ciudad destino:",
+        #comodel_name='res.country.city',
+        #ondelete='set null',
+        #index=True,
+    )
+    ###########################################################
+    #vista principal de servicio esterno
+    datop = fields.Char(
+        string ="prueba",
     )
 
 
