@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
         <field name="partner_id" position="after">
           <field name="contacto_facturacion"/>
-          <field name="email_facturacion" domain="[('parent_id', '=', partner_id)]"/>
+          <field name="email_facturacion" />  
           <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
         </field>
          <page name="description" position="after">
@@ -41,6 +41,31 @@
           </page>
         </field>
     </record>
-    
+
+
+     <record id="serviciogser_view_form" model="ir.ui.view">
+        <field name="name">serviciogser.view.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"></field>
+        <field name="arch" type="xml">
+        <field name="partner_id" position="after">
+          <field name="contacto_facturacion"/>
+          <field name="email_facturacion" domain="[('parent_id', '=', true), ('parent_id', '=', partner_id)]" />  
+          <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
+        </field>
+         <page name="description" position="after">
+            <group string="Ruta">
+              <group>
+                <group string="Ruta">
+                </group>
+                <group string="Costos">
+                </group>
+                <group string="Gastos Totales">
+                </group>
+              </group>
+            </group>
+          </page>
+        </field>
+    </record>
 
 </odoo>
