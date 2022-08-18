@@ -18,7 +18,7 @@ class servicioGSer (models.Model):
         string="Contacto Facturación",
     )
     email_facturacion = fields.Many2one(
-        comodel_name='res.partner',
+        comodel_name='res.partner.email',
         ondelete='set null',
         index='email',
         string="E-mail Facturación",
@@ -130,13 +130,16 @@ class servicioGSer (models.Model):
         index=True,
     )
     estado_or= fields.Many2one(
-        string ="País",
-        comodel_name='res.country',
+        string ="Estado",
+        comodel_name='res.country.state',
         ondelete='set null',
         index=True,
     )
     ciudad_or= fields.Char(
-        string="Dirección origen:"
+        string ="Ciudad",
+        comodel_name='res.city',
+        ondelete='set null',
+        index=True,
     )
 
 
