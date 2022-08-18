@@ -165,14 +165,7 @@ class servicioGSer (models.Model):
         #ondelete='set null',
         #index=True,
     )
-    ###########################################################
-    #vista principal de servicio esterno
-    datop = fields.Char(
-        string ="prueba",
-    )
-
-
-
+   
     #@api.onchange('partner_id')
     #def onchangue_ordventas(self):
     #    self.ord_vent = self.partner_id
