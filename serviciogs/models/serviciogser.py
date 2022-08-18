@@ -8,6 +8,7 @@ class servicioGSer (models.Model):
         ('2','Inactiva'),],
         string="Estatus Ruta",
     )
+    
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
@@ -15,7 +16,7 @@ class servicioGSer (models.Model):
         string="Contacto Facturación",
     )
     email_facturacion = fields.Many2one(
-        comodel_name='res.partner',
+        comodel_name='res.partner.email',
         ondelete='set null',
         index=True,
         string="E-mail Facturación",
