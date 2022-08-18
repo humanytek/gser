@@ -136,10 +136,7 @@ class servicioGSer (models.Model):
         index=True,
     )
     ciudad_or= fields.char(
-        string ="Ciudad",
-        comodel_name='res.city',
-        ondelete='set null',
-        index=True,
+        string ="Ciudad"
     )
     #ciudad_or= fields.Many2one(
     #    string ="Ciudad",
