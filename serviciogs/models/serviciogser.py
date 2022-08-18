@@ -130,10 +130,13 @@ class servicioGSer (models.Model):
         index=True,
     )
     estado_or= fields.Many2one(
-
+        string ="País",
+        comodel_name='res.country',
+        ondelete='set null',
+        index=True,
     )
     ciudad_or= fields.Char(
-
+        string="Dirección origen:"
     )
 
 
