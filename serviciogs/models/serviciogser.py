@@ -135,12 +135,18 @@ class servicioGSer (models.Model):
         ondelete='set null',
         index=True,
     )
-    ciudad_or= fields.Many2one(
+    ciudad_or= fields.char(
         string ="Ciudad",
         comodel_name='res.city',
         ondelete='set null',
         index=True,
     )
+    #ciudad_or= fields.Many2one(
+    #    string ="Ciudad",
+    #    comodel_name='res.city',
+    #    ondelete='set null',
+    #    index=True,
+    #)
 
 
 
