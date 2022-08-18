@@ -15,7 +15,7 @@ class servicioGSer (models.Model):
     email_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
-        index=False,
+        index=True,
     )
     km_ruta = fields.Float(
         string="Kilometros",
