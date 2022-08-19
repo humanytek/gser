@@ -1,5 +1,3 @@
-from email.policy import default, strict
-import string
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
@@ -21,7 +19,7 @@ class servicioGSer (models.Model):
         string="Contacto Facturación",
     )
     email_facturacion = fields.Char(
-        
+        related ='partner_id.email',
         string="E-mail Facturación",
     )
     km_ruta = fields.Float(
