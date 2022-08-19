@@ -10,7 +10,7 @@
         </field>
     </record>
 
-    <record id="serviciogserRuta_view_tree" model="ir.ui.view">
+    <record id="servicio_ruta_view_tree" model="ir.ui.view">
         <field name="name">servicio.ruta.view.tree</field>
         <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">

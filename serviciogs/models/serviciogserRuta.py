@@ -1,6 +1,6 @@
 from odoo import fields, models
 
-class servicioruta(models.Model):
+class ServicioRuta(models.Model):
     _name = 'servicio.ruta'
     _description = 'Rutas'
 
