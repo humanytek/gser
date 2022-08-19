@@ -11,6 +11,7 @@ class servicioGSer (models.Model):
         ('2','Inactiva'),],
         string="Estatus Ruta",
     )
+    
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
