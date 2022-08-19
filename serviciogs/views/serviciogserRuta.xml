@@ -14,13 +14,11 @@
         <field name="name">servicio.ruta.view.tree</field>
         <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
-            <tree string="serviciogserRuta Tree">
+            <tree string="servicio.ruta Tree">
                 <field name="contacto_facturacion"/>
                 <field name="email_facturacion"/>
                 <field name="ord_vent"/>
             </tree>
         </field>
     </record>
-
-  
 </odoo>
