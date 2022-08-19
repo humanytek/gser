@@ -15,7 +15,6 @@
         <field name="model">serviciogserRuta</field>
         <field name="arch" type="xml">
             <tree string="serviciogserRuta Tree">
-                <field name="marca"/>
                             <field name="contacto_facturacion"/>
                             <field name="email_facturacion"/>
                             <field name="ord_vent"/>
