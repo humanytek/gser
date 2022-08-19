@@ -1,12 +1,7 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
-class servicioGSer (models.Model):
-
-   
+class servicioGSerRuta (models.Model):
     contacto_facturacion = fields.Char(
-        #comodel_name='res.partner',
-        #ondelete='set null',
-        #index=True,
         string="Contacto Facturación",
     )
     
