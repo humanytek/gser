@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="serviciogserRuta_view_form" model="ir.ui.view">
-        <field name="name">serviciogserRuta.view.form</field>
-        <field name="model">serviciogserRuta</field>
+    <record id="servicio_ruta_view_form" model="ir.ui.view">
+        <field name="name">servicio.ruta.view.form</field>
+        <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
             <field name="contacto_facturacion" />
             <field name="email_facturacion"/>  
@@ -11,8 +11,8 @@
     </record>
 
     <record id="serviciogserRuta_view_tree" model="ir.ui.view">
-        <field name="name">serviciogserRuta.view.tree</field>
-        <field name="model">serviciogserRuta</field>
+        <field name="name">servicio.ruta.view.tree</field>
+        <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
             <tree string="serviciogserRuta Tree">
                             <field name="contacto_facturacion"/>

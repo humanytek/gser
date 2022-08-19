@@ -1,7 +1,7 @@
 from odoo import fields, models
 
-class serviciogserRuta(models.Model):
-    _name = 'serviciogserRuta'
+class servicioruta(models.Model):
+    _name = 'servicio.ruta'
     _description = 'Rutas'
 
     _sql_constraints = [
