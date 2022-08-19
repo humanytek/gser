@@ -1,19 +1,39 @@
 from odoo import fields, models
 
-class servicioGSerRuta (models.Model):
-    contacto_facturacion = fields.Char(
-        string="Contacto Facturación",
-    )
-    
-    email_facturacion = fields.Char(
-        #related ='partner_id.email',
-        string="E-mail Facturación",
-    )
-  
-    ord_vent = fields.Char(
-        string="Orden de Venta",
-        #comodel_name='sale.order',
-        #ondelete='set null',
-        #index=True,
-    )
 
+class servicioGSer(models.Model):
+    _name = 'serviciogserRuta'
+    _description = 'Rutas'
+
+    _sql_constraints = [
+        ('name_description_check',
+         'CHECK(name != description)',
+         "The title of the course should not be the description"),
+
+        ('name_unique',
+         'UNIQUE(name)',
+         "The course title must be unique"),
+    ]
+    contacto_facturacion = fields.Char(
+        string="Conctacto Facturacion",
+        required=True,
+    )
+    email_facturacion = fields.Char(
+        string="email",
+        required=True,
+    )
+    ord_vent = fields.Char(
+        string ="Orden de venta",
+    )
+   
+    def copy(self, default=None):
+        default = dict(default or {})
+        copied_count = self.search_count(
+            [('name', '=like', u"Copy of {}%".format(self.name))])
+        if not copied_count:
+            new_name = u"Copy of {}".format(self.name)
+        else:
+            new_name = u"Copy of {} ({})".format(self.name, copied_count)
+
+        default['name'] = new_name
+        return super(servicioGSer, self).copy(default)
