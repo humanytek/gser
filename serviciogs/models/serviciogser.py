@@ -1,10 +1,13 @@
-from email.policy import strict
+from email.policy import default, strict
 import string
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
 
     _inherit = ['project.project']
+    allow_timesheets=fields.Boolean(
+        default = False,
+    )
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
@@ -17,10 +20,8 @@ class servicioGSer (models.Model):
         index='email',
         string="Contacto Facturación",
     )
-    email_facturacion = fields.Many2one(
-        comodel_name='res.partner',
-        ondelete='set null',
-        index='email',
+    email_facturacion = fields.Char(
+        
         string="E-mail Facturación",
     )
     km_ruta = fields.Float(
@@ -137,9 +138,9 @@ class servicioGSer (models.Model):
     )
     ciudad_or= fields.Char(
         string ="Ciudad origen:",
-        #comodel_name='res.country.city',
-        #ondelete='set null',
-        #index=True,
+        comodel_name='res.city',
+        ondelete='set null',
+        index=True,
     )
     entregaD = fields.Char(
         string="Se entrega en:",
