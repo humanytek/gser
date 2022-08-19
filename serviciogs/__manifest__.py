@@ -5,9 +5,9 @@
     'website': '',
     'license': 'LGPL-3',
     'depends': [
-        "industry_fsm",
-        "project",
-        "sale_management"
+        #"industry_fsm",
+        #"project",
+        #"sale_management"
     ],
     'data': [
         # security
@@ -15,7 +15,7 @@
         # demo
         # reports
         # views
-        #'views/menus.xml',
+        'views/menus.xml',
         'views/serviciogserRuta.xml',
     ],
 }
