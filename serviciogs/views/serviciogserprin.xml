@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="serviciogserprin_view_form" model="ir.ui.view">
+        <field name="name">serviciogserprin.view.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"></field>
+        <field name="arch" type="xml">
+        <field name="user_ids" position="after">
+
+           <field name="n"/>  
+        </field>
+        </field>
+    </record>
+</odoo>

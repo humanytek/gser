@@ -1,5 +1,5 @@
 {
-    'name': 'Servicio Datos',
+    'name': 'Servicio Rutas',
     'version': '13.0.0.4.0',
     'author': 'GSerrano Lagos de Moreno',
     'website': '',
@@ -16,6 +16,6 @@
         # reports
         # views
         #'views/menus.xml',
-        'views/serviciogser.xml',
+        'views/serviciogserRuta.xml',
     ],
 }
