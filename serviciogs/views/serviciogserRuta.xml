@@ -4,9 +4,9 @@
         <field name="name">serviciogserRuta.view.form</field>
         <field name="model">serviciogserRuta</field>
         <field name="arch" type="xml">
-            <field name="contacto_facturacion" domain="[('parent_id', '=', partner_id)]"/>
+            <field name="contacto_facturacion" />
             <field name="email_facturacion"/>  
-            <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
+            <field name="ord_vent" />
         </field>
     </record>
 
