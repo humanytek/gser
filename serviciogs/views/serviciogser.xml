@@ -2,11 +2,62 @@
 <odoo>
     <record id="serviciogser_view_form" model="ir.ui.view">
         <field name="name">serviciogser.view.form</field>
-        <field name="model">serviciogser</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"></field>
         <field name="arch" type="xml">
-            <field name="contacto_facturacion"/>
-            <field name="email_facturacion"/>  
-            <field name="ord_vent" />
+        <field name="partner_id" position="after">
+          <field name="contacto_facturacion" domain="[('parent_id', '=', partner_id)]"/>
+          <field name="email_facturacion"/>  
+          <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
+        </field>
+         <page name="description" position="after">
+            <group string="Ruta">
+              <group>
+                <group string="Ruta">
+                  <field name="status_ruta"/>           
+                  <field name="km_ruta"/>
+                  <field name="carga_ruta"/>
+                  <field name="capacidad_ruta"/>
+                  <field name="ejes_ruta"/>
+                  <field name="producto_ruta"/>
+                </group>
+                <group string="Costos">
+                  <field name="tipo_precio"/>
+                  <field name="precio"/>
+                  <field name="precio_disel"/>
+                  <field name="rendimiento"/>
+                  <field name="disel"/>
+                  <field name="caseta_efectivo"/>
+                  <field name="caseta_llave"/>
+                  <field name="gasto_op"/>
+
+                </group>
+                <group string="Gastos Totales">
+                  <field name="gasto_totalOper"/>
+                  <field name="gasto_total"/>
+                </group>
+                <group >
+                </group>
+                <group string="Origen">
+                  <field name="recogen"/>
+                  <field name="direccion_or"/>
+                  <field name="pais_or"/>
+                  <field name="estado_or" domain="[('country_id', '=', pais_or)]"/>
+                  <field name="ciudad_or" />
+                  <!--dato de la ciudad-->
+                  <!--domain="[('country.state_id', '=', estado_or)]"-->
+                </group>
+                <group string="Destino">
+                  <field name="entregaD"/>
+                  <field name="direccion_des"/>
+                  <field name="pais_des"/>
+                  <field name="estado_des" domain="[('country_id', '=', pais_or)]"/>
+                  <field name="ciudad_des" />
+                  <!--domain="[('country.state_id', '=', estado_or)]"-->
+                </group>
+              </group>
+            </group>
+          </page>
         </field>
     </record>
 </odoo>
