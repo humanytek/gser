@@ -9,15 +9,4 @@
             <field name="ord_vent" />
         </field>
     </record>
-
-    <record id="servicio_ruta_view_tree" model="ir.ui.view">
-        <field name="name">servicio.ruta.view.tree</field>
-        <field name="model">servicio.ruta</field>
-        <field name="arch" type="xml">
-            <tree string="servicio.ruta Tree">
-                        <field name="email_facturacion"/>
-                        <field name="ord_vent"/>
-            </tree>
-        </field>
-    </record>
 </odoo>
