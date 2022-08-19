@@ -2,10 +2,10 @@ from odoo import fields, models, api
 
 class servicioGSer(models.Model):
 
-    _inherit = ['project.project']
-    allow_timesheets=fields.Boolean(
-        default = False,
-    )
+   # _inherit = ['project.project']
+    #allow_timesheets=fields.Boolean(
+       # default = False,
+    #)
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],

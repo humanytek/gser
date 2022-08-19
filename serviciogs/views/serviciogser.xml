@@ -2,14 +2,14 @@
 <odoo>
     <record id="serviciogser_view_form" model="ir.ui.view">
         <field name="name">serviciogser.view.form</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.edit_project"></field>
+        <field name="model">serviciogser</field>
+        <!--field name="inherit_id" ref="project.edit_project"></field-->
         <field name="arch" type="xml">
-        <field name="partner_id" position="after">
+        <!--field name="partner_id" position="after"-->
           <field name="contacto_facturacion" domain="[('parent_id', '=', partner_id)]"/>
           <field name="email_facturacion"/>  
           <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
-        </field>
+        <!--/field>
          <page name="description" position="after">
             <group string="Ruta">
               <group>
@@ -43,21 +43,21 @@
                   <field name="direccion_or"/>
                   <field name="pais_or"/>
                   <field name="estado_or" domain="[('country_id', '=', pais_or)]"/>
-                  <field name="ciudad_or" />
+                  <field name="ciudad_or" /-->
                   <!--dato de la ciudad-->
                   <!--domain="[('country.state_id', '=', estado_or)]"-->
-                </group>
+                <!--/group>
                 <group string="Destino">
                   <field name="entregaD"/>
                   <field name="direccion_des"/>
                   <field name="pais_des"/>
                   <field name="estado_des" domain="[('country_id', '=', pais_or)]"/>
-                  <field name="ciudad_des" />
+                  <field name="ciudad_des" /-->
                   <!--domain="[('country.state_id', '=', estado_or)]"-->
-                </group>
+                <!--/group>
               </group>
             </group>
-          </page>
+          </page-->
         </field>
     </record>
 </odoo>
