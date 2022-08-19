@@ -15,7 +15,7 @@
         # demo
         # reports
         # views
-        'views/menus.xml',
-        'views/serviciogserRuta.xml',
+        #'views/menus.xml',
+        'views/serviciogser.xml',
     ],
 }
