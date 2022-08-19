@@ -15,9 +15,9 @@
         <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
             <tree string="servicio.ruta Tree">
-                <field name="contacto_facturacion"/>
-                <field name="email_facturacion"/>
-                <field name="ord_vent"/>
+                        <field name="contacto_facturacion"/>
+                        <field name="email_facturacion"/>
+                        <field name="ord_vent"/>
             </tree>
         </field>
     </record>
