@@ -4,7 +4,7 @@
         <field name="name">servicio.ruta.view.form</field>
         <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
-            <field name="contacto_facturacion" />
+            <field name="contacto_facturacion"/>
             <field name="email_facturacion"/>  
             <field name="ord_vent" />
         </field>
@@ -15,9 +15,9 @@
         <field name="model">servicio.ruta</field>
         <field name="arch" type="xml">
             <tree string="serviciogserRuta Tree">
-                            <field name="contacto_facturacion"/>
-                            <field name="email_facturacion"/>
-                            <field name="ord_vent"/>
+                <field name="contacto_facturacion"/>
+                <field name="email_facturacion"/>
+                <field name="ord_vent"/>
             </tree>
         </field>
     </record>
