@@ -15,7 +15,7 @@ class servicioGSer (models.Model):
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
-        index='email',
+        index=True,
         string="Contacto Facturación",
     )
     email_facturacion = fields.Char(
