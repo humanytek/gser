@@ -5,11 +5,12 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"></field>
         <field name="arch" type="xml">
-          <field name="user_ids" position="after" default="Hector Atilano">
+          <field name="user_ids"  position="after">
             <field name="status_viaje"/>
             <field name="vehiculo"/>
             <field name="anio_vehiculo" readonly="1"/>
-            
+            <field name="remolque_1"/>
+            <field name="remolque_2"/>
           </field>
         </field>
     </record>

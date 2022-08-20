@@ -6,8 +6,8 @@ class FlotaSerrano(models.Model):
     _inherit = "fleet.vehicle"
                     
     tipo_vehiculo = fields.Selection([
-        ('1','Tracto'),
-        ('2','Tracto2'),],
+        ('1','Unidad'),
+        ('2','Remolque'),],
         string="Tipo de vehiculo",
     )    
     no_economico = fields.Char(
