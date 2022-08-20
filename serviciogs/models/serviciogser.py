@@ -1,6 +1,6 @@
 from odoo import fields, models, api
 
-class servicioGSer(models.Model):
+class servicioGSer (models.Model):
 
     _inherit = ['project.project']
     allow_timesheets=fields.Boolean(
