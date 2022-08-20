@@ -28,5 +28,11 @@ class servicioGSerprimario (models.Model):
         related ='vehiculo.model_year',
         string="Año vehículo",
     )
+    remolque_1 = fields.Char(
+        string="Remolque 1",
+    )
+    remolque_2 = fields.Char(
+        string="Remolque 2",
+    )
   
        
