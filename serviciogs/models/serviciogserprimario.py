@@ -24,14 +24,8 @@ class servicioGSerprimario (models.Model):
         index=True,
         string="Vehiculo",
     )
-    #anio_vehiculo = fields.Char(
-    #     #related ='model_year',
-    #    string="Año vehículo",
-    #)
-
-    anio_vehiculo = fields.Many2one(
-        comodel_name='fleet.vehicle.model',
+    anio_vehiculo = fields.Char(
+         related ='vehiculo.model_year',
         string="Año vehículo",
-        related='model_id.model_year'
     )
        
