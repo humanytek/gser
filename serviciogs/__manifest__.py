@@ -17,5 +17,6 @@
         # views
         #'views/menus.xml',
         'views/serviciogser.xml',
+        'views/serviciogserprimario.xml'
     ],
 }
