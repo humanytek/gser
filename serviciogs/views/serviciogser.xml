@@ -52,7 +52,7 @@
                   <field name="direccion_des"/>
                   <field name="pais_des"/>
                   <field name="estado_des" domain="[('country_id', '=', pais_or)]"/>
-                  <field name="ciudad_des" /-->
+                  <field name="ciudad_des" />
                   <!--domain="[('country.state_id', '=', estado_or)]"-->
                 </group>
               </group>
