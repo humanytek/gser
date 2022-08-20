@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <menuitem id="main_serviciogserRuta_menu" name="Ruta"/>
-    <menuitem id="serviciogserRuta_menu" name="Ruta" parent="main_serviciogserRuta_menu"/>
-    <menuitem id="configuration_menu" name="Configuration" parent="main_serviciogserRuta_menu"/>
-</odoo>
