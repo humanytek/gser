@@ -7,6 +7,8 @@
         <field name="arch" type="xml">
           <field name="user_ids" position="after">
             <field name="status_viaje"/>
+            <field name="vehiculo"/>
+            
           </field>
         </field>
     </record>

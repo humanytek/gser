@@ -18,4 +18,10 @@ class servicioGSerprimario (models.Model):
         ('8','Rechazado'),],
         string="Estado de Viaje",
     )
+    vehiculo = fields.Many2one(
+        comodel_name='fleet.vehicle',
+        ondelete='set null',
+        index=True,
+        string="Vehículo",
+    )
     
