@@ -22,10 +22,10 @@ class servicioGSerprimario (models.Model):
         comodel_name='fleet.vehicle',
         ondelete='set null',
         index=True,
-        string="Vehículo",
+        string="Vehiculo",
     )
-    #anio_vehiculo = fields.Char(
-    #    related ='model_id.model_year',
-    #    string="Año vehículo",
-    #)
+    anio_vehiculo = fields.Char(
+        related ='fleet.vehicle.model.model_year',
+        string="Año vehículo",
+    )
     
