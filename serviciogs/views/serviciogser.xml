@@ -43,7 +43,7 @@
                   <field name="direccion_or"/>
                   <field name="pais_or"/>
                   <field name="estado_or" domain="[('country_id', '=', pais_or)]"/>
-                  <field name="ciudad_or" /-->
+                  <field name="ciudad_or" />
                   <!--dato de la ciudad-->
                   <!--domain="[('country.state_id', '=', estado_or)]"-->
                 </group>
