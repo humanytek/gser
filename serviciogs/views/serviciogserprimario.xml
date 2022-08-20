@@ -8,6 +8,7 @@
           <field name="user_ids" position="after">
             <field name="status_viaje"/>
             <field name="vehiculo"/>
+            <field name="anio_vehiculo" readonly="1"/>
             
           </field>
         </field>
