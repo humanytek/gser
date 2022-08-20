@@ -30,7 +30,7 @@ class servicioGSerprimario (models.Model):
     #)
 
     anio_vehiculo = fields.Many2one(
-        comodel_name='fleet.vehicle',
+        comodel_name='fleet.vehicle.model',
         string="Año vehículo",
         related='model_id.model_year'
     )
