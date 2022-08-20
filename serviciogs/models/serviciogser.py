@@ -20,7 +20,7 @@ class servicioGSer (models.Model):
     )
     
     email_facturacion = fields.Char(
-        related ='partner_id.email',
+        related ='contacto_facturacion.email',
         string="E-mail Facturación",
     )
     km_ruta = fields.Float(
