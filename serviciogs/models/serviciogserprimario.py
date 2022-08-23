@@ -1,3 +1,4 @@
+from operator import index
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -28,7 +29,10 @@ class servicioGSerprimario (models.Model):
         related ='vehiculo.model_year',
         string="Año vehículo",
     )
-    remolque_1 = fields.Char(
+    remolque_1 = fields.Many2one(
+        comodel_name ='fleet.vehicle',
+        ondelete ='set null',
+        index=True,
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
