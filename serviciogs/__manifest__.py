@@ -8,8 +8,7 @@
         "industry_fsm",
         "project",
         "sale_management",
-        "fleet",
-        "Flota"
+        "fleet"
     ],
     'data': [
         # security
