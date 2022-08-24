@@ -1,4 +1,5 @@
-from operator import index
+
+from dataclasses import field
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -44,6 +45,7 @@ class servicioGSerprimario (models.Model):
     def noeconomico_get(self):
         res = []
         for rec in self:
-            res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+            res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
+            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
         return res
     
