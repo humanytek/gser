@@ -1,14 +1,14 @@
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
-
+    _name = 'fleet.vehicle'
     _inherit = ['project.task']
 
     @api.multi
     def noeconomico_get(self):
         res = []
         for rec in self:
-            res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
+            res.append((rec.remolque_1, '%s - %s' % (rec.no_economico, rec.license_plate)))
             #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
         return res
 
