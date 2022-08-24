@@ -34,11 +34,16 @@ class servicioGSerprimario (models.Model):
         comodel_name ='fleet.vehicle',
         ondelete ='set null',
         index=True,
-        related ='vehicle.no_economico',
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
         string="Remolque 2",
     )
-  
-       
+    
+    @api.multi
+    def noeconomico_get(self):
+        res = []
+        for rec in self:
+            res.append((rec.vehicle_id, '%s - %s' % (rec.no_economico, rec.vehicle_name)))
+        return res
+    
