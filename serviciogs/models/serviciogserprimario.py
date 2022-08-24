@@ -40,10 +40,10 @@ class servicioGSerprimario (models.Model):
         string="Remolque 2",
     )
     
-    #@api.multi
-    #def noeconomico_get(self):
-    #    res = []
-    #    for rec in self:
-    #        res.append((rec.vehicle_id, '%s - %s' % (rec.no_economico, rec.vehicle_name)))
-    #    return res
+    @api.multi
+    def noeconomico_get(self):
+        res = []
+        for rec in self:
+            res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+        return res
     
