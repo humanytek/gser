@@ -34,6 +34,7 @@ class servicioGSerprimario (models.Model):
         comodel_name ='fleet.vehicle',
         ondelete ='set null',
         index=True,
+        related ='vehicle.no_economico',
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
