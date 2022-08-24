@@ -36,7 +36,6 @@ class servicioGSerprimario (models.Model):
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
-        related ='vehiculo.tipo_vehiculo',
         string="Remolque 2",
     )
   
