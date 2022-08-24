@@ -7,7 +7,9 @@
     'depends': [
         "industry_fsm",
         "project",
-        "sale_management"
+        "sale_management",
+        "fleet",
+        "Flota"
     ],
     'data': [
         # security
