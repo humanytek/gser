@@ -1,11 +1,19 @@
-
-from dataclasses import field
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
 
     _inherit = ['project.task']
-   
+
+    @api.multi
+    def noeconomico_get(self):
+        res = []
+        for rec in self:
+            res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
+            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+        return res
+
+
+
     status_viaje = fields.Selection([
         ('1','Programado'),
         ('2','Pendiente de gastos'),
@@ -41,11 +49,5 @@ class servicioGSerprimario (models.Model):
         string="Remolque 2",
     )
     
-    @api.multi
-    def noeconomico_get(self):
-        res = []
-        for rec in self:
-            res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
-            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-        return res
+    
     
