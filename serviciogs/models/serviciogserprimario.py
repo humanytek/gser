@@ -1,16 +1,16 @@
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
-    _name = 'fleet.vehicle'
+    #_name = 'fleet.vehicle'
     _inherit = ['project.task']
 
-    @api.multi
-    def name_get(self):
-        res = []
-        for rec in self:
-            res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
-            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-        return res
+    #@api.multi
+    #def name_get(self):
+    #    res = []
+    #    for rec in self:
+    #        res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
+    #        #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+    #    return res
 
 
 
@@ -46,6 +46,7 @@ class servicioGSerprimario (models.Model):
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
+        related ='remolque_1.no_economico',
         string="Remolque 2",
     )
     
