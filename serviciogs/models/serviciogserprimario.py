@@ -5,7 +5,7 @@ class servicioGSerprimario (models.Model):
     _inherit = ['project.task']
 
     @api.multi
-    def noeconomico_get(self):
+    def name_get(self):
         res = []
         for rec in self:
             res.append((rec.remolque_2, '%s - %s' % (rec.no_economico, rec.license_plate)))
