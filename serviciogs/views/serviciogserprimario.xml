@@ -9,7 +9,7 @@
             <field name="status_viaje"/>
             <field name="vehiculo"/>
             <field name="anio_vehiculo" readonly="1"/>
-            <field name="remolque_1" domain="[('tipo_vehiculo', '=', 'Remolque')]"/>
+            <field name="remolque_1" />
             <field name="remolque_2"/>
           </field>
         </field>
