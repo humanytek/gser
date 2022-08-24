@@ -29,8 +29,9 @@ class servicioGSerprimario (models.Model):
         related ='vehiculo.model_year',
         string="Año vehículo",
     )
+   
     remolque_1 = fields.Many2one(
-        comodel_name ='fleet.vehicle',
+        comodel_name ='fleet.vehicle.no_economico',
         ondelete ='set null',
         index=True,
         string="Remolque 1",
