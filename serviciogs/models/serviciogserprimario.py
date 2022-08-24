@@ -42,7 +42,7 @@ class servicioGSerprimario (models.Model):
     remolque_1 = fields.Many2one(
         comodel_name ='fleet.vehicle',
         ondelete ='set null',
-        index=True,
+        index='no_economico',
         string="Remolque 1",
     )
     remolque_2 = fields.Char(
