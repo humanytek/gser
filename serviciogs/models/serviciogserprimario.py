@@ -46,14 +46,14 @@ class servicioGSerprimario (models.Model):
         related ='remolque_1.no_economico',
         string="No. Economico Remolque",
     )
-    ruta = fields.Many2one(
-        comodel_name ='project.project',
-        ondelete ='set null',
-        intex =True,
-        string ="ruta"
-    )
+    #ruta = fields.Many2one(
+    #    comodel_name ='project.project',
+    #    ondelete ='set null',
+    #    intex =True,
+    #    string ="ruta"
+    #)
     tipo_ruta_viaje= fields.Char(
-        related ='ruta.tipo_ruta',
+    #    related ='ruta.tipo_ruta',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
