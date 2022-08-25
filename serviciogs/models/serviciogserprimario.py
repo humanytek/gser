@@ -41,19 +41,21 @@ class servicioGSerprimario (models.Model):
         ondelete ='set null',
         index=True,
         string="Remolque 1",
-        store = True,
-      
+        store = True, 
     )
-
     remolque_2 = fields.Char(
         related ='remolque_1.no_economico',
         strore=True,
         string="No. Economico Remolque",
     )
 
-
+    dts_ruta = fields.Many2one(
+        comodel ='project.project',
+        ondelete ='set null',
+        index = True,
+    )
     tipo_ruta_viaje= fields.Char(
-        related ='name.tipo_precio',
+        related ='dts_ruta.tipo_precio',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
