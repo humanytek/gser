@@ -43,13 +43,13 @@ class servicioGSerprimario (models.Model):
         comodel_name ='fleet.vehicle',
         ondelete ='cascade',
         select=True,
-        oldname='no_economico',
+        oldname='model_id',
         #index=True,
         string="Remolque 1",
     )
 
-    remolque_2 = fields.Selection(
-        related ='remolque_1.no_economico',
+    remolque_2 = fields.Char(
+        #related ='remolque_1.no_economico',
         string="Remolque 2",
     )
     
