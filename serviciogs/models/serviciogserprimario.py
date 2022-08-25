@@ -46,8 +46,8 @@ class servicioGSerprimario (models.Model):
         string="Remolque 1",
     )
 
-    remolque_2 = fields.Char(
-        #related ='remolque_1.no_economico',
+    remolque_2 = fields.Selection(
+        related ='remolque_1.no_economico',
         string="Remolque 2",
     )
     
