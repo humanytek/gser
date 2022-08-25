@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
-    _name = 'fleet.vehicle'
+    #_name = 'fleet.vehicle'
     _inherit = ['project.task']
 
     #@api.multi
@@ -41,10 +41,13 @@ class servicioGSerprimario (models.Model):
    
     remolque_1 = fields.Many2one(
         comodel_name ='fleet.vehicle',
-        ondelete ='set null',
-        index=True,
+        ondelete ='cascade',
+        select=True,
+        oldname='no_economico',
+        #index=True,
         string="Remolque 1",
     )
+
     remolque_2 = fields.Selection(
         related ='remolque_1.no_economico',
         string="Remolque 2",
