@@ -51,8 +51,9 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
 
+
     tipo_ruta_viaje= fields.Char(
-        related ='project_id.tipo_precio',
+        #related ='project_id.tipo_precio',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
