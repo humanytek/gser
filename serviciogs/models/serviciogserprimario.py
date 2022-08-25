@@ -86,3 +86,7 @@ class servicioGSerprimario (models.Model):
         ('3','Otro'),],
         string="Carga de combustible",
     )
+
+    pmanager = fields.Char(
+        string ="Project Manager",
+    )
