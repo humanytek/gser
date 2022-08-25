@@ -49,11 +49,11 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
 
-    dts_ruta = fields.Many2one(
-        comodel ='project.project',
-        ondelete ='set null',
-        index = True,
-    )
+    #dts_ruta = fields.Many2one(
+    #    comodel ='project.project',
+    #    ondelete ='set null',
+    #    index = True,
+    #)
     tipo_ruta_viaje= fields.Char(
         #related ='dts_ruta.tipo_precio',
         string ="Tipo Ruta",
