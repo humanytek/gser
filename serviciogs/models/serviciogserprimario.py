@@ -46,7 +46,7 @@ class servicioGSerprimario (models.Model):
         related ='remolque_1.no_economico',
         string="No. Economico Remolque",
     )
-    ruta =fields.MAny2one(
+    ruta =fields.Many2one(
         comodel_name ='project.project',
         ondelete ='set null',
         intex =True,
