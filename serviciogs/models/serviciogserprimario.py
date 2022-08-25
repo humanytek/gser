@@ -4,13 +4,13 @@ class servicioGSerprimario (models.Model):
     _name = 'fleet.vehicle'
     _inherit = ['project.task']
 
-    @api.multi
-    def name_get(self):
-        res = []
-        for rec in self:
-            res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-        return res
+    #@api.multi
+    #def name_get(self):
+    #    res = []
+    #    for rec in self:
+    #        res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+    #        #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+    #    return res
 
   
 
@@ -45,9 +45,8 @@ class servicioGSerprimario (models.Model):
         index=True,
         string="Remolque 1",
     )
-    remolque_2 = fields.Char(
-        #related ='remolque_1.no_economico',
-        name_get(),
+    remolque_2 = fields.Selection(
+        related ='remolque_1.no_economico',
         string="Remolque 2",
     )
     
