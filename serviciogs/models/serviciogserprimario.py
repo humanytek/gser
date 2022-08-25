@@ -1,4 +1,3 @@
-import string
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -49,7 +48,7 @@ class servicioGSerprimario (models.Model):
     )
     
     tipo_ruta_viaje= fields.Char(
-        related ='project.name.tipo_ruta',
+        #related ='project.name.tipo_ruta',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
