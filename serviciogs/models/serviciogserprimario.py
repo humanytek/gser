@@ -50,7 +50,7 @@ class servicioGSerprimario (models.Model):
     )
 
     dts_ruta = fields.Many2one(
-        comodel ='project.task',
+        comodel ='project.project',
         ondelete ='set null',
         index = True,
     )
