@@ -37,22 +37,17 @@ class servicioGSerprimario (models.Model):
         string="Año vehículo",
     )
    
-    #remolque_1 = fields.Many2one(
-    #    comodel_name ='fleet.vehicle',
-    #    ondelete ='set null',
-    #    index=True,
-    #    string="Remolque 1",
-    #)
-    remolque_2 = fields.Char(
-        related ='remolque_1.no_economico',
-        string="No. Economico Remolque",
-    )
-    remolque = fields.Many2one(
-        comodel_name ='project.project',
+    remolque_1 = fields.Many2one(
+        comodel_name ='fleet.vehicle',
         ondelete ='set null',
         index=True,
         string="Remolque 1",
     )
+    remolque_2 = fields.Char(
+        related ='remolque_1.no_economico',
+        string="No. Economico Remolque",
+    )
+    
     tipo_ruta_viaje= fields.Char(
         related ='remolque.tipo_ruta',
         string ="Tipo Ruta",
