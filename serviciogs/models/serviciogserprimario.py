@@ -1,18 +1,15 @@
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
-    _name = 'fleet.vehicle'
     _inherit = ['project.task']
 
-    #@api.multi
-    #def name_get(self):
-    #    res = []
-    #    for rec in self:
-    #        res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-    #        #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
-    #    return res
-
-  
+    @api.multi
+    def name_get(self):
+        res = []
+        for rec in self:
+            res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+            #res.append((rec.model_id, '%s - %s' % (rec.no_economico, rec.license_plate)))
+        return res
 
     status_viaje = fields.Selection([
         ('1','Programado'),
@@ -41,10 +38,11 @@ class servicioGSerprimario (models.Model):
    
     remolque_1 = fields.Many2one(
         comodel_name ='fleet.vehicle',
-        domain="[('tipo_vehiculo', '=', 2)]",
         ondelete ='set null',
         index=True,
         string="Remolque 1",
+        store = True,
+        compute = 'name_get',
     )
 
     remolque_2 = fields.Char(
