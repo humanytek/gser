@@ -55,7 +55,7 @@ class servicioGSerprimario (models.Model):
         index = True,
     )
     tipo_ruta_viaje= fields.Char(
-        related ='dts_ruta.tipo_precio',
+        #related ='dts_ruta.tipo_precio',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
