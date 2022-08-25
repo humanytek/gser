@@ -46,7 +46,7 @@ class servicioGSerprimario (models.Model):
         related ='remolque_1.no_economico',
         string="No. Economico Remolque",
     )
-    ruta =fields.Many2one(
+    ruta = fields.Many2one(
         comodel_name ='project.project',
         ondelete ='set null',
         intex =True,
@@ -80,6 +80,9 @@ class servicioGSerprimario (models.Model):
     km_viaje= fields.Char(
         string ="",
     )   
-    carga_combustible= fields.Char(
-        string ="",
+    carga_combustible= fields.Selection([
+        ('1','Grupo Serrano'),
+        ('2','Gasolinera La Loma'),
+        ('3','Otro'),],
+        string="Carga de combustible",
     )
