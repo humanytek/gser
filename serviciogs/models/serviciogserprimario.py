@@ -1,3 +1,4 @@
+import string
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -49,11 +50,12 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
 
-    #dts_ruta = fields.Many2one(
-    #    comodel ='project.project',
-    #    ondelete ='set null',
-    #    index = True,
-    #)
+    dts_ruta = fields.Many2one(
+        comodel ='project.project',
+        ondelete ='set null',
+        index = True,
+        string ='Datos',
+    )
     tipo_ruta_viaje= fields.Char(
         #related ='dts_ruta.tipo_precio',
         string ="Tipo Ruta",
