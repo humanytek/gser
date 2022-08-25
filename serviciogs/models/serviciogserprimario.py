@@ -66,7 +66,7 @@ class servicioGSerprimario (models.Model):
         string ="",
     ) 
     conductor = fields.Char(
-        related ='vehiculo.model_year',
+        related ='vehiculo.driver_id.name',
         string ="Conductor",
     )  
     gasto_total_op_viaje= fields.Char(
