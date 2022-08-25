@@ -41,10 +41,8 @@ class servicioGSerprimario (models.Model):
    
     remolque_1 = fields.Many2one(
         comodel_name ='fleet.vehicle',
-        ondelete ='cascade',
-        select=True,
-        oldname='model_id',
-        #index=True,
+        ondelete ='set null',
+        index=True,
         string="Remolque 1",
     )
 
