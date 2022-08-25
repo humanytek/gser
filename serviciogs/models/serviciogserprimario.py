@@ -48,5 +48,37 @@ class servicioGSerprimario (models.Model):
     remolque_2 = fields.Char(
         related ='remolque_1.no_economico',
         strore=True,
-        string="Remolque 2",
+        string="No. Economico Remolque",
+    )
+
+    tipo_ruta_viaje= fields.Char(
+        related ='project_id.tipo_precio',
+        string ="Tipo Ruta",
+    )
+    carga_viaje= fields.Char(
+        string ="",
+    )  
+    capacidad_viaje = fields.Char(
+        string ="",
+    ) 
+    producto_viaje = fields.Char(
+        string ="",
+    ) 
+    conductor = fields.Char(
+        string ="",
+    )  
+    gasto_total_op_viaje= fields.Char(
+        string ="",
+    )
+    gasto_total_caseta_viaje= fields.Char(
+        string ="",
+    )   
+    disel_viaje= fields.Char(
+        string ="",
+    )   
+    km_viaje= fields.Char(
+        string ="",
+    )   
+    carga_combustible= fields.Char(
+        string ="",
     )
