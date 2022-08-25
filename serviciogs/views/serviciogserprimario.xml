@@ -5,7 +5,7 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"></field>
         <field name="arch" type="xml">
-          <field name="project_id" position="after">
+          <field name="child_ids" position="after">
             <field name="status_viaje"/>
             <field name="tipo_ruta_viaje" readonly ="1" />
             <field name="carga_viaje" readonly ="1"/>
