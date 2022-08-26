@@ -82,9 +82,9 @@ class servicioGSer (models.Model):
     tipo_ruta = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
-        ('3','Kilogramo'),],
-        index = True,
+        ('3','Kilogramo')],
         string="Tipo de precio",
+        index = True,
     )
    
     precio = fields.Float(
