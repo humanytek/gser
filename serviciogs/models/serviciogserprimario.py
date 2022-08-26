@@ -96,6 +96,6 @@ class servicioGSerprimario (models.Model):
     )
 
     pmanager = fields.Char(
-        related ='project_id.email_facturacion',
+       
         string ="Project Manager",
     )
