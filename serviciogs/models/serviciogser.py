@@ -87,7 +87,8 @@ class servicioGSer (models.Model):
     #    string="Tipo de precio",
     #)
     tipo_precio = fields.Char(
-        
+        ondelete ='set null',
+        index =True,
         string="Tipo de precio",
     )
     precio = fields.Float(
