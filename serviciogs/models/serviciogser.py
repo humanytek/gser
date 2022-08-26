@@ -79,11 +79,15 @@ class servicioGSer (models.Model):
         ondelete='set null',
         index=True,
     )
-    tipo_precio = fields.Selection([
-        ('1','Ruta'),
-        ('2','Litro'),
-        ('3','Kilogramo'),],
-        index = True,
+    #tipo_precio = fields.Selection([
+    #    ('1','Ruta'),
+    #    ('2','Litro'),
+    #    ('3','Kilogramo'),],
+    #    index = True,
+    #    string="Tipo de precio",
+    #)
+    tipo_precio = fields.Char(
+        
         string="Tipo de precio",
     )
     precio = fields.Float(
