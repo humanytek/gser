@@ -54,7 +54,7 @@ class servicioGSerprimario (models.Model):
         string ="ruta"
     )
     tipo_ruta_viaje= fields.Char(
-        related = 'ruta.km_ruta',
+       # related = 'ruta.km_ruta',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
