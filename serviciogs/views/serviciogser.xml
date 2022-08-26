@@ -29,7 +29,7 @@
                   <field name="producto_ruta"/>
                 </group-->
                 <group string="Costos">
-                  <field name="tipo_ruta"/>
+                  <field name="tipo_precio"/>
                   <field name="precio"/>
                   <field name="precio_disel"/>
                   <field name="rendimiento"/>

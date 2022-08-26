@@ -79,7 +79,7 @@ class servicioGSer (models.Model):
         ondelete='set null',
         index=True,
     )
-    tipo_ruta = fields.Selection([
+    tipo_precio = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
         ('3','Kilogramo')],
