@@ -57,12 +57,15 @@ class servicioGSerprimario (models.Model):
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     )  
     capacidad_viaje = fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     ) 
     producto_viaje = fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     ) 
     conductor = fields.Char(
@@ -70,15 +73,19 @@ class servicioGSerprimario (models.Model):
         string ="Conductor",
     )  
     gasto_total_op_viaje= fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     )
     gasto_total_caseta_viaje= fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     )   
     disel_viaje= fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     )   
     km_viaje= fields.Char(
+        related ='project_id.email_facturacion',
         string ="",
     )   
     carga_combustible= fields.Selection([
@@ -89,5 +96,6 @@ class servicioGSerprimario (models.Model):
     )
 
     pmanager = fields.Char(
+        related ='project_id.email_facturacion',
         string ="Project Manager",
     )
