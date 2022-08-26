@@ -8,14 +8,13 @@
         <field name="partner_id" position="after">
           <field name="contacto_facturacion" domain="[('parent_id', '=', partner_id)]"/>
           <field name="email_facturacion"/>  
-          <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
+          <!--field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/-->
           <field name="status_ruta"/>           
           <field name="km_ruta"/>
           <field name="carga_ruta"/>
           <field name="capacidad_ruta"/>
           <field name="ejes_ruta"/>
           <field name="producto_ruta"/>
-          <!--field name="tipo_ruta"/-->
         </field>
          <page name="description" position="after">
             <group string="Ruta">

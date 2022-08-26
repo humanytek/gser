@@ -74,11 +74,11 @@ class servicioGSer (models.Model):
         string="Producto",
     )
 
-    ord_vent = fields.Many2one(
-        comodel_name='sale.order',
-        ondelete='set null',
-        index=True,
-    )
+    #ord_vent = fields.Many2one(
+    #    comodel_name='sale.order',
+    #    ondelete='set null',
+    #    index=True,
+    #)
     tipo_precio = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
