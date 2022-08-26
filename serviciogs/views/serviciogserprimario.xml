@@ -24,7 +24,7 @@
             <field name="carga_combustible"/>
           </field>
           <field name="partner_phone" position="after">
-            <field name="pmanager" ></field>
+            <field name="pmanager" readonly="1" domain="[('name', '=', Brandon Freeman)]"></field>
           </field>
         </field>
     </record>
