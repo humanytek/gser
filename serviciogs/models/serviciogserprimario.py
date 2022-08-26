@@ -47,7 +47,7 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
     ruta = fields.Many2one(
-        comodel_name ='project.task',
+        comodel_name ='project.project',
         ondelete ='set null',
         intex =True,
         string ="ruta"
