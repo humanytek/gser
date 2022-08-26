@@ -61,7 +61,7 @@ class servicioGSerprimario (models.Model):
         string ="",
     )  
     capacidad_viaje = fields.Char(
-        related ='project_id.ord_vent',
+        related ='sales.order',
         string ="",
     ) 
     producto_viaje = fields.Char(
