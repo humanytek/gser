@@ -15,7 +15,7 @@
           <field name="capacidad_ruta"/>
           <field name="ejes_ruta"/>
           <field name="producto_ruta"/>
-          <field name="tipo_ruta"/>
+          <!--field name="tipo_ruta"/-->
         </field>
          <page name="description" position="after">
             <group string="Ruta">
