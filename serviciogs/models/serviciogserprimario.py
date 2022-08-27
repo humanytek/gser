@@ -32,7 +32,7 @@ class servicioGSerprimario (models.Model):
         string="Vehiculo",
     )
     anio_vehiculo = fields.Char(
-        related ='vehiculo.tipo_vehiculo',
+        related ='vehiculo.model_year',
         string="Año vehículo",
     )
    
