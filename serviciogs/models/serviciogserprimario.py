@@ -54,16 +54,10 @@ class servicioGSerprimario (models.Model):
     #    string ="ruta"
     #)
     tipo_ruta_viaje= fields.Char(
-        comodel_name ='project.project',
-        ondelete ='set null',
-        intex =True,
        # related = 'ruta.km_ruta',
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
-        comodel_name ='project.project',
-        ondelete ='set null',
-        intex =True,
         #related ='project_id.project_id',
         string ="Carga",
     )  
