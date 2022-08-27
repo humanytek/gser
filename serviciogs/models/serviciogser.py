@@ -1,28 +1,39 @@
+from cgitb import enable
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
-
+    # Hacemos referencia al modelo al cual vamos a heredar.
     _inherit = ['project.project']
+
+    # Desabilihitar la parte de las hojas de trabajo
     allow_timesheets=fields.Boolean(
         default = False,
+        enable =False,
     )
+# Campos agregados al modelo de proyecto parte del cliente
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
         string="Estatus Ruta",
     )
-    
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
         index=True,
         string="Contacto Facturación",
-    )
-    
+    )    
     email_facturacion = fields.Char(
         related ='contacto_facturacion.email',
         string="E-mail Facturación",
     )
+    ord_vent = fields.Many2one(
+        comodel_name='order.sale',
+        ondelete='set null',
+        index=True,
+        string="Orden de Venta",
+    ) 
+    
+    
     km_ruta = fields.Float(
         string="Kilometros",
     )
@@ -100,7 +111,8 @@ class servicioGSer (models.Model):
     )
     disel = fields.Float(
         compute='_compute_disel',
-    )
+        string ='Diesel'
+   )
     caseta_efectivo = fields.Float(
         string="Caseta Efectivo",
     )

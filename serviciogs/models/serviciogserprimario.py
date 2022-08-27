@@ -47,12 +47,6 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
     
-    #ruta = fields.Many2one(
-    #    comodel_name ='serviciogs.serviciogser',
-    #    ondelete ='set null',
-    #    intex =True,
-    #    string ="ruta"
-    #)
     tipo_ruta_viaje= fields.Selection(
        related = 'project_id.tipo_precio',
         string ="Tipo Ruta",
@@ -73,7 +67,6 @@ class servicioGSerprimario (models.Model):
         related ='vehiculo.driver_id.name',
         string ="Conductor",
     )  
-
     gasto_total_op_viaje= fields.Float(
         related ='project_id.gasto_totalOper',
         string ="Gastos del operador",
@@ -96,7 +89,6 @@ class servicioGSerprimario (models.Model):
         ('3','Otro'),],
         string="Carga de combustible",
     )
-
     pmanager = fields.Many2one(
         string ="Project Manager",
         comodel_name ='res.partner',
