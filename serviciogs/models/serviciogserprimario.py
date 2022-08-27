@@ -58,6 +58,8 @@ class servicioGSerprimario (models.Model):
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
+        comodel_name ='project.project',
+        ondelete ='set null',
         #related ='project_id.project_id',
         string ="Carga",
     )  
@@ -86,7 +88,7 @@ class servicioGSerprimario (models.Model):
         string ="Diesel",
     )   
     km_viaje= fields.Char(
-        related ='project_id.email_facturacion',
+        related ='project_id.km_ruta',
         string ="Kilometraje",
     )   
     carga_combustible= fields.Selection([

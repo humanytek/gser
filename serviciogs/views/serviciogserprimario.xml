@@ -9,7 +9,7 @@
             <field name="status_viaje"/>
             <!--field name="ruta"/-->
             <field name="tipo_ruta_viaje" readonly ="1" />
-            <field name="carga_viaje" readonly ="1"/>
+            <field name="carga_viaje" readonly ="1" domain="[('name', '=', 'Tlanepalpa - Lagos' )]"/>
             <field name="capacidad_viaje" readonly ="1"/>
             <field name="producto_viaje" readonly ="1"/>
             <field name="vehiculo" domain="[('tipo_vehiculo', '=', 1)]"/>
