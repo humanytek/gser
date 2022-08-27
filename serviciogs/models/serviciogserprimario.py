@@ -48,7 +48,7 @@ class servicioGSerprimario (models.Model):
     )
     
     ruta = fields.Many2one(
-        comodel_name ='serviciogser',
+        comodel_name ='serviciogs.serviciogser',
         ondelete ='set null',
         intex =True,
         string ="ruta"
