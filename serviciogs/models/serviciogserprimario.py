@@ -32,7 +32,7 @@ class servicioGSerprimario (models.Model):
         string="Vehiculo",
     )
     anio_vehiculo = fields.Char(
-        related ='vehiculo.model_year',
+        related ='vehiculo.no_economico',
         string="Año vehículo",
     )
    
@@ -47,12 +47,12 @@ class servicioGSerprimario (models.Model):
         string="No. Economico Remolque",
     )
     
-    ruta = fields.Many2one(
-        comodel_name ='serviciogs.serviciogser',
-        ondelete ='set null',
-        intex =True,
-        string ="ruta"
-    )
+    #ruta = fields.Many2one(
+    #    comodel_name ='serviciogs.serviciogser',
+    #    ondelete ='set null',
+    #    intex =True,
+    #    string ="ruta"
+    #)
     tipo_ruta_viaje= fields.Char(
        # related = 'ruta.km_ruta',
         string ="Tipo Ruta",
