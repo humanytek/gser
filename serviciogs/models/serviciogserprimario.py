@@ -54,35 +54,36 @@ class servicioGSerprimario (models.Model):
     #    string ="ruta"
     #)
     tipo_ruta_viaje= fields.Selection(
-       related = 'project_id.carga_ruta',
+       related = 'project_id.tipo_precio',
         string ="Tipo Ruta",
     )
-    carga_viaje= fields.Char(
-        #related ='project_id.project_id',
+    carga_viaje= fields.Selection(
+        related = 'project_id.carga_ruta',
         string ="Carga",
     )  
-    capacidad_viaje = fields.Char(
-        #related ='sales.order',
+    capacidad_viaje = fields.Selection(
+        related ='project_id.capacidad_ruta',
         string ="Capacidad",
     ) 
-    producto_viaje = fields.Char(
-        related ='project_id.email_facturacion',
+    producto_viaje = fields.Selection(
+        related ='project_id.producto_ruta',
         string ="Producto",
     ) 
-    conductor = fields.Char(
+    conductor = fields.Selection(
         related ='vehiculo.driver_id.name',
         string ="Conductor",
     )  
-    gasto_total_op_viaje= fields.Char(
-        related ='project_id.email_facturacion',
+
+    gasto_total_op_viaje= fields.Float(
+        related ='project_id.gasto_totalOper',
         string ="Gastos del operador",
     )
     gasto_total_caseta_viaje= fields.Char(
         related ='project_id.email_facturacion',
         string ="Gastos de caseta",
     )   
-    disel_viaje= fields.Char(
-        related ='project_id.email_facturacion',
+    disel_viaje= fields.Float(
+        related ='project_id.disel',
         string ="Diesel",
     )   
     km_viaje= fields.Float(
