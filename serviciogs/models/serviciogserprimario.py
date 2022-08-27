@@ -59,15 +59,15 @@ class servicioGSerprimario (models.Model):
     )
     carga_viaje= fields.Char(
         related ='project_id.label_tasks',
-        string ="",
+        string ="Carga",
     )  
     capacidad_viaje = fields.Char(
         #related ='sales.order',
-        string ="",
+        string ="Capacidad",
     ) 
     producto_viaje = fields.Char(
         related ='project_id.email_facturacion',
-        string ="",
+        string ="Producto",
     ) 
     conductor = fields.Char(
         related ='vehiculo.driver_id.name',
@@ -75,19 +75,19 @@ class servicioGSerprimario (models.Model):
     )  
     gasto_total_op_viaje= fields.Char(
         related ='project_id.email_facturacion',
-        string ="",
+        string ="Gastos del operador",
     )
     gasto_total_caseta_viaje= fields.Char(
         related ='project_id.email_facturacion',
-        string ="",
+        string ="Gastos de caseta",
     )   
     disel_viaje= fields.Char(
         related ='project_id.email_facturacion',
-        string ="",
+        string ="Diesel",
     )   
     km_viaje= fields.Char(
         related ='project_id.email_facturacion',
-        string ="",
+        string ="Kilometraje",
     )   
     carga_combustible= fields.Selection([
         ('1','Grupo Serrano'),
