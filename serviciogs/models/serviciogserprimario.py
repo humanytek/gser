@@ -62,6 +62,8 @@ class servicioGSerprimario (models.Model):
     )
     carga_viaje= fields.Char(
         comodel_name ='project.project',
+        ondelete ='set null',
+        intex =True,
         #related ='project_id.project_id',
         string ="Carga",
     )  
