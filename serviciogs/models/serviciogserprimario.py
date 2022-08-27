@@ -69,7 +69,7 @@ class servicioGSerprimario (models.Model):
         related ='project_id.producto_ruta',
         string ="Producto",
     ) 
-    conductor = fields.Selection(
+    conductor = fields.Char(
         related ='vehiculo.driver_id.name',
         string ="Conductor",
     )  
