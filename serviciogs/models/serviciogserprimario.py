@@ -58,7 +58,7 @@ class servicioGSerprimario (models.Model):
         string ="Tipo Ruta",
     )
     carga_viaje= fields.Char(
-        related ='project_id.partner_id.name',
+        related ='project_id.partner_id.function',
         string ="Carga",
     )  
     capacidad_viaje = fields.Char(
