@@ -29,7 +29,7 @@
           <page name="description_page" position="after">
             <group string="Facturacion y Cobranza">
               <group>
-                <group string="">
+                <group string="-- --">
                   <field name="Cantidad"/>           
                   <field name="Precio_ruta_Litro" readonly="1"/>
                   <field name="Subtotal" readonly="1"/>
