@@ -22,18 +22,10 @@
             <field name="disel_viaje" readonly ="1"/>
             <field name="km_viaje" readonly ="1"/>
             <field name="carga_combustible"/>
-            <field name="Cantidad"/>           
-            <field name="Precio_ruta_Litro"/>
-            <field name="Subtotal"/>
-            <field name="Iva_16"/>
-            <field name="Retencio_4"/>
-            <field name="Total_Facturar"/>
-
           </field>
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
-          </field>
-          
+          </field>          
         </field>
     </record>
 </odoo>
