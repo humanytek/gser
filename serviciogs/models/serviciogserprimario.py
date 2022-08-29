@@ -113,7 +113,9 @@ class servicioGSerprimario (models.Model):
     Total_Facturar = fields.Float(
         string ="Total a Facturar",
     )
-    Forma_pago = fields.Selection(
+    Forma_pago = fields.Selection([
+        ('1','Transferencia'),
+        ('2','Efectivo'),],
         string ="Forma de pago",
     )          
     No_Factura = fields.Char(
