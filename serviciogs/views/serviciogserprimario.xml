@@ -25,7 +25,28 @@
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
           </field>
-            
+          
+            <page name="description_page" position="after">
+            <group string="Facturacion y Cobranza">
+              <group>
+                <group string="-- --">
+                  <field name="Cantidad"/>           
+                  <field name="Precio_ruta_Litro" readonly="1"/>
+                  <field name="Subtotal" readonly="1"/>
+                  <field name="Iva" readonly="1"/>
+                  <field name="Retencion" readonly="1"/>
+                  <field name="Total_Facturar" readonly="1"/>
+                </group> 
+                <group string="">
+                  <field name="Forma_pago"/>           
+                  <field name="No_Factura"/>
+                  <field name="Fecha_Factura"/>
+                  <field name="Fecha_Pago"/>
+                </group>                
+              </group>
+            </group>
+          </page>
+
         </field>
     </record>
 </odoo>
