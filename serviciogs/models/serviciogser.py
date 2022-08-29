@@ -1,4 +1,3 @@
-from cgitb import enable
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
@@ -8,20 +7,28 @@ class servicioGSer (models.Model):
     # Desabilihitar la parte de las hojas de trabajo
     allow_timesheets=fields.Boolean(
         default = False,
-        enable =False,
     )
-# Campos agregados al modelo de proyecto parte del cliente
+# Campos agregados al modelo de proyecto seccion principal
     status_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
         string="Estatus Ruta",
     )
+    # Campos relacional de muchos a uno
+    # comodel_name, se hace referencia al modelo a utilizar
+    #
+    #index =  True indica que lo va a indexar a la BD.
+    #string es nuestro label del campo
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
         index=True,
         string="Contacto Facturación",
-    )    
+    )
+    #COD-GSer-001# Campo con un related
+    #El tipo de dato debe ser Char para poder realizar la extración de un campo relacionado
+    #Debe existir un campo ya con una relacion efectuada.
+    #se agrega palabra reservada "related" la cual 
     email_facturacion = fields.Char(
         related ='contacto_facturacion.email',
         string="E-mail Facturación",
@@ -31,9 +38,11 @@ class servicioGSer (models.Model):
         ondelete='set null',
         index=True,
         string="Orden de Venta",
-    ) 
+    )
     
-    
+#Campos de la sección de Ruta.Ruta
+
+
     km_ruta = fields.Float(
         string="Kilometros",
     )
@@ -103,7 +112,7 @@ class servicioGSer (models.Model):
     )
     precio_disel = fields.Float(
         default = 20.00,
-        string="Precio Disel",
+        string="Precio Diesel",
     )
     rendimiento = fields.Float(
         default=2.2,

@@ -20,9 +20,9 @@ class servicioGSerprimario (models.Model):
         ('6','En validación'),
         ('7','Por facturar'),
         ('8','Por cobrar'),
-        ('8','Finalizado'),
-        ('8','Cancelado'),
-        ('8','Rechazado'),],
+        ('9','Finalizado'),
+        ('10','Cancelado'),
+        ('12','Rechazado'),],
         string="Estado de Viaje",
     )
     vehiculo = fields.Many2one(
