@@ -119,10 +119,10 @@ class servicioGSerprimario (models.Model):
     No_Factura = fields.Char(
         string ="No. Factura",
     )    
-    Fecha_Factura = fields.Date(
+    Fecha_Factura = fields.Char(
         string ="Fecha de factura",
     )
-    Fecha_Pago = fields.Date(
+    Fecha_Pago = fields.Char(
         string ="Fecha pago",
     )
 
