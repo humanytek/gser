@@ -99,12 +99,15 @@ class servicioGSerprimario (models.Model):
         string ="Cantidad",
     )          
     Precio_ruta_Litro = fields.Float(
+        related ="project_id.precio",
         string ="Precio ruta / litro",
     )    
     Subtotal   = fields.Float(
+        compute='_compute_subtotal',
         string ="SubTotal",
     )     
     Iva = fields.Float(
+        compute='_compute_iva',
         string ="IVA 16%",
     )    
     Retencion = fields.Float(
@@ -127,5 +130,16 @@ class servicioGSerprimario (models.Model):
     Fecha_Pago = fields.Date(
         string ="Fecha pago",
     )
+
+    @api.depends("Cantidad", "Precio_ruta_Litro")
+    def _compute_subtotal(self):
+        for record in self:
+            record.Subtotal = record.Cantidad * record.Precio_ruta_Litro
+
+    @api.depends("Subtotal")
+    def _compute_iva(self):
+        for record in self:
+            record.Iva = record.Subtotal * 0.16
+
 
     
