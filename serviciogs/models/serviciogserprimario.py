@@ -138,4 +138,4 @@ class servicioGSerprimario (models.Model):
     @api.depends("Subtotal", "Iva", "Retencion")
     def _compute_total_facturar(self):
         for record in self:
-            record.Total_Facturar = record.Subtotal + record.Iva - record.Retencion
+            record.Total_Facturar = (record.Subtotal + record.Iva) - record.Retencion
