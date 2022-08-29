@@ -111,9 +111,11 @@ class servicioGSerprimario (models.Model):
         string ="IVA 16%",
     )    
     Retencion = fields.Float(
+        compute ='_compute_retencion',
         string ="Retención 4%",
     )   
     Total_Facturar = fields.Float(
+        compute ='_compute_Total_Facturar',
         string ="Total a Facturar",
     )
     Forma_pago = fields.Selection([
