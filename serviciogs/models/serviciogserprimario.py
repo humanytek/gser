@@ -1,3 +1,4 @@
+import string
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -94,4 +95,35 @@ class servicioGSerprimario (models.Model):
         comodel_name ='res.partner',
         ondelete ='set null',
         intex =True,
+    )
+
+    Cantidad = fields.Float(
+        string ="Cantidad",
+    )          
+    Precio_ruta_Litro = fields.Float(
+        string ="Precio ruta / litro",
+    )    
+    Subtotal   = fields.Float(
+        string ="SubTotal",
+    )     
+    Iva_16 = fields.Float(
+        string ="IVA 16%",
+    )    
+    Retencio_4 = fields.Float(
+        string ="Retención 4%",
+    )   
+    Total_Facturar = fields.Float(
+        string ="Total a Facturar",
+    )
+    Forma_pago = fields.Selection(
+        string ="Forma de pago",
+    )          
+    No_Factura = fields.Char(
+        string ="No. Factura",
+    )    
+    Fecha_Factura = fields.Date(
+        string ="Fecha de factura",
+    )
+    Fecha_Pago = fields.Date(
+        string ="Fecha pago",
     )
