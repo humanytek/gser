@@ -104,10 +104,10 @@ class servicioGSerprimario (models.Model):
     Subtotal   = fields.Float(
         string ="SubTotal",
     )     
-    Iva_16 = fields.Float(
+    Iva = fields.Float(
         string ="IVA 16%",
     )    
-    Retencio_4 = fields.Float(
+    Retencion = fields.Float(
         string ="Retención 4%",
     )   
     Total_Facturar = fields.Float(

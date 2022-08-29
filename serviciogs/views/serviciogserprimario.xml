@@ -33,8 +33,8 @@
                   <field name="Cantidad"/>           
                   <field name="Precio_ruta_Litro"/>
                   <field name="Subtotal"/>
-                  <field name="Iva_16"/>
-                  <field name="Retencio_4"/>
+                  <field name="Iva"/>
+                  <field name="Retencion"/>
                   <field name="Total_Facturar"/>
                 </group> 
                 <group string="">
