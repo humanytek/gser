@@ -111,7 +111,7 @@ class servicioGSerprimario (models.Model):
         string ="IVA 16%",
     )    
     Retencion = fields.Float(
-        compute ='_compute_retencion',
+        #compute ='_compute_retencion',
         string ="Retención 4%",
     )   
     Total_Facturar = fields.Float(
@@ -143,9 +143,9 @@ class servicioGSerprimario (models.Model):
         for record in self:
             record.Iva = record.Subtotal * 0.16
     
-    @api.depends("Subtotal")
-    def _compute_retencion(self):
-        for record in self:
-            record.Retencion = record.Subtotal * 0.04
+    #@api.depends("Subtotal")
+    #def _compute_retencion(self):
+    #    for record in self:
+    #        record.Retencion = record.Subtotal * 0.04
 
    
