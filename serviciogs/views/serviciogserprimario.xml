@@ -25,7 +25,19 @@
           </field>
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
-          </field>          
+          </field>
+          <page name="description_page" position="after">
+            <group string="Facturacion y Cobranza">
+              <group>
+                <group string="">
+                  <field name="Cantidad"/>           
+                  <field name="Precio_ruta_Litro"/>
+                
+                </group> 
+                              
+              </group>
+            </group>
+          </page>          
         </field>
     </record>
 </odoo>

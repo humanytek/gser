@@ -1,4 +1,3 @@
-import string
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -96,5 +95,12 @@ class servicioGSerprimario (models.Model):
         ondelete ='set null',
         intex =True,
     )
+    Cantidad = fields.Float(
+        string ="Cantidad",
+    )          
+    Precio_ruta_Litro = fields.Float(
+        string ="Precio ruta / litro",
+    )    
+
 
     
