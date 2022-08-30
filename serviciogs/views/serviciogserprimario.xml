@@ -53,7 +53,7 @@
         </field>
     </record>
 
-    <record id="project.view_task_tree2" model="ir.ui.view">
+    <record id="view_task_tree2" model="ir.ui.view">
       <field name="name">project.task.tree</field>
       <field name="model">project.task</field>
       <field name="arch" type="xml">
