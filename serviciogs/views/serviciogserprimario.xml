@@ -65,10 +65,18 @@
           <field name="priority" widget="priority" optional="show" nolabel="1"/>
           <field name="name" widget="name_with_subtask_count"/>
           <field name="child_text" invisible="1"/>
-          <field name="project_id" optional="show" readonly="1"/>
+          <field name="parent_id" />
+          <field name="id" />
           <field name="status_viaje" optional="show" readonly="1"/>
-          <field name="partner_id" optional="hide"/>
-          <field name="parent_id" optional="hide" attrs="{'invisible': [('allow_subtasks', '=', False)]}" groups="base.group_no_one"/>
+          <!--field name="Cliente Ruta" /-->
+          <field name="project_id" optional="show" readonly="1"/>
+          <field name="Conductor" />
+          <!--field name="create_date"  fecha de programacion/-->
+          <field name="carga_combustible"/>
+          <field name="disel_viaje"/>
+          <field name="gasto_total_op_viaje"/>
+          <field name="Total_Facturar"/>
+          <field name="No_Factura"/>
           <field name="user_ids" optional="show" widget="many2many_avatar_user" domain="[('share', '=', False), ('active', '=', True)]"/>
           <field name="company_id" groups="base.group_multi_company" optional="show"/>
           <field name="activity_ids" widget="list_activity" optional="show"/>
