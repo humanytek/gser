@@ -53,4 +53,29 @@
         </field>
     </record>
 
+   
+
+    <record id="industry_fsm.project_task_view_list_fsm" model="ir.ui.view">
+      <field name="name">project.task.tree.fsm</field>
+      <field name="model">project.task</field>
+      <field name="arch" type="xml">
+        <tree string="Tasks" >
+          <field name="parent_id" />
+          <field name="id" />
+          <field name="status_viaje" optional="show" readonly="1"/>
+          <!--field name="Cliente Ruta" /-->
+          <field name="project_id" optional="show" readonly="1"/>
+          <field name="conductor" />
+          <!--field name="create_date"  fecha de programacion/-->
+          <field name="carga_combustible"/>
+          <field name="disel_viaje"/>
+          <field name="gasto_total_op_viaje"/>
+          <field name="Total_Facturar"/>
+          <field name="No_Factura"/>
+        </tree>
+      </field>
+
+    </record>
+
+
 </odoo>
