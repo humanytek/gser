@@ -52,12 +52,12 @@
           
         </field>
     </record>
-    <record id="view.project.task.tree" model="ir.ui.view">
-      <field name="name">project.task.tree</field>
+    <record id="view.project.task.tree.fsm" model="ir.ui.view">
+      <field name="name">project.task.tree.fsm</field>
       <field name="model">project.task</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name" position="after">
+          <field>
             <field name="status_viaje"/>
           </field>
         </tree>
