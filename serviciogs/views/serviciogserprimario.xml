@@ -56,7 +56,6 @@
     <record id="serviciogserprimario_view_form" model="ir.ui.view">
         <field name="name">serviciogserprimario.view.form</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_form2"></field>
         <field name="arch" type="xml">
           <tree string="Tasks" multi_edit="1" sample="1" js_class="project_list">
             <field name="message_needaction" invisible="1" readonly="1"/>
