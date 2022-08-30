@@ -70,7 +70,7 @@
           <field name="status_viaje" optional="show" readonly="1"/>
           <!--field name="Cliente Ruta" /-->
           <field name="project_id" optional="show" readonly="1"/>
-          <field name="Conductor" />
+          <field name="conductor" />
           <!--field name="create_date"  fecha de programacion/-->
           <field name="carga_combustible"/>
           <field name="disel_viaje"/>
