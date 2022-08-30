@@ -34,7 +34,7 @@ class servicioGSer (models.Model):
         string="E-mail Facturación",
     )
     ord_vent = fields.Many2one(
-        comodel_name='sale.order',
+        comodel_name='sale.order.line',
         ondelete='set null',
         index=True,
         string="Orden de Venta",
@@ -208,3 +208,4 @@ class servicioGSer (models.Model):
         for record in self:
             record.disel = record.km_ruta / record.rendimiento
 
+    

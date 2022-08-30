@@ -140,3 +140,6 @@ class servicioGSerprimario (models.Model):
     def _compute_total_facturar(self):
         for record in self:
             record.Total_Facturar = (record.Subtotal + record.Iva) - record.Retencion
+
+
+    
