@@ -124,7 +124,7 @@ class servicioGSerprimario (models.Model):
         string ="Fecha pago",
     )
     note = fields.Text(
-        
+        string ="text",
     )
 
     @api.depends("Cantidad", "Precio_ruta_Litro")
