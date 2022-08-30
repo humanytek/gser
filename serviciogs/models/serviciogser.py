@@ -34,7 +34,7 @@ class servicioGSer (models.Model):
         string="E-mail Facturación",
     )
     ord_vent = fields.Many2one(
-        comodel_name='sale.order.line',
+        comodel_name='sale.order',
         ondelete='set null',
         index=True,
         string="Orden de Venta",

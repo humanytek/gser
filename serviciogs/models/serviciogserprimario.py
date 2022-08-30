@@ -2,6 +2,10 @@ from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
     _inherit = ['project.task']
+    allow_timesheets=fields.Boolean(
+        default = False,
+    )
+    
     status_viaje = fields.Selection([
         ('1','Programado'),
         ('2','Pendiente de gastos'),
