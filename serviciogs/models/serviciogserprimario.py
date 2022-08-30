@@ -123,7 +123,7 @@ class servicioGSerprimario (models.Model):
     Fecha_Pago = fields.Date(
         string ="Fecha pago",
     )
-    note = fields.Text(
+    note_cla = fields.Char(
         string ="text",
     )
 
