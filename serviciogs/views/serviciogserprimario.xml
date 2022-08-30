@@ -26,9 +26,7 @@
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
           </field>
-          <field name ="order_line" position=" after">
-            <field name ="note_cla"/>
-          </field>
+         
             <page name="description_page" position="after">
             <group string="Facturacion y Cobranza">
               <group>

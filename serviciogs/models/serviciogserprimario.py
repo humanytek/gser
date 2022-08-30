@@ -123,9 +123,7 @@ class servicioGSerprimario (models.Model):
     Fecha_Pago = fields.Date(
         string ="Fecha pago",
     )
-    note_cla = fields.Char(
-        string ="text",
-    )
+   
 
     @api.depends("Cantidad", "Precio_ruta_Litro")
     def _compute_subtotal(self):
