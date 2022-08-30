@@ -55,7 +55,7 @@
 
     <record id="industry_fsm.project_task_view_list_fsm" model="ir.ui.view">
       <field name="name">project.task.tree.fsm</field>
-      <field name="model">project.task.tree.fsm</field>
+      <field name="model">project.task</field>
       <field name="arch" type="xml">
         <tree string="Tasks" multi_edit="1" sample="1" js_class="project_list">
           <field name="message_needaction" invisible="1" readonly="1"/>
