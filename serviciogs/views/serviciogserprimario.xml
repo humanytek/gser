@@ -23,7 +23,7 @@
             <field name="carga_combustible"/>  
           </field>
           <field name="sale_line_id" position="replace">
-            <field name="sale_line_id"  attrs="{'visible': False }"></field>
+            <field name="sale_line_id" invisible="1"></field>
           </field>
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
