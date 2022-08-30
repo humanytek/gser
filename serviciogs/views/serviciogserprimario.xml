@@ -53,7 +53,7 @@
         </field>
     </record>
 
-    <record id="view_project_task_tree_fsm" model="ir.ui.view">
+    <record id="project_task_tree_fsm" model="ir.ui.view">
       <field name="name">project.task.tree.fsm</field>
       <field name="model">project.task</field>
       <field name="arch" type="xml">
