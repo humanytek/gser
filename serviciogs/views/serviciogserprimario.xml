@@ -21,6 +21,7 @@
             <field name="disel_viaje" readonly ="1"/>
             <field name="km_viaje" readonly ="1"/>
             <field name="carga_combustible"/>
+            <field name ="note"/>
           </field>
           <field name="partner_phone" position="after">
             <field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field>
@@ -46,9 +47,9 @@
               </group>
             </group>
           </page>
-          <field>
-            <field name ="note"/>
-          </field>
+          <!--field>
+            
+          </field-->
         </field>
     </record>
 </odoo>
