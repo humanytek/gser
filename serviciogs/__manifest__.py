@@ -17,6 +17,7 @@
         # reports
         # views
         'report/reports.xml',
+        'report/ticket_viaje.xml',
         'views/serviciogser.xml',
         'views/serviciogserprimario.xml'
     ],
