@@ -6,7 +6,7 @@
           <t t-call="web.external_layout">
             <div class="page">
               <h2>Ticket Viaje</h2>
-              <p> El numero de tarea es:<span t-field="o.name"/>
+              <p> El numero de tarea es: <!--span t-field="o.name"/-->
               </p>
             </div>
           </t>
