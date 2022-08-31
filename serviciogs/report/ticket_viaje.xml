@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="ticket_viaje_view_form" model="ir.actions.report">
-        <field name="name">Ticket.viaje.view.form</field>
-        <field name="model">project.task</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">ticket_viaje_report.report_viaje</field>
-        <field name="report_file">ticket_viaje_report.report_viaje</field>
-        <field name="bindig_model_id" ref="project.view_task_form2"/>
-        <field name="binding_type">report</field>
-    </record>
-
-    <template id="viaje_report">
-      <t t-call="web.html_container">
-        <t t-foreach="docs" t-as="o">
-          <center>
-            <h1>Ticket viaje</h1>
-          </center>
-        </t>
-      </t>
-    </template>
+  <template id="report_ticket_viaje">
+    <t t-call="web.basic_layout">
+      <div class="page">
+      </div>
+    </t>
+  </template>
 </odoo>
