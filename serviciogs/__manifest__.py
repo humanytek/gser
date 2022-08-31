@@ -16,7 +16,7 @@
         # demo
         # reports
         # views
-        #'views/menus.xml',
+        'report/reports.xml',
         'views/serviciogser.xml',
         'views/serviciogserprimario.xml'
     ],
