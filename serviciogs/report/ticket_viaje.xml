@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-  <template id="report_ticket_viaje">
-    <t t-call="web.basic_layout">
-      <div class="page">
-      </div>
-    </t>
-  </template>
+  <data>
+    <template id="report_ticket_viaje">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+          <t t-call="web.external_layout">
+            <div class="page">
+              <h2>Ticket Viaje</h2>
+              <p> El numero de tarea es:<span t-field="o.name"/>
+              </p>
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+  </data>
 </odoo>
