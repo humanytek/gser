@@ -4,8 +4,8 @@
         <field name="name">Ticket viaje</field>
         <field name="model">project.task</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">project.task.report_ticket_viaje</field>
-        <field name="report_file">project.task.report_ticket_viaje</field>
+        <field name="report_name">industry_fsm.report_ticket_viaje</field>
+        <field name="report_file">industry_fsm.report_ticket_viaje</field>
         <field name="binding_model_id" ref="model_project_task"></field>
         <field name="binding_type">report</field>
     </record>
