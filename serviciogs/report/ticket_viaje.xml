@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
   
-    <template id="report_ticket_viaje">
-      <t t-call="web.basic_layout">
-        <div class="page">
-          <h2>Ticket Viaje</h2>
-        </div>
-      </t>
-    </template>
-
 </odoo>
