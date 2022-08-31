@@ -9,4 +9,10 @@
         <field name="binding_model_id" ref="model_project_task"></field>
         <field name="binding_type">report</field>
     </record>
+    <template id="report_ticket_viaje">
+        <t t-call="web.basic_layout">
+        <div class="page">
+        </div>
+        </t>
+    </template>
 </odoo>
