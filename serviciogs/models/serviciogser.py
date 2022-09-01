@@ -123,7 +123,7 @@ class servicioGSer (models.Model):
         string ='Diesel'
    )
     caseta_efectivo = fields.Float(
-        string="Caseta Efectivo",
+        string="Caseta Efectivo", 
     )
     caseta_llave = fields.Float(
         string="Caseta Llave",

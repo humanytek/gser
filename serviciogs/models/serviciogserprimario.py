@@ -66,7 +66,7 @@ class servicioGSerprimario (models.Model):
         related ='project_id.gasto_totalOper',
         string ="Gastos del operador",
     )
-    gasto_total_caseta_viaje= fields.Char(
+    gasto_total_caseta_viaje= fields.Float(
         related ='project_id.caseta_efectivo',
         string ="Gastos de caseta",
     )   
