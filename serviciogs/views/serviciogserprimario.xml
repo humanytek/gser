@@ -80,6 +80,15 @@
         <field name="planned_date_end" position="replace">
           <field name="planned_date_end" invisible="1" optional="hide"/>
         </field>
+        <field name="planned_date_begin" position="replace">
+          <field name="planned_date_begin" invisible="1" optional="hide"/>
+        </field>
+        <field name="activity_ids" position="replace">
+          <field name="activity_ids" invisible="1" optional="hide"/>
+        </field>
+        <field name="tag_ids" position="replace">
+          <field name="tag_ids" invisible="1" optional="hide"/>
+        </field>
 
       </field>  
     </record>
