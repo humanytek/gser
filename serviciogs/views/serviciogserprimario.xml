@@ -58,10 +58,13 @@
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
       <field name="arch" type="xml">
         <tree>
+          
+          
           <field name="child_text" position="replace" invisible="1" optional="hide"/>
           <field name="priority" position="replace" widget="priority" optional="hide" nolabel="1"/>
           <field name="name" position="replace" widget="name_with_subtask_count" optional="hide"/>
           <field name="project_id" position="replace" readonly="1" optional="hide"/>
+          
           
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
@@ -88,7 +91,11 @@
           <field name="subtask_effective_hours" widget="timesheet_uom" optional="hide"/>
           <field name="total_hours_spent" widget="timesheet_uom" optional="hide"/>
           <field name="progress" widget="progressbar" optional="hide" groups="hr_timesheet.group_hr_timesheet_user"/>
-          <field name="activity_ids" widget="list_activity" invisible="context.get('set_visible',False)" optional="hide" readonly="1"/>
+          
+          <field name="user_ids" position="replace">
+          <field name="activity_ids" optional="hide"/>
+          </field>
+
           <field name="tag_ids" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
           <field name="kanban_state" widget="state_selection" optional="hide" readonly="1"/>
           <field name="stage_id" optional="hide"/>
