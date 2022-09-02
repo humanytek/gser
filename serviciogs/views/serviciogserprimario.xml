@@ -52,8 +52,8 @@
           
         </field>
     </record>
-    <!--record id="serviciogserprimario_view_list_fsm_tree" model="ir.ui.view">
-      <field name="name">serviciogserprimario.view.list.fsm.tree</field>
+    <record id="project_task_tree_fsm" model="ir.ui.view">
+      <field name="name">project.task.tree.fsm</field>
       <field name="model">project.task</field>
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm" />
       <field name="arch" type="xml">
@@ -61,16 +61,17 @@
           <fliel name="status_viaje" optional="show"/>
         </field>
       </field>  
-    </record-->
-    <record id="service_ext_view_tree" model="ir.ui.view">
-        <field name="name">service.ext.view.tree</field>
+    </record>
+    <!--record id="project_task_tree_fsm" model="ir.ui.view">
+        <field name="name">project.task.tree.fsm</field>
         <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"></field>
         <field name="arch" type="xml">
             <tree string="Service Tree">
                 <field name="name"/>
                 <field name="status_viaje"/> 
             </tree>
         </field>
-    </record>
+    </record-->
    
 </odoo>
