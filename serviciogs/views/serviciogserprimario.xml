@@ -60,7 +60,7 @@
         <tree>       
           
           <field name="partner_id" optional="show"/>
-          <field name="id" optional="show"/>
+          <!--field name="id" optional="show"/-->
           <field name="status_viaje" optional="show"/>
           <field name="name" optional="show"/>
           <field name="project_id" readonly="1" optional="show"/>
@@ -74,6 +74,7 @@
           <field name="Total_Facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="No_Factura" optional="show"/>
         </tree>
+        <!--campos ocultos de la vista task-->
         <field name="user_ids" position="replace">
           <field name="user_ids" invisible="1" optional="hide"/>
         </field>
@@ -88,6 +89,11 @@
         </field>
         <field name="tag_ids" position="replace">
           <field name="tag_ids" invisible="1" optional="hide"/>
+        </field>
+
+        <!--posisionamiento de los campos-->
+        <field name="name" position="before">
+          <field name="id" optional="show"/>
         </field>
 
       </field>  
