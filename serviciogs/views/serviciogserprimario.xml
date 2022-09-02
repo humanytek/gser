@@ -52,6 +52,15 @@
           
         </field>
     </record>
-
+    <record id="serviciogserprimario_view_tree" model="ir.ui.view">
+      <field name="name">serviciogserprimario.view.tree</field>
+      <field name="model">project.task</field>
+      <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm" />
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <fliel name="status_viaje"/>
+        </field>
+      </field>  
+    </record>
    
 </odoo>
