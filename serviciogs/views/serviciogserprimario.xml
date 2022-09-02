@@ -58,7 +58,7 @@
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
       <field name="arch" type="xml">
         <tree>       
-          <field name="user_ids" invisible="1"/>
+          <field name="user_ids" invisible="1" optional="hide"/>
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
           <field name="status_viaje" optional="show"/>
