@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<!--?xml version="1.0" encoding="utf-8" ?>
+<odoo-->
     <!-- modificar vista de servico externo -->
-    <record id="servicioproject_view_tree" model="ir.ui.view">
+    <!--record id="servicioproject_view_tree" model="ir.ui.view">
       <field name="name">servicioproject.view.tree</field>
       <field name="model">project.task</field>
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm" />
@@ -11,4 +11,4 @@
         </field>
       </field>  
     </record>
-</odoo>
+</odoo-->
