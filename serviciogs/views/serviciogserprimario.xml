@@ -55,11 +55,13 @@
     <record id="project_task_tree_fsm" model="ir.ui.view">
       <field name="name">project.task.tree.fsm</field>
       <field name="model">project.task</field>
-      <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm" />
+      <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
       <field name="arch" type="xml">
-        <field name="name" position="after">
-          <fliel name="status_viaje" optional="show"/>
-        </field>
+        <tree string="Tasks">
+                <field name="name" position="after">
+                  <field name="status_viaje"/> 
+                </field>
+        </tree>
       </field>  
     </record>
     <!--record id="project_task_tree_fsm" model="ir.ui.view">
