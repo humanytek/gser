@@ -92,9 +92,7 @@
           <field name="total_hours_spent" widget="timesheet_uom" optional="hide"/>
           <field name="progress" widget="progressbar" optional="hide" groups="hr_timesheet.group_hr_timesheet_user"/>
           
-          <field name="activity_ids" position="inside">
-          <field name="activity_ids"  optional="hide"/>
-          </field>
+          <field name="activity_ids" position="inside" optional="hide"/>
 
           <field name="tag_ids" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
           <field name="kanban_state" widget="state_selection" optional="hide" readonly="1"/>
