@@ -54,7 +54,7 @@
     </record>
 
     <!-- modificar vista de servico externo -->
-    <record id="project.task_view_tree" model="ir.ui.view">
+    <record id="servicioproject.task_view_tree" model="ir.ui.view">
       <field name="name">project.task.view.form.inherited.se</field>
       <field name="model">project.task</field>
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm" />
