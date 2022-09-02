@@ -19,6 +19,7 @@
         'report/reports.xml',
         'report/ticket_viaje.xml',
         'views/serviciogser.xml',
-        'views/serviciogserprimario.xml'
+        'views/serviciogserprimario.xml',
+        'views/serviciotasktree.xml',
     ],
 }
