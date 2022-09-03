@@ -106,6 +106,7 @@
           <field name="gasto_total_caseta_viaje" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="Total_Facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="No_Factura" optional="show"/>
+          <field name="partner_id" position="inside" optional="hide"/>
         </field>
         
       </field>  
