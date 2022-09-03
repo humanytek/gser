@@ -9,7 +9,7 @@
                     <table class="table table-striped">
                       <thead>
                         <tr>
-                          <th scope="col">Información del viaje</th>
+                          <th scope="col-sm-3">Información del viaje</th>
                         </tr>
                       </thead>
                       <tbody>
