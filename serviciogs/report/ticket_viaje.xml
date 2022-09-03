@@ -6,37 +6,52 @@
             <t t-call="web.external_layout">
                 <div class="page">
                   <div class="row">
+                    <div class="col-sm-12">
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Logo</div>
+                          <div class="col-4 col-sm-6">Transliquidos Serra REM</div>
+                          <div class="col-4 col-sm-6">logo</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">barra</div>
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6">Folio</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Tipo de vehículo:</div>
+                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo:</div>
                           <div class="col-4 col-sm-6">Asignado por:</div>
-                          <div class="col-4 col-sm-6 bg-info">Cliente</div>
+                          <div class="col-4 col-sm-6 bg-light">Cliente</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Carga:</div>
+                          <div class="col-4 col-sm-6 bg-light">Carga:</div>
                           <div class="col-4 col-sm-6">Correo electrónico:</div>
-                          <div class="col-4 col-sm-6 bg-info">Dirección:</div>
+                          <div class="col-4 col-sm-6 bg-light">Dirección:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Capacidad:</div>
+                          <div class="col-4 col-sm-6 bg-light">Capacidad:</div>
                           <div class="col-4 col-sm-6">Teléfono:</div>
-                          <div class="col-4 col-sm-6 bg-info">Ciudad:</div>
+                          <div class="col-4 col-sm-6 bg-light">Ciudad:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Producto:</div>
+                          <div class="col-4 col-sm-6 bg-light">Producto:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-info">Estado:</div>
+                          <div class="col-4 col-sm-6 bg-light">Estado:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Matrícula:</div>
+                          <div class="col-4 col-sm-6 bg-light">Matrícula:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-info">Teléfono:</div>
+                          <div class="col-4 col-sm-6 bg-light">Teléfono:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Conductor:</div>
+                          <div class="col-4 col-sm-6 bg-light">Conductor:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-info">Correo electrónico:</div>
+                          <div class="col-4 col-sm-6 bg-light">Correo electrónico:</div>
                       </div>
                     </div>
                     
@@ -45,16 +60,16 @@
                     <div class="col-sm-12">
                       <h2 class="bg-secondary text-white">Informacion del ruta</h2>
                       <div class="row">
-                          <div class="col-3 col-sm-6 bg-info">Dirección origen:</div>
-                          <div class="col-3 col-sm-6 bg-info">Ciudad:</div>
-                          <div class="col-3 col-sm-6 bg-info">Estado:</div>
-                          <div class="col-3 col-sm-6 bg-info">País:</div>
+                          <div class="col-3 col-sm-6 bg-light">Dirección origen:</div>
+                          <div class="col-3 col-sm-6 bg-light">Ciudad:</div>
+                          <div class="col-3 col-sm-6 bg-light">Estado:</div>
+                          <div class="col-3 col-sm-6 bg-light">País:</div>
                       </div>
                       <div class="row">
-                          <div class="col-3 col-sm-6 bg-info">Dirección destino:</div>
-                          <div class="col-3 col-sm-6 bg-info">Ciudad:</div>
-                          <div class="col-3 col-sm-6 bg-info">Estado:</div>
-                          <div class="col-3 col-sm-6 bg-info">País:</div>
+                          <div class="col-3 col-sm-6 bg-light">Dirección destino:</div>
+                          <div class="col-3 col-sm-6 bg-light">Ciudad:</div>
+                          <div class="col-3 col-sm-6 bg-light">Estado:</div>
+                          <div class="col-3 col-sm-6 bg-light">País:</div>
                       </div>
                     </div>
                   </div>
@@ -62,9 +77,9 @@
                     <div class="col-sm-12">
                       <h2 class="bg-secondary text-white">Informacion del transferencia</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-info">Banamex</div>
+                          <div class="col-4 col-sm-6 bg-light">Banamex</div>
                           <div class="col-4 col-sm-6">Bancomer</div>
-                          <div class="col-4 col-sm-6 bg-info">BanBajio</div>
+                          <div class="col-4 col-sm-6 bg-light">BanBajio</div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6">Clave Interbancaria:</div>
@@ -75,6 +90,9 @@
                           <div class="col-4 col-sm-6">No. Cuenta:</div>
                           <div class="col-4 col-sm-6">No. Cuenta:</div>
                           <div class="col-4 col-sm-6">No. Cuenta:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 col-sm-6"><small>El número del folio debe relacionarse a la transferencia</small></div>
                       </div>
                     </div>
                   </div>
