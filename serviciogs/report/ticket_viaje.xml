@@ -6,8 +6,8 @@
             <t t-call="web.external_layout">
                 <div class="page">
                   <div class="row">
-                    <div class="col-sm-12">
-                      Informacion del viaje
+                    <div class="col-sm-12 bg-primary" >
+                      <h2>Informacion del viaje</h2>
                       <div class="row">
                           <div class="col-4 col-sm-6">Tipo de vehículo:</div>
                           <div class="col-4 col-sm-6">Asignado por:</div>
@@ -37,6 +37,40 @@
                           <div class="col-4 col-sm-6">Conductor:</div>
                           <div class="col-4 col-sm-6"></div>
                           <div class="col-4 col-sm-6">Correo electrónico:</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <h2>Informacion del ruta</h2>
+                      <div class="row">
+                          <div class="col-3 col-sm-6">Dirección origen:</div>
+                          <div class="col-3 col-sm-6">Ciudad:</div>
+                          <div class="col-3 col-sm-6">Estado:</div>
+                          <div class="col-3 col-sm-6">País:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-3 col-sm-6">Dirección destino:</div>
+                          <div class="col-3 col-sm-6">Ciudad:</div>
+                          <div class="col-3 col-sm-6">Estado:</div>
+                          <div class="col-3 col-sm-6">País:</div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                      <h2>Informacion del transferencia</h2>
+                      <div class="row">
+                          <div class="col-3 col-sm-6">Banamex</div>
+                          <div class="col-3 col-sm-6">Bancomer</div>
+                          <div class="col-3 col-sm-6">BanBajio</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-3 col-sm-6">No. Cuenta:</div>
+                          <div class="col-3 col-sm-6">No. Cuenta:</div>
+                          <div class="col-3 col-sm-6">No. Cuenta:</div>
                       </div>
                     </div>
                   </div>
