@@ -9,34 +9,34 @@
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Tipo de vehículo:</div>
+                          <div class="col-4 col-sm-6 bg-info">Tipo de vehículo:</div>
                           <div class="col-4 col-sm-6">Asignado por:</div>
-                          <div class="col-4 col-sm-6 bg-muted">Cliente</div>
+                          <div class="col-4 col-sm-6 bg-info">Cliente</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Carga:</div>
+                          <div class="col-4 col-sm-6 bg-info">Carga:</div>
                           <div class="col-4 col-sm-6">Correo electrónico:</div>
-                          <div class="col-4 col-sm-6 bg-muted">Dirección:</div>
+                          <div class="col-4 col-sm-6 bg-info">Dirección:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Capacidad:</div>
+                          <div class="col-4 col-sm-6 bg-info">Capacidad:</div>
                           <div class="col-4 col-sm-6">Teléfono:</div>
-                          <div class="col-4 col-sm-6 bg-muted">Ciudad:</div>
+                          <div class="col-4 col-sm-6 bg-info">Ciudad:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Producto:</div>
+                          <div class="col-4 col-sm-6 bg-info">Producto:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-muted">Estado:</div>
+                          <div class="col-4 col-sm-6 bg-info">Estado:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Matrícula:</div>
+                          <div class="col-4 col-sm-6 bg-info">Matrícula:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-muted">Teléfono:</div>
+                          <div class="col-4 col-sm-6 bg-info">Teléfono:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-muted">Conductor:</div>
+                          <div class="col-4 col-sm-6 bg-info">Conductor:</div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-muted">Correo electrónico:</div>
+                          <div class="col-4 col-sm-6 bg-info">Correo electrónico:</div>
                       </div>
                     </div>
                     
@@ -45,16 +45,16 @@
                     <div class="col-sm-12">
                       <h2 class="bg-secondary text-white">Informacion del ruta</h2>
                       <div class="row">
-                          <div class="col-3 col-sm-6 bg-muted">Dirección origen:</div>
-                          <div class="col-3 col-sm-6 bg-muted">Ciudad:</div>
-                          <div class="col-3 col-sm-6 bg-muted">Estado:</div>
-                          <div class="col-3 col-sm-6 bg-muted">País:</div>
+                          <div class="col-3 col-sm-6 bg-info">Dirección origen:</div>
+                          <div class="col-3 col-sm-6 bg-info">Ciudad:</div>
+                          <div class="col-3 col-sm-6 bg-info">Estado:</div>
+                          <div class="col-3 col-sm-6 bg-info">País:</div>
                       </div>
                       <div class="row">
-                          <div class="col-3 col-sm-6 bg-muted">Dirección destino:</div>
-                          <div class="col-3 col-sm-6 bg-muted">Ciudad:</div>
-                          <div class="col-3 col-sm-6 bg-muted">Estado:</div>
-                          <div class="col-3 col-sm-6 bg-muted">País:</div>
+                          <div class="col-3 col-sm-6 bg-info">Dirección destino:</div>
+                          <div class="col-3 col-sm-6 bg-info">Ciudad:</div>
+                          <div class="col-3 col-sm-6 bg-info">Estado:</div>
+                          <div class="col-3 col-sm-6 bg-info">País:</div>
                       </div>
                     </div>
                   </div>
@@ -62,19 +62,19 @@
                     <div class="col-sm-12">
                       <h2 class="bg-secondary text-white">Informacion del transferencia</h2>
                       <div class="row">
-                          <div class="col-3 col-sm-6 bg-muted">Banamex</div>
-                          <div class="col-3 col-sm-6">Bancomer</div>
-                          <div class="col-3 col-sm-6 bg-muted">BanBajio</div>
+                          <div class="col-4 col-sm-6 bg-info">Banamex</div>
+                          <div class="col-4 col-sm-6">Bancomer</div>
+                          <div class="col-4 col-sm-6 bg-info">BanBajio</div>
                       </div>
                       <div class="row">
-                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
-                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
-                          <div class="col-3 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
                       </div>
                       <div class="row">
-                          <div class="col-3 col-sm-6">No. Cuenta:</div>
-                          <div class="col-3 col-sm-6">No. Cuenta:</div>
-                          <div class="col-3 col-sm-6">No. Cuenta:</div>
+                          <div class="col-4 col-sm-6">No. Cuenta:</div>
+                          <div class="col-4 col-sm-6">No. Cuenta:</div>
+                          <div class="col-4 col-sm-6">No. Cuenta:</div>
                       </div>
                     </div>
                   </div>
