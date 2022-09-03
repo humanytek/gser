@@ -6,11 +6,37 @@
             <t t-call="web.external_layout">
                 <div class="page">
                   <div class="row">
-                    <div class="col-sm-9">
-                      Level 1: .col-sm-9
+                    <div class="col-sm-12">
+                      Informacion del viaje
                       <div class="row">
-                          <div class="col-8 col-sm-6">Level 2: .col-8 .col-sm-6</div>
-                          <div class="col-4 col-sm-6">Level 2: .col-4 .col-sm-6</div>
+                          <div class="col-4 col-sm-6">Tipo de vehículo:</div>
+                          <div class="col-4 col-sm-6">Asignado por:</div>
+                          <div class="col-4 col-sm-6">Cliente</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Carga:</div>
+                          <div class="col-4 col-sm-6">Correo electrónico:</div>
+                          <div class="col-4 col-sm-6">Dirección:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Capacidad:</div>
+                          <div class="col-4 col-sm-6">Teléfono:</div>
+                          <div class="col-4 col-sm-6">Ciudad:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Producto:</div>
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6">Estado:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Matrícula:</div>
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6">Teléfono:</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4 col-sm-6">Conductor:</div>
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6">Correo electrónico:</div>
                       </div>
                     </div>
                   </div>
