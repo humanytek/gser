@@ -98,7 +98,6 @@
 
         <field name="project_id" position="after">
           <field name="status_viaje" optional="show"/>
-          <field name="conductor" optional="show"/>
           <field name="create_date" optional="show"/>
           <field name="carga_combustible" optional="show"/>
           <field name="disel_viaje" optional="show"/>

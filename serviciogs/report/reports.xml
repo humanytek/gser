@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data>
+    <!--report
+        id="report_session"
+        
+        #odel ="openacademy.session"
+        string="session report"
+        name="openacademy.report_session_view"
+        file="openacademy.report_session"
+        report_type="qweb-pdf"
+    /-->
+    <!-- meta data del reporte se puede configurar el tamaño-->
+    <!--report
+        id="report_ticket_viaje"
+        model = "project.task"
+        string="Ticket Viaje"
+        name="serviciogs.report_ticket_viaje"
+        file="serviciogs.report_ticket_viaje"
+        report_type="qweb-pdf"
+    /-->
+    <data> 
         <record id ="report_ticket_viaje" model="ir.actions.report">
             <field name="name">Ticket viaje</field>
             <field name="model">project.task</field>
