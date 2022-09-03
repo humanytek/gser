@@ -9,31 +9,26 @@
                     <table class="table table-striped">
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First</th>
-                          <th scope="col">Last</th>
-                          <th scope="col">Handle</th>
+                          <th scope="col">Información del viaje</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <td>Tipo de vehiculo:</td>
+                          <td>Asignado por:</td>
+                          <td>Cliente:</td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          
+                          <td>Carga:</td>
+                          <td>Correo electronico:</td>
+                          <td>Dirección</td>
                         </tr>
                         
                       </tbody>
                     </table>
                   </div>
-                    <h2>Report title</h2>
-                    <p>This object's name is <span t-field="o.company_id"/></p>
+                    
                 </div>
             </t>
         </t>
