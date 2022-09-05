@@ -22,7 +22,7 @@
                           <div class="col-4 col-sm-6">logo</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/QR/%s' % 'o.id"/>barra</div>
+                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/QR/%s' % 'o.id'"/>barra</div>
                           <div class="col-4 col-sm-6"></div>
                           <div class="col-4 col-sm-6" style="color:red; font-size:30px;">Folio<span t-field="o.id"/></div>
                       </div>
