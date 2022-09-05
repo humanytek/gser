@@ -35,7 +35,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white bg-dark">Información del viaje</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Información del viaje</h2></div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12">
@@ -109,7 +109,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 style="color:white;">Información de ruta</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 <h2 class="text-white">Información de ruta</h2></div>
                   </div>
                  <div class="row">
                     <div class="col-xs-12">
@@ -145,7 +145,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 style="color:white;">Información de transferencia</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 <h2 class="text-white">Información de transferencia</h2></div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12">
