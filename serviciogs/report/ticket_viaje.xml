@@ -39,12 +39,12 @@
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Carga:<span t-field="o.carga_viaje"/></div>
-                          <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.pmanager.email"/></div>
                           <div class="col-4 col-sm-6 bg-light">Dirección:<span t-field="o.project_id.partner_id.street"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Capacidad:<span t-field="o.capacidad_viaje"/></div>
-                          <div class="col-4 col-sm-6">Teléfono:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6">Teléfono:<span t-field="o.pmanager.phone"/></div>
                           <div class="col-4 col-sm-6 bg-light">Ciudad:<span t-field="o.project_id.partner_id.city"/></div>
                       </div>
                       <div class="row">
@@ -53,14 +53,14 @@
                           <div class="col-4 col-sm-6 bg-light">Estado:<span t-field="o.project_id.partner_id.state_id"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Matrícula:<span t-field="o.vehiculo.license_plate"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Matrícula:<span t-esc="'%s: %s'% (o.vehiculo.license_plate, o.vehiculo.no_economico)"/></div>
                           <div class="col-4 col-sm-6"></div>
                           <div class="col-4 col-sm-6 bg-light">Teléfono:<span t-field="o.project_id.partner_id.phone"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Conductor:<span t-field="o.conductor"/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Correo electrónico:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Correo electrónico:<span t-field="o.project_id.partner_id.email"/></div>
                       </div>
                     </div>
                     
