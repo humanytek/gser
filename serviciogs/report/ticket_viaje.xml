@@ -38,7 +38,7 @@
                           <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Carga:<span t-field=""/></div>
+                          <div class="col-4 col-sm-6 bg-light">Carga:vhi<span t-field=""/></div>
                           <div class="col-4 col-sm-6">Correo electrónico:<span t-field=""/></div>
                           <div class="col-4 col-sm-6 bg-light">Dirección:<span t-field=""/></div>
                       </div>
