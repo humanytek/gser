@@ -33,9 +33,9 @@
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4 col-sm-6" style="background-color:DodgerBlue;">Tipo de vehículo: <span t-field="o.vehiculo.tipo_vehiculo"/></div>
                           <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
-                          <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6" style="background-color:DodgerBlue;">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Carga:<span t-field="o.carga_viaje"/></div>
