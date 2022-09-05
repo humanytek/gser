@@ -106,6 +106,9 @@
                           <div class="col-3 col-sm-6" style="background-color:#dee2e6;">País:<span t-field="o.project_id.pais_or"/></div>
                       </div>
                       <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 10px solid black;"></div>
+                          </div>
                       </div>
                       <div class="row">
                           <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Dirección destino:<span t-field="o.project_id.direccion_des"/></div>
@@ -126,6 +129,11 @@
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Banamex</div>
                           <div class="col-4 col-sm-6">Bancomer</div>
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">BanBajio</div>
+                      </div>
+                      <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 10px solid black;"></div>
+                          </div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6">Clave Interbancaria:</div>
