@@ -33,29 +33,29 @@
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.vehiculo"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.vehiculo.tipo_vehiculo"/></div>
                           <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
                           <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Carga:<span t-field="o.carga_viaje"/></div>
                           <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.project_id.partner_id"/></div>
-                          <div class="col-4 col-sm-6 bg-light">Dirección:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Dirección:<span t-field="o.project_id.partner_id.street"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Capacidad:<span t-field="o.capacidad_viaje"/></div>
                           <div class="col-4 col-sm-6">Teléfono:<span t-field="o.project_id.partner_id"/></div>
-                          <div class="col-4 col-sm-6 bg-light">Ciudad:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Ciudad:<span t-field="o.project_id.partner_id.city"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Producto:<span t-field="o.producto_viaje"/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Estado:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Estado:<span t-field="o.project_id.partner_id.state_id"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Matrícula:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Matrícula:<span t-field="o.vehiculo.license_plate"/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Teléfono:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Teléfono:<span t-field="o.project_id.partner_id.phone"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Conductor:<span t-field="o.conductor"/></div>
