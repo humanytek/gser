@@ -33,34 +33,34 @@
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo:</div>
-                          <div class="col-4 col-sm-6">Asignado por:</div>
-                          <div class="col-4 col-sm-6 bg-light">Cliente</div>
+                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.project_id.conductor"/></div>
+                          <div class="col-4 col-sm-6">Asignado por:<span t-field="o.project_id.pmanager"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.project_id.cliente"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Carga:</div>
-                          <div class="col-4 col-sm-6">Correo electrónico:</div>
-                          <div class="col-4 col-sm-6 bg-light">Dirección:</div>
+                          <div class="col-4 col-sm-6 bg-light">Carga:<span t-field=""/></div>
+                          <div class="col-4 col-sm-6">Correo electrónico:<span t-field=""/></div>
+                          <div class="col-4 col-sm-6 bg-light">Dirección:<span t-field=""/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Capacidad:</div>
-                          <div class="col-4 col-sm-6">Teléfono:</div>
-                          <div class="col-4 col-sm-6 bg-light">Ciudad:</div>
+                          <div class="col-4 col-sm-6 bg-light">Capacidad:<span t-field=""/></div>
+                          <div class="col-4 col-sm-6">Teléfono:<span t-field=""/></div>
+                          <div class="col-4 col-sm-6 bg-light">Ciudad:<span t-field=""/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Producto:</div>
+                          <div class="col-4 col-sm-6 bg-light">Producto:<span t-field=""/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Estado:</div>
+                          <div class="col-4 col-sm-6 bg-light">Estado:<span t-field=""/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Matrícula:</div>
+                          <div class="col-4 col-sm-6 bg-light">Matrícula:<span t-field=""/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Teléfono:</div>
+                          <div class="col-4 col-sm-6 bg-light">Teléfono:<span t-field=""/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Conductor:</div>
+                          <div class="col-4 col-sm-6 bg-light">Conductor:<span t-field=""/></div>
                           <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 bg-light">Correo electrónico:</div>
+                          <div class="col-4 col-sm-6 bg-light">Correo electrónico:<span t-field=""/></div>
                       </div>
                     </div>
                     
