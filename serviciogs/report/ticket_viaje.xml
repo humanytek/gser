@@ -40,7 +40,11 @@
                           <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
-                      
+                      <div class="row">
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6"></div>
+                          <div class="col-4 col-sm-6"></div>
+                      </div>
                       <div class="row">
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Carga:<span t-field="o.carga_viaje"/></div>
                           <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.pmanager.email"/></div>
