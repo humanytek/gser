@@ -41,9 +41,9 @@
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4"></div>
-                          <div class="col-4"></div>
-                          <div class="col-4"></div>
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 1px solid black;"></div>
+                          </div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Carga:<span t-field="o.carga_viaje"/></div>
