@@ -33,9 +33,9 @@
                     <div class="col-sm-12" >
                       <h2 class="bg-secondary text-white">Informacion del viaje</h2>
                       <div class="row">
-                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.fleet.vehicle.vehiculo"/></div>
-                          <div class="col-4 col-sm-6">Asignado por:<span t-field="o.partner_id.pmanager"/></div>
-                          <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.res.partner.pmanager"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Tipo de vehículo: <span t-field="o.vehiculo"/></div>
+                          <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
+                          <div class="col-4 col-sm-6 bg-light">Cliente:<span t-field="o.partner_id"/></div>
                       </div>
                       <div class="row">
                           <div class="col-4 col-sm-6 bg-light">Carga:vhi<span t-field="o.project_id.partner_id"/></div>
