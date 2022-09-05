@@ -22,13 +22,13 @@
                           <div class="col-4 col-sm-6">logo</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&model;width=%s&amp;height=%s'%('QR', 'project.task.project_id', 50, 50)"/></div>
+                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'project.project_id', 50, 50)"/></div>
                           <div class="col-4 col-sm-6"></div>
                           <div class="col-4 col-sm-6" style="color:red; font-size:30px;">Folio: <span t-field="o.id"/></div>
                       </div>
                     </div>
                   </div>
-
+                  <br>
                   <div class="row">
                     <div class="col-sm-12" >
                       <h2 style="background-color:#6c757d;">Informacion del viaje</h2>
@@ -37,6 +37,7 @@
                           <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Cliente:<span t-field="o.project_id.partner_id"/></div>
                       </div>
+                      <br>
                       <div class="row">
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Carga:<span t-field="o.carga_viaje"/></div>
                           <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.pmanager.email"/></div>
