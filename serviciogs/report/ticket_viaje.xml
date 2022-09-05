@@ -22,7 +22,7 @@
                           <div class="col-4 col-sm-6">logo</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&model;width=%s&amp;height=%s'%('QR', 'project.project_id', 50, 50)"/></div>
+                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&model;width=%s&amp;height=%s'%('QR', 'project.task.project_id', 50, 50)"/></div>
                           <div class="col-4 col-sm-6"></div>
                           <div class="col-4 col-sm-6" style="color:red; font-size:30px;">Folio: <span t-field="o.id"/></div>
                       </div>
