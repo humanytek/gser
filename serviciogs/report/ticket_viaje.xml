@@ -30,12 +30,11 @@
                   </div>
                   
                   <div class="row">
-                    <div class="col-4 col-sm-6" style="background-color:#6c757d;"><h2>Informacion del viaje</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2>Informacion del viaje</h2></div>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12" >
-                      <h2 style="background-color:#6c757d;"></h2>
                       <div class="row">
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Tipo de vehículo: <span t-field="o.vehiculo.tipo_vehiculo"/></div>
                           <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
@@ -72,11 +71,14 @@
                           <div class="col-4 col-sm-6 " style="background-color:#dee2e6;">Correo electrónico:<span t-field="o.project_id.partner_id.email"/></div>
                       </div>
                     </div>
-                    
                   </div>
+
+                  <div class="row">
+                    <div class="col-12" style="background-color:#6c757d;"><h2>Informacion del ruta</h2></div>
+                  </div>
+
                   <div class="row">
                     <div class="col-sm-12">
-                      <h2 style="background-color:#6c757d;">Informacion del ruta</h2>
                       <div class="row">
                           <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Dirección origen:<span t-field="o.project_id.direccion_or"/></div>
                           <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Ciudad:<span t-field="o.project_id.ciudad_or"/></div>
@@ -93,9 +95,13 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col-12" style="background-color:#6c757d;"><h2>Informacion del transferencia</h2></div>
+                  </div>
+
                   <div class="row">
                     <div class="col-sm-12">
-                      <h2 style="background-color:#6c757d;">Informacion del transferencia</h2>
                       <div class="row">
                           <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Banamex</div>
                           <div class="col-4 col-sm-6">Bancomer</div>
