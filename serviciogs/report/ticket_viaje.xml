@@ -24,7 +24,7 @@
                       <div class="row">
                           <div class="col-4 text-center"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'o.id', 70, 70)"/></div>
                           <div class="col-4"></div>
-                          <div class="col-4 text-center" style="color:red; font-size:20px;">Folio:<br/><span t-field="o.id"/></div>
+                          <div class="col-4 text-center font-weight-bold" style="color:red; font-size:20px;">Folio:<br/><span t-field="o.id"/></div>
                       </div>
                     </div>
                   </div>
@@ -46,9 +46,9 @@
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row">
-                          <div class="col-4" style="background-color:#dee2e6;">Tipo de vehículo:<br/><span t-field="o.vehiculo.tipo_vehiculo"/></div>
-                          <div class="col-4">Asignado por:<br/><span t-field="o.pmanager"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">Cliente:<br/><span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Tipo de vehículo:<br/><span t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4 font-weight-bold">Asignado por:<br/><span t-field="o.pmanager"/></div>
+                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Cliente:<br/><span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -56,16 +56,16 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4" style="background-color:#dee2e6;">Carga:<br/><span t-field="o.carga_viaje"/></div>
-                          <div class="col-4">Correo electrónico:<br/><span t-field="o.pmanager.email"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">Dirección:<br/><span t-field="o.project_id.partner_id.street"/></div>
+                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Carga:<br/><span t-field="o.carga_viaje"/></div>
+                          <div class="col-4 font-weight-bold">Correo electrónico:<br/><span t-field="o.pmanager.email"/></div>
+                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Dirección:<br/><span t-field="o.project_id.partner_id.street"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
                           <div style="border-bottom: 10px solid black;"></div>
                           </div>
                       </div>
-                      <div class="row">
+                      <div class="row  font-weight-bold">
                           <div class="col-4" style="background-color:#dee2e6;">Capacidad:<br/><span t-field="o.capacidad_viaje"/></div>
                           <div class="col-4">Teléfono:<br/><span t-field="o.pmanager.phone"/></div>
                           <div class="col-4" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.partner_id.city"/></div>
