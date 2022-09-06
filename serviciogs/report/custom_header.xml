@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<openerp>
-    <data>
-        <template id="custom_header" inherit_id="report.external_layout_header">
+
+        <template id="general_report_header" inherit_id="report.external_layout_header">
             <xpath expr="//div[@class='header']" position="replace">
                 <div class="header">
                     <div class="row">
@@ -20,5 +19,4 @@
                 </div>
             </xpath>
         </template>
-    </data>
-</openerp>
+    
