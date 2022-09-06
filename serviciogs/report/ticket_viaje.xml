@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-  <template id="report_ticket_viaje" inherit_id="report.external_layout_header">
+  <template id="report_ticket_viaje" inherit_id="report_ticket_viaje.external_layout_header">
     <xpath expr="//div[@class='header']" position="replace">
       <div class="header">
         <div class="row">
