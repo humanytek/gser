@@ -8,8 +8,8 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row">
-                          <div class="col-4 col-sm-6"><span><img t-att-src="o.company_id.logo" width="50px" height="50px"/></span></div>
-                          <div class="col-4 col-sm-6">
+                          <div class="col-4"><span><img t-att-src="o.company_id.logo" width="50px" height="50px"/></span></div>
+                          <div class="col-4">
                             <span t-field="o.company_id.name"/>
                             <span t-field="o.company_id.street"/>
                             <span t-field="o.company_id.zip"/>
@@ -19,12 +19,12 @@
                             <span t-field="o.company_id.phone"/>
                             <span t-field="o.company_id.email"/>
                           </div>
-                          <div class="col-4 col-sm-6">logo</div>
+                          <div class="col-4">logo</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'project.project_id', 80, 80)"/></div>
-                          <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 text-center" style="color:red; font-size:20px;">Folio: <br/> <span t-field="o.id"/></div>
+                          <div class="col-4"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'project.project_id', 80, 80)"/></div>
+                          <div class="col-4"></div>
+                          <div class="col-4 text-center" style="color:red; font-size:20px;">Folio:<br/><span t-field="o.id"/></div>
                       </div>
                     </div>
                   </div>
@@ -46,9 +46,9 @@
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row">
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Tipo de vehículo: <span t-field="o.vehiculo.tipo_vehiculo"/></div>
-                          <div class="col-4 col-sm-6">Asignado por:<span t-field="o.pmanager"/></div>
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Cliente:<span t-field="o.project_id.partner_id"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Tipo de vehículo:<br/><span t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4">Asignado por:<br/><span t-field="o.pmanager"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Cliente:<br/><span t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -56,9 +56,9 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Carga:<span t-field="o.carga_viaje"/></div>
-                          <div class="col-4 col-sm-6">Correo electrónico:<span t-field="o.pmanager.email"/></div>
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Dirección:<span t-field="o.project_id.partner_id.street"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Carga:<br/><span t-field="o.carga_viaje"/></div>
+                          <div class="col-4">Correo electrónico:<br/><span t-field="o.pmanager.email"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Dirección:<br/><span t-field="o.project_id.partner_id.street"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -66,9 +66,9 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Capacidad:<span t-field="o.capacidad_viaje"/></div>
-                          <div class="col-4 col-sm-6">Teléfono:<span t-field="o.pmanager.phone"/></div>
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Ciudad:<span t-field="o.project_id.partner_id.city"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Capacidad:<br/><span t-field="o.capacidad_viaje"/></div>
+                          <div class="col-4">Teléfono:<br/><span t-field="o.pmanager.phone"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.partner_id.city"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -76,9 +76,9 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Producto:<span t-field="o.producto_viaje"/></div>
-                          <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Estado:<span t-field="o.project_id.partner_id.state_id"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Producto:<br/><span t-field="o.producto_viaje"/></div>
+                          <div class="col-4"></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.partner_id.state_id"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -86,9 +86,9 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 " style="background-color:#dee2e6;">Matrícula:<span t-esc="'%s: %s'% (o.vehiculo.license_plate, o.vehiculo.no_economico)"/></div>
-                          <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 " style="background-color:#dee2e6;">Teléfono:<span t-field="o.project_id.partner_id.phone"/></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Matrícula:<br/><span t-esc="'%s: %s'% (o.vehiculo.license_plate, o.vehiculo.no_economico)"/></div>
+                          <div class="col-4"></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Teléfono:<br/><span t-field="o.project_id.partner_id.phone"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -96,9 +96,9 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6 " style="background-color:#dee2e6;">Conductor:<span t-field="o.conductor"/></div>
-                          <div class="col-4 col-sm-6"></div>
-                          <div class="col-4 col-sm-6 " style="background-color:#dee2e6;">Correo electrónico:<span t-field="o.project_id.partner_id.email"/></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Conductor:<br/><span t-field="o.conductor"/></div>
+                          <div class="col-4"></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Correo electrónico:<br/><span t-field="o.project_id.partner_id.email"/></div>
                       </div>
                     </div>
                   </div>
@@ -120,10 +120,10 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row">
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Dirección origen:<span t-field="o.project_id.direccion_or"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Ciudad:<span t-field="o.project_id.ciudad_or"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Estado:<span t-field="o.project_id.estado_or"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">País:<span t-field="o.project_id.pais_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Dirección origen:<br/><span t-field="o.project_id.direccion_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.ciudad_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.estado_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span t-field="o.project_id.pais_or"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -131,10 +131,10 @@
                           </div>
                       </div>
                       <div class="row">
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Dirección destino:<span t-field="o.project_id.direccion_des"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Ciudad:<span t-field="o.project_id.ciudad_des"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">Estado:<span t-field="o.project_id.estado_des"/></div>
-                          <div class="col-3 col-sm-6" style="background-color:#dee2e6;">País:<span t-field="o.project_id.pais_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Dirección destino:<br/><span t-field="o.project_id.direccion_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.ciudad_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.estado_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span t-field="o.project_id.pais_des"/></div>
                       </div>
                     </div>
                   </div>
@@ -156,9 +156,9 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row">
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">Banamex</div>
-                          <div class="col-4 col-sm-6">Bancomer</div>
-                          <div class="col-4 col-sm-6" style="background-color:#dee2e6;">BanBajio</div>
+                          <div class="col-4 text-center" style="background-color:#dee2e6;">Banamex</div>
+                          <div class="col-4 text-center">Bancomer</div>
+                          <div class="col-4 text-center" style="background-color:#dee2e6;">BanBajio</div>
                       </div>
                       <div class="row">
                         <div class="col-xs-12">
@@ -166,17 +166,17 @@
                         </div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
-                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
-                          <div class="col-4 col-sm-6">Clave Interbancaria:</div>
+                          <div class="col-4 text-center">Clave Interbancaria:</div>
+                          <div class="col-4 text-center">Clave Interbancaria:</div>
+                          <div class="col-4 text-center">Clave Interbancaria:</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 col-sm-6">No. Cuenta:</div>
-                          <div class="col-4 col-sm-6">No. Cuenta:</div>
-                          <div class="col-4 col-sm-6">No. Cuenta:</div>
+                          <div class="col-4 text-center">No. Cuenta:</div>
+                          <div class="col-4 text-center">No. Cuenta:</div>
+                          <div class="col-4 text-center">No. Cuenta:</div>
                       </div>
                       <div class="row">
-                          <div class="col-12 col-sm-6"><small>El número del folio debe relacionarse a la transferencia</small></div>
+                          <div class="col-12 text-center"><small>El número del folio debe relacionarse a la transferencia</small></div>
                       </div>
                     </div>
                   </div>
