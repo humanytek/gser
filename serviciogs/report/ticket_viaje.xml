@@ -10,9 +10,9 @@
                       <div class="row">
                           <div class="col-4 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="120px" height="100px"/></div>
                           <div class="col-4 text-center fw-bold">
-                            <span t-field="o.company_id.name"/><br/>
-                            <span t-field="o.company_id.street"/>, 
-                            <span t-field="o.company_id.zip"/>, 
+                            <span class="col-4 text-bold" t-field="o.company_id.name"/><br/>
+                            <span class="col-4 fw-bold" t-field="o.company_id.street"/>, 
+                            <span class="col-4 fw-bold" t-field="o.company_id.zip"/>, 
                             <span t-field="o.company_id.city"/>, 
                             <span t-field="o.company_id.state_id"/>, 
                             <span t-field="o.company_id.country_id"/><br/>
