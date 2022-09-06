@@ -10,7 +10,6 @@
                       <div class="row">
                           <div class="col-4"><span><img t-att-src="o.company_id.logo" width="50px" height="50px"/></span></div>
                           <div class="col-4 text-center">
-                            <span t-field="o.company_id.logo"/>
                             <span t-field="o.company_id.name"/><br/>
                             <span t-field="o.company_id.street"/>, 
                             <span t-field="o.company_id.zip"/>, 
@@ -23,7 +22,7 @@
                           <div class="col-4">logo</div>
                       </div>
                       <div class="row">
-                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'project.project_id', 80, 80)"/></div>
+                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', "o.id", 80, 80)"/></div>
                           <div class="col-4"></div>
                           <div class="col-4 text-center" style="color:red; font-size:20px;">Folio:<br/><span t-field="o.id"/></div>
                       </div>
