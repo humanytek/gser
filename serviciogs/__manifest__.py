@@ -20,8 +20,8 @@
         'report/ticket_viaje.xml',
         'views/serviciogser.xml',
         'views/serviciogserprimario.xml',
-        'views/custom_header.xml',
-        'views/custom_footer.xml',
+        #'views/custom_header.xml',
+        #'views/custom_footer.xml',
         #'views/serviciotasktree.xml',
     ],
 }
