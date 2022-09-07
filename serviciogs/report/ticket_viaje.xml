@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
   <template id="report_ticket_viaje">
-    <!--t t-call ="report.external_layout_header"/-->
     <t t-call="web.html_container">
         <t t-foreach="docs" t-as="o">
             <t t-call="web.external_layout">
-                <!--div class="page"-->
+              <div class="header">
+                    <div class="row">
+                        <div class="col-2">
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                        </div>
+                        <div class="col-8 text-center">
+                            <span t-esc="company.name"/> - <span t-esc="o.name"/>
+                             (<span t-if="data['form']['target_move'] == 'all'">Posted and Draft Entries</span><span t-if="data['form']['target_move'] == 'posted'">Posted Entries only</span>)
+                        </div>
+                        <div class="col-2 text-right">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><span class="page"/></li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item"><span class="topage"/></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <t t-if="data['form'].get('date_from') or data['form'].get('date_to')">
+                        <div class="row">
+                            <div class="col-8 offset-2 text-center">
+                                <t t-if="data['form'].get('date_from')">
+                                    From : <span t-esc="data['form'].get('date_from')"/>
+                                </t>
+                                <t t-if="data['form'].get('date_from') and data['form'].get('date_to')">
+                                    -
+                                </t>
+                                <t t-if="data['form'].get('date_to')">
+                                    To : <span t-esc="data['form'].get('date_to')"/>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+                <div class="page">
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row">
@@ -181,7 +213,7 @@
                       </div>
                     </div>
                   </div>
-                <!--/div-->
+                </div>
             </t>
         </t>
     </t>
