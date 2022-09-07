@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-  <template id="report_ticket_viaje">
+  <template id="report_proceso_lavado">
     <t t-call="web.html_container">
       <t t-set="data_report_margin_top" t-value="12"/>
       <t t-set="data_report_header_spacing" t-value="0"/>
@@ -57,18 +57,18 @@
                     </div>
                     <div class="row">    
                         <div class="col-12">
-                          <p>1.-Ingreso del tanque a nuestras instalaciones.
-                          2.-Lavado de tapa y la cubierta.
-                          3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.
-                          4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.
-                          5.-Lavado de alcalino a una temperatura de 60° a 68° centígrados.
-                          6.-Enjuague de alcalino a base de agua a temperatura ambiente.
-                          7.-Enjuague con ácido sanitizánte a base de agua.
-                          8.-Salida del tanque de las instalaciones.
+                          <h5>1.-Ingreso del tanque a nuestras instalaciones.</h5>
+                          <h5>2.-Lavado de tapa y la cubierta.</h5>
+                          <h5>3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.</h5>
+                          <h5>4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.</h5>
+                          <h5>5.-Lavado de alcalino a una temperatura de 60° a 68° centígrados.</h5>
+                          <h5>6.-Enjuague de alcalino a base de agua a temperatura ambiente.</h5>
+                          <h5>7.-Enjuague con ácido sanitizánte a base de agua.</h5>
+                          <h5>8.-Salida del tanque de las instalaciones.</h5>
                         
-                          Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:
-                          1.-28 Minutos - ciclo de lavado CIP.
-                          2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</p>
+                          <p>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</p>
+                          <h5>1.-28 Minutos - ciclo de lavado CIP.</h5>
+                          <h5>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</h5>
                         </div>
                     </div>
                     <div class="row">
