@@ -93,7 +93,7 @@
                             </div>
                             </div>
                             <div class="row  font-weight-bold">
-                                <div class="col-12 text-center">________________________</br>Firma del supervisor<!--span class="font-weight-normal" t-field="o.carga_viaje"/--></div>
+                                <div class="col-12 text-center">________________________</br>Firma del supervisor</div>
                             </div>
                         </div>
                   </div>
