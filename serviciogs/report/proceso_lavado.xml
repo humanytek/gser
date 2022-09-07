@@ -50,37 +50,37 @@
 
                   
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12"></br>
                           <p>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
                           instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</p>
                         </div>
                     </div>
                     <div class="row">    
                         <div class="col-12">
-                          <span>1.-Ingreso del tanque a nuestras instalaciones.</span>
-                          <p>2.-Lavado de tapa y la cubierta.</p>
-                          <p>3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.</p>
-                          <p>4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.</p>
-                          <p>5.-Lavado de alcalino a una temperatura de 60° a 68° centígrados.</p>
-                          <p>6.-Enjuague de alcalino a base de agua a temperatura ambiente.</p>
-                          <p>7.-Enjuague con ácido sanitizánte a base de agua.</p>
-                          <p>8.-Salida del tanque de las instalaciones.</p>
-
-                          <p>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</p>
-                          <p>1.-28 Minutos - ciclo de lavado CIP.</p>
-                          <p>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</p>
+                          1.-Ingreso del tanque a nuestras instalaciones.</br>
+                          2.-Lavado de tapa y la cubierta.</br>
+                          3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.</br>
+                          4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.</br>
+                          5.-Lavado de alcalino a una temperatura de 60° a 68° centígrados.</br>
+                          6.-Enjuague de alcalino a base de agua a temperatura ambiente.</br>
+                          7.-Enjuague con ácido sanitizánte a base de agua.</br>
+                          8.-Salida del tanque de las instalaciones.</br></br>
+                        
+                          Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</br>
+                          1.-28 Minutos - ciclo de lavado CIP.</br>
+                          2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                           <div class="col-6">No. Placas: <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
-                          <div class="col-6">No. Sellos: __________________</div>
+                          <div class="col-6">No. Sellos: ________________</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                           <div class="col-6">No. Placas: <!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
-                          <div class="col-6">No. Sellos: __________________</div>
+                          <div class="col-6">No. Sellos: ________________</div>
                         </div>                   
                     </div>
 
@@ -102,7 +102,7 @@
 
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <span><_____________________________/span>
+                            <span></span>
                         </div>
                     </div>
                     <div class="row  font-weight-bold">

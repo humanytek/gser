@@ -22,8 +22,6 @@
         'report/proceso_lavado.xml',
         'views/serviciogser.xml',
         'views/serviciogserprimario.xml',
-        #'report/custom_header.xml',
-        #'report/custom_footer.xml',
         #'views/serviciotasktree.xml',
     ],
 }
