@@ -37,9 +37,11 @@
                       <div style="border-bottom: 15px solid black;"></div>
                     </div>
                   </div>
+
                   <div class="row">
                     <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Proceso de lavado</h2></div>
                   </div>
+
                   <div class="row">
                     <div class="col-xs-12">
                       <div style="border-bottom: 15px solid black;"></div>
@@ -53,6 +55,7 @@
                           <p>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
                           instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</p>
                         </div>
+
                         <div class="col-12">
                           <p>1.-Ingreso del tanque a nuestras instalaciones.</p>
                           <p>2.-Lavado de tapa y la cubierta.</p>
@@ -67,26 +70,30 @@
                           <p>1.-28 Minutos - ciclo de lavado CIP.</p>
                           <p>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</p>
                         </div>
+
                         <div class="col-12">
                           <div class="col-6">No. Placas: <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
                           <div class="col-6">No. Sellos: __________________</div>
                         </div>
+
                         <div class="col-12">
                           <div class="col-6">No. Placas: <!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
                           <div class="col-6">No. Sellos: __________________</div>
                         </div>
                                                 
-                        </div>
-                            <div class="row">
+                        <!--/div-->
+                        <div class="row">
                             <div class="col-xs-12">
                                 <div style="border-bottom: 30px solid black;"></div>
                             </div>
-                            </div>
-                            <div class="row  font-weight-bold">
+                        </div>
+                        
+                        <div class="row  font-weight-bold">
                                 <div class="col-12" style="background-color:#dee2e6;">Observaciones:<!--span class="font-weight-normal" t-field="o.carga_viaje"/--></div>
-                            </div>
                         </div>
-                        </div>
+                        
+                        <!--/div-->
+                        <!--/div-->
 
                             <div class="row">
                                 <div class="col-xs-12">
