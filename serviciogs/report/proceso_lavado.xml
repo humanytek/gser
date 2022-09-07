@@ -72,16 +72,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
                           <div class="col-6">No. Placas: <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
                           <div class="col-6">No. Sellos: ________________</div>
-                        </div>
+                    
                     </div>
                     <div class="row">
-                        <div class="col-12">
                           <div class="col-6">No. Placas: <!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
                           <div class="col-6">No. Sellos: ________________</div>
-                        </div>                   
+                                           
                     </div>
 
                     <div class="row">
