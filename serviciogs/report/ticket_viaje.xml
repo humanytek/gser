@@ -9,16 +9,8 @@
             <t t-call="web.external_layout">
               <div class="header">
                     <div class="row">
-                        <div class="col-2">
-                            <span>fszafdasdfas</span>
-                        </div>
-                        
-                        <div class="col-2 text-right">
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="page"/></li>
-                                <li class="list-inline-item">/</li>
-                                <li class="list-inline-item"><span class="topage"/></li>
-                            </ul>
+                        <div class="col-12">
+                            <div style="border-bottom: 15px solid red;"></div>
                         </div>
                     </div>
                 </div>
