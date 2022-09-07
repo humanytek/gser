@@ -9,10 +9,7 @@
                         <div class="col-2">
                             <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
                         </div>
-                        <div class="col-8 text-center">
-                            <span t-esc="company.name"/> - <span t-esc="o.name"/>
-                             (<span t-if="data['form']['target_move'] == 'all'">Posted and Draft Entries</span><span t-if="data['form']['target_move'] == 'posted'">Posted Entries only</span>)
-                        </div>
+                        
                         <div class="col-2 text-right">
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span class="page"/></li>
