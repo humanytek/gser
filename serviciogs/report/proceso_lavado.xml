@@ -51,8 +51,8 @@
                   
                     <div class="row">
                         <div class="col-12">
-                          <p>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
-                          instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</p>
+                          <h5>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
+                          instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
                         </div>
                     </div>
                     <div class="row">    
@@ -66,7 +66,7 @@
                           <h5>7.-Enjuague con ácido sanitizánte a base de agua.</h5>
                           <h5>8.-Salida del tanque de las instalaciones.</h5>
                         
-                          <p>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</p>
+                          <h5>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</h5>
                           <h5>1.-28 Minutos - ciclo de lavado CIP.</h5>
                           <h5>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</h5>
                         </div>
@@ -102,12 +102,12 @@
 
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <span></span>
+                            <h5>______________________</h5>
                         </div>
                     </div>
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <span>Firma del supervisor</span>
+                            <h5>Firma del supervisor</h5>
                         </div>
                     </div>
                 </div>
