@@ -54,9 +54,10 @@
                           <p>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
                           instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</p>
                         </div>
-
+                    </div>
+                    <div class="row">    
                         <div class="col-12">
-                          <p>1.-Ingreso del tanque a nuestras instalaciones.</p>
+                          <span>1.-Ingreso del tanque a nuestras instalaciones.</span>
                           <p>2.-Lavado de tapa y la cubierta.</p>
                           <p>3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.</p>
                           <p>4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.</p>
@@ -69,12 +70,14 @@
                           <p>1.-28 Minutos - ciclo de lavado CIP.</p>
                           <p>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</p>
                         </div>
-
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                           <div class="col-6">No. Placas: <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
                           <div class="col-6">No. Sellos: __________________</div>
                         </div>
-
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                           <div class="col-6">No. Placas: <!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
                           <div class="col-6">No. Sellos: __________________</div>
