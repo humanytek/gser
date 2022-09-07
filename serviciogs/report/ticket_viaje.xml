@@ -45,20 +45,10 @@
 
                   <div class="row">
                     <div class="col-sm-12" >
-                      <div class="row">
-                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Tipo de vehículo:<br/><span t-field="o.vehiculo.tipo_vehiculo"/></div>
-                          <div class="col-4 font-weight-bold">Asignado por:<br/><span t-field="o.pmanager"/></div>
-                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Cliente:<br/><span t-field="o.project_id.partner_id"/></div>
-                      </div>
-                      <div class="row">
-                      <div class="col-xs-12">
-                          <div style="border-bottom: 10px solid black;"></div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Carga:<br/><span t-field="o.carga_viaje"/></div>
-                          <div class="col-4 font-weight-bold">Correo electrónico:<br/><span t-field="o.pmanager.email"/></div>
-                          <div class="col-4 font-weight-bold" style="background-color:#dee2e6;">Dirección:<br/><span t-field="o.project_id.partner_id.street"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-4" style="background-color:#dee2e6;">Tipo de vehículo:<br/><span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4">Asignado por:<br/><span class="font-weight-normal" t-field="o.pmanager"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Cliente:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
@@ -66,39 +56,49 @@
                           </div>
                       </div>
                       <div class="row  font-weight-bold">
-                          <div class="col-4" style="background-color:#dee2e6;">Capacidad:<br/><span t-field="o.capacidad_viaje"/></div>
-                          <div class="col-4">Teléfono:<br/><span t-field="o.pmanager.phone"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.partner_id.city"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Carga:<br/><span class="font-weight-normal" t-field="o.carga_viaje"/></div>
+                          <div class="col-4">Correo electrónico:<br/><span class="font-weight-normal" t-field="o.pmanager.email"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Dirección:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id.street"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
                           <div style="border-bottom: 10px solid black;"></div>
                           </div>
                       </div>
-                      <div class="row">
-                          <div class="col-4" style="background-color:#dee2e6;">Producto:<br/><span t-field="o.producto_viaje"/></div>
-                          <div class="col-4"></div>
-                          <div class="col-4" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.partner_id.state_id"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-4" style="background-color:#dee2e6;">Capacidad:<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/></div>
+                          <div class="col-4">Teléfono:<br/><span class="font-weight-normal" t-field="o.pmanager.phone"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Ciudad:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id.city"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
                           <div style="border-bottom: 10px solid black;"></div>
                           </div>
                       </div>
-                      <div class="row">
-                          <div class="col-4 " style="background-color:#dee2e6;">Matrícula:<br/><span t-esc="'%s: %s'% (o.vehiculo.license_plate, o.vehiculo.no_economico)"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-4" style="background-color:#dee2e6;">Producto:<br/><span class="font-weight-normal" t-field="o.producto_viaje"/></div>
                           <div class="col-4"></div>
-                          <div class="col-4 " style="background-color:#dee2e6;">Teléfono:<br/><span t-field="o.project_id.partner_id.phone"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">Estado:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id.state_id"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
                           <div style="border-bottom: 10px solid black;"></div>
                           </div>
                       </div>
-                      <div class="row">
-                          <div class="col-4 " style="background-color:#dee2e6;">Conductor:<br/><span t-field="o.conductor"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-4 " style="background-color:#dee2e6;">Matrícula:<br/><span class="font-weight-normal" t-esc="'%s: %s'% (o.vehiculo.license_plate, o.vehiculo.no_economico)"/></div>
                           <div class="col-4"></div>
-                          <div class="col-4 " style="background-color:#dee2e6;">Correo electrónico:<br/><span t-field="o.project_id.partner_id.email"/></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Teléfono:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id.phone"/></div>
+                      </div>
+                      <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 10px solid black;"></div>
+                          </div>
+                      </div>
+                      <div class="row font-weight-bold">
+                          <div class="col-4 " style="background-color:#dee2e6;">Conductor:<br/><span class="font-weight-normal" t-field="o.conductor"/></div>
+                          <div class="col-4"></div>
+                          <div class="col-4 " style="background-color:#dee2e6;">Correo electrónico:<br/><span class="font-weight-normal" t-field="o.project_id.partner_id.email"/></div>
                       </div>
                     </div>
                   </div>
@@ -119,22 +119,22 @@
 
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="row">
-                          <div class="col-3" style="background-color:#dee2e6;">Dirección origen:<br/><span t-field="o.project_id.direccion_or"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.ciudad_or"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.estado_or"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span t-field="o.project_id.pais_or"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-3" style="background-color:#dee2e6;">Dirección origen:<br/><span class="font-weight-normal" t-field="o.project_id.direccion_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span class="font-weight-normal" t-field="o.project_id.estado_or"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span class="font-weight-normal" t-field="o.project_id.pais_or"/></div>
                       </div>
                       <div class="row">
                       <div class="col-xs-12">
                           <div style="border-bottom: 10px solid black;"></div>
                           </div>
                       </div>
-                      <div class="row">
-                          <div class="col-3" style="background-color:#dee2e6;">Dirección destino:<br/><span t-field="o.project_id.direccion_des"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span t-field="o.project_id.ciudad_des"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span t-field="o.project_id.estado_des"/></div>
-                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span t-field="o.project_id.pais_des"/></div>
+                      <div class="row font-weight-bold">
+                          <div class="col-3" style="background-color:#dee2e6;">Dirección destino:<br/><span class="font-weight-normal" t-field="o.project_id.direccion_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Ciudad:<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">Estado:<br/><span class="font-weight-normal" t-field="o.project_id.estado_des"/></div>
+                          <div class="col-3" style="background-color:#dee2e6;">País:<br/><span class="font-weight-normal" t-field="o.project_id.pais_des"/></div>
                       </div>
                     </div>
                   </div>
@@ -155,7 +155,7 @@
 
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="row">
+                      <div class="row font-weight-bold">
                           <div class="col-4 text-center" style="background-color:#dee2e6;">Banamex</div>
                           <div class="col-4 text-center">Bancomer</div>
                           <div class="col-4 text-center" style="background-color:#dee2e6;">BanBajio</div>
@@ -165,12 +165,12 @@
                           <div style="border-bottom: 10px solid black;"></div>
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="row font-weight-bold">
                           <div class="col-4 text-center">Clave Interbancaria:</div>
                           <div class="col-4 text-center">Clave Interbancaria:</div>
                           <div class="col-4 text-center">Clave Interbancaria:</div>
                       </div>
-                      <div class="row">
+                      <div class="row font-weight-bold">
                           <div class="col-4 text-center">No. Cuenta:</div>
                           <div class="col-4 text-center">No. Cuenta:</div>
                           <div class="col-4 text-center">No. Cuenta:</div>
