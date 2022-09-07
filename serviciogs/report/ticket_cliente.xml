@@ -178,11 +178,7 @@
                           <div class="col-4 text-center">No. Cuenta:</div>
                           <div class="col-4 text-center">No. Cuenta:</div>
                       </div>
-                      <div class="row font-weight-bold">
-                          <div class="col-4 text-center">No. Cuenta:</div>
-                          <div class="col-4 text-center">No. Cuenta:</div>
-                          <div class="col-4 text-center">No. Cuenta:</div>
-                      </div>
+                      
                       <div class="row">
                           <div class="col-12 text-center"><small>El número del folio debe relacionarse a la transferencia</small></div>
                       </div>
