@@ -28,9 +28,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
-
-    <!--/data>
-    <data-->
+        
         <record id ="report_ticket_cliente" model="ir.actions.report">
             <field name="name">Ticket cliente</field>
             <field name="model">project.task</field>
