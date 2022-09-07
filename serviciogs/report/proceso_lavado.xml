@@ -102,7 +102,12 @@
 
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <span> Firma del supervisor</span>
+                            <span><_____________________________/span>
+                        </div>
+                    </div>
+                    <div class="row  font-weight-bold">
+                        <div class="col-12 text-center">
+                            <span>Firma del supervisor</span>
                         </div>
                     </div>
                 </div>
