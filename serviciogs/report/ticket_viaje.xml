@@ -55,6 +55,11 @@
                           instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 30px solid black;"></div>
+                        </div>
+                    </div>
                     <div class="row">    
                         <div class="col-12">
                           <h5>1.-Ingreso del tanque a nuestras instalaciones.</h5>
@@ -65,10 +70,16 @@
                           <h5>6.-Enjuague de alcalino a base de agua a temperatura ambiente.</h5>
                           <h5>7.-Enjuague con ácido sanitizánte a base de agua.</h5>
                           <h5>8.-Salida del tanque de las instalaciones.</h5>
-                        
+                        </br>
+                        </br>
                           <h5>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</h5>
                           <h5>1.-28 Minutos - ciclo de lavado CIP.</h5>
                           <h5>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 30px solid black;"></div>
                         </div>
                     </div>
                     <div class="row">
