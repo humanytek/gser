@@ -3,7 +3,7 @@
     <data>
         <template id="genral_report_footer" inherit_id="report.external_layout_footer">
             <xpath expr="//div[@class='footer']" position="replace">
-                <div class="footer">
+                <div class="footer"> 
                     <div class="text-center" style="border-top: 1px solid black;">
                         <ul class="list-inline">
                             <li>Developed By: Hassan Enterprises</li>
