@@ -50,12 +50,26 @@
 
                   
                     <div class="row">
-                        <div class="col-12">
-                          <h5>Fecha:<span class="font-weight-bold" t-field="o.create_date"/><br/></h5>
-                          <h5>Producto:<span class="font-weight-bold" t-field="o.producto_viaje"/><br/></h5>
-                          <h5>Tanque 1:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5>Tanque 2:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5>Operador:<span class="font-weight-bold" t-field="o.conductor"/><br/></h5>
+                        <div class="col-4">
+                          <h5>Fecha:</h5>
+                          <h5>Producto:</h5>
+                          <h5>Tanque 1:</h5>
+                          <h5>Tanque 2:</h5>
+                          <h5>Operador:</h5>
+                        </div>
+                        <div class="col-4">
+                          <h5><span class="font-weight-bold" t-field="o.create_date"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.producto_viaje"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
+                        </div>
+                        <div class="col-4">
+                          <h5></h5>
+                          <h5></h5>
+                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
+                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
+                          <h5></h5>
                         </div>
                     </div>
                     <div class="row">
