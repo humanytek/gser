@@ -59,7 +59,7 @@
                   <div class="row">
                     <div class="col-12" >
                       <div class="row font-weight-bold">
-                          <div class="col-4" style="background-color:#dee2e6;">RFC REMITENTE<br/><span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">RFC REMITENTE<br/><!--span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/--> </div>
                           <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL REMITENTE<br/><span class="font-weight-normal" t-field="o.company_id.name"/></div>
                           <div class="col-4" style="background-color:#dee2e6;"><br/></div>
                       </div>
@@ -75,6 +75,7 @@
                     </div>
                   </div>
 
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
 
                   <div class="row">
                       <div class="col-12">
@@ -86,7 +87,7 @@
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
-                          <div class="col-4" style="background-color:#dee2e6;">RFC DESTINATARIO<br/><span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">RFC DESTINATARIO<br/><!--span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/--> </div>
                           <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL DESTINATARIO<br/><span class="font-weight-normal" t-field="o.partner_id.name"/></div>
                           <div class="col-4" style="background-color:#dee2e6;"><br/></div>
                       </div>
@@ -101,7 +102,47 @@
                       </div>
                     </div>
                   </div>
-                 
+
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-3" style="background-color:#dee2e6;">VALOR DECLARADO<br/><!--span class="font-weight-normal" t-esc="'%s: %s'% (o.partner_id.street, o.partner_id.zip)"/--></div>
+                        <div class="col-3" style="background-color:#dee2e6;">FECHA DE ENTREGA<br/><!--span class="font-weight-normal" t-field="o.partner_id.city"/--></div>
+                        <div class="col-3" style="background-color:#dee2e6;">FRACCION NO<br/><!--span class="font-weight-normal" t-field="o.partner_id.state_id"/--></div>
+                        <div class="col-3" style="background-color:#dee2e6;">CLASE<br/><!--span class="font-weight-normal" t-field="o.partner_id.state_id"/--></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                <div class="row">
+                  <div class="col-12">
+                      <div>DESCRIPCIÓN DE LAS MERCANCIAS</div>
+                  </div>
+                </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><span class="font-weight-normal" t-field="o.producto_viaje"/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/></div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-12">
+                      <div>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</div>
+                  </div>
+                </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+               
+
+
+
+
+
                 </div>
             </t>
         </t>
