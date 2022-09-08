@@ -167,7 +167,7 @@
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
                         <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.iva"/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.Iva"/><br/></div>
                     </div>
                   </div>
                 </div>
