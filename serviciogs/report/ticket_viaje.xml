@@ -52,9 +52,7 @@
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-12">
-                          <div class="col-12" style="background-color:#6c757d;">INFORMACIÓN DEL REMITENTE</div>
-                      </div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">INFORMACIÓN DE REMITENTE</h2></div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
 
@@ -80,9 +78,7 @@
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
 
                   <div class="row">
-                      <div class="col-12">
-                          <div class="col-12" style="background-color:#6c757d;">INFORMACIÓN DEL DESTINATARIO</div>
-                      </div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">INFORMACIÓN DE DESTINATARIO</h2></div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
 
@@ -148,9 +144,9 @@
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-3" style="background-color:#dee2e6;">SEGURIDAD DE CARGA<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">MANIOBRAS<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">AUTOPISTAS<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">SEGURIDAD DE CARGA<br/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">MANIOBRAS<br/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">AUTOPISTAS<br/><br/></div>
                         <div class="col-3" style="background-color:#dee2e6;">IMPORTE<br/><span class="font-weight-normal" t-field="o.Precio_ruta_Litro"/><br/></div>
                     </div>
                   </div>
