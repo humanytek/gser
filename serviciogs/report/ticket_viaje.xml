@@ -50,7 +50,7 @@
 
                   
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-2">
                           <h5>Fecha:</h5>
                           <h5>Producto:</h5>
                           <h5>Tanque 1:</h5>
@@ -64,12 +64,12 @@
                           <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
                           <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
                         </div>
-                        <div class="col-4">
-                          <h5></h5>
-                          <h5></h5>
+                        <div class="col-6">
+                          <h5><br/></h5>
+                          <h5><br/></h5>
                           <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
                           <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5></h5>
+                          <h5><br/></h5>
                         </div>
                     </div>
                     <div class="row">
@@ -80,19 +80,19 @@
                     <div class="row">    
                         <div class="col-12">
                           <h5>1.-Pisos, techos y paredes sin perforaciones y/o roturas.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [&#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [&#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>2.-Puerta con cierre hermético.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>3.-Libre de basura.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>4.-Sin residuos de alimentos.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>5.-Libre de olores.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>6.-Sin agua estancada.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                           <h5>7.-Libre de fauna nociva.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]     No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
                        <br/>
                           
                         </div>
@@ -111,7 +111,7 @@
                    
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <h5>______________________</h5><br/>
+                            <h5>__________________________________</h5><br/>
                         </div>
                     </div>
                     <div class="row  font-weight-bold">
