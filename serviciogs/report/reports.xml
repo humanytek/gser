@@ -25,6 +25,8 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">serviciogs.report_ticket_viaje</field>
             <field name="report_file">serviciogs.report_ticket_viaje</field>
+            <field name="page_height">197</field>
+            <field name="page_width">110</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
