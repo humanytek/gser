@@ -39,22 +39,26 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-10">
                       <div><h5 class="text-black">LUGAR Y FECHA DE EXPEDICIÓN<br/>Lagos de Moreno, Jalisco &#160;&#160; <span t-field="o.create_date"/></h5></div>
                     </div>
-                    <div class="col-6 text-end">
+                    <div class="col-2 text-end">
                       <div><h5 class="text-black">CARTA PORTE<br/><span t-field="o.id"/></h5></div>
                     </div>
                   </div>
-
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div style="border-bottom: 15px solid black;"></div>
+                    </div>
+                  </div>
                   
                   <div class="row">
                       <div class="col-12 text-center">
-                        <h4>TRANSPORTE DE CARGA EN GENERAL, RED DE CAMINOS DE JURISDICCIÓN FEDERAL, ESTATAL Y CAMINOS VECINALES.</h4>
+                        <h5>TRANSPORTE DE CARGA EN GENERAL, RED DE CAMINOS DE JURISDICCIÓN FEDERAL, ESTATAL Y CAMINOS VECINALES.</h5>
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-xs-12">
+                      <div class="col-12">
                           <div style="background-color:#6c757d;">INFORMACIÓN DEL REMITENTE</div>
                       </div>
                   </div>
@@ -66,9 +70,18 @@
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
-                          <div class="col-4" style="background-color:#dee2e6;">RFC REMITENTE:<br/><span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL REMITENTE:<br/><span class="font-weight-normal" t-field="o.company_id.name"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">RFC REMITENTE<br/><span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL REMITENTE<br/><span class="font-weight-normal" t-field="o.company_id.name"/></div>
                           <div class="col-4" style="background-color:#dee2e6;"><br/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12" >
+                      <div class="row font-weight-bold">
+                          <div class="col-4" style="background-color:#dee2e6;">DIRECCIÓN ORIGEN<br/><span class="font-weight-normal" t-esc="'%s: %s'% (o.company_id.street, o.company_id.zip)"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">CIUDAD ORIGEN<br/><span class="font-weight-normal" t-field="o.company_id.city"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">ESTADO ORIGEN<br/><span class="font-weight-normal" t-field="o.company_id.state_id"/></div>
                       </div>
                     </div>
                   </div>
