@@ -127,9 +127,9 @@
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/><br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/><br/><br/></div>
                     </div>
                   </div>
                 </div>
@@ -144,6 +144,7 @@
                       <div class ="text-right">¿TRANSPORTA MATERIAL PELIGROSO?  SI ( )  NO (  )</div>
                   </div>
                 </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
@@ -183,8 +184,8 @@
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-6" style="background-color:#dee2e6;">AGENTE<br/><span class="font-weight-normal" t-field="o.pmanager"/><br/></div>
-                        <div class="col-6" style="background-color:#e9ecef;">RECIBI DE CONFORMIDAD<br/><span class="font-weight-normal" t-field="o.partner_id"/><br/></div>
+                        <div class="col-6 text-center" style="background-color:#dee2e6;">AGENTE<br/><br/><br/><span class="font-weight-normal" t-field="o.pmanager"/><br/></div>
+                        <div class="col-6 text-center" style="background-color:#e9ecef;">RECIBI DE CONFORMIDAD<br/><br/><br/><span class="font-weight-normal" t-field="o.partner_id"/><br/></div>
                     </div>
                   </div>
                 </div>
