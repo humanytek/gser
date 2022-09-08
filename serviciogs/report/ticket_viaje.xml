@@ -154,23 +154,40 @@
                     </div>
                   </div>
                 </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-9" style="background-color:#dee2e6;">OBSERVACIÓN<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-9" style="background-color:#dee2e6;">OBSERVACIÓN<br/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.Retencion"/><br/></div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-9" style="background-color:#dee2e6;"><br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">IVA 16%<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.iva"/><br/></div>
                     </div>
                   </div>
                 </div>
-
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">TOTAL<br/><span class="font-weight-normal" t-field="o.Total_Facturar"/><br/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-6" style="background-color:#dee2e6;">AGENTE<br/><span class="font-weight-normal" t-field="o.pmanager"/><br/></div>
+                        <div class="col-6" style="background-color:#e9ecef;">RECIBI DE CONFORMIDAD<br/><span class="font-weight-normal" t-field="o.partner_id"/><br/></div>
+                    </div>
+                  </div>
+                </div>
 
 
                 </div>
