@@ -4,6 +4,8 @@
     <t t-call="web.html_container">
       <t t-set="data_report_margin_top" t-value="12"/>
       <t t-set="data_report_header_spacing" t-value="0"/>
+      <t t-set="data_report_margin_bottom" t-value="12"/>
+      <t t-set="data_report_footer_spacing" t-value="0"/>
       <t t-set="data_report_dpi" t-value="110"/>
         <t t-foreach="docs" t-as="o">
             <t t-call="web.external_layout">
@@ -51,7 +53,7 @@
                   </div>
                   <div class="row">
                       <div class="col-12">
-                          <div style="background-color:#6c757d;">INFORMACIÓN DEL REMITENTE</div>
+                          <div class="col-12" style="background-color:#6c757d;">INFORMACIÓN DEL REMITENTE</div>
                       </div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
@@ -79,7 +81,7 @@
 
                   <div class="row">
                       <div class="col-12">
-                          <div style="background-color:#6c757d;">INFORMACIÓN DEL DESTINATARIO</div>
+                          <div class="col-12" style="background-color:#6c757d;">INFORMACIÓN DEL DESTINATARIO</div>
                       </div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
@@ -88,7 +90,7 @@
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
                           <div class="col-4" style="background-color:#dee2e6;">RFC DESTINATARIO<br/><!--span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/--> </div>
-                          <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL DESTINATARIO<br/><span class="font-weight-normal" t-field="o.partner_id.name"/></div>
+                          <div class="col-4" style="background-color:#dee2e6;">NOMBRE DEL DESTINATARIO<br/><span class="font-weight-normal" t-field="o.partner_id"/></div>
                           <div class="col-4" style="background-color:#dee2e6;"><br/></div>
                       </div>
                     </div>
@@ -118,7 +120,7 @@
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
                 <div class="row">
                   <div class="col-12">
-                      <div>DESCRIPCIÓN DE LAS MERCANCIAS</div>
+                      <div class="text-center"><h5>DESCRIPCIÓN DE LAS MERCANCIAS</h5></div>
                   </div>
                 </div>
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
@@ -133,7 +135,7 @@
                 </div>
                  <div class="row">
                   <div class="col-12">
-                      <div>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</div>
+                      <div><h6>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</h6></div>
                   </div>
                 </div>
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
