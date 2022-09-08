@@ -35,79 +35,61 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">CARTA PORTE</h2></div>
+                    <div class="col-12"><h2 class="text-black text-center">CARTA PORTE</h2></div>
                   </div>
 
                   <div class="row">
-                    <div class="col-xs-6">
-                      <div style="border-bottom: 15px solid black;">LUGAR Y FECHA DE EXPEDICIÓN<br/>Lagos de Moreno, Jalisco &#160;&#160; <span t-field="o.create_date"/></div>
+                    <div class="col-6">
+                      <div><h5 class="text-black">LUGAR Y FECHA DE EXPEDICIÓN<br/>Lagos de Moreno, Jalisco &#160;&#160; <span t-field="o.create_date"/></h5></div>
                     </div>
-                    <div class="col-xs-6">
-                      <div style="border-bottom: 15px solid black;">CARTA PORTE<br/><span t-field="o.id"/></div>
+                    <div class="col-6 text-rigth">
+                      <div><h5 class="text-black">CARTA PORTE<br/><span t-field="o.id"/></h5></div>
                     </div>
                   </div>
 
                   
-                    <div class="row">
-                        <div class="col-2">
-                          <h5>Fecha:</h5>
-                          <h5>Producto:</h5>
-                          <h5>Tanque 1:</h5>
-                          <h5>Tanque 2:</h5>
-                          <h5>Operador:</h5>
-                        </div>
-                        <div class="col-4">
-                          <h5><span class="font-weight-bold" t-field="o.create_date"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.producto_viaje"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
-                        </div>
-                        <div class="col-6">
-                          <h5><br/></h5>
-                          <h5><br/></h5>
-                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5><br/></h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div style="border-bottom: 30px solid black; background-color:#6c757d;"></div>
-                        </div>
-                    </div>
-                    <div class="row">    
-                        <div class="col-12">
-                          <h5>1.-Pisos, techos y paredes sin perforaciones y/o roturas.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [&#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>2.-Puerta con cierre hermético.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>3.-Libre de basura.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>4.-Sin residuos de alimentos.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>5.-Libre de olores.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>6.-Sin agua estancada.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                          <h5>7.-Libre de fauna nociva.</h5>
-                          <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
-                       <br/>
-                          
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div style="border-bottom: 30px solid black;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div style="border-bottom: 30px solid black;"></div>
-                        </div>
-                    </div>
-                   
+                  <div class="row">
+                      <div class="col-2 text-center">
+                        <h4>TRANSPORTE DE CARGA EN GENERAL, RED DE CAMINOS DE JURISDICCIÓN FEDERAL, ESTATAL Y CAMINOS VECINALES.</h4>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 30px solid black; background-color:#6c757d;">DTF</div>
+                      </div>
+                  </div>
+                  <div class="row">    
+                      <div class="col-12">
+                        <h5>1.-Pisos, techos y paredes sin perforaciones y/o roturas.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [&#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>2.-Puerta con cierre hermético.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>3.-Libre de basura.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>4.-Sin residuos de alimentos.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>5.-Libre de olores.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>6.-Sin agua estancada.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                        <h5>7.-Libre de fauna nociva.</h5>
+                        <h5>Si [ &#160;&#160;&#160;&#160;]&#160;&#160;&#160; No [ &#160;&#160;&#160;&#160;]</h5><br/>
+                      <br/>
+                        
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 30px solid black;"></div>
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div style="border-bottom: 30px solid black;"></div>
+                      </div>
+                  </div>
+                  
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
                             <h5>__________________________________</h5><br/>
