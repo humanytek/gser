@@ -39,12 +39,15 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Inspección de transporte</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">CARTA PORTE</h2></div>
                   </div>
 
                   <div class="row">
-                    <div class="col-xs-12">
-                      <div style="border-bottom: 15px solid black;"></div>
+                    <div class="col-xs-6">
+                      <div style="border-bottom: 15px solid black;">LUGAR Y FECHA DE EXPEDICIÓN<br/>Lagos de Moreno, Jalisco &#160;&#160; <span t-field="o.create_date"/></div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div style="border-bottom: 15px solid black;">CARTA PORTE<br/><span t-field="o.id"/></div>
                     </div>
                   </div>
 
