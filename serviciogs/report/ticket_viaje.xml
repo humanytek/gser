@@ -41,7 +41,7 @@
                       <div><h6 class="text-black">LUGAR Y FECHA DE EXPEDICIÓN<br/>Lagos de Moreno, Jalisco &#160;&#160; <span t-field="o.create_date"/></h6></div>
                     </div>
                     <div class="col-2">
-                      <div><h6 class="text-black">CARTA PORTE<br/><span t-field="o.id"/></h6></div>
+                      <div><h6 class="text-black text-right">CARTA PORTE<br/><span t-field="o.id"/></h6></div>
                     </div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
@@ -127,21 +127,49 @@
                 <div class="row">
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
-                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><span class="font-weight-normal" t-field="o.producto_viaje"/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/><br/></div>
                     </div>
                   </div>
                 </div>
                  <div class="row">
                   <div class="col-12">
-                      <div><h6>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</h6></div>
+                      <div><small>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</small></div>
                   </div>
                 </div>
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-               
-
-
+                <div class="row">
+                  <div class="col-12">
+                      <div class ="text-right">¿TRANSPORTA MATERIAL PELIGROSO?  SI ( )  NO (  )</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-3" style="background-color:#dee2e6;">SEGURIDAD DE CARGA<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">MANIOBRAS<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">AUTOPISTAS<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">IMPORTE<br/><span class="font-weight-normal" t-field="o.Precio_ruta_Litro"/><br/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-9" style="background-color:#dee2e6;">OBSERVACIÓN<br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="row font-weight-bold">
+                        <div class="col-9" style="background-color:#dee2e6;"><br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">IVA 16%<br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
+                    </div>
+                  </div>
+                </div>
 
 
 
