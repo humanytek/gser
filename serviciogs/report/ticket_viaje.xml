@@ -53,8 +53,8 @@
                         <div class="col-12">
                           <h5>Fecha:<span class="font-weight-bold" t-field="o.create_date"/><br/></h5>
                           <h5>Producto:<span class="font-weight-bold" t-field="o.producto_viaje"/><br/></h5>
-                          <h5>Tanque 1:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_2.licence_plate"/><br/></h5>
-                          <h5>Tanque 2:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_2.licence_plate"/><br/></h5>
+                          <h5>Tanque 1:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_1.licence_plate"/><br/></h5>
+                          <h5>Tanque 2:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_1.licence_plate"/><br/></h5>
                           <h5>Operador:<span class="font-weight-bold" t-field="o.conductor"/><br/></h5>
                         </div>
                     </div>
