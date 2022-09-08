@@ -39,7 +39,7 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Proceso de lavado</h2></div>
+                    <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Inspección de transporte</h2></div>
                   </div>
 
                   <div class="row">
@@ -51,56 +51,42 @@
                   
                     <div class="row">
                         <div class="col-12">
-                          <h5>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.remolque_2"/> y el cual fue realizado en nuestras 
-                          instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
+                          <h5>Fecha:<span class="font-weight-bold" t-field="o.create_date"/><br/></h5>
+                          <h5>Producto:<span class="font-weight-bold" t-field="o.producto_viaje"/><br/></h5>
+                          <h5>Tanque 1:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_2.licence_plate"/><br/></h5>
+                          <h5>Tanque 2:<span class="font-weight-bold" t-field="o.remolque_2"/>    Placas: <span class="font-weight-bold" t-field="o.remolque_2.licence_plate"/><br/></h5>
+                          <h5>Operador:<span class="font-weight-bold" t-field="o.conductor"/><br/></h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div style="border-bottom: 30px solid black;"></div>
+                            <div style="border-bottom: 30px solid black; background-color:#6c757d;"></div>
                         </div>
                     </div>
                     <div class="row">    
                         <div class="col-12">
-                          <h5>1.-Ingreso del tanque a nuestras instalaciones.</h5>
-                          <h5>2.-Lavado de tapa y la cubierta.</h5>
-                          <h5>3.-Desarmar y lavar válvula de descarga, tapón, bote y empaque.</h5>
-                          <h5>4.-Enjuague con agua a una temperatura de 35° a 40° centígrados.</h5>
-                          <h5>5.-Lavado de alcalino a una temperatura de 60° a 68° centígrados.</h5>
-                          <h5>6.-Enjuague de alcalino a base de agua a temperatura ambiente.</h5>
-                          <h5>7.-Enjuague con ácido sanitizánte a base de agua.</h5>
-                          <h5>8.-Salida del tanque de las instalaciones.</h5>
+                          <h5>1.-Pisos, techos y paredes sin perforaciones y/o roturas.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>2.-Puerta con cierre hermético.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>3.-Libre de basura.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>4.-Sin residuos de alimentos.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>5.-Libre de olores.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>6.-Sin agua estancada.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
+                          <h5>7.-Libre de fauna nociva.</h5>
+                          <h5>Si [  ]     No [  ]</h5><br/>
                        <br/>
-                          <h5>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</h5>
-                       <br/>
-                          <h5>1.-28 Minutos - ciclo de lavado CIP.</h5>
-                          <h5>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</h5>
+                          
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div style="border-bottom: 30px solid black;"></div>
                         </div>
-                    </div>
-                    <div class="row">
-                          <div class="col-6"><h5>No. Placas:  </h5><span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
-                          <div class="col-6"><h5>No. Sellos: ________________</h5></div>
-                    
-                    </div>
-                    <div class="row">
-                          <div class="col-6"><h5>No. Placas: </h5><!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
-                          <div class="col-6"><h5>No. Sellos: ________________</h5></div>
-                                           
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div style="border-bottom: 30px solid black;"></div>
-                        </div>
-                    </div>
-                        
-                    <div class="row  font-weight-bold">
-                        <div class="col-12" style="background-color:#dee2e6;"><h5>Observaciones:</h5><!--span class="font-weight-normal" t-field="o.carga_viaje"/--></div>
                     </div>
                     
                     <div class="row">

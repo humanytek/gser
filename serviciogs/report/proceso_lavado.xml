@@ -55,6 +55,11 @@
                           instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 30px solid black;"></div>
+                        </div>
+                    </div>
                     <div class="row">    
                         <div class="col-12">
                           <h5>1.-Ingreso del tanque a nuestras instalaciones.</h5>
@@ -65,20 +70,26 @@
                           <h5>6.-Enjuague de alcalino a base de agua a temperatura ambiente.</h5>
                           <h5>7.-Enjuague con ácido sanitizánte a base de agua.</h5>
                           <h5>8.-Salida del tanque de las instalaciones.</h5>
-                        
+                       <br/>
                           <h5>Este proceso tiene una duración de 45 minutos aproximadamente y se divide de la siguiente manera:</h5>
+                       <br/>
                           <h5>1.-28 Minutos - ciclo de lavado CIP.</h5>
                           <h5>2.-17 Minutos para el ingreso y conexión de mangueras y enjuagues.</h5>
                         </div>
                     </div>
                     <div class="row">
-                          <div class="col-6">No. Placas: <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
-                          <div class="col-6">No. Sellos: ________________</div>
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 30px solid black;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                          <div class="col-6"><h5>No. Placas:  </h5><span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
+                          <div class="col-6"><h5>No. Sellos: ________________</h5></div>
                     
                     </div>
                     <div class="row">
-                          <div class="col-6">No. Placas: <!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
-                          <div class="col-6">No. Sellos: ________________</div>
+                          <div class="col-6"><h5>No. Placas: </h5><!--span class="font-weight-normal" t-field="o.remolque_1.license_plate"/--></div>
+                          <div class="col-6"><h5>No. Sellos: ________________</h5></div>
                                            
                     </div>
 
@@ -89,7 +100,7 @@
                     </div>
                         
                     <div class="row  font-weight-bold">
-                        <div class="col-12" style="background-color:#dee2e6;">Observaciones:<!--span class="font-weight-normal" t-field="o.carga_viaje"/--></div>
+                        <div class="col-12" style="background-color:#dee2e6;"><h5>Observaciones:</h5><!--span class="font-weight-normal" t-field="o.carga_viaje"/--></div>
                     </div>
                     
                     <div class="row">
@@ -100,7 +111,6 @@
 
                     <div class="row  font-weight-bold">
                         <div class="col-12 text-center">
-                            <h5>______________________</h5>
                             <h5>______________________</h5>
                         </div>
                     </div>
