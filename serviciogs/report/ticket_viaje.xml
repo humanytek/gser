@@ -7,7 +7,7 @@
       <t t-set="data_report_dpi" t-value="110"/>
         <t t-foreach="docs" t-as="o">
             <t t-call="web.external_layout">
-                <div class="page" style="max-width:100mm">
+                <div class="page h6" style="max-width:100mm">
                  <div class="row">
                     <div class="col-12 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="120px" height="100px"/></div>
                   </div>
