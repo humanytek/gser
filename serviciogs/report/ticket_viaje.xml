@@ -82,6 +82,10 @@
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
                   
                   <div class="row">
+                    <div class="col-12">Origen</div>
+                  </div>               
+                  
+                  <div class="row">
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
                         <div class="col-6"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_or"/></h6></div>
