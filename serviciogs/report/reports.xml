@@ -45,7 +45,7 @@
             <field name="binding_type">report</field>
         </record>
         
-        <record id ="report_ticket_cliente" model="ir.actions.report">
+        <!--record id ="report_ticket_cliente" model="ir.actions.report">
             <field name="name">Ticket cliente</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -53,7 +53,7 @@
             <field name="report_file">serviciogs.report_ticket_cliente</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
-        </record>
+        </record-->
         <!--record id ="report_proceso_lavado" model="ir.actions.report">
             <field name="name">Proceso lavado</field>
             <field name="model">project.task</field>
