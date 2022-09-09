@@ -78,19 +78,30 @@
                       </div>
                     </div>
                   </div>
-                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                   
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
-                          <div class="col-4">DIRECCIÓN DESTINO<br/><span class="font-weight-normal" t-esc="'%s: %s'% (o.partner_id.street, o.partner_id.zip)"/></div>
-                          <div class="col-4">CIUDAD DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.city"/></div>
-                          <div class="col-4">ESTADO DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.state_id"/></div>
+                        <div class="col-6">Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_or"/></div>
+                        <div class="col-6">Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_or"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  
+                  <div class="row">
+                    <div class="col-sm-12" >
+                      <div class="row font-weight-bold">
+                        <div class="col-6">Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_des"/></div>
+                        <div class="col-6">Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_des"/></div>
                       </div>
                     </div>
                   </div>
 
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                </div>
+                  </div>
             </t>
         </t>
     </t>
