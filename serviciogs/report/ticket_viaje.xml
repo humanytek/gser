@@ -37,9 +37,17 @@
 
                   <div class="row">
                     <div class="col-12 font-weight-bold" >
-                          <div class="col-4">Cliente:<br/><span class="font-weight-normal" t-field="o.partner_id"/> </div>
-                          <div class="col-4">Conductor<br/><span class="font-weight-normal" t-field="o.conductor"/> </div>
-                          <div class="col-4">Ruta:<br/><span class="font-weight-normal" t-field="o.project_id"/> </div>
+                          <div>Cliente:<br/><span class="font-weight-normal" t-field="o.partner_id"/> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold" >
+                          <div>Conductor<br/><span class="font-weight-normal" t-field="o.conductor"/> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold" >
+                          <div>Ruta:<br/><span class="font-weight-normal" t-field="o.project_id"/> </div>
                     </div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
