@@ -82,17 +82,14 @@
                   <div class="row">
                     <div class="col-sm-12" >
                       <div class="row font-weight-bold">
-                          <div class="col-4" style="background-color:#dee2e6;">DIRECCIÓN DESTINO<br/><span class="font-weight-normal" t-esc="'%s: %s'% (o.partner_id.street, o.partner_id.zip)"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">CIUDAD DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.city"/></div>
-                          <div class="col-4" style="background-color:#dee2e6;">ESTADO DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.state_id"/></div>
+                          <div class="col-4">DIRECCIÓN DESTINO<br/><span class="font-weight-normal" t-esc="'%s: %s'% (o.partner_id.street, o.partner_id.zip)"/></div>
+                          <div class="col-4">CIUDAD DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.city"/></div>
+                          <div class="col-4">ESTADO DESTINO<br/><span class="font-weight-normal" t-field="o.partner_id.state_id"/></div>
                       </div>
                     </div>
                   </div>
 
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                
-                
-
                 </div>
             </t>
         </t>
