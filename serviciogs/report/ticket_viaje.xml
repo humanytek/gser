@@ -82,8 +82,12 @@
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
                   
                   <div class="row">
-                    <div class="col-12">Origen</div>
-                  </div>               
+                    <div class="col-12 font-weight-bold" >
+                          <div>Origen<br/></div>
+                    </div>
+                  </div>   
+
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
                   
                   <div class="row">
                     <div class="col-sm-12" >
@@ -94,6 +98,14 @@
                     </div>
                   </div>
                   
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  
+                  <div class="row">
+                    <div class="col-12 font-weight-bold" >
+                          <div>Destino<br/></div>
+                    </div>
+                  </div>   
+                           
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
                   
                   <div class="row">
