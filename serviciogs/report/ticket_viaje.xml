@@ -73,7 +73,7 @@
                       <div class="row font-weight-bold">
                           <div class="col-3"><br/></div>
                           <div class="col-3">Caseta:<br/><!--span class="font-weight-normal" t-field="o.vehiculo.tipo_vehiculo"/--> </div>
-                          <div class="col-3">Fecha:<br/><span class="font-weight-normal" t-field=""/></div>
+                          <div class="col-3">Fecha:<br/></div>
                           <div class="col-3">Costos:<br/><span class="font-weight-normal" t-field="o.gasto_total_caseta_viaje"/></div>
                       </div>
                     </div>
