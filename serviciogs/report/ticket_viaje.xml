@@ -7,7 +7,7 @@
       <t t-set="data_report_dpi" t-value="110"/>
         <t t-foreach="docs" t-as="o">
             <t t-call="web.external_layout">
-                <div class="page h6" style="max-width:100mm">
+                <div class="page" style="max-width:100mm">
                  <div class="row">
                     <div class="col-12 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="120px" height="100px"/></div>
                   </div>
@@ -65,7 +65,7 @@
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
 
                   <div class="row">
-                    <div class="col-12"><h6 class="text-white">Cobro de casetas</h6></div>
+                    <div class="col-12"><h6>Cobro de casetas</h6></div>
                   </div>
                   <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
                   <div class="row">
@@ -91,89 +91,7 @@
 
                 <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
                 
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-3" style="background-color:#dee2e6;">VALOR DECLARADO<br/><!--span class="font-weight-normal" t-esc="'%s: %s'% (o.partner_id.street, o.partner_id.zip)"/--></div>
-                        <div class="col-3" style="background-color:#dee2e6;">FECHA DE ENTREGA<br/><!--span class="font-weight-normal" t-field="o.partner_id.city"/--></div>
-                        <div class="col-3" style="background-color:#dee2e6;">FRACCION NO<br/><!--span class="font-weight-normal" t-field="o.partner_id.state_id"/--></div>
-                        <div class="col-3" style="background-color:#dee2e6;">CLASE<br/><!--span class="font-weight-normal" t-field="o.partner_id.state_id"/--></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-12">
-                      <div class="text-center"><h5>DESCRIPCIÓN DE LAS MERCANCIAS</h5></div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-4" style="background-color:#dee2e6;">CANTIDAD<br/><br/><span class="font-weight-normal" t-field="o.capacidad_viaje"/><br/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PRODUCTO<br/><br/><span class="font-weight-normal" t-field="o.producto_viaje"/><br/></div>
-                        <div class="col-4" style="background-color:#dee2e6;">PESO<br/><br/><br/></div>
-                    </div>
-                  </div>
-                </div>
-                 <div class="row">
-                  <div class="col-12">
-                      <div><small>*NOTA: EL PESO DEBERA SER LLENADO CON LETRA DE MOLDE, DE ACUERDO AL PESO DE BASCULA</small></div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-12">
-                      <div class ="text-right">¿TRANSPORTA MATERIAL PELIGROSO?  SI ( )  NO (  )</div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-3" style="background-color:#dee2e6;">SEGURIDAD DE CARGA<br/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">MANIOBRAS<br/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">AUTOPISTAS<br/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">IMPORTE<br/><span class="font-weight-normal" t-field="o.Precio_ruta_Litro"/><br/></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-9" style="background-color:#dee2e6;">OBSERVACIÓN<br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.Retencion"/><br/></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.Iva"/><br/></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">TOTAL<br/><span class="font-weight-normal" t-field="o.Total_Facturar"/><br/></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
-                <div class="row">
-                  <div class="col-sm-12" >
-                    <div class="row font-weight-bold">
-                        <div class="col-6 text-center" style="background-color:#dee2e6;">AGENTE<br/><br/><br/><span class="font-weight-normal" t-field="o.pmanager"/><br/></div>
-                        <div class="col-6 text-center" style="background-color:#e9ecef;">RECIBI DE CONFORMIDAD<br/><br/><br/><span class="font-weight-normal" t-field="o.partner_id"/><br/></div>
-                    </div>
-                  </div>
-                </div>
-
+                
 
                 </div>
             </t>
