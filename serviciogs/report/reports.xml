@@ -63,7 +63,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record-->
-        <!--record id ="report_cp_vertical" model="ir.actions.report">
+        <record id ="report_cp_vertical" model="ir.actions.report">
             <field name="name">Carta Porte Vertical</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -71,8 +71,8 @@
             <field name="report_file">serviciogs.report_cp_vertical</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
-        </record>-->
-        <record id ="report_inspeccion_trans" model="ir.actions.report">
+        </record>
+        <!--record id ="report_inspeccion_trans" model="ir.actions.report">
             <field name="name">Inspección de Transporte</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -80,7 +80,7 @@
             <field name="report_file">serviciogs.report_inspeccion_trans</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
-        </record>
+        </record>-->
 
         
     </data>
