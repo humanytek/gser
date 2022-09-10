@@ -118,7 +118,7 @@
                   
                   <div class="row text-center">
                     <div class="col-12">
-                      <img t-att-src="'/report/barcode/QR/'+o.project_id.direccion_or +<br/>+ o.project_id.ciudad_or" style="width:80px;height:80px" alt="Barcode"/>
+                      <img t-att-src="'/report/barcode/QR/'+o.project_id.direccion_or+o.project_id.ciudad_or" style="width:80px;height:80px" alt="Barcode"/>
                     </div>
                   </div>
                  
