@@ -48,7 +48,10 @@ class servicioGSerprimario (models.Model):
         index=True,
         string="Remolque 2",
     )
-
+    remolque_4 = fields.Char(
+        related ='remolque_3.no_economico',
+        string="No. Economico Remolque 2",
+    )
 
     tipo_ruta_viaje= fields.Selection(
        related = 'project_id.tipo_precio',
