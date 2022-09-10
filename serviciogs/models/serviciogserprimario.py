@@ -41,7 +41,15 @@ class servicioGSerprimario (models.Model):
         related ='remolque_1.no_economico',
         string="No. Economico Remolque",
     )
-    
+
+    remolque_3 = fields.Many2one(
+        comodel_name ='fleet.vehicle',
+        ondelete ='set null',
+        index=True,
+        string="Remolque 2",
+    )
+
+
     tipo_ruta_viaje= fields.Selection(
        related = 'project_id.tipo_precio',
         string ="Tipo Ruta",
