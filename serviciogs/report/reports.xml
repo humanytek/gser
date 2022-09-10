@@ -80,7 +80,7 @@
             <field name="report_file">serviciogs.report_inspeccion_trans</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
-        </record
+        </record>
 
         
     </data>
