@@ -19,6 +19,8 @@
         'report/ticket_viaje.xml',
         'report/ticket_cliente.xml',
         'report/proceso_lavado.xml',
+        'report/cp_vertical.xml',
+        'report/inspeccion_trans.xml',
         # # views
         'views/serviciogser.xml',
         'views/serviciogserprimario.xml',
