@@ -96,6 +96,7 @@
         <field name="name" position="before">
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
+          <field name="project_id.id" optional="show"/>
         </field>
 
         <field name="project_id" position="after">
