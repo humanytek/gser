@@ -147,7 +147,7 @@
                       <div style="border-bottom: 15px solid black;"></div>
                     </div>
                   </div>
-                  <div class="row">
+                  <!--div class="row">
                     <div class="col-12" style="background-color:#6c757d;"><h2 class="text-white">Información de transferencia</h2></div>
                   </div>
                   <div class="row">
@@ -156,7 +156,7 @@
                     </div>
                   </div>
 
-                  <!--div class="row">
+                  <div class="row">
                     <div class="col-sm-12">
                       <div class="row font-weight-bold">
                           <div class="col-4 text-center" style="background-color:#dee2e6;">Banamex</div>
