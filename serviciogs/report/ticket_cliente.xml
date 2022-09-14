@@ -156,7 +156,7 @@
                     </div>
                   </div>
 
-                  <div class="row">
+                  <!--div class="row">
                     <div class="col-sm-12">
                       <div class="row font-weight-bold">
                           <div class="col-4 text-center" style="background-color:#dee2e6;">Banamex</div>
@@ -183,7 +183,7 @@
                           <div class="col-12 text-center"><small>El número del folio debe relacionarse a la transferencia</small></div>
                       </div>
                     </div>
-                  </div>
+                  </div-->
                 </div>
             </t>
         </t>
