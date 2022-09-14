@@ -24,7 +24,7 @@
                             <span t-field="o.company_id.phone"/><br/>
                             <span t-field="o.company_id.email"/>
                           </div>
-                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'o.id', 70, 70)"/></div>
+                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/QR/'+str(o.id)" style="width:70px;height:70px" alt="Barcode"/></div>
                       </div>
                       
                     </div>

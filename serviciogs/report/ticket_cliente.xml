@@ -25,7 +25,7 @@
                           <div class="col-4 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="120px" height="100px"/></div>
                       </div>
                       <div class="row">
-                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', 'o.id', 70, 70)"/></div>
+                          <div class="col-4 text-center"><img t-att-src="'/report/barcode/QR/'+str(o.id)" style="width:70px;height:70px" alt="Barcode"/></div>
                           <div class="col-4"></div>
                           <div class="col-4 text-center font-weight-bold" style="color:red; font-size:20px;">Folio:<br/><span t-field="o.id"/></div>
                       </div>
