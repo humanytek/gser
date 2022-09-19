@@ -10,7 +10,7 @@
           <field name="email_facturacion"/>  
           <field name="ord_vent" domain="[('partner_id', '=', partner_id)]"/>
         </field>
-         <page name="description" position="after">
+         <page name="description" position="after" >
             <group string="Ruta">
               <group>
                 <group string="Ruta">
