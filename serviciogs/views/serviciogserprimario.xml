@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="project.view_task_form2"></field>
         <field name="arch" type="xml">
           <field name="user_ids" position="replace">
-            <field name="user_ids" visible ="0" />
+            <field name="user_ids" invisible ="1" />
           </field>
           <field name="project_id" position="after">
             <field name="status_viaje"/>
