@@ -18,6 +18,9 @@ class FlotaSerrano(models.Model):
         string="Capacidad del Tanque",
     )
     #Parte de modelo
+    num_poliza =fields.Char(
+        string="Numero de poliza",
+    )
     vig_poliza =fields.Date(
         string="Vig. de la poliza",
     ) 
