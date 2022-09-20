@@ -28,7 +28,7 @@ class datosEmpleados (models.Model):
         string="Numero IMSS",
     )
     alta_patronal = fields.Date(
-        string="Fecah de alta patronal",
+        string="Fecha de alta patronal",
     )
     alta_imss = fields.Binary(
         string="Alta IMSS",
