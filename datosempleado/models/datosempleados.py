@@ -25,7 +25,10 @@ class datosEmpleados (models.Model):
     
     #Seguro
     imss = fields.Char(
-        string="IMSS",
+        string="Numero IMSS",
+    )
+    alta_patronal = fields.Date(
+        string="Fecah de alta patronal",
     )
     alta_imss = fields.Binary(
         string="Alta IMSS",

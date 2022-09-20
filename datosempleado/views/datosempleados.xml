@@ -19,6 +19,7 @@
                 </group>
                 <group string="Seguro">
                   <field name="imss"/>
+                  <field name="alta_patronal"/>
                   <field name="alta_imss"/>
                   <field name="infonavit"/>
                 </group>
