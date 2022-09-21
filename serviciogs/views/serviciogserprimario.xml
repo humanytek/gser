@@ -62,7 +62,7 @@
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">project.task</field>
       <field name="view_mode">tree</field>
-      <field name="views" eval="[6, 0, [project_task_tree_fsm, project_task_tree_fsm]]"/>
+      <field name="views" eval="project_task_tree_fsm"/>
     </record>
     <record id="project_task_tree_fsm" model="ir.ui.view">
       <field name="name">project.task.tree.fsm</field>
