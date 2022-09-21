@@ -1,6 +1,0 @@
-
-Documentacion de GSER
-
-COD-GSer-001# Campo con relacion 
-COD-GSer-002# Combo
-COD-GSer-003# Dominio

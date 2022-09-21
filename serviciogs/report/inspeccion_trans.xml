@@ -60,8 +60,8 @@
                         <div class="col-4">
                           <h5><span class="font-weight-bold" t-field="o.create_date"/></h5>
                           <h5><span class="font-weight-bold" t-field="o.producto_viaje"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.remolque_2"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.r1_no_economico"/></h5>
+                          <h5><span class="font-weight-bold" t-field="o.r1_no_economico"/></h5>
                           <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
                         </div>
                         <div class="col-6">

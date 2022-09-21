@@ -37,19 +37,19 @@ class servicioGSerprimario (models.Model):
         index=True,
         string="Remolque 1",
     )
-    remolque_2 = fields.Char(
+    r1_no_economico = fields.Char(
         related ='remolque_1.no_economico',
-        string="No. Economico Remolque",
+        string="No. Economico Remolque 1",
     )
 
-    remolque_3 = fields.Many2one(
+    remolque_2 = fields.Many2one(
         comodel_name ='fleet.vehicle',
         ondelete ='set null',
         index=True,
         string="Remolque 2",
     )
-    remolque_4 = fields.Char(
-        related ='remolque_3.no_economico',
+    r2_no_economico = fields.Char(
+        related ='remolque_2.no_economico',
         string="No. Economico Remolque 2",
     )
 
