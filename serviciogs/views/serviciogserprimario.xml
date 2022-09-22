@@ -58,12 +58,12 @@
         </field>
     </record>
 
-    <!--record id="action_viajes_tree_action" model="ir.actions.act_window.view">
-      <field name="act_window_id" ref="industry_fsm.project_task_action_fsm" />
-      <field name="view_id" ref="project_task_tree_fsm" />
+    <record id="industry_fsm.project_task_action_fsm" model="ir.actions.act_window.view">
+      <!--field name="act_window_id" ref="industry_fsm.project_task_action_fsm" />
+      <field name="view_id" ref="project_task_tree_fsm" /-->
       <field name="view_mode">tree</field>
       <field name="sequence">1</field>
-    </record-->
+    </record>
     
     <record id="project_task_tree_fsm" model="ir.ui.view">
       <field name="name">project.task.tree.fsm</field>
