@@ -59,8 +59,8 @@
     </record>
 
     <record id="industry_fsm.project_task_action_fsm" model="ir.actions.act_window.view">
-      <field name="act_window_id" ref="industry_fsm.project_task_action_fsm" />
-      <field name="view_id" ref="project_task_tree_fsm" />
+      <!--field name="act_window_id" ref="industry_fsm.project_task_action_fsm" />
+      <field name="view_id" ref="project_task_tree_fsm" /-->
       
       <field name="view_mode">form</field>
       <field name="sequence">1</field>
