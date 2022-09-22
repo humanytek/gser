@@ -57,7 +57,7 @@
           
         </field>
     </record>
-    <record model="ir.actions.act_window.view" id="test_action_tree">
+    <record model="ir.actions.act_window.view" id="industry_fsm.project_task_action_fsm">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
       <field name="view_id" ref="serviciogs.project_task_tree_fsm"/>
