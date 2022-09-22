@@ -69,7 +69,7 @@
         <field name="res_model">project.task</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view">list</field>
-        <field name="view_id" ref="industry_fsm.project_task_view_list_fsm"/>
+        <field name="view_id" ref="project_task_view_list_fsm"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No putaway rule found. Let's create one!
