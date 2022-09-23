@@ -65,18 +65,12 @@
     </record-->
 
     <record id="servico_action_tree" model="ir.actions.act_window">
-        <field name="name">Putaways Rules</field>
+        <field name="name">vista de lista servicio externo</field>
         <field name="res_model">project.task</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="view">list</field>
+        <field name="view">tree</field>
+        <field name="view_mode">tree,kanban,map,calendar,form</field>
         <field name="view_id" ref="industry_fsm.project_task_action_fsm"/>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                No putaway rule found. Let's create one!
-            </p><p>
-                Create new putaway rules to dispatch automatically specific products to their appropriate destination location upon receptions.
-            </p>
-        </field>
     </record>
     
     <record id="project_task_tree_fsm" model="ir.ui.view">
