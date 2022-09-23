@@ -73,19 +73,19 @@
     <record id="field_service_map_view" model="ir.actions.act_window.view">
         <field eval="3" name="sequence"/>
         <field name="view_mode">map</field>
-        <field name="view_id" ref="industry_fsm.project_task_map_view"/>
+        <field name="view_id" ref="project_enterprise.project_task_map_view"/>
         <field name="act_window_id" ref="industry_fsm.project_task_action_fsm"/>
     </record> 
     <record id="field_service_calendar_view" model="ir.actions.act_window.view">
         <field eval="4" name="sequence"/>
         <field name="view_mode">calendar</field>
-        <field name="view_id" ref="project_task_view_calendar_fsm"/>
+        <field name="view_id" ref="	industry_fsm.project_task_view_calendar_fsm"/>
         <field name="act_window_id" ref="industry_fsm.project_task_action_fsm"/>
     </record> 
     <record id="field_service_form_view" model="ir.actions.act_window.view">
         <field eval="5" name="sequence"/>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_task_form2"/>
+        <field name="view_id" ref="	project.view_task_form2"/>
         <field name="act_window_id" ref="industry_fsm.project_task_action_fsm"/>
     </record>   
 
