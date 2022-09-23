@@ -79,7 +79,7 @@
     <record id="field_service_calendar_view" model="ir.actions.act_window.view">
         <field eval="4" name="sequence"/>
         <field name="view_mode">calendar</field>
-        <field name="view_id" ref="	industry_fsm.project_task_view_calendar_fsm"/>
+        <field name="view_id" ref="industry_fsm.project_task_view_calendar_fsm"/>
         <field name="act_window_id" ref="industry_fsm.project_task_action_fsm"/>
     </record> 
     <record id="field_service_form_view" model="ir.actions.act_window.view">
