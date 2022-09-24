@@ -57,10 +57,10 @@
           
         </field>
     </record>
-    <record id="industry_fsm.project_task_action_fsm" model="ir.actions.act_window">
+    <!--record id="industry_fsm.project_task_action_fsm" model="ir.actions.act_window">
       <field name="view_type">tree</field>
       <field name="view_mode">tree,kanban,map,calendar,form</field>
-    </record>
+    </record-->
    <!-- https://www.youtube.com/watch?v=8aGOHkee7i4 -->
     <!--record id="field_service_tree_view" model="ir.actions.act_window.view">
         <field eval="1" name="sequence"/>
