@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!--report
-        id="report_session"
-        
-        #odel ="openacademy.session"
-        string="session report"
-        name="openacademy.report_session_view"
-        file="openacademy.report_session"
-        report_type="qweb-pdf"
-    /-->
-    <!-- meta data del reporte se puede configurar el tamaño-->
-    <!--report
-        id="report_ticket_viaje"
-        model = "project.task"
-        string="Ticket Viaje"
-        name="serviciogs.report_ticket_viaje"
-        file="serviciogs.report_ticket_viaje"
-        report_type="qweb-pdf"
-    /-->
     <data> 
         <record id="paperformat_custom" model="report.paperformat">
             <field name="name">Formato de papel</field>
@@ -34,7 +16,7 @@
             <!--field name="header_spacing">5</field-->
             <field name="dpi">100</field>
         </record>
-        <record id ="report_ticket_viaje" model="ir.actions.report">
+        <record id="report_ticket_viaje" model="ir.actions.report">
             <field name="name">Ticket viaje</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -45,7 +27,7 @@
             <field name="binding_type">report</field>
         </record>
         
-        <record id ="report_ticket_cliente" model="ir.actions.report">
+        <record id="report_ticket_cliente" model="ir.actions.report">
             <field name="name">Ticket cliente</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -54,7 +36,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
-        <record id ="report_proceso_lavado" model="ir.actions.report">
+        <record id="report_proceso_lavado" model="ir.actions.report">
             <field name="name">Proceso lavado</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -63,7 +45,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
-        <record id ="report_cp_vertical" model="ir.actions.report">
+        <record id="report_cp_vertical" model="ir.actions.report">
             <field name="name">Carta Porte</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -72,7 +54,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
-        <record id ="report_inspeccion_trans" model="ir.actions.report">
+        <record id="report_inspeccion_trans" model="ir.actions.report">
             <field name="name">Inspección de Transporte</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
