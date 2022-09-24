@@ -58,7 +58,7 @@
         </field>
     </record> 
     <record id="industry_fsm.project_task_action_fsm" model="ir.actions.act_window">
-      <field name="view_type">tree</field>
+      
       <field name="view_mode">tree,kanban,map,calendar,form</field>
     </record>
 
