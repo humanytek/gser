@@ -62,7 +62,7 @@
       <field name="view_mode">tree,kanban,map,calendar,form</field>
     </record-->
    <!-- https://www.youtube.com/watch?v=8aGOHkee7i4 -->
-    <!--record id="field_service_tree_view" model="ir.actions.act_window.view">
+    <record id="field_service_tree_view" model="ir.actions.act_window.view">
         <field eval="1" name="sequence"/>
         <field name="view_mode">tree</field>
         <field name="view_id"  ref="industry_fsm.project_task_view_list_fsm"/>
@@ -91,7 +91,7 @@
         <field name="view_mode">form</field>
         <field name="view_id" ref="project.view_task_form2"/>
         <field name="act_window_id" ref="industry_fsm.project_task_action_fsm"/>
-    </record-->   
+    </record>   
 
     
     <record id="project_task_tree_fsm" model="ir.ui.view">
