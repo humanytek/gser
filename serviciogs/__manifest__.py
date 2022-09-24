@@ -9,7 +9,6 @@
         "project",
         "sale_management",
         "fleet",
-        "hr"
     ],
     'data': [
         # security
@@ -24,6 +23,6 @@
         'report/inspeccion_trans.xml',
         # # views
         'views/serviciogser.xml',
-        'views/serviciogserprimario.xml',
+        'views/serviciogserprimario.xml'
     ],
 }
