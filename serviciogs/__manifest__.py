@@ -14,6 +14,10 @@
         # security
         # data
         # demo
+        
+        # # views
+        'views/serviciogser.xml',
+        'views/serviciogserprimario.xml',
         # reports
         'report/reports.xml',
         'report/ticket_viaje.xml',
@@ -21,8 +25,6 @@
         'report/proceso_lavado.xml',
         'report/cp_vertical.xml',
         'report/inspeccion_trans.xml',
-        # # views
-        'views/serviciogser.xml',
-        'views/serviciogserprimario.xml'
+        
     ],
 }
