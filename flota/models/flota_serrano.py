@@ -18,25 +18,25 @@ class FlotaSerrano(models.Model):
         string="Capacidad del Tanque",
     )
     #Parte de modelo
-    num_poliza =fields.Char(
+    numero_poliza =fields.Char(
         string="Numero de poliza",
     )
-    vig_poliza =fields.Date(
+    vigencia_poliza =fields.Date(
         string="Vig. de la poliza",
     ) 
     file_poliza = fields.Binary(
         string="Carga Poliza",
     )
-    vig_fm =fields.Date(
+    vigencia_fisico_mecanico =fields.Date(
         string="Vig. Fisico-Mecanico",
     ) 
-    file_fm = fields.Binary(
+    file_fisico_mecanico = fields.Binary(
         string="Carga Poliza F-Mecanico",
     )
-    vig_contamin =fields.Date(
+    vigencia_emisiones =fields.Date(
         string="Vig.Emisiones",
     ) 
-    file_contamin = fields.Binary(
+    file_emisiones = fields.Binary(
         string="Carga Emisiones",
     )
     file_circulacion = fields.Binary(

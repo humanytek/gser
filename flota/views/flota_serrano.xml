@@ -15,13 +15,13 @@
       </field>
       <!--Seccion de modelo-->
       <field name="color" position="after">
-            <field name="num_poliza"/>
+            <field name="numero_poliza"/>
             <field name="file_poliza"/> 
-            <field name="vig_poliza"/>
-            <field name="file_fm"/>
-            <field name="vig_fm"/>
-            <field name="file_contamin"/>
-            <field name="vig_contamin"/>
+            <field name="vigencia_poliza"/>
+            <field name="file_fisico_mecanico"/>
+            <field name="vigencia_fisico_mecanico"/>
+            <field name="file_emisiones"/>
+            <field name="vigencia_emisiones"/>
             <field name="file_circulacion"/>
             <field name="file_factura"/>
       </field>
