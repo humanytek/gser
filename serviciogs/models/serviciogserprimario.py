@@ -6,7 +6,7 @@ class servicioGSerprimario (models.Model):
         default = False,
     )
     
-    status_viaje = fields.Selection([
+    estatus_viaje = fields.Selection([
         ('1','Programado'),
         ('2','Pendiente de gastos'),
         ('3','Pendiente de diesel'),
@@ -74,15 +74,15 @@ class servicioGSerprimario (models.Model):
         string ="Conductor",
     )  
     gasto_total_op_viaje= fields.Float(
-        related ='project_id.gasto_totalOper',
+        related ='project_id.gasto_total_operador',
         string ="Gastos del operador",
     )
     gasto_total_caseta_viaje= fields.Float(
         related ='project_id.caseta_efectivo',
         string ="Gastos de caseta",
     )   
-    disel_viaje= fields.Float(
-        related ='project_id.disel',
+    diesel_viaje= fields.Float(
+        related ='project_id.diesel',
         string ="Diesel",
     )   
     km_viaje= fields.Float(
@@ -110,7 +110,7 @@ class servicioGSerprimario (models.Model):
     )    
     Subtotal   = fields.Float(
         compute='_compute_subtotal',
-        string ="SubTotal",
+        string ="Subtotal",
     )     
     Iva = fields.Float(
         compute='_compute_iva',

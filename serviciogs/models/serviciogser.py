@@ -8,32 +8,25 @@ class servicioGSer (models.Model):
     allow_timesheets=fields.Boolean(
         default = False,
     )
-# Campos agregados al modelo de proyecto seccion principal
-    status_ruta = fields.Selection([
+    # Campos agregados al modelo de proyecto seccion principal
+    estatus_ruta = fields.Selection([
         ('1','Activa'),
         ('2','Inactiva'),],
         string="Estatus Ruta",
     )
-    # Campos relacional de muchos a uno
-    # comodel_name, se hace referencia al modelo a utilizar
-    #
-    #index =  True indica que lo va a indexar a la BD.
-    #string es nuestro label del campo
+    # Campos relacional: la referencia indica el modelo de donde estamos mandando llamr los datos
     contacto_facturacion = fields.Many2one(
         comodel_name='res.partner',
         ondelete='set null',
         index=True,
         string="Contacto Facturación",
     )
-    #COD-GSer-001# Campo con un related
-    #El tipo de dato debe ser Char para poder realizar la extración de un campo relacionado
-    #Debe existir un campo ya con una relacion efectuada.
-    #se agrega palabra reservada "related" la cual 
+    # Campo Char: campo para introducir texto
     email_facturacion = fields.Char(
         related ='contacto_facturacion.email',
         string="E-mail Facturación",
     )
-    ord_vent = fields.Many2one(
+    orden_venta = fields.Many2one(
         comodel_name='sale.order',
         ondelete='set null',
         index=True,
@@ -94,11 +87,6 @@ class servicioGSer (models.Model):
         string="Producto",
     )
 
-    #ord_vent = fields.Many2one(
-    #    comodel_name='sale.order',
-    #    ondelete='set null',
-    #    index=True,
-    #)
     tipo_precio = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
@@ -110,16 +98,16 @@ class servicioGSer (models.Model):
     precio = fields.Float(
         string="Precio",
     )
-    precio_disel = fields.Float(
+    precio_diesel = fields.Float(
         default = 20.00,
         string="Precio Diesel",
     )
-    rendimiento = fields.Float(
+    rendimiento_diesel = fields.Float(
         default=2.2,
         string="Rendimiento",
     )
-    disel = fields.Float(
-        compute='_compute_disel',
+    diesel = fields.Float(
+        compute='_compute_diesel',
         string ='Diesel'
    )
     caseta_efectivo = fields.Float(
@@ -128,10 +116,10 @@ class servicioGSer (models.Model):
     caseta_llave = fields.Float(
         string="Caseta Llave",
     )
-    gasto_op = fields.Float(
+    gastos_operador = fields.Float(
         string="Gasto Operador",
     )
-    gasto_totalOper = fields.Float(
+    gasto_total_operador = fields.Float(
         compute='_compute_gastoopera',
         string="Gasto Total del Operador",
     )
@@ -139,73 +127,71 @@ class servicioGSer (models.Model):
         compute='_compute_gastoT',
         string="Gasto Total",
     )
-    
-    recogen = fields.Char(
+    # Datos de origen
+    recoge_en_origen = fields.Char(
         string="Se recoge en:",
     )
-    direccion_or= fields.Char(
+    direccion_origen= fields.Char(
         string="Dirección origen:",
     )
-    pais_or= fields.Many2one(
+    pais_origen= fields.Many2one(
         string ="País origen:",
         comodel_name='res.country',
         ondelete='set null',
         index=True,
     )
-    estado_or= fields.Many2one(
+    estado_origen= fields.Many2one(
         string ="Estado origen:",
         comodel_name='res.country.state',
         ondelete='set null',
         index=True,
     )
-    ciudad_or= fields.Char(
+    ciudad_origen= fields.Char(
         string ="Ciudad origen:",
         comodel_name='res.city',
         ondelete='set null',
         index=True,
     )
-    entregaD = fields.Char(
+    # Datos de destino
+    entrega_destino = fields.Char(
         string="Se entrega en:",
     )
-    direccion_des= fields.Char(
+    direccion_destino= fields.Char(
         string="Dirección destino:",
     )
-    pais_des= fields.Many2one(
+    pais_destino= fields.Many2one(
         string ="País destino:",
         comodel_name='res.country',
         ondelete='set null',
         index=True,
     )
-    estado_des= fields.Many2one(
+    estado_destino= fields.Many2one(
         string ="Estado destino:",
         comodel_name='res.country.state',
         ondelete='set null',
         index=True,
     )
-    ciudad_des= fields.Char(
+    ciudad_destino= fields.Char(
         string ="Ciudad destino:",
         #comodel_name='res.country.city',
         #ondelete='set null',
         #index=True,
     )
-   
-    #@api.onchange('partner_id')
-    #def onchangue_ordventas(self):
-    #    self.ord_vent = self.partner_id
 
-    @api.depends("disel", "precio_disel","caseta_llave","gasto_op","caseta_efectivo")
+    # Datos Computados para el calculo de gastos
+    @api.depends("diesel", "precio_diesel","caseta_llave","gastos_operador","caseta_efectivo")
     def _compute_gastoT(self):
         for record in self:
-            record.gasto_total = (record.disel * record.precio_disel) + record.caseta_llave + record.caseta_efectivo + record.gasto_op
+            record.gasto_total = (record.diesel * record.precio_diesel) + record.caseta_llave + record.caseta_efectivo + record.gastos_operador
 
-    @api.depends("caseta_efectivo", "gasto_op")
+    @api.depends("caseta_efectivo", "gastos_operador")
     def _compute_gastoopera(self):
         for record in self:
-            record.gasto_totalOper = record.caseta_efectivo + record.gasto_op
+            record.gasto_total_operador = record.caseta_efectivo + record.gastos_operador
 
-    @api.depends("km_ruta", "rendimiento")
-    def _compute_disel(self):
+    @api.depends("km_ruta", "rendimiento_diesel")
+    def _compute_diesel(self):
         for record in self:
-            record.disel = record.km_ruta / record.rendimiento
+            record.diesel = record.km_ruta / record.rendimiento_diesel
 
     

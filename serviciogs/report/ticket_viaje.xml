@@ -98,8 +98,8 @@
                   <div class="row">
                     <div class="col-12" >
                       <div class="row">
-                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_or"/></h6></div>
-                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_or"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_origen"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_origen"/></h6></div>
                       </div>
                     </div>
                   </div>
@@ -116,8 +116,8 @@
                   <div class="row">
                     <div class="col-12" >
                       <div class="row">
-                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_des"/></h6></div>
-                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_des"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_destino"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_destino"/></h6></div>
                       </div>
                     </div>
                   </div>

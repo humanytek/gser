@@ -9,7 +9,7 @@
                 <attribute name="invisible">1</attribute>
           </field>
           <field name="user_ids" position="after">
-            <field name="status_viaje"/>
+            <field name="estatus_viaje"/>
             <field name="tipo_ruta_viaje" readonly ="1" />
             <field name="carga_viaje" readonly ="1" />
             <field name="capacidad_viaje" readonly ="1"/>
@@ -90,7 +90,7 @@
         </field>
 
         <field name="project_id" position="after">
-          <field name="status_viaje" optional="show"/>
+          <field name="estatus_viaje" optional="show"/>
           <field name="create_date" optional="show"/>
           <field name="carga_combustible" optional="show"/>
           <field name="disel_viaje" optional="show"/>
