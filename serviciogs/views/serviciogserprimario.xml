@@ -23,7 +23,7 @@
             <field name="conductor" readonly ="1"/>
             <field name="gasto_total_op_viaje" readonly ="1"/>
             <field name="gasto_total_caseta_viaje" readonly ="1"/>
-            <field name="disel_viaje" readonly ="1"/>
+            <field name="diesel_viaje" readonly ="1"/>
             <field name="km_viaje" readonly ="1"/>
             <field name="carga_combustible"/>  
           </field>
@@ -93,7 +93,7 @@
           <field name="estatus_viaje" optional="show"/>
           <field name="create_date" optional="show"/>
           <field name="carga_combustible" optional="show"/>
-          <field name="disel_viaje" optional="show"/>
+          <field name="diesel_viaje" optional="show"/>
           <field name="conductor" optional="show"/>
           <field name="gasto_total_op_viaje"/>
           <field name="gasto_total_caseta_viaje" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
