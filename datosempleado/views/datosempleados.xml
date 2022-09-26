@@ -24,13 +24,13 @@
                   <field name="infonavit"/>
                 </group>
                 <group string="Contratos">
-                  <field name="emp_fechaIngreso"/>
-                  <field name="emp_contrato"/>
-                  <field name="emp_reglamento"/>
-                  <field name="emp_codigoetica"/>
-                  <field name="emp_bajafecha"/>
-                  <field name="emp_baja"/>
-                  <field name="emp_motivo_baja"/>
+                  <field name="empleado_fecha_ingreso"/>
+                  <field name="empleado_contrato"/>
+                  <field name="empleado_reglamento"/>
+                  <field name="empleado_codigo_etica"/>
+                  <field name="empleado_baja_fecha"/>
+                  <field name="empleado_baja"/>
+                  <field name="empleado_motivo_baja"/>
                   <field name="no_antesedentes"/>
                   <field name="recomendacion1"/>
                   <field name="recomendacion2"/>

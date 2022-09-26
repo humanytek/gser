@@ -38,25 +38,25 @@ class datosEmpleados (models.Model):
     )
     
     #Contratos
-    emp_fechaIngreso = fields.Date(
+    empleado_fecha_ingreso = fields.Date(
         string='Fecha de ingreso',
     )
-    emp_contrato = fields.Binary(
+    empleado_contrato = fields.Binary(
         string='Contrato',
     )
-    emp_reglamento = fields.Binary(
+    empleado_reglamento = fields.Binary(
         string='Reglamento',
     )
-    emp_codigoetica = fields.Binary(
+    empleado_codigo_etica = fields.Binary(
         string='Codigo Etica',
     )
-    emp_bajafecha = fields.Date(    
+    empleado_baja_fecha = fields.Date(    
         string='Fecha Baja',
     )
-    emp_baja = fields.Binary(
+    empleado_baja = fields.Binary(
         string='Baja',
     )
-    emp_motivo_baja = fields.Text(
+    empleado_motivo_baja = fields.Text(
         string='Motivo',
     )  
     no_antesedentes = fields.Binary(
