@@ -50,7 +50,7 @@
                   <field name="entrega_destino"/>
                   <field name="direccion_destino"/>
                   <field name="pais_destino"/>
-                  <field name="estado_destino" domain="[('country_id', '=', pais_or)]"/>
+                  <field name="estado_destino" domain="[('country_id', '=', pais_origen)]"/>
                   <field name="ciudad_destino" />
                   <!--domain="[('country.state_id', '=', estado_destino)]"-->
                 </group>
