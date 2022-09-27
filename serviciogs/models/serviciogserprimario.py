@@ -105,8 +105,6 @@ class servicioGSerprimario (models.Model):
         string ="Project Manager",
         comodel_name='res.users',
         default=lambda self: self.env.user.id
-        ondelete ='set null',
-        intex =True,
     )
     Cantidad = fields.Float(
         string ="Cantidad",
