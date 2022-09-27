@@ -148,18 +148,18 @@ class servicioGSerprimario (models.Model):
     @api.depends("cantidad", "precio_ruta_litro")
     def _compute_subtotal(self):
         for record in self:
-            record.Subtotal = record.cantidad * record.precio_ruta_litro
+            record.subtotal = record.cantidad * record.precio_ruta_litro
 
-    @api.depends("Subtotal")
+    @api.depends("subtotal")
     def _compute_iva(self):
         for record in self:
-            record.iva = record.Subtotal * 0.16
-            record.retencion = record.Subtotal * 0.04
+            record.iva = record.subtotal * 0.16
+            record.retencion = record.subtotal * 0.04
 
-    @api.depends("Subtotal", "iva", "retencion")
+    @api.depends("subtotal", "iva", "retencion")
     def _compute_total_facturar(self):
         for record in self:
-            record.total_facturar = (record.Subtotal + record.iva) - record.retencion
+            record.total_facturar = (record.subtotal + record.iva) - record.retencion
 
 
     
