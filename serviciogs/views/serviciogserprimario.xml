@@ -32,7 +32,7 @@
           </field>
           <field name="partner_phone" position="after">
             <!--field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field-->
-            <field name="pmanager"  domain="[('name', '=', self._uid)]"></field>
+            <field name="pmanager"></field>
           </field>
             <page name="description_page" position="after">
             <group string="Facturacion y Cobranza">

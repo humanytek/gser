@@ -95,9 +95,16 @@ class servicioGSerprimario (models.Model):
         ('3','Otro'),],
         string="Carga de combustible",
     )
+    #pmanager = fields.Many2one(
+    #    string ="Project Manager",
+    #    comodel_name ='res.partner',
+    #    ondelete ='set null',
+    #    intex =True,
+    #)
     pmanager = fields.Many2one(
         string ="Project Manager",
-        comodel_name ='res.partner',
+        comodel_name='res.users',
+        default=lambda self: self.env.user.id
         ondelete ='set null',
         intex =True,
     )
