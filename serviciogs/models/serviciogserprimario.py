@@ -113,7 +113,7 @@ class servicioGSerprimario (models.Model):
         related ="project_id.precio",
         string ="Precio ruta / litro",
     )    
-    Subtotal   = fields.Float(
+    subtotal   = fields.Float(
         compute='_compute_subtotal',
         string ="Subtotal",
     )     
