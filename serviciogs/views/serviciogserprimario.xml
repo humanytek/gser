@@ -38,18 +38,18 @@
             <group string="Facturacion y Cobranza">
               <group>
                 <group string="">
-                  <field name="Cantidad"/>           
-                  <field name="Precio_ruta_Litro" readonly="1"/>
-                  <field name="Subtotal" readonly="1"/>
-                  <field name="Iva" readonly="1"/>
-                  <field name="Retencion" readonly="1"/>
-                  <field name="Total_Facturar" readonly="1"/>
+                  <field name="cantidad"/>           
+                  <field name="precio_ruta_litro" readonly="1"/>
+                  <field name="subtotal" readonly="1"/>
+                  <field name="iva" readonly="1"/>
+                  <field name="retencion" readonly="1"/>
+                  <field name="total_facturar" readonly="1"/>
                 </group> 
                 <group string="">
-                  <field name="Forma_pago"/>           
-                  <field name="No_Factura"/>
-                  <field name="Fecha_Factura"/>
-                  <field name="Fecha_Pago"/>
+                  <field name="forma_pago"/>           
+                  <field name="no_factura"/>
+                  <field name="fecha_factura"/>
+                  <field name="fecha_pago"/>
                 </group>                
               </group>
             </group>
@@ -98,8 +98,8 @@
           <field name="conductor" optional="show"/>
           <field name="gasto_total_op_viaje"/>
           <field name="gasto_total_caseta_viaje" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
-          <field name="Total_Facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
-          <field name="No_Factura" optional="show"/>
+          <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
+          <field name="no_factura" optional="show"/>
         </field>
         
       </field>  

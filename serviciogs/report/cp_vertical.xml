@@ -150,7 +150,7 @@
                         <div class="col-3" style="background-color:#dee2e6;">SEGURIDAD DE CARGA<br/><br/></div>
                         <div class="col-3" style="background-color:#dee2e6;">MANIOBRAS<br/><br/></div>
                         <div class="col-3" style="background-color:#dee2e6;">AUTOPISTAS<br/><br/></div>
-                        <div class="col-3" style="background-color:#dee2e6;">IMPORTE<br/><span class="font-weight-normal" t-field="o.Precio_ruta_Litro"/><br/></div>
+                        <div class="col-3" style="background-color:#dee2e6;">IMPORTE<br/><span class="font-weight-normal" t-field="o.precio_ruta_litro"/><br/></div>
                     </div>
                   </div>
                 </div>
@@ -159,7 +159,7 @@
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
                         <div class="col-9" style="background-color:#dee2e6;">OBSERVACIÓN<br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.Retencion"/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">RETENCION 4%<br/><span class="font-weight-normal" t-field="o.retencion"/><br/></div>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
                         <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.Iva"/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">IVA 16%<br/><span class="font-weight-normal" t-field="o.iva"/><br/></div>
                     </div>
                   </div>
                 </div>
@@ -175,7 +175,7 @@
                   <div class="col-sm-12" >
                     <div class="row font-weight-bold">
                         <div class="col-9" style="background-color:#dee2e6;"><br/><br/></div>
-                        <div class="col-3" style="background-color:#e9ecef;">TOTAL<br/><span class="font-weight-normal" t-field="o.Total_Facturar"/><br/></div>
+                        <div class="col-3" style="background-color:#e9ecef;">TOTAL<br/><span class="font-weight-normal" t-field="o.total_facturar"/><br/></div>
                     </div>
                   </div>
                 </div>

@@ -106,10 +106,10 @@ class servicioGSerprimario (models.Model):
         comodel_name='res.users',
         default=lambda self: self.env.user.id
     )
-    Cantidad = fields.Float(
+    cantidad = fields.Float(
         string ="Cantidad",
     )          
-    Precio_ruta_Litro = fields.Float(
+    precio_ruta_litro = fields.Float(
         related ="project_id.precio",
         string ="Precio ruta / litro",
     )    
@@ -117,49 +117,49 @@ class servicioGSerprimario (models.Model):
         compute='_compute_subtotal',
         string ="Subtotal",
     )     
-    Iva = fields.Float(
+    iva = fields.Float(
         compute='_compute_iva',
         string ="IVA 16%",
     )    
-    Retencion = fields.Float(
+    retencion = fields.Float(
         compute ='_compute_iva',
         string ="Retención 4%",
     )   
-    Total_Facturar = fields.Float(
+    total_facturar = fields.Float(
         compute ='_compute_total_facturar',
         string ="Total a Facturar",
     )
-    Forma_pago = fields.Selection([
+    forma_pago = fields.Selection([
         ('1','Transferencia'),
         ('2','Efectivo'),],
         string ="Forma de pago",
     )          
-    No_Factura = fields.Char(
+    no_factura = fields.Char(
         string ="No. Factura",
     )    
-    Fecha_Factura = fields.Date(
+    fecha_factura = fields.Date(
         string ="Fecha de factura",
     )
-    Fecha_Pago = fields.Date(
+    fecha_pago = fields.Date(
         string ="Fecha pago",
     )
    
 
-    @api.depends("Cantidad", "Precio_ruta_Litro")
+    @api.depends("cantidad", "precio_ruta_litro")
     def _compute_subtotal(self):
         for record in self:
-            record.Subtotal = record.Cantidad * record.Precio_ruta_Litro
+            record.Subtotal = record.cantidad * record.precio_ruta_litro
 
     @api.depends("Subtotal")
     def _compute_iva(self):
         for record in self:
-            record.Iva = record.Subtotal * 0.16
-            record.Retencion = record.Subtotal * 0.04
+            record.iva = record.Subtotal * 0.16
+            record.retencion = record.Subtotal * 0.04
 
-    @api.depends("Subtotal", "Iva", "Retencion")
+    @api.depends("Subtotal", "iva", "retencion")
     def _compute_total_facturar(self):
         for record in self:
-            record.Total_Facturar = (record.Subtotal + record.Iva) - record.Retencion
+            record.total_facturar = (record.Subtotal + record.iva) - record.retencion
 
 
     
