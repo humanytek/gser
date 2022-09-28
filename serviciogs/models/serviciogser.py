@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 class servicioGSer (models.Model):
-    # Hacemos referencia al modelo al cual vamos a heredar.
+    # Referencia a modelo al cual vamos a heredar.
     _inherit = ['project.project']
 
     # Desabilihitar la parte de las hojas de trabajo

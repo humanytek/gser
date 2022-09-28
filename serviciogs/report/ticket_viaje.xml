@@ -55,7 +55,7 @@
                     <div class="col-12" >
                       <div class="row font-weight-bold">
                           <div class="col-3">Kilometros:<br/><span class="font-weight-normal" t-field="o.km_viaje"/></div>
-                          <div class="col-3">Disel:<br/><span class="font-weight-normal" t-field="o.disel_viaje"/></div>
+                          <div class="col-3">Diesel:<br/><span class="font-weight-normal" t-field="o.diesel_viaje"/></div>
                           <div class="col-3">Casetas Efectivo:<br/><span class="font-weight-normal" t-field="o.gasto_total_caseta_viaje"/></div>
                           <div class="col-3">Gasto total operador:<br/><span class="font-weight-normal" t-field="o.gasto_total_op_viaje"/></div>
                       </div>
