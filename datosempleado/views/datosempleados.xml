@@ -43,8 +43,8 @@
                 </group>
                 <group string="Responsibas">
                   <field name="res_unidad"/>
-                  <field name="res_llavecaseta"/>
-                  <field name="res_llavedisel"/>
+                  <field name="res_llave_caseta"/>
+                  <field name="res_llave_diesel"/>
                   <field name="res_telefono"/>
                   <field name="res_equipo"/>
                   <field name="res_resguardo1"/>

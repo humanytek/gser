@@ -86,11 +86,11 @@ class datosEmpleados (models.Model):
     res_unidad = fields.Binary(
         string='Unidad',
     )
-    res_llavecaseta = fields.Binary(
+    res_llave_caseta = fields.Binary(
         string='Llave caseta',
     )
-    res_llavedisel = fields.Binary(
-        string='Llave Disel',
+    res_llave_diesel = fields.Binary(
+        string='Llave Diesel',
     )
     res_telefono = fields.Binary(
         string='Telefono',
