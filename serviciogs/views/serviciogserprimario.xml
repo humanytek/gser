@@ -85,6 +85,7 @@
         </field>
 
         <!--posisionamiento de los campos-->
+        <!--posisionamiento de los campos-->
         <field name="name" position="before">
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
