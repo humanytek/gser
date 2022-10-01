@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="main_servicesext_menu" name="Servicio Externo"/>
+    <menuitem id="servicesext_menu" name="Servicio Esterno" parent="main_servicesext_menu"/>
+    <menuitem id="configuration_menu" name="Configuration" parent="main_servicesext_menu"/>
+</odoo>

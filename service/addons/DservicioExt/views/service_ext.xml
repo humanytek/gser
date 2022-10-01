@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="service_ext_view_form" model="ir.ui.view">
+        <field name="name">service.ext.view.form</field>
+        <field name="model">service.ext</field>
+        <field name="arch" type="xml">
+            <form string="Service Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="x_cliente"/>
+                            <field name="x_contactoFacturacion"/> 
+                            <field name="x_statusruta"/> 
+                            <field name="x_empresa"/> 
+                        </group>
+                        <group>       
+                            <field name="x_km"/>
+                            <field name="x_carga"/>
+                            <field name="x_capacidad"/>
+                            <field name="x_producto"/>
+                            <field name="x_ejes"/>
+                        </group>
+                    </group>
+                     <group>
+                        <group>
+                            <field name="x_ordenVenta"/>
+                            <field name="x_tipoPrecio"/>
+                            <field name="x_precio"/>
+                            <field name="x_disel"/>
+                            <field name="x_rendimiento"/>
+                            <field name="x_ejemploHoy"/>
+                        </group>
+                        <group>
+                            <field name="x_casetas"/>
+                            <field name="x_casetas"/>
+                            <field name="x_casetas"/>
+                            <field name="x_casetas"/>
+                        </group>
+                    </group>
+                    <!--notebook>
+                        <page string="Viaje">
+                            
+                        </page>
+                        <page string="Producto">
+                            
+                        </page>
+                    </notebook-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="service_ext_view_tree" model="ir.ui.view">
+        <field name="name">service.ext.view.tree</field>
+        <field name="model">service.ext</field>
+        <field name="arch" type="xml">
+            <tree string="Service Tree">
+                <field name="name"/>
+                <field name="x_cliente"/> 
+            </tree>
+        </field>
+    </record>
+
+    <record id="service_ext_view_search" model="ir.ui.view">
+        <field name="name">service.search</field>
+        <field name="model">service.ext</field>
+        <field name="arch" type="xml">
+            <search>
+                <!--filter name="my_courses" string="My Courses" domain="[('responsible_id', '=', uid)]"/-->
+                <filter name="my_services" string="My Services" domain="[('x_cliente', '=', uid)]"/>
+                <group string="Group By">
+                    <!--filter name="by_responsible" string="Responsible" context="{'group_by': 'name'}"/-->
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="service_ext_action" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">service.ext</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context" eval="{'search_default_my_services': 1}"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first course
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="services_menu" name="Services" parent="servicesext_menu" action="service_ext_action"/>
+</odoo>

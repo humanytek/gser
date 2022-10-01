@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_category_action" model="ir.actions.act_window">
+        <field name="name">Contact Tags</field>
+        <field name="res_model">res.partner.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="contact_cat_menu" name="Contact Tags" parent="configuration_menu" action="res_partner_category_action"/>
+</odoo>

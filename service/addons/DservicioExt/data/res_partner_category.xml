@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="teacher1" model="res.partner.category">
+        <field name="name">Teacher / Level 1</field>
+    </record>
+    <record id="teacher2" model="res.partner.category">
+        <field name="name">Teacher / Level 2</field>
+    </record>
+</odoo>
