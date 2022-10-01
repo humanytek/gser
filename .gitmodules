@@ -1,4 +1,0 @@
-[submodule "humanytek/gser"]
-	path = humanytek/gser
-	url = git@github.com:humanytek/gser.git
-	branch = 15.0-PruebasUnitarias
