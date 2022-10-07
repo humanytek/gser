@@ -104,7 +104,6 @@ class servicioGSerprimario (models.Model):
     #)
     pmanager = fields.Many2one(
         string ="Project Manager",
-       default=" ",
         comodel_name='res.users',
         #default=lambda self: self.env.user.id
     )
