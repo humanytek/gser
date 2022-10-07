@@ -102,12 +102,12 @@ class servicioGSerprimario (models.Model):
     #    ondelete ='set null',
     #    intex =True,
     #)
-    project_id = fields.Many2one(
-        comodel_name='project.project',
-        ondelete ='set null',
-        index=True,
+    #project_id = fields.Many2one(
+    #    comodel_name='project.project',
+    #    ondelete ='set null',
+    #    index=True,
         
-    )
+    #)
     pmanager = fields.Many2one(
         string ="Project Manager",
         comodel_name='res.users',
