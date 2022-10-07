@@ -8,10 +8,11 @@
           <field name="user_ids" position="attributes">
                 <attribute name="invisible">1</attribute>
           </field>
-          <field name="user_ids" position="after">
-            <field name="project_id" position="attributes">
+          <field name="project_id" position="attributes">
               <attribute name="value_label" value=" "></attribute>
             </field>
+          <field name="user_ids" position="after">
+            
             <field name="estatus_viaje"/>
             <field name="tipo_ruta_viaje" readonly ="1" />
             <field name="carga_viaje" readonly ="1" />
