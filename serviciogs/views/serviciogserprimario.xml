@@ -9,10 +9,9 @@
                 <attribute name="invisible">1</attribute>
           </field>
           <field name="partner_id" position="replace">
-              <field name="partner_id" value="default"> </field>
+              <field name="partner_id" value="default"></field>
           </field>
           <field name="user_ids" position="after">
-            
             <field name="estatus_viaje"/>
             <field name="tipo_ruta_viaje" readonly ="1" />
             <field name="carga_viaje" readonly ="1" />
@@ -90,7 +89,7 @@
 
         <!--posisionamiento de los campos-->
         <field name="name" position="before">
-          <field name="partner_id" optional="show"/>
+          <field name="partner_id" optional="show" invisible="1"/>
           <field name="id" optional="show"/>
         </field>
 
