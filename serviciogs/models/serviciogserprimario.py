@@ -39,7 +39,7 @@ class servicioGSerprimario (models.Model):
     )
     r1_no_economico = fields.Char(
         related ='remolque_1.no_economico',
-        string="No. Economico Remolque 1",
+        string="No. Economico",
     )
 
     remolque_2 = fields.Many2one(
@@ -50,7 +50,7 @@ class servicioGSerprimario (models.Model):
     )
     r2_no_economico = fields.Char(
         related ='remolque_2.no_economico',
-        string="No. Economico Remolque 2",
+        string="No. Economico",
     )
 
     tipo_ruta_viaje= fields.Selection(
