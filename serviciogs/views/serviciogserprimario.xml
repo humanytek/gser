@@ -86,12 +86,13 @@
         <field name="tag_ids" position="replace">
           <field name="tag_ids" invisible="1" optional="hide"/>
         </field>
-
+        <field name="name" position="replace">
+          <field name="name" invisible="1" optional="hide"/>
+        </field>
         <!--posisionamiento de los campos-->
         <field name="name" position="before">
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
-          <field name="name" invisible="1" optional="hide"/>
         </field>
 
         <field name="project_id" position="after">
