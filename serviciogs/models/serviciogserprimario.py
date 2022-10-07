@@ -1,3 +1,4 @@
+from email.policy import default
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -103,6 +104,7 @@ class servicioGSerprimario (models.Model):
     #)
     pmanager = fields.Many2one(
         string ="Project Manager",
+        default="",
         comodel_name='res.users',
         default=lambda self: self.env.user.id
     )
