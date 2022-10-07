@@ -105,7 +105,7 @@ class servicioGSerprimario (models.Model):
     pmanager = fields.Many2one(
         string ="Project Manager",
         comodel_name='res.users',
-        #default=lambda self: self.env.user.id
+        default=lambda self: self.env.user.id
     )
     cantidad = fields.Float(
         string ="Cantidad",
