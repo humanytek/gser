@@ -8,8 +8,8 @@
           <field name="user_ids" position="attributes">
                 <attribute name="invisible">1</attribute>
           </field>
-          <field name="partner_id" position="attributes">
-              <attribute name="default" value=""></attribute>
+          <field name="partner_id" position="replace">
+              <field name="partner_id" default="  "></field>
           </field>
           <field name="user_ids" position="after">
             
