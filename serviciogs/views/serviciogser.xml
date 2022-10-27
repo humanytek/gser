@@ -14,44 +14,44 @@
             <group string="Ruta">
               <group>
                 <group string="Ruta">
-                  <field name="estatus_ruta" required="true"/>           
-                  <field name="km_ruta" required="true"/>
-                  <field name="carga_ruta" required="true"/>
-                  <field name="capacidad_ruta" required="true"/>
-                  <field name="ejes_ruta" required="true"/>
-                  <field name="producto_ruta" required="true"/>
+                  <field name="estatus_ruta" required="1"/>           
+                  <field name="km_ruta" required="1"/>
+                  <field name="carga_ruta" required="1"/>
+                  <field name="capacidad_ruta" required="1"/>
+                  <field name="ejes_ruta" required="1"/>
+                  <field name="producto_ruta" required="1"/>
                 </group>
                 <group string="Costos">
-                  <field name="tipo_precio"  required="true"/>
-                  <field name="precio"  required="true"/>
-                  <field name="precio_diesel"  required="true"/>
-                  <field name="rendimiento_diesel"  required="true"/>
-                  <field name="diesel" required="true"/>
-                  <field name="caseta_efectivo" required="true"/>
-                  <field name="caseta_llave" required="true"/>
-                  <field name="gastos_operador" required="true"/>
+                  <field name="tipo_precio"  required="1"/>
+                  <field name="precio"  required="1"/>
+                  <field name="precio_diesel"  required="1"/>
+                  <field name="rendimiento_diesel"  required="1"/>
+                  <field name="diesel" required="1"/>
+                  <field name="caseta_efectivo" required="1"/>
+                  <field name="caseta_llave" required="1"/>
+                  <field name="gastos_operador" required="1"/>
                 </group>
-                <group string="Gastos Totales" required="true">
-                  <field name="gasto_total_operador" required="true"/>
-                  <field name="gasto_total" required="true"/>
+                <group string="Gastos Totales" required="1">
+                  <field name="gasto_total_operador" required="1"/>
+                  <field name="gasto_total" required="1"/>
                 </group>
                 <group >
                 </group>
                 <group string="Origen">
-                  <field name="recoge_en_origen" required="true"/>
-                  <field name="direccion_origen" required="true"/>
-                  <field name="pais_origen" required="true"/>
-                  <field name="estado_origen" domain="[('country_id', '=', pais_origen)]" required="true"/>
-                  <field name="ciudad_origen" required="true"/>
+                  <field name="recoge_en_origen" required="1"/>
+                  <field name="direccion_origen" required="1"/>
+                  <field name="pais_origen" required="1"/>
+                  <field name="estado_origen" domain="[('country_id', '=', pais_origen)]" required="1"/>
+                  <field name="ciudad_origen" required="1"/>
                   <!--dato de la ciudad-->
                   <!--domain="[('country.state_id', '=', estado_origen)]"-->
                 </group>
                 <group string="Destino">
-                  <field name="entrega_destino" required="true"/>
-                  <field name="direccion_destino" required="true"/>
-                  <field name="pais_destino" required="true"/>
-                  <field name="estado_destino" domain="[('country_id', '=', pais_origen)]" required="true"/>
-                  <field name="ciudad_destino" required="true"/>
+                  <field name="entrega_destino" required="1"/>
+                  <field name="direccion_destino" required="1"/>
+                  <field name="pais_destino" required="1"/>
+                  <field name="estado_destino" domain="[('country_id', '=', pais_origen)]" required="1"/>
+                  <field name="ciudad_destino" required="1"/>
                   <!--domain="[('country.state_id', '=', estado_destino)]"-->
                 </group>
               </group>
