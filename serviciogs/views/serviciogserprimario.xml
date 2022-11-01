@@ -13,7 +13,7 @@
           <field name="user_ids" position="attributes">
                 <attribute name="invisible">1</attribute>
           </field>
-          
+
           <field name="partner_id" position="replace">
               <field name="partner_id" value="default"></field>
           </field>
@@ -37,9 +37,9 @@
             <field name="km_viaje" readonly ="1"/>
             <field name="carga_combustible"/>  
           </field>
-          <field name="sale_line_id" position="replace">
+          <!--field name="sale_line_id" position="replace">
             <field name="sale_line_id" invisible="1"></field>
-          </field>
+          </field-->
           <field name="partner_phone" position="after">
             <!--field name="pmanager"  domain="[('name', '=', 'Brandon Freeman')]"></field-->
             <field name="pmanager"></field>
