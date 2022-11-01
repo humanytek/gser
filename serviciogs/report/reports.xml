@@ -16,6 +16,7 @@
             <!--field name="header_spacing">5</field-->
             <field name="dpi">100</field>
         </record>
+
         <record id="report_ticket_viaje" model="ir.actions.report">
             <field name="name">Ticket viaje</field>
             <field name="model">project.task</field>
@@ -36,6 +37,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
+
         <record id="report_proceso_lavado" model="ir.actions.report">
             <field name="name">Proceso lavado</field>
             <field name="model">project.task</field>
@@ -45,6 +47,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
+
         <record id="report_cp_vertical" model="ir.actions.report">
             <field name="name">Carta Porte</field>
             <field name="model">project.task</field>
@@ -54,6 +57,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="binding_type">report</field>
         </record>
+
         <record id="report_inspeccion_trans" model="ir.actions.report">
             <field name="name">Inspección de Transporte</field>
             <field name="model">project.task</field>
@@ -64,6 +68,5 @@
             <field name="binding_type">report</field>
         </record>
 
-        
     </data>
 </odoo>
