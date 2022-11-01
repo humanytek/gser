@@ -21,7 +21,6 @@
                   <field name="ejes_ruta" required="1"/>
                   <field name="producto_ruta" required="1"/>
                 </group>
-                
                 <group string="Costos">
                   <field name="tipo_precio"  required="1"/>
                   <field name="precio"  required="1"/>
