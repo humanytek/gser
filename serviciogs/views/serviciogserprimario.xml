@@ -105,10 +105,6 @@
           <field name="id" optional="show"/>
         </field>
 
-        <!--field name="project_id" position="replace">
-          <field name="Cliente - Ruta" />
-        </field-->
-
         <field name="project_id" position="after">
           <field name="estatus_viaje" optional="show"/>
           <field name="create_date" optional="show"/>
