@@ -17,7 +17,7 @@
             <field name="dpi">100</field>
         </record>
 
-        <record id="report_ticket_viaje" model="ir.actions.report">
+        <!--record id="report_ticket_viaje" model="ir.actions.report">
             <field name="name">Ticket viaje</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
@@ -26,7 +26,7 @@
             <field name="binding_model_id" ref="project.model_project_task"></field>
             <field name="paperformat_id" ref="serviciogs.paperformat_custom"></field>
             <field name="binding_type">report</field>
-        </record>
+        </record-->
         
         <record id="report_ticket_cliente" model="ir.actions.report">
             <field name="name">Ticket cliente</field>
