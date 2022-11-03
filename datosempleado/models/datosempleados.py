@@ -4,7 +4,7 @@ class datosEmpleados (models.Model):
     _inherit="hr.employee"
     #Documentacion personal
     acta_nacimiento = fields.Binary(
-        string='Acta de Nacimiento',
+        string="Acta de Nacimiento",
     )
     domicilio = fields.Binary(
         string="Comp. Domicilio",
@@ -13,94 +13,94 @@ class datosEmpleados (models.Model):
         string="Comp. Estudios",
     )
     curp = fields.Binary(
-        string='CURP',
+        string="CURP",
     )
     rfc = fields.Binary(
-        string='RFC',
+        string="RFC",
     )
     ine = fields.Binary(
-        string='INE',
+        string="INE",
     )
     
     
     #Seguro
     nss = fields.Char(
-        string='Numero NSS',
+        string="Numero NSS",
     )
     alta_patronal = fields.Date(
-        string='Fecha de alta patronal',
+        string="Fecha de alta patronal",
     )
     alta_imss = fields.Binary(
-        string='Alta IMSS',
+        string="Alta IMSS",
     )
     infonavit = fields.Binary(
-        string='Comp. Infonavit',
+        string="Comp. Infonavit",
     )
     
     #Contratos
     empleado_fecha_ingreso = fields.Date(
-        string='Fecha de ingreso',
+        string="Fecha de ingreso",
     )
     empleado_contrato = fields.Binary(
-        string='Contrato',
+        string="Contrato",
     )
     empleado_reglamento = fields.Binary(
-        string='Reglamento',
+        string="Reglamento",
     )
     empleado_codigo_etica = fields.Binary(
-        string='Codigo Etica',
+        string="Codigo Etica",
     )
     empleado_baja_fecha = fields.Date(    
-        string='Fecha Baja',
+        string="Fecha Baja",
     )
     empleado_baja = fields.Binary(
-        string='Baja',
+        string="Baja",
     )
     empleado_motivo_baja = fields.Text(
-        string='Motivo',
+        string="Motivo",
     )  
     no_antesedentes = fields.Binary(
-        string='Carta Antecedentes',
+        string="Carta Antecedentes",
     )   
     recomendacion1 = fields.Binary(
-        string='Carta de recomendación 1',
+        string="Carta de recomendación 1",
     )
     recomendacion2 = fields.Binary(
-        string='Carta de recomendación 2',
+        string="Carta de recomendación 2",
     )
     
     #Vehiculo
     licencia = fields.Binary(
-        string='Licencia',
+        string="Licencia",
     )
     vigencia = fields.Date(
-        string='Vigencia',
+        string="Vigencia",
     )
     chofer_examen = fields.Binary(
-        string='Examen de manejo',
+        string="Examen de manejo",
     )
     vigencia_exam = fields.Date(
-        string='Vigencia Examen',
+        string="Vigencia Examen",
     )
     #responsivas
     res_unidad = fields.Binary(
-        string='Unidad',
+        string="Unidad",
     )
     res_llave_caseta = fields.Binary(
-        string='Llave caseta',
+        string="Llave caseta",
     )
     res_llave_diesel = fields.Binary(
-        string='Llave Diesel',
+        string="Llave Diesel",
     )
     res_telefono = fields.Binary(
-        string='Telefono',
+        string="Telefono",
     )
     res_equipo = fields.Binary(
-        string='Equipo',
+        string="Equipo",
     )
     res_resguardo1 = fields.Binary(
-        string='Resguardo 1',
+        string="Resguardo 1",
     )
     res_resguardo2 = fields.Binary(
-        string='Resguardo 2',
+        string="Resguardo 2",
     )

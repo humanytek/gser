@@ -40,7 +40,7 @@ class servicioGSerprimario (models.Model):
     )
     r1_no_economico = fields.Char(
         related ='remolque_1.no_economico',
-        string="No. Economico",
+        string="No. Economico r1",
     )
 
     remolque_2 = fields.Many2one(
@@ -51,7 +51,7 @@ class servicioGSerprimario (models.Model):
     )
     r2_no_economico = fields.Char(
         related ='remolque_2.no_economico',
-        string="No. Economico",
+        string="No. Economico r2",
     )
 
     tipo_ruta_viaje= fields.Selection(
@@ -109,7 +109,7 @@ class servicioGSerprimario (models.Model):
         
     #)
     pmanager = fields.Many2one(
-        string ="Project Manager",
+        string ="Manager",
         comodel_name='res.users',
         default=lambda self: self.env.user.id
     )
