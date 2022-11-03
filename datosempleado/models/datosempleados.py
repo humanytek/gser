@@ -25,7 +25,7 @@ class datosEmpleados (models.Model):
     
     #Seguro
     #nss = fields.Char(
-    #    string="Numero IMSS",
+    #    string="Numero NSS",
     #)
     alta_patronal = fields.Date(
         string="Fecha de alta patronal",
@@ -63,10 +63,10 @@ class datosEmpleados (models.Model):
         string='Carta Antecedentes',
     )   
     recomendacion1 = fields.Binary(
-        string='Carta de recomendación',
+        string='Carta de recomendación 1',
     )
     recomendacion2 = fields.Binary(
-        string='Carta de recomendación',
+        string='Carta de recomendación 2',
     )
     
     #Vehiculo
@@ -80,7 +80,7 @@ class datosEmpleados (models.Model):
         string='Examen de manejo',
     )
     vigencia_exam = fields.Date(
-        string='Vigencia',
+        string='Vigencia Examen',
     )
     #responsivas
     res_unidad = fields.Binary(
