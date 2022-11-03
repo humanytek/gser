@@ -26,15 +26,15 @@ class datosEmpleados (models.Model):
     #nseguridad_social = fields.Char(
     #    string="NSS",
     #)
-    alta_patronal = fields.Date(
-        string="Fecha de alta patronal",
-    )
-    alta_imss = fields.Binary(
-        string="Alta IMSS",
-    )
-    infonavit = fields.Binary(
-        string="Comp. Infonavit",
-    )
+    #alta_patronal = fields.Date(
+    #    string="Fecha de alta patronal",
+    #)
+    #alta_imss = fields.Binary(
+    #    string="Alta IMSS",
+    #)
+    #infonavit = fields.Binary(
+    #    string="Comp. Infonavit",
+    #)
     
     #Contratos
     empleado_fecha_ingreso = fields.Date(
