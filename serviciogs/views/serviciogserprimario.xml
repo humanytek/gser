@@ -58,10 +58,10 @@
                   <field name="total_facturar" readonly="1"/>
                 </group> 
                 <group string="">
-                  <field name="forma_pago" invisible="1"/>           
-                  <field name="no_factura" invisible="1"/>
-                  <field name="fecha_factura" invisible="1"/>
-                  <field name="fecha_pago" invisible="1"/>
+                  <field name="forma_pago"/>           
+                  <field name="no_factura"/>
+                  <field name="fecha_factura"/>
+                  <field name="fecha_pago"/>
                 </group>                
               </group>
             </group>
