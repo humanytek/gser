@@ -22,11 +22,10 @@ class datosEmpleados (models.Model):
         string="INE",
     )
     
-    
     #Seguro
-    nseguridad_social = fields.Char(
-        string="NSS",
-    )
+    #nseguridad_social = fields.Char(
+    #    string="NSS",
+    #)
     alta_patronal = fields.Date(
         string="Fecha de alta patronal",
     )

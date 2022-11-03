@@ -18,7 +18,7 @@
                   <field name="ine"/>
                 </group>
                 <group string="Seguro">
-                  <field name="nseguridad_social"/>
+                  <!--field name="nseguridad_social"/-->
                   <field name="alta_patronal"/>
                   <field name="alta_imss"/>
                   <field name="infonavit"/>
