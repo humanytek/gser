@@ -24,9 +24,9 @@ class datosEmpleados (models.Model):
     
     
     #Seguro
-    nss = fields.Char(
-        string="Numero IMSS",
-    )
+    #nss = fields.Char(
+    #    string="Numero IMSS",
+    #)
     alta_patronal = fields.Date(
         string="Fecha de alta patronal",
     )
