@@ -24,17 +24,17 @@ class datosEmpleados (models.Model):
     
     
     #Seguro
-    #nss = fields.Char(
-    #    string="Numero NSS",
-    #)
+    nss = fields.Char(
+        string='Numero NSS',
+    )
     alta_patronal = fields.Date(
-        string="Fecha de alta patronal",
+        string='Fecha de alta patronal',
     )
     alta_imss = fields.Binary(
-        string="Alta IMSS",
+        string='Alta IMSS',
     )
     infonavit = fields.Binary(
-        string="Comp. Infonavit",
+        string='Comp. Infonavit',
     )
     
     #Contratos
