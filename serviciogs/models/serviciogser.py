@@ -5,9 +5,9 @@ class servicioGSer (models.Model):
     _inherit = ['project.project']
 
     # Desabilihitar la parte de las hojas de trabajo
-    allow_timesheets=fields.Boolean(
-        default = False,
-    )
+    #allow_timesheets=fields.Boolean(
+    #    default = False,
+    #)
     # Campos agregados al modelo de proyecto seccion principal
     estatus_ruta = fields.Selection([
         ('1','Activa'),
