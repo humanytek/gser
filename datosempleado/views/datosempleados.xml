@@ -19,12 +19,12 @@
                 </group>
 
                 <group string="Seguro">
-                  <field name="nseguridad_social"/>
+                  <field name="nseguridad_social" invisible ="1"/>
                   <field name="alta_patronal"/>
                   <field name="alta_imss"/>
                   <field name="infonavit"/>
                 </group>
-                
+
                 <group string="Contratos">
                   <field name="empleado_fecha_ingreso"/>
                   <field name="empleado_contrato"/>

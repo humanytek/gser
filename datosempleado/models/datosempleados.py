@@ -21,7 +21,6 @@ class datosEmpleados (models.Model):
     ine = fields.Binary(
         string="INE",
     )
-    
     #Seguro
     nseguridad_social = fields.Char(
         string="NSS",
@@ -35,7 +34,6 @@ class datosEmpleados (models.Model):
     infonavit = fields.Binary(
         string="Comp. Infonavit",
     )
-    
     #Contratos
     empleado_fecha_ingreso = fields.Date(
         string="Fecha de ingreso",
@@ -67,7 +65,6 @@ class datosEmpleados (models.Model):
     recomendacion2 = fields.Binary(
         string="Carta de recomendación 2",
     )
-    
     #Vehiculo
     licencia = fields.Binary(
         string="Licencia",
