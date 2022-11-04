@@ -19,7 +19,7 @@
                 </group>
 
                 <group string="Seguro">
-                  <field name="nseguridad_social" invisible ="1"/>
+                  <field name="nseguridad_social" />
                   <field name="alta_patronal"/>
                   <field name="alta_imss"/>
                   <field name="infonavit"/>
