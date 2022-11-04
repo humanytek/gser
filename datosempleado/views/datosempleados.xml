@@ -17,12 +17,12 @@
                   <field name="rfc"/>
                   <field name="ine"/>
                 </group>
-                <!--group string="Seguro">
+                <group string="Seguro">
                   <field name="nseguridad_social"/>
                   <field name="alta_patronal"/>
                   <field name="alta_imss"/>
                   <field name="infonavit"/>
-                </group-->
+                </group>
                 <group string="Contratos">
                   <field name="empleado_fecha_ingreso"/>
                   <field name="empleado_contrato"/>
