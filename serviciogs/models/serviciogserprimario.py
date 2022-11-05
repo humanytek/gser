@@ -9,7 +9,8 @@ class servicioGSerprimario (models.Model):
     #)
     
     estatus_viaje = fields.Selection([
-        ('1','Programado'),
+        ('0','Programado'),
+        ('1','Programadosssss'),
         ('2','Pendiente de gastos'),
         ('3','Pendiente de diesel'),
         ('4','Pendiente de carta porte'),
