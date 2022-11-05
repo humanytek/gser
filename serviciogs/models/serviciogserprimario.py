@@ -21,7 +21,7 @@ class servicioGSerprimario (models.Model):
         ('10','Cancelado'),
         ('12','Rechazado'),],
         string="Estado de Viaje",
-        default='Programado',
+        default='1',
     )
     vehiculo = fields.Many2one(
         comodel_name='fleet.vehicle',
