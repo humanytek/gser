@@ -1,4 +1,5 @@
 from email.policy import default
+from unittest.mock import DEFAULT
 from odoo import fields, models, api
 
 class servicioGSerprimario (models.Model):
@@ -20,6 +21,7 @@ class servicioGSerprimario (models.Model):
         ('10','Cancelado'),
         ('12','Rechazado'),],
         string="Estado de Viaje",
+        default="Programado",
     )
     vehiculo = fields.Many2one(
         comodel_name='fleet.vehicle',
