@@ -9,8 +9,7 @@ class servicioGSerprimario (models.Model):
     #)
     
     estatus_viaje = fields.Selection([
-        ('0','Programado'),
-        ('1','Programadosssss'),
+        ('1','Programado'),
         ('2','Pendiente de gastos'),
         ('3','Pendiente de diesel'),
         ('4','Pendiente de carta porte'),
@@ -22,7 +21,7 @@ class servicioGSerprimario (models.Model):
         ('10','Cancelado'),
         ('12','Rechazado'),],
         string="Estado de Viaje",
-        default="Programado",
+        default='Programado',
     )
     vehiculo = fields.Many2one(
         comodel_name='fleet.vehicle',
