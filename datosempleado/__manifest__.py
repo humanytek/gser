@@ -13,7 +13,7 @@
         # demo
         # reports
         # views
-        'views/menus.xml',
+        #'views/menus.xml',
         'views/datosempleados.xml',
     ],
 }
