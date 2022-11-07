@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
           <!--field name="work_email" position="after"-->
           <page name="public" position="after">
-            <!--group string="Documentación">
+            <group string="Documentación">
               <group>
                 <group string="Documentación Personal">
                   <field name="acta_nacimiento"/>
@@ -53,7 +53,7 @@
                   <field name="res_resguardo2"/>
                 </group>
               </group>
-            </group-->
+            </group>
           </page>
         </field>
     </record>
