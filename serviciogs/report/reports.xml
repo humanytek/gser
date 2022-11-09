@@ -17,7 +17,7 @@
             <field name="dpi">100</field>
         </record>
 
-        <record id="report_ticket_viaje" model="ir.ui.view">
+        <record id="report_ticket_viaje" model="ir.actions.report">
             <field name="name">Ticket viaje</field>
             <field name="model">project.task</field>
             <field name="report_type">qweb-pdf</field>
