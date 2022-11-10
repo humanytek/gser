@@ -45,7 +45,7 @@
             <field name="report_name">serviciogs.report_proceso_lavado</field>
             <field name="report_file">serviciogs.report_proceso_lavado</field>
             <field name="binding_model_id" ref="project.model_project_task"></field>
-            <field name="binding_type">report</field>
+            <!--field name="binding_type">report</field-->
         </record>
 
         <record id="report_cp_vertical" model="ir.actions.report">
