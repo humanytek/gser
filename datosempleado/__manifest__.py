@@ -14,6 +14,6 @@
         # reports
         # views
         #'views/menus.xml',
-        'views/datosempleados.xml',
+        #'views/datosempleados.xml',
     ],
 }
