@@ -14,7 +14,7 @@
             <group string="Ruta">
               <group>
                 <group string="Ruta">
-                  <field name="estatus_ruta" required="1"/>           
+                  <field name="estatus_ruta"/>           
                   <field name="km_ruta" required="1"/>
                   <field name="carga_ruta" required="1"/>
                   <field name="capacidad_ruta" required="1"/>
