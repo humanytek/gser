@@ -21,6 +21,7 @@
                   <field name="ejes_ruta" required="1"/>
                   <field name="producto_ruta" required="1"/>
                 </group>
+
                 <group string="Costos">
                   <field name="tipo_precio"  required="1"/>
                   <field name="precio"  required="1"/>
@@ -31,12 +32,12 @@
                   <field name="caseta_llave" required="1"/>
                   <field name="gastos_operador" required="1"/>
                 </group>
+                
                 <group string="Gastos Totales" required="1">
                   <field name="gasto_total_operador" required="1"/>
                   <field name="gasto_total" required="1"/>
                 </group>
-                <group >
-                </group>
+                
                 <group string="Origen">
                   <field name="recoge_en_origen" required="1"/>
                   <field name="direccion_origen" required="1"/>
@@ -46,6 +47,7 @@
                   <!--falta completar la cidudad odoo enterprise-->
                   <!--domain="[('country.state_id', '=', estado_origen)]"-->
                 </group>
+
                 <group string="Destino">
                   <field name="entrega_destino" required="1"/>
                   <field name="direccion_destino" required="1"/>
@@ -55,6 +57,7 @@
                   <!--falta completar la cidudad odoo enterprise-->
                   <!--domain="[('country.state_id', '=', estado_destino)]"-->
                 </group>
+                
               </group>
             </group>
           </page>
