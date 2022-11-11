@@ -35,6 +35,7 @@
             <field name="gasto_total_caseta_viaje" readonly ="1"/>
             <field name="diesel_viaje" readonly ="1"/>
             <field name="km_viaje" readonly ="1"/>
+            
             <field name="carga_combustible"/>  
           </field>
 
@@ -106,7 +107,7 @@
         <field name="tag_ids" position="replace">
           <field name="tag_ids" invisible="1" optional="hide"/>
         </field>
-        
+
         <field name="name" position="replace">
           <field name="name" invisible="1" optional="hide"/>
         </field>
