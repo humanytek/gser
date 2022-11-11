@@ -197,4 +197,4 @@ class servicioGSer (models.Model):
     """@api.depends("km_ruta", "rendimiento_diesel")
     def _compute_diesel(self):
         for record in self:
-            record.diesel = record.km_ruta / record.rendimiento_diesel"""
+            record.diesel = """
