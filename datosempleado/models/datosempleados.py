@@ -65,7 +65,6 @@ class datosEmpleados (models.Model):
     recomendacion2 = fields.Binary(
         string="Carta de recomendación 2",
     )
-    
     #Vehiculo
     licencia = fields.Binary(
         string="Licencia",
