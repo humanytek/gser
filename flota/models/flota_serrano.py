@@ -66,7 +66,7 @@ class FlotaSerrano(models.Model):
         index=True,
         string="Conductor",
     )
-    conductor_compute = fields.Char(
+    conductor_compute = fields.Many2one(
         compute ='_conductor',
         string ="conductor",
         store=True,
