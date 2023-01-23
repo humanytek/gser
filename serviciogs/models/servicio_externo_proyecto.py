@@ -68,7 +68,7 @@ class servicio_externo_proyecto (models.Model):
         string ="Producto",
     ) 
     conductor = fields.Char(
-        related ='vehiculo.conductor',
+        related ='vehiculo.driver_id.name',
         string ="Conductor",
     )  
     gasto_total_op_viaje= fields.Float(
