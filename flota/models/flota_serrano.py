@@ -65,7 +65,6 @@ class FlotaSerrano(models.Model):
         ondelete='set null',
         index=True,
         string="Conductor",
-        compute="_conductor"
     )
     conductor_compute = fields.Float(
         compute ='_conductor',
