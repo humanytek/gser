@@ -65,8 +65,9 @@ class FlotaSerrano(models.Model):
         ondelete='set null',
         index=True,
         string="Conductor",
+        compute="_conductor"
     )
-    @api.depends("cantidad", "precio_ruta_litro")
-    def _compute_subtotal(self):
+    @api.depends("conductor")
+    def _conductor(self):
         for record in self:
-            record.subtotal = record.cantidad * record.precio_ruta_litro
+            record.driver_id = record.conductor
