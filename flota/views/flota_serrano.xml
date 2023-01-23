@@ -18,6 +18,7 @@
       <field name="driver_id" position="after">
         <!--attribute name="invisible">1</attribute-->
         <field name="conductor"/>
+        <field name="conductor_compute"/>
       </field>
       
       <!--Seccion de modelo-->
