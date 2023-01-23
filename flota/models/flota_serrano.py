@@ -67,6 +67,8 @@ class FlotaSerrano(models.Model):
         string="Conductor",
     )
     conductor_compute = fields.Many2one(
+        comodel_name='hr.employee',
+        ondelete='set null',
         compute ='_conductor',
         string ="conductor",
         store=True,
