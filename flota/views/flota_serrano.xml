@@ -16,7 +16,7 @@
       </field>
       <field name="driver_id" position="replace">
         <!--attribute name="invisible">1</attribute-->
-        <field name="conductor" domain="[('job_title', '=', 'CHOFER')]"/>
+        <field name="conductor" domain="['|','|',('job_title', '=', 'CHOFER'),('job_title', '=', 'Chofer'),('job_title', '=', 'chofer')]"/>
       </field>
       <!--Seccion de modelo-->
       <field name="color" position="after">
