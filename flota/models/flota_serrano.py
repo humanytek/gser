@@ -67,7 +67,13 @@ class FlotaSerrano(models.Model):
         string="Conductor",
         compute="_conductor"
     )
-    @api.depends("conductor")
+    conductor_compute = fields.Float(
+        compute ='_conductor',
+        string ="conductor",
+        store=True,
+    )
+
+    @api.depends()
     def _conductor(self):
         for record in self:
             record.driver_id = record.conductor
