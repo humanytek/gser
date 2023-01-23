@@ -15,10 +15,9 @@
         <field name="capacidad_tanque"/>
       </field>
 
-      <field name="driver_id" position="before">
+      <field name="driver_id" position="replace">
         <!--attribute name="invisible">1</attribute-->
-        <field name="conductor"/>
-        <field name="conductor_compute"/>
+        <field name="conductor" domain="[('job_title', '=', 'CHOFER')]"/>
       </field>
       
       <!--Seccion de modelo-->

@@ -66,15 +66,3 @@ class FlotaSerrano(models.Model):
         index=True,
         string="Conductor",
     )
-    conductor_compute = fields.Many2one(
-        comodel_name='hr.employee',
-        ondelete='set null',
-        #compute ='_conductor',
-        string ="conductor",
-        store=True,
-    )
-
-    @api.depends("conductor")
-    def _conductor(self):
-        for record in self:
-            record.driver_id = record.conductor
