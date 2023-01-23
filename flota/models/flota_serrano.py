@@ -60,3 +60,13 @@ class FlotaSerrano(models.Model):
     file_otro = fields.Binary(
         string= "Otro",
     )
+    conductor = fields.Many2one(
+        comodel_name='hr.employee',
+        ondelete='set null',
+        index=True,
+        string="Conductor",
+    )
+    @api.depends("cantidad", "precio_ruta_litro")
+    def _compute_subtotal(self):
+        for record in self:
+            record.subtotal = record.cantidad * record.precio_ruta_litro
