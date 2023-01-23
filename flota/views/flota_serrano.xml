@@ -15,7 +15,7 @@
         <field name="capacidad_tanque"/>
       </field>
 
-      <field name="driver_id" position="after">
+      <field name="driver_id" position="before">
         <!--attribute name="invisible">1</attribute-->
         <field name="conductor"/>
         <field name="conductor_compute"/>
