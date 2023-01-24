@@ -11,7 +11,6 @@
         "fleet",
         "account",
         "contacts",
-        "product",
     ],
     'data': [
         # security
