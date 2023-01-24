@@ -58,19 +58,19 @@ class servicio_externo_proyecto (models.Model):
     carga_viaje= fields.Selection(
         related = 'project_id.carga_ruta',
         string ="Carga",
-    )  
+    )
     capacidad_viaje = fields.Selection(
         related ='project_id.capacidad_ruta',
         string ="Capacidad",
-    ) 
+    )
     producto_viaje = fields.Selection(
         related ='project_id.producto_ruta',
         string ="Producto",
-    ) 
+    )
     conductor = fields.Many2one(
         related ='vehiculo.conductor',
         string ="Conductor",
-    )  
+    )
     gasto_total_op_viaje= fields.Float(
         related ='project_id.gasto_total_operador',
         string ="Gastos del operador",
