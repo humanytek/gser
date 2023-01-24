@@ -19,9 +19,9 @@
                   <field name="carga_ruta" required="1"/>
                   <field name="capacidad_ruta" required="1"/>
                   <field name="ejes_ruta" required="1"/>
-                  <field name="producto_ruta" />
+                  <!--field name="producto_ruta" /-->
                 </group>
-                
+
                 <group string="Costos">
                   <field name="tipo_precio"  required="1"/>
                   <field name="precio"  required="1"/>
