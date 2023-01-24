@@ -63,10 +63,10 @@ class servicio_externo_proyecto (models.Model):
         related ='project_id.capacidad_ruta',
         string ="Capacidad",
     )
-    producto_viaje = fields.Many2one(
-        related ='project_id.producto_ruta',
-        string ="Producto",
-    )
+    #producto_viaje = fields.Many2one(
+    #    related ='project_id.producto_ruta',
+    #    string ="Producto",
+    #)
     conductor = fields.Many2one(
         related ='vehiculo.conductor',
         string ="Conductor",
