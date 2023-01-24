@@ -47,14 +47,14 @@ class proyecto_ruta (models.Model):
     capacidad_ruta = fields.Selection([
         ('1','25,000 Litros'),
         ('2','30,000 Litros'),
-        ('3','35,000Litros'),
+        ('3','35,000 Litros'),
         ('4','36,000 Litros'),
         ('5','50,000 Litros'),
         ('6','54,000 Litros'),
-        ('7','2 Tonelada'),
-        ('8','10 Tonelada'),
-        ('9','20 Tonelada'),
-        ('10','30 Tonelada'),
+        ('7','2 Toneladas'),
+        ('8','10 Toneladas'),
+        ('9','20 Toneladas'),
+        ('10','30 Toneladas'),
         ('11','N/A'),],
         string="Capacidad",
     )
@@ -66,18 +66,10 @@ class proyecto_ruta (models.Model):
         ('5','9 ejes'),],
         string="Ejes",
     )
-    producto_ruta = fields.Selection([
-        ('1','Aceite'),
-        ('2','Aceite pollo'),
-        ('3','Crema'),
-        ('4','Cascarilla de arroz'),
-        ('5','Leche'),
-        ('6','Leche en polvo'),
-        ('7','Lacteos'),
-        ('8','Lodos planta tratamientos'),
-        ('9','Pluma'),
-        ('10','Refacciones'),
-        ('11','Otros'),],
+    producto_ruta = fields.Many2one(
+        comodel_name='product.template',
+        ondelete='set null',
+        index=True,
         string="Producto",
     )
     tipo_precio = fields.Selection([
