@@ -67,8 +67,8 @@ class servicio_externo_proyecto (models.Model):
         related ='project_id.producto_ruta',
         string ="Producto",
     ) 
-    conductor = fields.Char(
-        related ='vehiculo.driver_id.name',
+    conductor = fields.Many2one(
+        related ='vehiculo.conductor',
         string ="Conductor",
     )  
     gasto_total_op_viaje= fields.Float(
