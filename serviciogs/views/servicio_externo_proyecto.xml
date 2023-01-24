@@ -25,7 +25,7 @@
             <field name="remolque_1" domain="['|','|','|','|','|','|','|',('tipo_vehiculo', '=', 7), ('tipo_vehiculo', '=', 8), ('tipo_vehiculo', '=', 9), ('tipo_vehiculo', '=', 10), ('tipo_vehiculo', '=', 11), ('tipo_vehiculo', '=', 12), ('tipo_vehiculo', '=', 13), ('tipo_vehiculo', '=', 14)]"/>
             <field name="r1_no_economico"/>
             <field name="remolque_2" domain="['|','|','|','|','|','|','|',('tipo_vehiculo', '=', 7), ('tipo_vehiculo', '=', 8), ('tipo_vehiculo', '=', 9), ('tipo_vehiculo', '=', 10), ('tipo_vehiculo', '=', 11), ('tipo_vehiculo', '=', 12), ('tipo_vehiculo', '=', 13), ('tipo_vehiculo', '=', 14)]"/>  
-            <field name="r2_no_economico"/>          
+            <field name="r2_no_economico"/>
             <field name="conductor" readonly ="1"/>
             <field name="gasto_total_op_viaje" readonly ="1"/>
             <field name="gasto_total_caseta_viaje" readonly ="1"/>
