@@ -67,7 +67,7 @@ class proyecto_ruta (models.Model):
         string="Ejes",
     )
     producto_ruta = fields.Many2one(
-        comodel_name='product.template',
+        comodel_name='product.product',
         ondelete='set null',
         index=True,
         string="Producto",
