@@ -64,6 +64,9 @@ class servicio_externo_proyecto (models.Model):
         string ="Capacidad",
     )
     producto_viaje = fields.Many2one(
+        comodel_name='product.template',
+        ondelete='set null',
+        index=True,
         related ='project_id.producto_ruta',
         string ="Producto",
     )
