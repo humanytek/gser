@@ -66,12 +66,12 @@ class proyecto_ruta (models.Model):
         ('5','9 ejes'),],
         string="Ejes",
     )
-    #producto_ruta = fields.Char(
-        #comodel_name='product.template',
-        #ondelete='set null',
-        #index=True,
-        #string="Producto",
-    #)
+    producto_ruta = fields.Char(
+        comodel_name='product.template',
+        ondelete='set null',
+        index=True,
+        string="Producto",
+    )
     tipo_precio = fields.Selection([
         ('1','Ruta'),
         ('2','Litro'),
