@@ -103,8 +103,8 @@
           <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="no_factura" optional="show"/>
         </field>
-        <field name="project_id" position="replace">
-          <field name="Ruta" />
+        <field name="project_id" position="attributes">
+          <attribute name="Ruta" separator="" add="" remove="" value=""></attribute>
         </field>
       </field>
     </record>
