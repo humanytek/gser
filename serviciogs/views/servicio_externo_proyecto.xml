@@ -104,7 +104,7 @@
           <field name="no_factura" optional="show"/>
         </field>
         <field name="project_id" position="attributes">
-          <attribute name="Ruta" separator="" add="" remove="" value=""></attribute>
+          <attribute name="string" separator="" add="" remove="" value="Ruta"></attribute>
         </field>
       </field>
     </record>
