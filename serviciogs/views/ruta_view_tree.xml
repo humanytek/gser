@@ -45,6 +45,7 @@
         <field name="create_date" position="attributes">
           <attribute name="string">Fecha de Programacion</attribute>
         </field-->
+        
       </field>
     </record>
 </odoo>
