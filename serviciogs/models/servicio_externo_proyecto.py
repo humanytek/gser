@@ -18,7 +18,7 @@ class servicio_externo_proyecto (models.Model):
         ('9','Finalizado'),
         ('10','Cancelado'),
         ('12','Rechazado'),],
-        string="Estado de Viaje",
+        string="Estatus de Viaje",
         default='1',
     )
     vehiculo = fields.Many2one(
@@ -77,7 +77,7 @@ class servicio_externo_proyecto (models.Model):
     )
     gasto_total_caseta_viaje= fields.Float(
         related ='project_id.caseta_efectivo',
-        string ="Gastos de caseta",
+        string ="Gasto total - caseta",
     )   
     diesel_viaje= fields.Float(
         related ='project_id.diesel',

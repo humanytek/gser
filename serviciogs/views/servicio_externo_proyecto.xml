@@ -88,12 +88,16 @@
         <field name="name" position="replace">
           <field name="name" invisible="1" optional="hide"/>
         </field>
+
+        <!-- Renombre de campos de la vista -->
         <field name="name" position="before">
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
         </field>
-        <field name="project_id" position="after">
+        <field name="project_id" position="before">
           <field name="estatus_viaje" optional="show"/>
+        </field>
+        <field name="project_id" position="after">
           <field name="create_date" optional="show"/>
           <field name="carga_combustible" optional="show"/>
           <field name="diesel_viaje" optional="show" sum="Sum of diesel_viaje"/>
@@ -103,8 +107,13 @@
           <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="no_factura" optional="show"/>
         </field>
+        
+        <!-- Renombre de campos de la vista -->
         <field name="project_id" position="attributes">
           <attribute name="string">Ruta</attribute>
+        </field>
+        <field name="create_date" position="attributes">
+          <attribute name="string">Fecha de Prgramacion</attribute>
         </field>
       </field>
     </record>
