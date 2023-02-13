@@ -21,6 +21,7 @@
         # # views
         'views/proyecto_ruta.xml',
         'views/servicio_externo_proyecto.xml',
+        'views/ruta_view_tree.xml',
         # reports
         'report/reports.xml',
         'report/ticket_viaje.xml',
