@@ -21,7 +21,6 @@
         <field name="tag_ids" position="replace">
           <field name="tag_ids" invisible="1" optional="hide"/>
         </field>
-
         <!-- Renombre de campos de la vista -->
         <field name="name" position="before">
           <field name="id" optional="show"/>
@@ -36,7 +35,6 @@
           <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="no_factura" optional="show"/>
         </field-->
-        
         <!-- Renombre de campos de la vista -->
         <!--field name="project_id" position="attributes">
           <attribute name="string">Ruta</attribute>
@@ -44,7 +42,6 @@
         <field name="create_date" position="attributes">
           <attribute name="string">Fecha de Programacion</attribute>
         </field-->
-        
       </field>
     </record>
 </odoo>
