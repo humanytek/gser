@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="ruta_view_tree" model="ir.ui.view">
+      <field name="name">ruta.view.tree</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.view_project_project_filter"/>
+      <field name="arch" type="xml">
+        <!--campos ocultos de la vista task-->
+        <field name="privacy_visibility" position="replace">
+          <field name="privacy_visibility" invisible="1" optional="hide"/>
+        </field>
+        <field name="date" position="replace">
+          <field name="date" invisible="1" optional="hide"/>
+        </field>
+        <field name="user_id" position="replace">
+          <field name="user_id" invisible="1" optional="hide"/>
+        </field>
+        <field name="last_update_status" position="replace">
+          <field name="last_update_status" invisible="1" optional="hide"/>
+        </field>
+        <field name="tag_ids" position="replace">
+          <field name="tag_ids" invisible="1" optional="hide"/>
+        </field>
+
+        <!-- Renombre de campos de la vista -->
+        <field name="name" position="before">
+          <!--field name="partner_id" optional="show"/-->
+          <field name="id" optional="show"/>
+        </field>
+        <!--field name="project_id" position="after">
+          <field name="create_date" optional="show"/>
+          <field name="carga_combustible" optional="show"/>
+          <field name="diesel_viaje" optional="show" sum="Sum of diesel_viaje"/>
+          <field name="conductor" optional="show"/>
+          <field name="gasto_total_op_viaje" optional="show" sum="Sum of gasto_total_op_viaje"/>
+          <field name="gasto_total_caseta_viaje" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
+          <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
+          <field name="no_factura" optional="show"/>
+        </field-->
+        
+        <!-- Renombre de campos de la vista -->
+        <!--field name="project_id" position="attributes">
+          <attribute name="string">Ruta</attribute>
+        </field>
+        <field name="create_date" position="attributes">
+          <attribute name="string">Fecha de Programacion</attribute>
+        </field-->
+      </field>
+    </record>
+</odoo>
