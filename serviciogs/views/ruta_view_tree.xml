@@ -6,9 +6,9 @@
       <field name="inherit_id" ref="project.view_project_project_filter"/>
       <field name="arch" type="xml">
         <!--campos ocultos de la vista task-->
-        <field name="privacy_visibility" position="replace">
+        <!--field name="privacy_visibility" position="replace">
           <field name="privacy_visibility" invisible="1" optional="hide"/>
-        </field>
+        </field-->
         <field name="date" position="replace">
           <field name="date" invisible="1" optional="hide"/>
         </field>
