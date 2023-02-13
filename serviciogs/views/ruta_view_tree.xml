@@ -8,10 +8,10 @@
         <!--campos ocultos de la vista task-->
         <!--field name="privacy_visibility" position="replace">
           <field name="privacy_visibility" invisible="1" optional="hide"/>
-        </field-->
+        </field>
         <field name="date" position="replace">
           <field name="date" invisible="1" optional="hide"/>
-        </field>
+        </field-->
         <field name="user_id" position="replace">
           <field name="user_id" invisible="1" optional="hide"/>
         </field>
