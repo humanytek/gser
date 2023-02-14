@@ -22,7 +22,7 @@
           <field name="tag_ids" invisible="1" optional="hide"/>
         </field>
         <!-- Renombre de campos de la vista -->
-        <field name="company_id" position="before">
+        <field name="name" position="after">
           <field name="id" optional="show"/>
           <field name="partner_id" optional="show"/>
           <field name="estatus_ruta" optional="show"/>
