@@ -33,7 +33,6 @@
           <field name="precio" optional="show"/>
           <field name="orden_venta" optional="show"/>
         </field>
-
         <!-- Renombre de campos de la vista -->
         <!--field name="project_id" position="attributes">
           <attribute name="string">Ruta</attribute>
