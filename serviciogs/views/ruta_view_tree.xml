@@ -3,7 +3,7 @@
     <record id="ruta_view_tree" model="ir.ui.view">
       <field name="name">ruta.view.tree</field>
       <field name="model">project.project</field>
-      <field name="inherit_id" ref="project.view_project_project_filter"/>
+      <field name="inherit_id" ref="industry_fsm.project_view_tree_primary"/>
       <field name="arch" type="xml">
         <!--campos ocultos de la vista task-->
         <!--field name="privacy_visibility" position="replace">
