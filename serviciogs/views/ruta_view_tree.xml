@@ -24,14 +24,6 @@
         <!-- Renombre de campos de la vista -->
         <field name="name" position="before">
           <field name="id" optional="show"/>
-          <field name="partner_id" optional="show"/>
-          <field name="estatus_ruta" optional="show"/>
-          <field name="date_start" optional="show"/>
-          <field name="carga_ruta" optional="show"/>
-          <field name="gastos_operador" optional="show"/>
-          <field name="tipo_precio" optional="show"/>
-          <field name="precio" optional="show"/>
-          <field name="orden_venta" optional="show"/>
         </field>
         <field name="name" position="after">
           <field name="partner_id" optional="show"/>
