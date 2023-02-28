@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <report id="report_session" model="account.move" string="Carta porte" 
+  name="cartaportegser.report_carta_porte" file="cartaportegser.report_session" report_type="qweb-pdf" />
+
+  <template id="report_carta_porte">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center" style="background-color: #486f9e; color: white; border-radius:10px;">
+                      <h4>CARTA PORTE</h4>
+                      <h5><span t-field="o.l10n_mx_edi_cfdi_uuid"/></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row texty-center">  
+                    <div class="col-9 text-left p-3"><h3><br/>Factura <span t-field="o.name"/></h3></div>
+                    <div class="col-3 text-left p-3"><h3 class="text-right"><br/>Ingreso</h3></div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6 text-left p-3" style="font-size: 12px; color: BLACK; border: 1px solid #000;">
+                      <h6>EMPRESA:</h6>
+                      <span t-field="o.company_id.name"/><br/>
+                      <span t-field="o.company_id.street"/><br/>
+                      <span t-field="o.company_id.city"/>, 
+                      <span t-field="o.company_id.state_id"/>,
+                      <span t-field="o.company_id.country_id"/>.<br/>
+                      CP:
+                      <span t-field="o.company_id.zip"/><br/>
+                      RFC:
+                      <span t-field="o.company_id.vat"/><br/>
+                      Regimen Fiscal: Coordinados<br/>
+                      Expedido en: LAGOS DE MORENO, Jalisco, C.P.47400
+                    </div>
+                    <div class="col-6 text-left p-3" style="font-size: 10px; color: BLACK; border: 1px solid #000;">
+                      <h6>CLIENTE:</h6>
+                      <span t-field="o.partner_id"/><br/>
+                      <span t-field="o.partner_id.street_name"/><br/>
+                      No.
+                      <span t-field="o.partner_id.street_number"/>
+                      Int.
+                      <span t-field="o.partner_id.street_number2"/><br/>
+                      Colonia:
+                      <span t-field="o.partner_id.l10n_mx_edi_colony"/><br/>
+                      <span t-field="o.partner_id.l10n_mx_edi_locality_id"/>,
+                      <span t-field="o.partner_id.city"/>,
+                      <span t-field="o.partner_id.city_id"/>,
+                      <span t-field="o.partner_id.state_id"/>,<br/>
+                      <span t-field="o.partner_id.country_id"/>.<br/>
+                      CP:
+                      <span t-field="o.partner_id.zip"/><br/>
+                      RFC:
+                      <span t-field="o.partner_id.vat"/><br/>
+                      
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-2 text-center font-weight-bold"><br/>Fecha de Factura:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Fecha de Vencimiento:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Moneda:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Uso CDFI:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Forma de Pago:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Método de Pago:</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 text-center"><span t-field="o.invoice_date"/></div>
+                    <div class="col-2 text-center"><span t-field="o.invoice_payment_term_id"/></div>
+                    <div class="col-2 text-center"><span t-field="o.currency_id"/></div>
+                    <div class="col-2 text-center"><span t-esc="o.l10n_mx_edi_usage"/>  - <span t-field="o.l10n_mx_edi_usage"/></div>
+                    <div class="col-2 text-center"><span t-field="o.l10n_mx_edi_payment_method_id.code"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></div>
+                    <div class="col-2 text-center"><span t-field="o.l10n_mx_edi_payment_policy"/></div>
+                    <!--<div class="col-2 text-center"><span t-field="o.carta_porte_picking_id.picking_type_id"/></div>-->
+                  </div>
+                    <hr class="my-4"/>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-2 text-center font-weight-bold"><br/>Código<br/>Producto:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Descripción:</div>
+                    <div class="col-1 text-center font-weight-bold"><br/>Cantidad:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Precio<br/>Unitario:</div>
+                    <div class="col-1 text-center font-weight-bold"><br/>Código<br/>Unidad:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Impuestos:</div>
+                    <div class="col-2 text-center font-weight-bold"><br/>Importe:</div>
+                    <hr class="my-4"/>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 text-center"><span t-esc="o.invoice_line_ids.product_id.unspsc_code_id.code"/></div>
+                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.name"/></div>
+                    <div class="col-1 text-center"><span t-field="o.invoice_line_ids.quantity"/></div>
+                    <div class="col-2 text-center">$ <span t-esc="o.invoice_line_ids.price_unit" t-options='{"widget": "float", "precision": 2}'/></div>
+                    <div class="col-1 text-center"><span t-esc="o.invoice_line_ids.product_id.uom_id.unspsc_code_id.code"/></div>
+                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></div>
+                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.price_subtotal"/></div>
+                  </div>
+                    <hr class="my-4"/>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      Subtotal
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      <span t-field="o.invoice_line_ids.price_subtotal"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      IVA 16% de <span t-field="o.invoice_line_ids.price_subtotal"/>
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      <!--$ <span t-esc="o.invoice_line_ids.price_subtotal*.16"/>
+                      $<t t-esc="'{0:,.2f}'.format(int(o.invoice_line_ids.price_subtotal*.16)).replace(',', ',')" />-->
+                      $ <span t-esc="o.invoice_line_ids.price_subtotal*.16" t-options='{"widget": "float", "precision": 2}'/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      IVA Retencion 4% de <span t-field="o.invoice_line_ids.price_subtotal"/>
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      $ - <span t-esc="o.invoice_line_ids.price_subtotal*.04" t-options='{"widget": "float", "precision": 2}'/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      TOTAL
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      <!--<span t-esc="(o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04)"/>
+                      $<t t-esc="'{0:,.2f}'.format(int((o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04))).replace(',', ',')" />-->
+                      $ <span t-esc="(o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04)" t-options='{"widget": "float", "precision": 2}'/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      <!--<span t-field="o.invoice_payments_widget"/>-->
+                      <span t-set="tax_adeudo" t-value="json.loads(o.invoice_payments_widget)"/>
+                      Pagado el <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['date'] or '00/00/0000'"/>
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      <span t-set="tax_adeudo" t-value="json.loads(o.invoice_payments_widget)"/>
+                      $ <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['amount'] or '0.00'"/>
+                      <!--$ <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['amount'] or ''" t-options='{"widget": "float", "precision": 2}'/>-->
+                    </div>
+                  </div>                  
+                </div>
+                  <div class="row">
+                    <div class="col-7 text-left p-3">
+                    </div>
+                    <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
+                      Importe adeudado
+                    </div>
+                    <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
+                      <span t-field="o.amount_residual"/>
+                    </div>
+                  </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-left">
+                      <br/>
+                      <br/>
+                      Por favor utilice la siguiente referencia al realizar su pago: <span t-field="o.name"/>  
+                      <br/>
+                      <br/>
+                      Plazo de pago: <span t-field="o.invoice_payment_term_id"/>
+                      <br/>
+                      <br/>
+                      <t t-set="cfdi_vals" t-value="o._l10n_mx_edi_decode_cfdi()"/>
+                      <t t-set="is_cfdi_signed" t-value="bool(o._get_l10n_mx_edi_signed_edi_document())"/>
+                      <t t-if="is_cfdi_signed">
+                          <p>
+                              <span t-esc="o._l10n_mx_edi_cfdi_amount_to_text()"/>
+                          </p>
+                      </t>
+                      <br/>
+                      <br/>
+                      <p><span t-field="o.narration"/></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Complemento Carta Porte</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Transporte Internacional</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Entrada/Salida Mercancia</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center">SI</div>
+                    <div class="col-4 text-center">NO</div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.picking_type_id.name"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Tipo Transporte</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Distancia Recorrida KM</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Peso Total KG</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center"><span t-esc="o.carta_porte_picking_id.l10n_mx_edi_transport_type"/> - <span t-field="o.carta_porte_picking_id.l10n_mx_edi_transport_type"/></div>
+                    <div class="col-4 text-center"><span t-esc="o.carta_porte_picking_id.l10n_mx_edi_distance" t-options='{"widget": "float", "precision": 2}'/></div>
+                    <div class="col-4 text-center"><span t-esc="o.carta_porte_picking_id.shipping_weight*1.03" t-options='{"widget": "float", "precision": 2}'/></div>
+                  </div>
+                  <t t-set="i" t-value="0"/>
+                  <t t-foreach="o.carta_porte_picking_id.ubicacion_ids" t-as="ubiorigen">
+                    <t t-set="i" t-value="i+1"/>
+                      <!-- This will only be on every fifth row. Page break after -->
+                    <t t-if="i == 1">
+                      <div class="row">
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Origen</div>
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>-</div>
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Fecha/Hora Salida</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 text-center"><td><span t-field="ubiorigen.name"/> - <span t-field="ubiorigen.partner_id"/></td></div>
+                        <div class="col-4 text-center">-</div>
+                        <div class="col-4 text-center"><td><span t-field="ubiorigen.date"/></td></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Direccion</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          Calle: <span t-field="ubiorigen.partner_id.street_name"/> 
+                          No. Exterior: <span t-field="ubiorigen.partner_id.street_number"/>
+                          No. Interior: <span t-field="ubiorigen.partner_id.street_number2"/>
+                          Colonia: <span t-field="ubiorigen.partner_id.l10n_mx_edi_colony"/>
+                          Localidad: <span t-field="ubiorigen.partner_id.l10n_mx_edi_locality_id"/>
+                          Municipio: <span t-field="ubiorigen.partner_id.city_id"/>
+                          Estado: <span t-field="ubiorigen.partner_id.state_id"/>
+                          Pais: <span t-field="ubiorigen.partner_id.country_id"/>
+                          Codigo Postal: <span t-field="ubiorigen.partner_id.zip"/>
+                        </div>
+                      </div>
+                    </t>
+                  </t>
+                  <!--Destinos con Nombre y direccion-->
+                  <t t-foreach="o.carta_porte_picking_id.ubicacion_ids" t-as="ubicaciones" >   
+                    <div class="row">
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Destino</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Distancia Recorrida (KM)</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Fecha/Hora Llegada</div>
+                    </div>
+                    <div class="row">                      
+                      <div class="col-4 text-center"><td><span t-field="ubicaciones.name"/> - <span t-field="ubicaciones.partner_id"/></td></div>
+                      <div class="col-4 text-center"><td><span t-field="ubicaciones.distance"/></td></div>
+                      <div class="col-4 text-center"><td><span t-field="ubicaciones.date"/></td></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Direccion</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 text-center">
+                        Calle: <span t-field="ubicaciones.partner_id.street_name"/> 
+                        No. Exterior: <span t-field="ubicaciones.partner_id.street_number"/>
+                        No. Interior: <span t-field="ubicaciones.partner_id.street_number2"/>
+                        Colonia: <span t-field="ubicaciones.partner_id.l10n_mx_edi_colony"/>
+                        Localidad: <span t-field="ubicaciones.partner_id.l10n_mx_edi_locality_id"/>
+                        Municipio: <span t-field="ubicaciones.partner_id.city_id"/>
+                        Estado: <span t-field="ubicaciones.partner_id.state_id"/>
+                        Pais: <span t-field="ubicaciones.partner_id.country_id"/>
+                        Codigo Postal: <span t-field="ubicaciones.partner_id.zip"/>
+                      </div>
+                    </div>
+                  </t>
+                  <!--Destinos con Nombre y direccion-->
+                  <!--Informacion de Transporte y Operador-->
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Permiso SCT</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>-</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Tipo de Permiso</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.name"/></div>
+                    <div class="col-4 text-center"></div>
+                    <div class="col-4 text-center"><span t-esc="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.transport_perm_sct"/> - <span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.transport_perm_sct"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Tipo Autotransporte</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Placa</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Año del modelo</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center"><span t-esc="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.vehicle_config"/> - <span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.vehicle_config"/></div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.vehicle_licence"/></div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.vehicle_model"/></div>
+                  </div>
+
+
+                  <t t-foreach="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.trailer_ids" t-as="trailer">
+                    <div class="row">
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Remolque</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>-</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Placas</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 text-center"><td><span t-esc="trailer.sub_type"/> - <span t-field="trailer.sub_type"/></td></div>
+                      <div class="col-4 text-center">-</div>
+                      <div class="col-4 text-center"><td><span t-field="trailer.name"/></td></div>
+                    </div>
+                  </t>
+
+
+
+
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Aseguradora</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>No. Póliza Seguro</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Prima Seguro</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.transport_insurer"/></div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.transport_insurance_policy"/></div>
+                    <div class="col-4 text-center">0</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Nombre Operador</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>RFC Operador</div>
+                    <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>No. Licencia</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.figure_ids.operator_id"/></div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.figure_ids.operator_id.vat"/></div>
+                    <div class="col-4 text-center"><span t-field="o.carta_porte_picking_id.l10n_mx_edi_vehicle_id.figure_ids.operator_id.l10n_mx_edi_operator_licence"/></div>
+                  </div>
+                  <!--Informacion de Transporte y Operador-->
+                  <!--Cantidades Origen y Destino-->
+                  <div class="row">
+                    <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Mercancias Transportadas</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Producto<br/>SAT</div>
+                    <div class="col-2 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Cantidad</div>
+                    <div class="col-2 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>UdM</div>
+                    <div class="col-1 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Clave<br/>STCC</div>
+                    <div class="col-2 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Peso<br/>KG</div>
+                    <div class="col-1 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Dimensiones</div>
+                    <div class="col-1 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Material<br/>Peligroso</div>
+                    <div class="col-1 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Clave<br/>M.P.</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2 text-center"><span t-field="o.carta_porte_picking_id.product_id.unspsc_code_id.code"/> <br/> <span t-field="o.carta_porte_picking_id.product_id.name"/></div>
+                    <div class="col-2 text-center"><span t-esc="o.carta_porte_picking_id.shipping_weight" t-options='{"widget": "float", "precision": 2}'/></div>
+                    <div class="col-2 text-center"><span t-field="o.carta_porte_picking_id.product_id.uom_id.unspsc_code_id"/></div>
+                    <div class="col-1 text-center"></div>
+                    <div class="col-2 text-center">1.030</div>
+                    <div class="col-1 text-center">0/0/0plg</div>
+                    <div class="col-1 text-center">No</div>
+                    <div class="col-1 text-center"></div>
+                  </div>
+                  <t t-foreach="o.carta_porte_picking_id.move_ids_without_package" t-as="productos" >  
+                    <div class="row">
+                      <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Cantidades Transportadas</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Cantidad</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>ID Origen</div>
+                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>ID Destino</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 text-center"><td><span t-field="productos.quantity_done"/></td></div>
+                      <div class="col-4 text-center"><td><span t-field="productos.ubicacion_origin_id"/></td></div>
+                      <div class="col-4 text-center"><td><span t-field="productos.ubicacion_destination_id"/></td></div>
+                    </div>
+                  </t>
+                  <!--Cantidades Origen y Destino-->
+                  <div class="row" id="complement">
+                    <div t-if="cfdi_vals.get('sello')" class="barcode col-3">
+                        <img alt="Barcode" t-att-src="'/report/barcode/?type=QR&amp;value=%s&amp;width=180&amp;height=180' % quote_plus(                             'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(                                 re=o.l10n_mx_edi_cfdi_supplier_rfc, rr=o.l10n_mx_edi_cfdi_customer_rfc,                                 tt='%.*f' % (o.currency_id.decimal_places, o.l10n_mx_edi_cfdi_amount), id=o.l10n_mx_edi_cfdi_uuid)                                 + '&amp;fe=%s' % quote_plus(                                     cfdi_vals['sello'][-8:], 'utf-8', 'strict', '=/').replace('%2B', '+'))"/>
+                    </div>
+                    <div class="complement-details col-9">
+                        <div class="digital-stamp">
+                            <span>Digital stamp of the emitter</span>
+                        </div>
+                        <div class="digital-stamp-content">
+                            <span t-esc="cfdi_vals.get('sello')"/>
+                        </div>
+                        <div class="digital-stamp">
+                            <span>Digital stamp SAT</span>
+                        </div>
+                        <div class="digital-stamp-content">
+                            <span t-esc="cfdi_vals.get('sello_sat')"/>
+                        </div>
+                        <div class="digital-stamp">
+                            <span>Original chain complement of digital certification SAT</span>
+                        </div>
+                        <div class="digital-stamp-content">
+                            <span class="nowrap" t-esc="cfdi_vals.get('cadena')"/>
+                        </div>
+                        <div class="digital-stamp">
+                            <span>Extra Info</span>
+                        </div>
+                        <div class="digital-stamp-content">
+                            <span>Emitter certificate:</span> <span t-esc="cfdi_vals.get('certificate_number')"/>
+                            <span> | SAT Certificate:</span> <span t-esc="cfdi_vals.get('certificate_sat_number')"/>
+                            <span> | Expedition place:</span> <span t-esc="cfdi_vals.get('expedition')"/>
+                            <span> | Fiscal Regime:</span><span t-esc="cfdi_vals.get('fiscal_regime')"/>
+                            <span> | Emission Date:</span> <span t-esc="cfdi_vals.get('emission_date_str')"/>
+                            <span> | Certification Date:</span> <span t-esc="cfdi_vals.get('stamp_date')"/>
+                            <span> | Fiscal Folio:</span> <span t-esc="cfdi_vals.get('uuid')"/>
+                        </div>
+                        <div class="digital-stamp-content text-center">
+                            <strong>This document is a printed representation of a CFDI</strong>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </t>
+        </t>
+    </t>
+  </template>
+</odoo>
+
+
