@@ -93,7 +93,21 @@
                     <div class="col-2 text-center font-weight-bold"><br/>Importe:</div>
                     <hr class="my-4"/>
                   </div>
-                  <div class="row">
+                  <t t-foreach="o.invoice_line_ids" t-as="productos" > 
+                    <div class="row">
+                      <div class="col-2 text-center"><span t-esc="productos.product_id.unspsc_code_id.code"/></div>
+                      <div class="col-2 text-center"><span t-field="productos.name"/></div>
+                      <div class="col-1 text-center"><span t-field="productos.quantity"/></div>
+                      <div class="col-2 text-center">$ <span t-esc="productos.price_unit" t-options='{"widget": "float", "precision": 2}'/></div>
+                      <div class="col-1 text-center"><span t-esc="productos.product_id.uom_id.unspsc_code_id.code"/></div>
+                      <div class="col-2 text-center"><span t-field="productos.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></div>
+                      <div class="col-2 text-center"><span t-field="productos.price_subtotal"/></div>
+                    </div>
+                      <hr class="my-4"/>
+                  </t>
+
+
+                  <!--<div class="row">
                     <div class="col-2 text-center"><span t-esc="o.invoice_line_ids.product_id.unspsc_code_id.code"/></div>
                     <div class="col-2 text-center"><span t-field="o.invoice_line_ids.name"/></div>
                     <div class="col-1 text-center"><span t-field="o.invoice_line_ids.quantity"/></div>
@@ -102,7 +116,9 @@
                     <div class="col-2 text-center"><span t-field="o.invoice_line_ids.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></div>
                     <div class="col-2 text-center"><span t-field="o.invoice_line_ids.price_subtotal"/></div>
                   </div>
-                    <hr class="my-4"/>
+                    <hr class="my-4"/>-->
+
+
                 </div>
 
                 <div class="container-fluid">
