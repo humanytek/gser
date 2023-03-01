@@ -90,7 +90,7 @@
         </field-->
 
         <!-- Posisionamiento de campos de la vista -->
-        <field name="name" position="before">
+        <field name="name" position="after">
           <field name="partner_id" optional="show"/>
           <field name="id" optional="show"/>
         </field>
