@@ -283,6 +283,28 @@
                   </div>
                 </div>-->
                 <div class="container-fluid">
+                    <div class="col-12 text-left">
+                      <br/>
+                      <br/>
+                      Por favor utilice la siguiente referencia al realizar su pago: <span t-field="o.name"/>  
+                      <br/>
+                      <br/>
+                      Plazo de pago: <span t-field="o.invoice_payment_term_id"/>
+                      <br/>
+                      <br/>
+                      <t t-set="cfdi_vals" t-value="o._l10n_mx_edi_decode_cfdi()"/>
+                      <t t-set="is_cfdi_signed" t-value="bool(o._get_l10n_mx_edi_signed_edi_document())"/>
+                      <t t-if="is_cfdi_signed">
+                          <p>
+                              <span t-esc="o._l10n_mx_edi_cfdi_amount_to_text()"/>
+                          </p>
+                      </t>
+                      <br/>
+                      <br/>
+                      <p><span t-field="o.narration"/></p>  
+                    </div> 
+                </div>
+                <div class="container-fluid">
                   <div class="row">
                     <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Complemento Carta Porte</div>
                     <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Transporte Internacional</div>
