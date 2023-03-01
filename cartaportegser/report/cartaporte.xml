@@ -235,16 +235,22 @@
                                                 </td>
                                             </tr>
                                         </t>
-                                        <!--<t t-if="len(payments_vals) &gt; 0">-->
+                                        <!--<t t-if="len(payments_vals) &gt; 0">
                                             <tr class="border-black">
                                                 <td><strong>Importe Adeudado</strong></td>
                                                 <td class="text-right">
                                                     <span t-field="o.amount_residual"/>
                                                 </td>
                                             </tr>
-                                        <!--</t>-->
+                                        </t>-->
                                     </t>
                                 </t>
+                                <tr class="border-black">
+                                    <td><strong>Importe Adeudado</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_residual"/>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>
