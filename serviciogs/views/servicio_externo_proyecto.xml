@@ -85,9 +85,9 @@
         <field name="tag_ids" position="replace">
           <field name="tag_ids" invisible="1" optional="hide"/>
         </field>
-        <field name="name" position="replace">
+        <!--field name="name" position="replace">
           <field name="name" invisible="1" optional="hide"/>
-        </field>
+        </field-->
 
         <!-- Posisionamiento de campos de la vista -->
         <field name="name" position="before">
