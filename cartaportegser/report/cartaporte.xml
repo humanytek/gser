@@ -193,8 +193,8 @@
 
 
                 </div>
-
-                <div class="container-fluid">
+                
+                <!--<div class="container-fluid">
                   <div class="row">
                     <div class="col-7 text-left p-3">
                     </div>
@@ -212,8 +212,6 @@
                       IVA 16% de <span t-field="o.invoice_line_ids.price_subtotal"/>
                     </div>
                     <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
-                      <!--$ <span t-esc="o.invoice_line_ids.price_subtotal*.16"/>
-                      $<t t-esc="'{0:,.2f}'.format(int(o.invoice_line_ids.price_subtotal*.16)).replace(',', ',')" />-->
                       $ <span t-esc="o.invoice_line_ids.price_subtotal*.16" t-options='{"widget": "float", "precision": 2}'/>
                     </div>
                   </div>
@@ -234,8 +232,6 @@
                       TOTAL
                     </div>
                     <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
-                      <!--<span t-esc="(o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04)"/>
-                      $<t t-esc="'{0:,.2f}'.format(int((o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04))).replace(',', ',')" />-->
                       $ <span t-esc="(o.invoice_line_ids.price_subtotal)+(o.invoice_line_ids.price_subtotal*.16)-(o.invoice_line_ids.price_subtotal*.04)" t-options='{"widget": "float", "precision": 2}'/>
                     </div>
                   </div>
@@ -243,14 +239,12 @@
                     <div class="col-7 text-left p-3">
                     </div>
                     <div class="col-3 text-left p-3" style="border-top: 2px solid black;">
-                      <!--<span t-field="o.invoice_payments_widget"/>-->
                       <span t-set="tax_adeudo" t-value="json.loads(o.invoice_payments_widget)"/>
                       Pagado el <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['date'] or '00/00/0000'"/>
                     </div>
                     <div class="col-2 text-left p-3" style="border-top: 2px solid black;">
                       <span t-set="tax_adeudo" t-value="json.loads(o.invoice_payments_widget)"/>
                       $ <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['amount'] or '0.00'"/>
-                      <!--$ <span t-esc="tax_adeudo and tax_adeudo['content'][0] and tax_adeudo['content'][0]['amount'] or ''" t-options='{"widget": "float", "precision": 2}'/>-->
                     </div>
                   </div>                  
                 </div>
@@ -287,7 +281,7 @@
                       <p><span t-field="o.narration"/></p>  
                     </div>
                   </div>
-                </div>
+                </div>-->
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Complemento Carta Porte</div>
