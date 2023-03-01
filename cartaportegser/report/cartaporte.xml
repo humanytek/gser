@@ -250,7 +250,7 @@
                                     <td class="text-right">
                                         <span t-field="o.amount_residual"/>
                                     </td>
-                                </tr>
+                                </tr> 
                             </table>
                         </div>
                     </div>
