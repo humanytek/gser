@@ -181,19 +181,6 @@
                       <hr class="my-4"/>
                   </t>
 
-
-                  <div class="row">
-                    <div class="col-2 text-center"><span t-esc="o.invoice_line_ids.product_id.unspsc_code_id.code"/></div>
-                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.name"/></div>
-                    <div class="col-1 text-center"><span t-field="o.invoice_line_ids.quantity"/></div>
-                    <div class="col-2 text-center">$ <span t-esc="o.invoice_line_ids.price_unit" t-options='{"widget": "float", "precision": 2}'/></div>
-                    <div class="col-1 text-center"><span t-esc="o.invoice_line_ids.product_id.uom_id.unspsc_code_id.code"/></div>
-                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></div>
-                    <div class="col-2 text-center"><span t-field="o.invoice_line_ids.price_subtotal"/></div>
-                  </div>
-                    <hr class="my-4"/>
-
-
                     <div class="clearfix">
                         <div id="total" class="row">
                             <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ml-auto">
