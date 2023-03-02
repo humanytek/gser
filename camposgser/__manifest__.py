@@ -4,11 +4,12 @@
     'author': 'Fernando Rodriguez',
     'summary': 'Ajuste de Nombre de Campos',
     'depends': [
+        'base',
         'hr',
     ],
     'data': [
         # views
-        'views/camposajuste.xml',
+        'views/hr_employee.xml',
     ],
     'installable': True,
     'auto_install': False,
