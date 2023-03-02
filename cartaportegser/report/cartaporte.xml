@@ -196,14 +196,20 @@
                         </thead>
                         <t t-foreach="o.invoice_line_ids" t-as="productos" >   
                           <tbody class="invoice_tbody">
-
-                            <td class="text-left"><span t-esc="productos.product_id.unspsc_code_id.code"/></td>
-                            <td class="text-left"><span t-field="productos.name"/></td>
-                            <td class="text-left"><span t-field="productos.quantity"/></td>
-                            <td class="text-left">$ <span t-esc="productos.price_unit" t-options='{"widget": "float", "precision": 2}'/></td>
-                            <td class="text-left"><span t-esc="productos.product_id.uom_id.unspsc_code_id.code"/></td>
-                            <td class="text-left"><span t-field="productos.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></td>
-                            <td class="text-left"><span t-field="productos.price_subtotal"/></td>
+                            <t t-if="productos.display_type == 'line_note'">
+                                <td colspan="99">
+                                    <span t-field="productos.name" t-options="{'widget': 'text'}"/>
+                                </td>
+                            </t>
+                            <t t-if="not productos.display_type" name="account_invoice_line_accountable">
+                              <td class="text-left"><span t-esc="productos.product_id.unspsc_code_id.code"/></td>
+                              <td class="text-left"><span t-field="productos.name"/></td>
+                              <td class="text-left"><span t-field="productos.quantity"/></td>
+                              <td class="text-left">$ <span t-esc="productos.price_unit" t-options='{"widget": "float", "precision": 2}'/></td>
+                              <td class="text-left"><span t-esc="productos.product_id.uom_id.unspsc_code_id.code"/></td>
+                              <td class="text-left"><span t-field="productos.tax_ids"/> - <span t-field="o.l10n_mx_edi_payment_method_id"/></td>
+                              <td class="text-left"><span t-field="productos.price_subtotal"/></td>
+                            </t>
                           </tbody>
                         </t>
                       </table>
