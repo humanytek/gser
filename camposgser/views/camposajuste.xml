@@ -8,7 +8,7 @@
         <form string="Employee">
           <sheet>
             <group>
-              <field name="mobile_phone" string="Telefono laborall"/>
+              <field name="work_phone" string="Telefono laborall"/>
             </group>
           </sheet>
         </form>
