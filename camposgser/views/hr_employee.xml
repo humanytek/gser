@@ -9,6 +9,9 @@
           <sheet>
             <group>
               <field name="work_phone" string="Telefono laborall"/>
+              <field name="gender" position="attributes">
+                <attribute name="string">Generoo</attribute>
+              </field>
             </group>
           </sheet>
         </form>
