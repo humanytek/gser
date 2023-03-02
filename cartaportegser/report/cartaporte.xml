@@ -465,33 +465,37 @@
                     </t>
                   </t>
                   <!--Destinos con Nombre y direccion-->
+                  <t t-set="e" t-value="0"/>
                   <t t-foreach="o.carta_porte_picking_id.ubicacion_ids" t-as="ubicaciones" >   
-                    <div class="row">
-                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Destino</div>
-                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Distancia Recorrida (KM)</div>
-                      <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Fecha/Hora Llegada</div>
-                    </div>
-                    <div class="row">                      
-                      <div class="col-4 text-center"><td><span t-field="ubicaciones.name"/> - <span t-field="ubicaciones.partner_id"/></td></div>
-                      <div class="col-4 text-center"><td><span t-field="ubicaciones.distance"/></td></div>
-                      <div class="col-4 text-center"><td><span t-field="ubicaciones.date"/></td></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Direccion</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 text-center">
-                        Calle: <span t-field="ubicaciones.partner_id.street_name"/> 
-                        No. Exterior: <span t-field="ubicaciones.partner_id.street_number"/>
-                        No. Interior: <span t-field="ubicaciones.partner_id.street_number2"/>
-                        Colonia: <span t-field="ubicaciones.partner_id.l10n_mx_edi_colony"/>
-                        Localidad: <span t-field="ubicaciones.partner_id.l10n_mx_edi_locality_id"/>
-                        Municipio: <span t-field="ubicaciones.partner_id.city_id"/>
-                        Estado: <span t-field="ubicaciones.partner_id.state_id"/>
-                        Pais: <span t-field="ubicaciones.partner_id.country_id"/>
-                        Codigo Postal: <span t-field="ubicaciones.partner_id.zip"/>
+                    <t t-set="e" t-value="e+1"/>
+                    <t t-if="e &gt; 1">
+                      <div class="row">
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Destino</div>
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Distancia Recorrida (KM)</div>
+                        <div class="col-4 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Fecha/Hora Llegada</div>
                       </div>
-                    </div>
+                      <div class="row">                      
+                        <div class="col-4 text-center"><td><span t-field="ubicaciones.name"/> - <span t-field="ubicaciones.partner_id"/></td></div>
+                        <div class="col-4 text-center"><td><span t-field="ubicaciones.distance"/></td></div>
+                        <div class="col-4 text-center"><td><span t-field="ubicaciones.date"/></td></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 text-center font-weight-bold" style="background-color: #486f9e; color: white;"><br/>Direccion</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          Calle: <span t-field="ubicaciones.partner_id.street_name"/> 
+                          No. Exterior: <span t-field="ubicaciones.partner_id.street_number"/>
+                          No. Interior: <span t-field="ubicaciones.partner_id.street_number2"/>
+                          Colonia: <span t-field="ubicaciones.partner_id.l10n_mx_edi_colony"/>
+                          Localidad: <span t-field="ubicaciones.partner_id.l10n_mx_edi_locality_id"/>
+                          Municipio: <span t-field="ubicaciones.partner_id.city_id"/>
+                          Estado: <span t-field="ubicaciones.partner_id.state_id"/>
+                          Pais: <span t-field="ubicaciones.partner_id.country_id"/>
+                          Codigo Postal: <span t-field="ubicaciones.partner_id.zip"/>
+                        </div>
+                      </div>
+                    </t>                    
                   </t>
                   <!--Destinos con Nombre y direccion-->
                   <!--Informacion de Transporte y Operador-->
