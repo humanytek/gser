@@ -131,3 +131,34 @@ class datosEmpleados (models.Model):
         string="Resguardo 2",
         groups="hr.group_hr_user",
     )
+
+    #Fernando Marzo 2023
+    f_rcontrol = fields.Binary(
+        string="R Control",
+        groups="hr.group_hr_user",
+    )
+
+    f_pasaporte = fields.Binary(
+        string="Pasaporte",
+        groups="hr.group_hr_user",
+    )
+
+    f_fpasaporte = fields.Date(
+        string="Vigencia Pasaporte",
+        groups="hr.group_hr_user",
+    )
+
+    f_visa = fields.Binary(
+        string="Visa",
+        groups="hr.group_hr_user",
+    )
+
+    f_fvisa = fields.Date(
+        string="Vigencia Visa",
+        groups="hr.group_hr_user",
+    )
+
+    f_afore = fields.Binary(
+        string="Afore",
+        groups="hr.group_hr_user",
+    )
