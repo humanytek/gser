@@ -47,14 +47,14 @@ class proyecto_ruta (models.Model):
     capacidad_ruta = fields.Selection([
         ('1','25,000 Litros'),
         ('2','30,000 Litros'),
-        ('3','35,000Litros'),
+        ('3','35,000 Litros'),
         ('4','36,000 Litros'),
         ('5','50,000 Litros'),
         ('6','54,000 Litros'),
-        ('7','2 Tonelada'),
-        ('8','10 Tonelada'),
-        ('9','20 Tonelada'),
-        ('10','30 Tonelada'),
+        ('7','2 Toneladas'),
+        ('8','10 Toneladas'),
+        ('9','20 Toneladas'),
+        ('10','30 Toneladas'),
         ('11','N/A'),],
         string="Capacidad",
     )
@@ -66,18 +66,10 @@ class proyecto_ruta (models.Model):
         ('5','9 ejes'),],
         string="Ejes",
     )
-    producto_ruta = fields.Selection([
-        ('1','Aceite'),
-        ('2','Aceite pollo'),
-        ('3','Crema'),
-        ('4','Cascarilla de arroz'),
-        ('5','Leche'),
-        ('6','Leche en polvo'),
-        ('7','Lacteos'),
-        ('8','Lodos planta tratamientos'),
-        ('9','Pluma'),
-        ('10','Refacciones'),
-        ('11','Otros'),],
+    producto_ruta = fields.Many2one(
+        comodel_name='product.template',
+        ondelete='set null',
+        index=True,
         string="Producto",
     )
     tipo_precio = fields.Selection([
@@ -120,54 +112,70 @@ class proyecto_ruta (models.Model):
         string="Gasto Total",
     )
     # Datos de origen
-    recoge_en_origen = fields.Char(
+    recoge_en_origen = fields.Many2one(
+        comodel_name='res.partner',
+        ondelete='set null',
+        index=True,
         string="Se recoge en:",
     )
-    direccion_origen= fields.Char(
+    direccion_origen = fields.Char(
+        related ='recoge_en_origen.street',
         string="Dirección origen:",
+        readonly=True,
     )
-    pais_origen= fields.Many2one(
-        string ="País origen:",
+    pais_origen = fields.Many2one(
+        related ='recoge_en_origen.country_id',
         comodel_name='res.country',
         ondelete='set null',
+        string="País origen:",
+        readonly=True,
         index=True,
     )
     estado_origen= fields.Many2one(
-        string ="Estado origen:",
+        related ='recoge_en_origen.state_id',
         comodel_name='res.country.state',
         ondelete='set null',
+        string ="Estado origen:",
+        readonly=True,
         index=True,
     )
     ciudad_origen= fields.Char(
+        related ='recoge_en_origen.city',
         string ="Ciudad origen:",
-        comodel_name='res.city',
+        readonly=True,
+    )
+    # Datos de destino
+    entrega_destino = fields.Many2one(
+        string="Se entrega en:",
+        comodel_name='res.partner',
         ondelete='set null',
         index=True,
     )
-    # Datos de destino
-    entrega_destino = fields.Char(
-        string="Se entrega en:",
-    )
     direccion_destino= fields.Char(
+        related ='entrega_destino.street',
         string="Dirección destino:",
+        readonly=True,
     )
     pais_destino= fields.Many2one(
-        string ="País destino:",
+        related ='entrega_destino.country_id',
         comodel_name='res.country',
         ondelete='set null',
+        string ="País destino:",
+        readonly=True,
         index=True,
     )
     estado_destino= fields.Many2one(
-        string ="Estado destino:",
+        related ='entrega_destino.state_id',
         comodel_name='res.country.state',
         ondelete='set null',
+        string ="Estado destino:",
+        readonly=True,
         index=True,
     )
     ciudad_destino= fields.Char(
+        related ='entrega_destino.city',
         string ="Ciudad destino:",
-        #comodel_name='res.country.city',
-        #ondelete='set null',
-        #index=True,
+        readonly=True,
     )
     # Datos Computados para el calculo de gastos
     @api.depends("diesel", "precio_diesel","caseta_llave","gastos_operador","caseta_efectivo")

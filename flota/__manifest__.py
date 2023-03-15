@@ -10,5 +10,6 @@
     'data': [
         # views
         'views/flota_serrano.xml',
+        'views/flota_view_tree.xml',
     ],
 }

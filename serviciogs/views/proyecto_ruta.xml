@@ -19,8 +19,9 @@
                   <field name="carga_ruta" required="1"/>
                   <field name="capacidad_ruta" required="1"/>
                   <field name="ejes_ruta" required="1"/>
-                  <field name="producto_ruta" required="1"/>
+                  <field name="producto_ruta" domain="[('categ_id', '=', 'PRODUCTO-TRANSPORTE')]"/>
                 </group>
+
                 <group string="Costos">
                   <field name="tipo_precio"  required="1"/>
                   <field name="precio"  required="1"/>
@@ -36,22 +37,23 @@
                   <field name="gasto_total" required="1"/>
                 </group>
                 <group string="Origen">
-                  <field name="recoge_en_origen" required="1"/>
-                  <field name="direccion_origen" required="1"/>
-                  <field name="pais_origen" required="1"/>
-                  <field name="estado_origen" domain="[('country_id', '=', pais_origen)]" required="1"/>
-                  <field name="ciudad_origen" required="1"/>
+                  <field name="recoge_en_origen" domain="[('parent_id', '=', partner_id)]"/>
+                  <field name="direccion_origen"/>
+                  <field name="pais_origen"/>
+                  <field name="estado_origen"/>
+                  <field name="ciudad_origen"/>
                   <!--falta completar la cidudad odoo enterprise-->
                   <!--domain="[('country.state_id', '=', estado_origen)]"-->
                 </group>
                 <group string="Destino">
-                  <field name="entrega_destino" required="1"/>
-                  <field name="direccion_destino" required="1"/>
-                  <field name="pais_destino" required="1"/>
-                  <field name="estado_destino" domain="[('country_id', '=', pais_origen)]" required="1"/>
-                  <field name="ciudad_destino" required="1"/>
+                  <field name="entrega_destino" domain="[('parent_id', '=', partner_id)]"/>
+                  <field name="direccion_destino"/>
+                  <field name="pais_destino"/>
+                  <field name="estado_destino"/>
+                  <field name="ciudad_destino"/>
                   <!--falta completar la cidudad odoo enterprise-->
                   <!--domain="[('country.state_id', '=', estado_destino)]"-->
+                  <!--domain-->
                 </group>
               </group>
             </group>

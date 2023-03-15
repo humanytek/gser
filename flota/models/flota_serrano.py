@@ -4,19 +4,20 @@ class FlotaSerrano(models.Model):
     _inherit = "fleet.vehicle"                 
     tipo_vehiculo = fields.Selection([
         ('1','Tractocamion'),
-        ('2','Unidad'),
-        ('3','Torton'),
-        ('4','Pickup'),
-        ('5','Unidad'),
-        ('6','Maquinaria Pesada'),
+        ('2','Torton'),
+        ('3','Pickup'),
+        ('4','Unidad'),
+        ('5','Maquinaria Pesada'),
+        ('6','Volteo'),
         ('7','Tanque'),
         ('8','Caja Seca'),
         ('9','Gondola'),
         ('10','Plataforma'),
         ('11','Cama Baja'),
         ('12','Caja Refrigerada'),
-        ('13','Tanque Acero Inoxidable'), 
-        ('14','Remolque'),],
+        ('13','Tanque de Acero Inoxidable'),
+        ('14','Plana'), 
+        ('15','Remolque'),],
         string="Tipo de vehiculo",
     )
     no_economico = fields.Char(
@@ -59,4 +60,10 @@ class FlotaSerrano(models.Model):
     )
     file_otro = fields.Binary(
         string= "Otro",
+    )
+    conductor = fields.Many2one(
+        comodel_name='hr.employee',
+        ondelete='set null',
+        index=True,
+        string="Conductor",
     )

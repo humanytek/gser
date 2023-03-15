@@ -1,19 +1,18 @@
 {
-    'name': 'Datos Empleado',
+    'name': 'Docuementacion Contactos',
     'version': '13.0.0.4.0',
     'author': 'GSerrano Lagos de Moreno',
     'website': '',
     'license': 'LGPL-3',
     'depends': [
-        "hr"
+        "contacts",
     ],
     'data': [
         # security
         # data
         # demo
-        # reports
-        # views
-        'views/datosempleados.xml',
-        'views/pagoimms.xml',
+        
+        # # views
+        'views/documentos_contactos.xml',
     ],
 }

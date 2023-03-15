@@ -18,7 +18,7 @@ class servicio_externo_proyecto (models.Model):
         ('9','Finalizado'),
         ('10','Cancelado'),
         ('12','Rechazado'),],
-        string="Estado de Viaje",
+        string="Estatus de Viaje",
         default='1',
     )
     vehiculo = fields.Many2one(
@@ -58,26 +58,26 @@ class servicio_externo_proyecto (models.Model):
     carga_viaje= fields.Selection(
         related = 'project_id.carga_ruta',
         string ="Carga",
-    )  
+    )
     capacidad_viaje = fields.Selection(
         related ='project_id.capacidad_ruta',
         string ="Capacidad",
-    ) 
-    producto_viaje = fields.Selection(
+    )
+    producto_viaje = fields.Many2one(
         related ='project_id.producto_ruta',
         string ="Producto",
-    ) 
-    conductor = fields.Char(
-        related ='vehiculo.driver_id.name',
+    )
+    conductor = fields.Many2one(
+        related ='vehiculo.conductor',
         string ="Conductor",
-    )  
+    )
     gasto_total_op_viaje= fields.Float(
         related ='project_id.gasto_total_operador',
         string ="Gastos del operador",
     )
     gasto_total_caseta_viaje= fields.Float(
         related ='project_id.caseta_efectivo',
-        string ="Gastos de caseta",
+        string ="Gasto total - caseta",
     )   
     diesel_viaje= fields.Float(
         related ='project_id.diesel',
