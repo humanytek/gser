@@ -114,7 +114,7 @@ class servicio_externo_proyecto (models.Model):
         string ="IVA 16%",
     )    
     retencion = fields.Float(
-        compute ='_compute_iva',
+        compute ='_compute_retencion',
         string ="Retención 4%",
     )   
     total_facturar = fields.Float(
@@ -154,14 +154,18 @@ class servicio_externo_proyecto (models.Model):
     def _compute_iva(self):
         for record in self:
             record.iva = record.subtotal * 0.16
-            record.retencion = record.subtotal * 0.04
+    @api.depends("subtotal")
+    def _compute_retencion(self):
+        for record in self:
+            if record.retencion == 0:
+                record.retencion = 0
+            else:
+                record.retencion = record.subtotal * 0.04
     @api.depends("subtotal", "iva", "retencion", "cantidad", "total_facturar")
     def _compute_total_facturar(self):
         for record in self:
             if record.total_facturar != 0:
                 record.total_facturar = record.total_facturar
-            elif record.retencion == 0:
-                record.total_facturar = record.subtotal + record.iva
             else:
                 record.total_facturar = (record.subtotal + record.iva) - record.retencion
                 
