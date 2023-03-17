@@ -157,10 +157,10 @@ class servicio_externo_proyecto (models.Model):
     @api.depends("subtotal")
     def _compute_retencion(self):
         for record in self:
-            if record.retencion == 0:
-                record.retencion = 0
-            else:
+            if record.retencion != 0:
                 record.retencion = record.subtotal * 0.04
+            else:
+                record.retencion = 0
     @api.depends("subtotal", "iva", "retencion", "cantidad", "total_facturar")
     def _compute_total_facturar(self):
         for record in self:
