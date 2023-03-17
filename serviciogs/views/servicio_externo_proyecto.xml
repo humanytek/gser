@@ -47,11 +47,11 @@
               <group>
                 <group string="">
                   <field name="cantidad"/>           
-                  <field name="precio_ruta_litro" readonly="1"/>
-                  <field name="subtotal" readonly="1"/>
-                  <field name="iva" readonly="1"/>
-                  <field name="retencion" readonly="1"/>
-                  <field name="total_facturar" readonly="1"/>
+                  <field name="precio_ruta_litro" readonly="0"/>
+                  <field name="subtotal" readonly="0"/>
+                  <field name="iva" readonly="0"/>
+                  <field name="retencion" readonly="0"/>
+                  <field name="total_facturar" readonly="0"/>
                 </group>
                 <group string="">
                   <field name="forma_pago" invisible="1"/>           
@@ -69,6 +69,9 @@
       <field name="model">project.task</field>
       <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
       <field name="arch" type="xml">
+        <xpath expr="//tree" position="attributes">
+        <attribute name="default_order">id desc</attribute>
+      </xpath>
         <!--campos ocultos de la vista task-->
         <field name="user_ids" position="replace">
           <field name="user_ids" invisible="1" optional="hide"/>
