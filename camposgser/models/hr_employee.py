@@ -38,97 +38,120 @@ class campos_ajuste (models.Model):
     campo_de_seleccion = fields.Selection(
         selection=OPCIONES_CAMPO_SELECCION,
         string="Cantidad de Hijos",
+        groups="hr.group_hr_user",
     )
     
     hijo_1 = fields.Char(
         string="Hijo 1",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_2 = fields.Char(
         string="Hijo 2",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_3 = fields.Char(
         string="Hijo 3",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_4 = fields.Char(
         string="Hijo 4",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_5 = fields.Char(
         string="Hijo 5",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_6 = fields.Char(
         string="Hijo 6",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_7 = fields.Char(
         string="Hijo 7",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     hijo_8 = fields.Char(
         string="Hijo 8",
         invisible=True,
+        groups="hr.group_hr_user",
     )
 
     edad_hijo_1 = fields.Integer(
         string="Edad hijo 1",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_2 = fields.Integer(
         string="Edad hijo 2",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_3 = fields.Integer(
         string="Edad hijo 3",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_4 = fields.Integer(
         string="Edad hijo 4",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_5 = fields.Integer(
         string="Edad hijo 5",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_6 = fields.Integer(
         string="Edad hijo 6",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_7 = fields.Integer(
         string="Edad hijo 7",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     edad_hijo_8 = fields.Integer(
         string="Edad hijo 8",
         invisible=True,
+        groups="hr.group_hr_user",
     )
 
     beneficiario_1 = fields.Char(
         string="Beneficiario 1",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     beneficiario_2 = fields.Char(
         string="Beneficiario 2",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     
     beneficiario_porce_1 = fields.Integer(
         string="Procentaje 1",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     beneficiario_porce_2 = fields.Integer(
         string="Procentaje 2",
         invisible=True,
+        groups="hr.group_hr_user",
     )
 
     beneficiario_par_1 = fields.Char(
         string="Parentesco 1",
         invisible=True,
+        groups="hr.group_hr_user",
     )
     beneficiario_par_2 = fields.Char(
         string="Parentesco 2",
         invisible=True,
+        groups="hr.group_hr_user",
     )
