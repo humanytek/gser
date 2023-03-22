@@ -69,7 +69,7 @@
                 <field name="beneficiario_par_1"/>
                 <field name="beneficiario_porce_1"/>
                 <field name="beneficiario_2"/>
-                <field name="beneficiario_par_1"/>
+                <field name="beneficiario_par_2"/>
                 <field name="beneficiario_porce_2"/>
             </field>
         </field>
