@@ -174,4 +174,6 @@ class servicio_externo_proyecto (models.Model):
                 record.total_facturar = record.total_facturar
             else:
                 record.total_facturar = (record.subtotal + record.iva) - record.retencion
+            if record.cantidad == 0:
+                record.total_facturar = 0
                 
