@@ -145,6 +145,12 @@ class servicio_externo_proyecto (models.Model):
     fecha_pago = fields.Date(
         string ="Fecha pago",
     )
+    
+    con_retencion = fields.Selection([
+        ('1','SI'),
+        ('2','NO'),],
+        string ="Con Retencion",
+    )
 
     @api.depends("cantidad", "precio_ruta_litro")
     def _compute_subtotal(self):
@@ -157,10 +163,10 @@ class servicio_externo_proyecto (models.Model):
     @api.depends("subtotal")
     def _compute_retencion(self):
         for record in self:
-            if record.retencion != 0:
-                record.retencion = record.subtotal * 0.04
-            else:
+            if record.con_retencion == 2:
                 record.retencion = 0
+            else:
+                record.retencion = record.subtotal * 0.04
     @api.depends("subtotal", "iva", "retencion", "cantidad", "total_facturar")
     def _compute_total_facturar(self):
         for record in self:
