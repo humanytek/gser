@@ -46,7 +46,7 @@
             <group string="Facturacion y Cobranza">
               <group>
                 <group string="">
-                  <field name="con_retencion"/>
+                  <field name="con_retencion" readonly="0"/>
                   <field name="cantidad"/>           
                   <field name="precio_ruta_litro" readonly="0"/>
                   <field name="subtotal" readonly="0"/>

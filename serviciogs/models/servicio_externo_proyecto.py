@@ -151,6 +151,7 @@ class servicio_externo_proyecto (models.Model):
         ('1','NO'),],
         string ="Con Retencion",
         default ='0',
+        compute ='_compute_total_facturar',
     )
 
     @api.depends("cantidad", "precio_ruta_litro")
