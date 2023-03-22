@@ -150,7 +150,7 @@ class servicio_externo_proyecto (models.Model):
         ('0','SI'),
         ('1','NO'),],
         string ="Con Retencion",
-        default =2,
+        default ='0',
     )
 
     @api.depends("cantidad", "precio_ruta_litro")
@@ -164,7 +164,7 @@ class servicio_externo_proyecto (models.Model):
     @api.depends("con_retencion","subtotal")
     def _compute_retencion(self):
         for record in self:
-            if record.con_retencion == 1:
+            if record.con_retencion == '1':
                 record.retencion = 0
             else:
                 record.retencion = record.subtotal * 0.04
