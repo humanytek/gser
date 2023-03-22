@@ -160,7 +160,7 @@ class servicio_externo_proyecto (models.Model):
     def _compute_iva(self):
         for record in self:
             record.iva = record.subtotal * 0.16
-    @api.depends("subtotal")
+    @api.depends("subtotal","con_retencion")
     def _compute_retencion(self):
         for record in self:
             if record.con_retencion == 2:
