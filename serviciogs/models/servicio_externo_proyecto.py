@@ -147,8 +147,8 @@ class servicio_externo_proyecto (models.Model):
     )
     
     con_retencion = fields.Selection([
-        ('1','SI'),
-        ('2','NO'),],
+        ('0','SI'),
+        ('1','NO'),],
         string ="Con Retencion",
         default =2,
     )
@@ -161,10 +161,10 @@ class servicio_externo_proyecto (models.Model):
     def _compute_iva(self):
         for record in self:
             record.iva = record.subtotal * 0.16
-    @api.depends("subtotal","con_retencion")
+    @api.depends("con_retencion","subtotal")
     def _compute_retencion(self):
         for record in self:
-            if record.con_retencion == 'NO':
+            if record.con_retencion == 1:
                 record.retencion = 0
             else:
                 record.retencion = record.subtotal * 0.04
