@@ -16,6 +16,8 @@
                   <field name="estado_cuenta"/>
                   <field name="otro"/>
                   <field name="descripcion"/>
+                  <field name="doc_f_licencia"/>
+                  <field name="f_licencia"/>
                 </group>
               </group>
             </group>

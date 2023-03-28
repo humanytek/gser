@@ -24,4 +24,11 @@ class datosEmpleados (models.Model):
     descripcion = fields.Binary(
         string="Descripcion",
     )
-    
+
+    f_licencia = fields.Date(
+        string="Vigencia de licencia",
+    )
+
+    doc_f_licencia = fields.Binary(
+        string="Licencia",
+    )

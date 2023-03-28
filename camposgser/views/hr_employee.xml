@@ -1,23 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <record model="ir.ui.view" id="hr_employee_form_view">
-      <field name="name">hr.employee.form</field>
-      <field name="model">hr.employee</field>
-      <field name="arch" type="xml">
-        <form string="Employee">
-          <sheet>
-            <group>
-              <field name="work_phone" string="Telefono laborall"/>
-              <field name="gender" position="attributes">
-                <attribute name="string">Generoo</attribute>
-              </field>
-            </group>
-          </sheet>
-        </form>
-      </field>
+    <record id="hide_employee_field" model="ir.ui.view">
+        <field name="name">Hide Phone Field</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="mobile_phone" position="replace">
+                <field name="mobile_phone" invisible="1"/>
+            </field>
+            <!--<field name="identification_id" position="replace">
+                <field name="identification_id" invisible="1"/>
+            </field>-->
+        </field>
     </record>
-  </data>
+    <record id="curp_view_tree" model="ir.ui.view">
+        <field name="name">curp view tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="identification_id" position="after">
+                <field name="curp_mx"/>
+                <!--<field name="f_ine"/>-->
+                <!--<field name="f_rfc"/>-->
+            </field>
+        </field>
+    </record>
+        <record id="hijos_view_tree" model="ir.ui.view">
+        <field name="name">curp view tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="children" position="after">
+                <field name="campo_de_seleccion"/>
+                <field name="hijo_1" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '0')]}"/>
+                <field name="edad_hijo_1" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '0')]}"/>
+
+                <field name="hijo_2" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '1')]}"/>
+                <field name="edad_hijo_2" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '1')]}"/>
+
+                <field name="hijo_3" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '2')]}"/>
+                <field name="edad_hijo_3" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '2')]}"/>
+
+                <field name="hijo_4" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '3')]}"/>
+                <field name="edad_hijo_4" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '3')]}"/>
+
+                <field name="hijo_5" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '4')]}"/>
+                <field name="edad_hijo_5" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '4')]}"/>
+
+                <field name="hijo_6" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '5')]}"/>
+                <field name="edad_hijo_6" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '5')]}"/>
+
+                <field name="hijo_7" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '6')]}"/>
+                <field name="edad_hijo_7" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '6')]}"/>
+
+                <field name="hijo_8" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '7')]}"/>
+                <field name="edad_hijo_8" attrs="{'invisible': [('campo_de_seleccion', '&lt;=', '7')]}"/>
+
+            </field>
+        </field>
+    </record>
+    <record id="beneficiario_view_tree" model="ir.ui.view">
+        <field name="name">beneficiario view tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="emergency_phone" position="after">
+                <field name="beneficiario_1"/>
+                <field name="beneficiario_par_1"/>
+                <field name="beneficiario_porce_1"/>
+                <field name="beneficiario_2"/>
+                <field name="beneficiario_par_1"/>
+                <field name="beneficiario_porce_2"/>
+            </field>
+        </field>
+    </record>
 </odoo>
 
 

@@ -15,6 +15,12 @@
                   <field name="curp"/>
                   <field name="rfc"/>
                   <field name="ine"/>
+                  <field name="f_rcontrol"/>
+                  <field name="f_pasaporte"/>
+                  <field name="f_fpasaporte"/>
+                  <field name="f_visa"/>
+                  <field name="f_fvisa"/>
+                  <field name="f_afore"/>
                 </group>
 
                 <group string="Seguro">
