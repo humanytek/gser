@@ -15,12 +15,14 @@
                   <field name="curp"/>
                   <field name="rfc"/>
                   <field name="ine"/>
+                  <!-- Fernando 2023-->
                   <field name="f_rcontrol"/>
                   <field name="f_pasaporte"/>
                   <field name="f_fpasaporte"/>
                   <field name="f_visa"/>
                   <field name="f_fvisa"/>
                   <field name="f_afore"/>
+                  <!-- Fernando 2023-->
                 </group>
 
                 <group string="Seguro">

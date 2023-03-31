@@ -44,7 +44,7 @@ class campos_ajuste (models.Model):
     hijo_1 = fields.Char(
         string="Hijo 1",
         invisible=True,
-        groups="hr.group_hr_user",    
+        groups="hr.group_hr_user",
     )
     hijo_2 = fields.Char(
         string="Hijo 2",
