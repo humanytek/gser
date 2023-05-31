@@ -23,10 +23,9 @@
                 <!--<xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="required">1</attribute>
                 </xpath>-->
-
-                <field name="l10n_mx_edi_operator_licence" position="replace">
-                    <field name="l10n_mx_edi_operator_licence" attrs="{'invisible': [('company_id', '=', 1)]}"/>
-                </field>
+                <xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
             </field>
         </record>
     </data>
