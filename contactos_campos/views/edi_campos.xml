@@ -31,11 +31,14 @@
                 </xpath>-->
 
 
+
+                <field name="l10n_mx_edi_curp" position="replace">
+                    <field name="l10n_mx_edi_curp" attrs="{'invisible': [('company_id', '=', 1)]}"/>
+                </field>
+
                 <field name="l10n_mx_edi_operator_licence" position="replace">
                     <field name="l10n_mx_edi_operator_licence" attrs="{'invisible': [('company_id', '=', 1)]}"/>
                 </field>
-
-
                 <!--<xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="attrs">{'invisible': [('company_id', '=', 1)]}</attribute>
                 </xpath>
