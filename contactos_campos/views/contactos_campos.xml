@@ -37,9 +37,9 @@
                 <xpath expr="//field[@name='ine_representante']" position="attributes">
                     <attribute name="required">1</attribute>
                 </xpath>
-                <!--<field name="l10n_mx_edi_curp" position="replace">
+                <field name="l10n_mx_edi_curp" position="replace">
                     <field name="l10n_mx_edi_curp" attrs="{'invisible': [('company_id', '=', 1)]}"/>
-                </field>-->
+                </field>
                 <field name="doc_f_licencia" position="replace">
                     <field name="doc_f_licencia" attrs="{'invisible': [('company_id', '=', 1)]}"/>
                 </field>
