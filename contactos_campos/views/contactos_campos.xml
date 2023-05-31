@@ -43,9 +43,6 @@
                 <field name="doc_f_licencia" position="replace">
                     <field name="doc_f_licencia" attrs="{'invisible': [('company_id', '=', 1)]}"/>
                 </field>
-                <field name="id" position="replace">
-                    <field name="id" attrs="{'invisible': [('company_id', '=', 1)]}"/>
-                </field>
                 <field name="f_licencia" position="replace">
                     <field name="f_licencia" attrs="{'invisible': [('company_id', '=', 1)]}"/>
                 </field>   
