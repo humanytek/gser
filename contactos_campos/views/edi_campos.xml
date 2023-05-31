@@ -22,9 +22,12 @@
             <field name="arch" type="xml">
                 <!--<xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="required">1</attribute>
-                </xpath>-->
+                </xpath>
                 <xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="invisible">1</attribute>
+                </xpath>-->
+                <xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('company_id', '=', 1)]}</attribute>
                 </xpath>
             </field>
         </record>
