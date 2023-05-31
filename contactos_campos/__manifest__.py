@@ -9,6 +9,7 @@
         "base",
         "l10n_mx_edi",
         "l10n_mx_edi_extended",
+        "l10n_mx_edi_stock",
     ],
     'data': [
         # security
