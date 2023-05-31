@@ -18,7 +18,7 @@
         <record id="view_partner_form_inherited_licence" model="ir.ui.view">
             <field name="name">res.partner.form.inherited.licence</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="inherit_id" ref="base.view_partner_form"/> 
             <field name="arch" type="xml">
                 <!--<xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="required">1</attribute>
@@ -29,6 +29,9 @@
                 <xpath expr="//field[@name='l10n_mx_edi_operator_licence']" position="attributes">
                     <attribute name="attrs">{'invisible': [('company_id', '=', 1)]}</attribute>
                 </xpath>
+                <field name="l10n_mx_edi_curp" position="replace">
+                    <field name="l10n_mx_edi_curp" attrs="{'invisible': [('company_id', '=', 1)]}"/>
+                </field>
             </field>
         </record>
     </data>
