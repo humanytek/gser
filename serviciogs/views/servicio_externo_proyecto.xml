@@ -106,6 +106,8 @@
           <field name="diesel_viaje" optional="show" sum="Sum of diesel_viaje"/>
           <field name="conductor" optional="show"/>
           <field name="gasto_total_op_viaje" optional="show" sum="Sum of gasto_total_op_viaje"/>
+          <field name="caseta_efectivo_1" optional="show"/>
+          <field name="caseta_llave_1" optional="show"/>
           <field name="gasto_total_caseta_viaje" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="total_facturar" optional="show" sum="Sum of gasto_total_caseta_viaje"/>
           <field name="no_factura" optional="show"/>
