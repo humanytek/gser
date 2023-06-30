@@ -157,7 +157,15 @@ class servicio_externo_proyecto (models.Model):
         string ="Con Retencion",
         default ='0',
     )
-
+    caseta_llave_1 = fields.Float(
+        related ="project_id.caseta_llave",
+        string ="Caseta IAVE",
+    )
+    caseta_efectivo_1 = fields.Float(
+        related ="project_id.caseta_efectivo",
+        string ="Caseta Efectivo",
+    )    
+    
     @api.depends("cantidad", "precio_ruta_litro")
     def _compute_subtotal(self):
         for record in self:
