@@ -183,7 +183,7 @@ class servicio_externo_proyecto (models.Model):
             if record.cantidad == 0:
                 record.total_facturar = 0
 
-   @api.depends('project_id.caseta_efectivo', 'project_id.caseta_llave')
+    @api.depends('project_id.caseta_efectivo', 'project_id.caseta_llave')
     def _compute_gasto_total_caseta_viaje(self):
         for record in self:
             record.gasto_total_caseta_viaje = record.project_id.caseta_efectivo + record.project_id.caseta_llave
