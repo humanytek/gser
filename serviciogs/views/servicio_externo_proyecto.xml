@@ -28,6 +28,8 @@
             <field name="r2_no_economico"/>
             <field name="conductor" readonly ="1"/>
             <field name="gasto_total_op_viaje" readonly ="1"/>
+            <field name="caseta_efectivo_1" readonly ="1"/>
+            <field name="caseta_llave_1" readonly ="1"/>
             <field name="gasto_total_caseta_viaje" readonly ="1"/>
             <field name="diesel_viaje" readonly ="1"/>
             <field name="km_viaje" readonly ="1"/>
