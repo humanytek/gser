@@ -75,8 +75,13 @@ class servicio_externo_proyecto (models.Model):
         related ='project_id.gasto_total_operador',
         string ="Gastos del operador",
     )
+
+    #gasto_total_caseta_viaje= fields.Float(
+    #    related ='project_id.caseta_efectivo',
+    #    string ="Gasto total - caseta",
+    #)
     gasto_total_caseta_viaje= fields.Float(
-        related ='project_id.caseta_efectivo',
+        compute ='_compute_gasto_total_caseta_viaje',
         string ="Gasto total - caseta",
     )   
     diesel_viaje= fields.Float(
