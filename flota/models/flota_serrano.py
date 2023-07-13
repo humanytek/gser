@@ -17,7 +17,8 @@ class FlotaSerrano(models.Model):
         ('12','Caja Refrigerada'),
         ('13','Tanque de Acero Inoxidable'),
         ('14','Plana'), 
-        ('15','Remolque'),],
+        ('15','Remolque'),
+        ('16','Torton Roll Off'),],
         string="Tipo de vehiculo",
     )
     no_economico = fields.Char(
