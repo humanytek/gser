@@ -1,6 +1,6 @@
 {
     'name': 'Datos Empleado',
-    'version': '15.0.0.4.0',
+    'version': '13.0.0.4.0',
     'author': 'GSerrano Lagos de Moreno TEST ',
     'website': '',
     'license': 'LGPL-3',
