@@ -1,7 +1,7 @@
 {
-    'name': 'Datos Empleado TEST LOCAL',
+    'name': 'Datos Empleado',
     'version': '15.0.0.4.0',
-    'author': 'GSerrano Lagos de Moreno',
+    'author': 'GSerrano Lagos de Moreno TEST ',
     'website': '',
     'license': 'LGPL-3',
     'depends': [
