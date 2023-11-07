@@ -10,7 +10,7 @@
                     <attribute name="required">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='l10n_mx_edi_locality_id']" position="attributes">
-                    <attribute name="required">1</attribute>
+                    <attribute name="required">0</attribute>
                 </xpath>
             </field>
         </record>
