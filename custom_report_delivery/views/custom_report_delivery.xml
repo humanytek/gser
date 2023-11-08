@@ -1,0 +1,12 @@
+<odoo>
+    <template id="custom_report_delivery" inherit_id="stock.report_delivery_document">
+        <xpath expr="//h2" position="after">
+            <div t-if="o.partner_id" class="col-auto" name="div_origin">
+                <strong>Cliente:</strong>
+                <p t-field="o.partner_id"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+
+              
