@@ -91,7 +91,7 @@ class datosEmpleados (models.Model):
         groups="hr.group_hr_user",
     )
     vigencia = fields.Date(
-        string="Vigencia",
+        string="Vigencia Licencia",
         groups="hr.group_hr_user",
     )
     chofer_examen = fields.Binary(
