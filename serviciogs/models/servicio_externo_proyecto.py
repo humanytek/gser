@@ -1,6 +1,10 @@
 from email.policy import default
 from unittest.mock import DEFAULT
 from odoo import fields, models, api
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
+
 class servicio_externo_proyecto (models.Model):
     _inherit = ['project.task']
     allow_timesheets=fields.Boolean(
@@ -23,7 +27,8 @@ class servicio_externo_proyecto (models.Model):
     )
     vehiculo = fields.Many2one(
         comodel_name='fleet.vehicle',
-        ondelete='set null',
+        #compute = 'compute_vihicle',
+        #ondelete='set null',
         index=True,
         string="Vehiculo",
     )
@@ -68,6 +73,7 @@ class servicio_externo_proyecto (models.Model):
         string ="Producto",
     )
     conductor = fields.Many2one(
+        compute = '_compute_driver',
         related ='vehiculo.conductor',
         string ="Conductor",
     )
@@ -195,3 +201,260 @@ class servicio_externo_proyecto (models.Model):
     def _compute_gasto_total_caseta_viaje(self):
         for record in self:
             record.gasto_total_caseta_viaje = record.project_id.caseta_efectivo + record.project_id.caseta_llave
+            
+    @api.onchange('vehiculo')
+    def _compute_driver(self):
+        if not self.vehiculo.conductor:
+            warning = {
+                    'title': 'Conductor no registrado. ',
+                    'message': 'El Vehiculo "%s" con placas : "%s"  no posee conductor registrado \nPor favor registrarlo.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                    #'type': 'notification',
+            }
+            self.update({
+                'vehiculo': False,})
+            return {'warning': warning}
+        elif self.vehiculo.conductor:
+            #LICENCIA
+            if not self.vehiculo.conductor.vigencia or not self.vehiculo.conductor.licencia:
+                warning = {
+                    'title': 'Registrar documento. ',
+                    'message': 'El conductor %s relacionado al vehiculo "%s" con placas : "%s" , no posee Licencia registrada \nPor favor cargar documento y registrar la respectiva fecha de vigencia.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                    #'type': 'notification',
+                }
+                self.update({
+                    'vehiculo': False,})
+                return {'warning': warning}
+            elif self.vehiculo.conductor.vigencia:
+                now = datetime.now()
+                now = datetime.date(now)
+                expiration_date = self.vehiculo.conductor.vigencia
+                warning_date = self.vehiculo.conductor.vigencia - timedelta(days = 30 )
+                if now > expiration_date:
+                    warning = {
+                        'title': 'Licencia vencida.',
+                        'message': 'El conductor %s relacionado al vehiculo "%s" con placas : "%s"  \nPosee vencida su LICENCIA, verificar el respectivo proceder.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                        #'type': 'notification',
+                    }
+                    self.update({
+                    'vehiculo': False,})
+                    return {'warning': warning}
+                #Licencia por vencer
+                # elif expiration_date >= now and warning_date <= now:
+                #     exp_days = now - expiration_date
+                #     exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                #     warning = {
+                #             'title': 'Documento por Vencer.',
+                #             'message': 'El conductor %s relacionado al vehiculo "%s" con placas : "%s"  \nTiene %s dia(s) previo(s) al vencimiento de su Licencia.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+                #             #'type': 'notification',
+                #     }
+                #     return {'warning': warning,}
+                
+                
+        #POLIZA
+        if not self.vehiculo.vigencia_poliza or not self.vehiculo.file_poliza:
+            warning = {
+                'title': 'Registrar Poliza. ',
+                'message': 'El Vehiculo  %s  con Placa :  %s no registra Poliza. \nPor favor cargar documento y registrar la respectiva fecha de vigencia.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                #'type': 'notification',
+            }
+            self.update({
+            'vehiculo': False,})
+            return {'warning': warning}
+                            
+        elif self.vehiculo.vigencia_poliza:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_poliza
+            warning_date = self.vehiculo.vigencia_poliza - timedelta(days = 30 )
+            if now > expiration_date:
+                warning = {
+                    'title': 'Poliza vencida.',
+                    'message': 'El Vehiculo seleccionado "%s" con Placa : %s \nTiene vencida su poliza, por favor actualizar la vigencia.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate),
+                    #'type': 'notification',
+                }
+                return {'warning': warning}
+            # elif expiration_date >= now and warning_date <= now:
+            #     exp_days = now - expiration_date
+            #     exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+            #     warning = {
+            #             'title': 'Documento por Vencer.',
+            #             'message': 'El Vehiculo "%s"  con Placa : %s \nTiene poliza vigente  %s dia(s) , Actualizarla en la brevedad posible.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+            #             #'type': 'notification',
+            #     }
+            #     return {'warning': warning}
+                
+        #EXAMEN DE CONDUCCION        
+        if not self.vehiculo.conductor.vigencia_exam or not self.vehiculo.conductor.chofer_examen:
+            warning = {
+            'title': 'Registrar Examen . ',
+            'message': 'El conductor %s relacionado al vehiculo "%s" con placas "%s" no registra examen \nPor favor cargar documento y registrar la respectiva fecha de vigencia.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate),
+            #'type': 'notification',
+            }
+            self.update({
+                'vehiculo': False,})
+            return {'warning': warning}
+        elif self.vehiculo.conductor.vigencia_exam:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.conductor.vigencia_exam
+            warning_date = self.vehiculo.conductor.vigencia_exam - timedelta(days = 30 )
+            if now > expiration_date:
+                warning = {
+                    'title': 'Examen vencida.',
+                    'message': 'El conductor %s relacionado al vehiculo "%s" con placas "%s tiene vencido su examen de conduccion. \nPor favor verificar el respectivo proceder.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate),
+                    #'type': 'notification',
+                }
+                self.update({
+                'vehiculo': False,})
+                return {'warning': warning}
+            # elif expiration_date >= now and warning_date <= now:
+            #     exp_days = now - expiration_date
+            #     exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+            #     warning = {
+            #             'title': 'Documento por Vencer.',
+            #             'message': 'El conductor %s  \n Tiene %s dias habiles, antes de que venza la vigencia de su examen de conduccion, por favor verificar el respectivo proceder.' % (self.vehiculo.conductor.name, exp_days),
+            #             #'type': 'notification',
+            #     }
+            #     return {'warning': warning}
+            
+            
+            
+            
+        #FISICO MECANICO  
+        if not self.vehiculo.vigencia_fisico_mecanico or not self.vehiculo.file_fisico_mecanico:
+            warning = {
+                'title': 'Registrar Fisico Mecanica  . ',
+                'message': 'El Vehiculo  %s  con Placa :  %s \nNo registra Fisico Mecanico \nPor favor cargar documento y registrar la respectiva fecha de vigencia.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                #'type': 'notification',
+            }
+            self.update({
+                    'vehiculo': False,})
+            return {'warning': warning}    
+        elif self.vehiculo.vigencia_fisico_mecanico:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_fisico_mecanico
+            warning_date = self.vehiculo.vigencia_fisico_mecanico - timedelta(days = 30 )
+            if now > expiration_date:
+                warning = {
+                    'title': 'Fecha Fisico Mecanica vencida.',
+                    'message': 'El Vehiculo seleccionado %s con Placa : %s \nTiene vencida la vigencia F/M, por favor verificar el respectivo proceder.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate),
+                    #'type': 'notification',
+                }
+                self.update({
+                    'vehiculo': False,})
+                return {'warning': warning}
+            # elif expiration_date >= now and warning_date <= now:
+            #     exp_days = now - expiration_date
+            #     exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+            #     warning = {
+            #             'title': 'Documento por Vencer.',
+            #             'message': 'El Vehiculo %s  con Placa : %s \nTiene el documento Fisico Mecanica  %s dias habiles , por favor regularizar y verificar el respectivo proceder..' % (self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+            #             #'type': 'notification',
+            #     }
+            #     return {'warning': warning}
+            
+            
+        #EMISION  
+        if not self.vehiculo.vigencia_emisiones or not self.vehiculo.file_emisiones:
+            warning = {
+                'title': 'Registrar Emisiones. ',
+                'message': 'El Vehiculo  %s  con Placa :  %s \nNo registra Emisiones \nPor favor cargar documento y registrar la respectiva fecha de vigencia.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate,),
+                #'type': 'notification',
+            }
+            self.update({
+                    'vehiculo': False,})
+            return {'warning': warning}    
+        elif self.vehiculo.vigencia_emisiones:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_emisiones
+            warning_date = self.vehiculo.vigencia_emisiones - timedelta(days = 30 )
+            if now > expiration_date:
+                warning = {
+                    'title': 'Emisiones vencida.',
+                    'message': 'El Vehiculo seleccionado %s con Placa : %s \nTiene vencida la vigencia de emisiones, por favor verificar el respectivo proceder.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate),
+                    #'type': 'notification',
+                }
+                self.update({
+                    'vehiculo': False,})
+                return {'warning': warning}
+            
+                
+                #####################***VIGENCIA***##############################           
+                
+        if self.vehiculo.conductor.vigencia:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.conductor.vigencia
+            warning_date = self.vehiculo.conductor.vigencia - timedelta(days = 30 )
+            #Licencia vencida
+            if expiration_date >= now and warning_date <= now:
+                exp_days = now - expiration_date
+                exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                warning = {
+                        'title': 'Documento por Vencer.',
+                        'message': 'El conductor %s relacionado al vehiculo "%s" con placas : "%s"  \nTiene %s dia(s) previo(s) al vencimiento de su Licencia.' % (self.vehiculo.conductor.name, self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+                        #'type': 'notification',
+                }
+                return {'warning': warning,}                
+                
+        if self.vehiculo.vigencia_poliza:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_poliza
+            warning_date = self.vehiculo.vigencia_poliza - timedelta(days = 30 )
+            if expiration_date >= now and warning_date <= now:
+                exp_days = now - expiration_date
+                exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                warning = {
+                        'title': 'Documento por Vencer.',
+                        'message': 'El Vehiculo "%s"  con Placa : %s \nTiene poliza vigente  %s dia(s) , Actualizarla en la brevedad posible.' % (self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+                        #'type': 'notification',
+                }
+                return {'warning': warning}
+            
+        if self.vehiculo.conductor.vigencia_exam:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.conductor.vigencia_exam
+            warning_date = self.vehiculo.conductor.vigencia_exam - timedelta(days = 30 )
+            if expiration_date >= now and warning_date <= now:
+                exp_days = now - expiration_date
+                exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                warning = {
+                        'title': 'Documento por Vencer.',
+                        'message': 'El conductor %s  \n Tiene %s dias habiles, antes de que venza la vigencia de su examen de conduccion, por favor verificar el respectivo proceder.' % (self.vehiculo.conductor.name, exp_days),
+                        #'type': 'notification',
+                }
+                return {'warning': warning}
+        
+        if self.vehiculo.vigencia_fisico_mecanico:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_fisico_mecanico
+            warning_date = self.vehiculo.vigencia_fisico_mecanico - timedelta(days = 30 )
+            if expiration_date >= now and warning_date <= now:
+                exp_days = now - expiration_date
+                exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                warning = {
+                        'title': 'Documento por Vencer.',
+                        'message': 'El Vehiculo %s  con Placa : %s \nTiene el documento Fisico Mecanica  %s dias habiles , por favor regularizar y verificar el respectivo proceder..' % (self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+                        #'type': 'notification',
+                }
+                return {'warning': warning}
+            
+        if self.vehiculo.vigencia_emisiones:
+            now = datetime.now()
+            now = datetime.date(now)
+            expiration_date = self.vehiculo.vigencia_emisiones
+            warning_date = self.vehiculo.vigencia_emisiones - timedelta(days = 30 )
+            if expiration_date >= now and warning_date <= now:
+                exp_days = now - expiration_date
+                exp_days = str(exp_days).replace("-", "").replace(" 0:00:00", "").replace("day,", "").replace("days,", "")
+                warning = {
+                        'title': 'Documento por Vencer.',
+                        'message': 'El Vehiculo %s  con Placa : %s \nTiene el documento emisiones  %s dias habiles , por favor regularizar y verificar el respectivo proceder..' % (self.vehiculo.model_id.name, self.vehiculo.license_plate, exp_days),
+                        #'type': 'notification',
+                }
+                return {'warning': warning}
