@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+ <report id="manifiestos_manifiesto_g_report" model="manifiestos.manifiesto" string="Guanajuato" 
+  name="manifiestos.report_manifiesto_g" file="manifiestos.report_manifiesto_g" report_type="qweb-pdf" />
+
+  <template id="report_manifiesto_g">
+    <t t-call="web.html_container">
+        <t t-set="data_report_margin_top" t-value="12"/>
+        <t t-set="data_report_header_spacing" t-value="0"/>
+        <t t-foreach="docs" t-as="o">
+            <!--<t t-call="web.external_layout">-->
+            <t t-call="web.basic_layout">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-right p-8" style="font-size: 10px; color: BLACK;">
+                      Formato SMAOT-MIR-07-2018, Manifiesto de control de residuos de manejo especial.<br/>
+                      <strong>2.- No. DE MANIFIESTO: (1)</strong> <span t-field="o.consecutivo"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-2 text-center p-2">
+                      <img t-att-src="'/manifiestos/static/img/guanajuato.png'" width="118px" height="43px"/>
+                    </div>
+                    <div class="col-8 text-center p-8">
+                      <h6>MANIFIESTO DE ENTREGA, TRANSPORTE Y   RECEPCION DE RESIDUOS DE MANEJO ESPECIAL
+                      </h6>
+                    </div>
+                    <div class="col-2 text-center p-2">
+                      <img t-att-src="'/manifiestos/static/img/logo_tra.png'" width="118px" height="43px"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-right p-8" style="font-size: 6px; color: BLACK;">
+                      Con fundamento en los artículos 7º fracciones II, IV VI, 134 fracciones I, II y III, 135 fracción III y 149 de la Ley General del Equilibrio Ecológico y la Protección al Ambiente; 6º fracciones II, V, VII, 8º fracciones XV y XVIII de la Ley para la Protección y Preservación del Ambiente del Estado de Guanajuato; 8º fracciones I, VIII y IX, y 37 fracción III de la Ley para la Gestión Integral de Residuos del Estado y los Municipios de Guanajuato, artículo 40, fracción VIII del reglamento de la Ley para la Gestión Integral de Residuos del Estado y los Municipios de Guanajuato.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center" style="background-color: #486f9e;  font-size: 8px; color: white; border-radius:10px;">
+                      <h6>GENERADOR</h6>  
+                    </div>
+                  </div>
+                  <table class="table" style="font-size: 8px; color: BLACK;">
+                    <tbody>
+                      <tr>
+                        <th><strong>1.- No. DE REGISTRO AMBIENTAL:</strong> <span t-field="o.num_mani"/> </th>
+                        <th><strong>3.- RAZON SOCIAL DE LA EMPRESA GENERADORA:</strong> <span t-field="o.partner_id.parent_id"/> - <span t-field="o.partner_id.name"/></th>
+                        <th>DOMICILIO: <span t-field="o.partner_id.street_name"/> - <span t-field="o.partner_id.street_number"/> </th>
+                        <td>C.P.: <span t-field="o.partner_id.zip"/></td>
+                      </tr>
+                      <tr>
+                        <td>COLONIA: <span t-field="o.partner_id.l10n_mx_edi_colony"/></td>
+                        <td>MUNICIPIO: <span t-field="o.partner_id.city"/></td>
+                        <td colspan="2">TELEFONO: <span t-field="o.partner_id.phone"/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
+                <table class="table text-center" style="font-size: 8px; color: BLACK;">
+                  <thead>
+                    <tr>
+                      <th rowspan="2"><strong>4.- NOMBRE DEL RESIDUO</strong></th>
+                      <th rowspan="2">CLASIFICACIÓN (2)</th>
+                      <th colspan="2">CONTENEDOR</th>
+                      <th rowspan="2">CANTIDAD</th>
+                      <th rowspan="2">UNIDAD3</th>
+                    </tr>
+                    <tr>
+                      <th>CAPACIDAD</th>
+                      <th>TIPO</th>
+                    </tr>
+                  </thead>
+
+                  <t t-foreach="o.lines" t-as="productos" >   
+                    <tbody class="invoice_tbody">
+                      <td class="text-left"><span t-esc="productos.product_id.name"/></td>
+                      <td class="text-left"><span t-field="productos.clasifi_gto"/></td>
+                      <td class="text-left"><span t-field="productos.capacidad"/></td>
+                      <td class="text-left"><span t-field="productos.tipo"/></td>
+                      <td class="text-left"><span t-field="productos.cantidad"/></td>
+                      <td class="text-left"><span t-field="productos.unidad"/></td>
+                    </tbody>
+                  </t>
+                </table>
+
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                      <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
+                      <strong>5.- INSTRUCCIONES ESPECIALES E INFORMACION ADICIONAL PARA EL MANEJO SEGURO:</strong>                       
+                        <span t-field="o.instrucciones"/> 
+                      <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-left p-8" style="font-size: 6px; color: BLACK;">
+                     <strong>6.- CERTIFICACION DEL GENERADOR:</strong> 
+                     DECLARO QUE EL CONTENIDO DE ESTE LOTE ESTA TOTAL Y CORRECTAMENTE DESCRITO MEDIANTE EL NOMBRE Y 
+                     CLASIFICACIÓN DEL RESIDUO; SEPARADO, IDENTIFICADO Y ENVASADO Y/O EMPAQUETADO CONFORME A LA 
+                     NORMATIVIDAD AMBIENTAL VIGENTE EN EL ESTADO DE GUANAJUATO; Y QUE SE HAN PREVISTO LAS CONDICIONES 
+                     INDISPENSABLES PARA SU CORRECTO TRANSPORTE HASTA SU DESTINO FINAL.
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-left p-8" style="font-size: 8px; color: BLACK;">
+                      NOMBRE Y FIRMA DEL RESPONSABLE:<br/>
+                    </div>
+                    <div class="col-8 text-left p-8" style="font-size: 8px; color: BLACK;">
+                      <span t-field="o.nombre_7"/>    ___________________________________________ <br/>
+                    </div>
+                  </div>
+                </div>
+
+ 
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center" style="background-color: #486f9e; color: white; border-radius:10px;">
+                      <h6>TRANSPORTE</h6>  
+                    </div>
+                  </div>
+                  <table class="table" style="font-size: 8px; color: BLACK;">
+                    <tbody>
+                      <tr>
+                        <td colspan="2"><strong>7.- NOMBRE DE LA EMPRESA DE SERVICIOS DE MANEJO: </strong> <span t-field="o.emp_tralisol"/></td>
+
+
+                        <td>
+                          <t t-if="o.emp_tralisol =='opc1'">
+                            DOMICILIO: Carretera al Puesto km6
+                          </t>
+                          <t t-if="o.emp_tralisol =='opc2'">
+                            DOMICILIO: C. Porfirio Díaz No. 15
+                          </t>
+                        </td>
+
+                        <td>
+                          <t t-if="o.emp_tralisol =='opc1'">
+                            COLONIA: Centro
+                          </t>
+                          <t t-if="o.emp_tralisol =='opc2'">
+                            COLONIA: Chichimeco
+                          </t>
+                        </td>
+                        
+                      </tr>
+                      <tr>
+
+                        <td>
+                          <t t-if="o.emp_tralisol =='opc1'">
+                            C.P.: 47400
+                          </t>
+                          <t t-if="o.emp_tralisol =='opc2'">
+                            C.P.: 47750
+                          </t>
+                        </td>
+
+                        <td>
+                          <t t-if="o.emp_tralisol =='opc1'">
+                            MUNICIPIO: Lagos de Moreno, Jalisco. MEX
+                          </t>
+                          <t t-if="o.emp_tralisol =='opc2'">
+                            MUNICIPIO: Atotonilco El Alto
+                          </t>
+                        </td>
+
+                        <td>TELEFONO: <span t-field="o.emp_telefono"/></td>                      
+                        <td>AUTORIZACIÓN DEL IEG: <span t-field="o.emp_permiso"/></td>
+                      </tr>
+                      
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="table text-left" style="font-size: 8px; color: BLACK;">
+                    <tbody>
+                      <tr>
+                        <td colspan="4"><strong>8.- DATOS DE LA CONCESIÓN PARA EL SERVICIO DE TRANSPORTE DE CARGA ESPECIALIZADO:</strong></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><strong>9.- RECIBÍ LOS RESIDUOS DESCRITOS EN EL MANIFIESTO PARA SU TRANSPORTE.</strong></td>
+                        <td colspan="2"><strong>10.- FECHA DE EMBARQUE:</strong><span t-field="o.fecha_1"/></td>
+                      </tr>
+                      <tr>
+                        <td>NOMBRE:<span t-field="o.vehicle_id.conductor"/></td>
+                        <td>FIRMA:  _____________________________</td>
+                        <td><strong>11.- NÚMERO DE LICENCIA DE CONDUCIR:</strong><span t-field="o.vehicle_id.conductor.licencia_1"/></td>
+                        <td>TIPO:<span t-field="o.vehicle_id.conductor.licencia_1"/></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="4"><div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="2"><strong>12.- TIPO DE VEHICULO:</strong><span t-field="o.vehicle_id.tipo_vehiculo"/></td>
+                        <td colspan="2">No. DE PLACA: <span t-field="o.vehicle_id.license_plate"/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center" style="background-color: #486f9e; color: white; border-radius:10px;">
+                      <h6>DESTINATARIO</h6>  
+                    </div>
+                  </div>
+                  <table class="table" style="font-size: 8px; color: BLACK;">
+                    <tbody>
+                      <tr>
+                        <td><strong>13.- NOMBRE DE LA EMPRESA DESTINATARIA O SITIO DE DISPOSICIÓN FINAL:  </strong> <span t-field="o.contact_id"/> </td>
+                        <td>NÚMERO DE AUTORIZACIÓN DEL IEG: <span t-field="o.num_autorizacion"/></td>
+                        <td>DOMICILIO:<span t-field="o.contact_id.street_name"/></td>
+                      </tr>
+                      <tr>
+                        <td><strong>14.- OBSERVACIONES:  </strong> </td>
+                        <td><strong>15.- TIPO DE VEHICULO:</strong><span t-field="o.vehicle_id.tipo_vehiculo"/></td>
+                        <td><strong>No. DE PLACA:</strong><span t-field="o.vehicle_id.license_plate"/></td>
+                      </tr>
+                      <tr>
+                        <td><strong>16.- RECIBÍ LOS RESIDUOS DESCRITOS EN EL MANIFIESTO. </strong>  </td>
+                        <td>NOMBRE:  <span t-field="o.des_nombre"/></td>
+                        <td>CARGO:   <span t-field="o.cargo"/></td>
+                      </tr>
+                      <tr>
+                        <td>FIRMA:  _____________________________ </td>
+                        <td colspan="2"><strong>17.- FECHA: DE RECEPCIÓN:</strong><span t-field="o.fecha_2"/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>  
+                
+                <div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                      (1) Clave otorgada por el Instituto de Ecología del Estado. (Única para cada manifiesto)<br/>
+                      (2) En función de su posibilidad de comercialización e inserción en un sistema de mercado, como de su posibilidad técnica de ser recuperados. (RR: Residuos Reciclables y/o Residuos Reutilizables; RNV: Residuos No Valorizados).<br/>
+                      (3) Indique Unidad de Medida del siguiente listado: Litros (Lts.), Kilogramos (Kgs.), Toneladas (Ton.), Metros Cúbicos (M3). 
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid" style="page-break-inside: avoid;">
+                  <div class="row" style="page-break-inside: avoid;">
+                    <div class="col-2 text-left" style="page-break-inside: avoid;">
+                      <img t-att-src="'/report/barcode/QR/' + str(o.generate_qr_code_text())" style="width:100px;height:100px;page-break-inside: avoid;" alt="Barcode"/>
+                    </div>
+                    <div class="col-10 text-left" style="font-size: 8px; color: BLACK;">
+                      <br/><br/><br/><br/><br/><span t-esc="o.generate_qr_code_text()"/>
+                    </div>
+                  </div>
+                </div>
+            </t>
+        </t>
+    </t>
+  </template>
+</odoo>
+
+

@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="manifiesto_form_view">
+            <field name="name">manifiesto.form</field>
+            <field name="model">manifiestos.manifiesto</field>
+            <field name="arch" type="xml">
+                <form string="Manifiesto">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <div class="separator" style="font-size: 15px; border-top: 1px solid #c1c1c1; margin-top: 10px; margin-bottom: 10px;">Generador</div>
+                                <field name="estado" string="Numero de Manifiesto Edo" required="1"/>
+                                <field name="consecutivo"/>
+                                <!--<field name="name" string="Numero de Manifiesto" required="1"/>-->
+                                <field name="num_mani" string="Numero de Registro" required="1"/>
+                                <field name="partner_id" string="Cliente" required="1"/>
+                                
+                                <div class="separator" style="font-size: 15px; border-top: 1px solid #c1c1c1; margin-top: 10px; margin-bottom: 10px;">Transporte</div>
+                                <field name="emp_tralisol" string="Empresa" required="1"/>
+                                <field name="emp_domicilio" string="Dirección" required="1"/>
+                                <field name="emp_telefono" string="Telefono" required="1"/>
+                                <field name="emp_permiso" string="Permiso Gobierno" required="1"/>
+                                <field name="vehicle_id" string="Vehiculo Asignado" required="1"/>
+                                <field name="fecha_1" string="Fecha de embarque" required="1"/>
+                                <field name="ruta" string="Ruta de la empresa" required="1"/>
+
+                            </group>
+                            <group name="group_right">
+                                <div class="separator" style="font-size: 15px; border-top: 1px solid #c1c1c1; margin-top: 10px; margin-bottom: 10px;">Residuo</div>
+                                <field name="instrucciones" string="Instrucciones" required="1"/>
+                                <field name="nombre_7" string="Nombre del responsable" required="1"/>
+
+                                <div class="separator" style="font-size: 15px; border-top: 1px solid #c1c1c1; margin-top: 10px; margin-bottom: 10px;">Destinatario</div>
+                                <field name="contact_id" string="Empresa destino" required="1"/>
+                                <field name="num_autorizacion" string="Numero autorización" required="1"/>
+                                <field name="des_nombre" string="Nombre destinatario" required="1"/>
+                                <field name="cargo" string="Cargo destinatario" required="1"/>
+                                <field name="fecha_2" string="Fecha recepción" required="1"/>
+
+
+                            </group>
+                        </group>
+                        <group>
+                            <field name="lines" string="Líneas de facturación" nolabel="1">
+                                <tree editable="top">
+                                    <field name="product_id"/>
+                                    <field name="tipo"/>
+                                    <field name="clasifi_gto" string="Clasificacion Gto" required="1"/>
+                                    <field name="cantidad"/>
+                                    <field name="capacidad"/>
+                                    <field name="unidad"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="manifiesto_action">
+            <field name="name">Manifiestos</field>
+            <field name="res_model">manifiestos.manifiesto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_mi_modelo_tree" model="ir.ui.view">
+            <field name="name">Manifiestos</field>
+            <field name="model">manifiestos.manifiesto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="consecutivo"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem name="Manifiestos" id="menu_manifiestos" action="manifiesto_action" web_icon="manifiestos,static/description/icon.png"/>
+        <!--Pagina Web para Iconos https://spilymp.github.io/ibo/-->
+    </data>
+</odoo>
+
