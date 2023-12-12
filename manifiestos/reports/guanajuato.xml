@@ -35,7 +35,7 @@
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-right p-8" style="font-size: 6px; color: BLACK;">
+                    <div class="col-12 text-right p-8" style="font-size: 8px; color: BLACK;">
                       Con fundamento en los artículos 7º fracciones II, IV VI, 134 fracciones I, II y III, 135 fracción III y 149 de la Ley General del Equilibrio Ecológico y la Protección al Ambiente; 6º fracciones II, V, VII, 8º fracciones XV y XVIII de la Ley para la Protección y Preservación del Ambiente del Estado de Guanajuato; 8º fracciones I, VIII y IX, y 37 fracción III de la Ley para la Gestión Integral de Residuos del Estado y los Municipios de Guanajuato, artículo 40, fracción VIII del reglamento de la Ley para la Gestión Integral de Residuos del Estado y los Municipios de Guanajuato.
                     </div>
                   </div>
@@ -47,7 +47,7 @@
                       <h6>GENERADOR</h6>  
                     </div>
                   </div>
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <th><strong>1.- No. DE REGISTRO AMBIENTAL:</strong> <span t-field="o.num_mani"/> </th>
@@ -65,7 +65,7 @@
                 </div>
                 
                 <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
-                <table class="table text-center" style="font-size: 8px; color: BLACK;">
+                <table class="table text-center" style="font-size: 10px; color: BLACK;">
                   <thead>
                     <tr>
                       <th rowspan="2"><strong>4.- NOMBRE DEL RESIDUO</strong></th>
@@ -95,7 +95,7 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-12 text-left p-8" style="font-size: 10px; color: BLACK;">
                       <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
                       <strong>5.- INSTRUCCIONES ESPECIALES E INFORMACION ADICIONAL PARA EL MANEJO SEGURO:</strong>                       
                         <span t-field="o.instrucciones"/> 
@@ -106,7 +106,7 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-left p-8" style="font-size: 6px; color: BLACK;">
+                    <div class="col-12 text-left p-8" style="font-size: 10px; color: BLACK;">
                      <strong>6.- CERTIFICACION DEL GENERADOR:</strong> 
                      DECLARO QUE EL CONTENIDO DE ESTE LOTE ESTA TOTAL Y CORRECTAMENTE DESCRITO MEDIANTE EL NOMBRE Y 
                      CLASIFICACIÓN DEL RESIDUO; SEPARADO, IDENTIFICADO Y ENVASADO Y/O EMPAQUETADO CONFORME A LA 
@@ -115,10 +115,10 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-4 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-4 text-left p-8" style="font-size: 10px; color: BLACK;">
                       NOMBRE Y FIRMA DEL RESPONSABLE:<br/>
                     </div>
-                    <div class="col-8 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-8 text-left p-8" style="font-size: 10px; color: BLACK;">
                       <span t-field="o.nombre_7"/>    ___________________________________________ <br/>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
                       <h6>TRANSPORTE</h6>  
                     </div>
                   </div>
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td colspan="2"><strong>7.- NOMBRE DE LA EMPRESA DE SERVICIOS DE MANEJO: </strong> <span t-field="o.emp_tralisol"/></td>
@@ -185,7 +185,7 @@
                     </tbody>
                   </table>
 
-                  <table class="table text-left" style="font-size: 8px; color: BLACK;">
+                  <table class="table text-left" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td colspan="4"><strong>8.- DATOS DE LA CONCESIÓN PARA EL SERVICIO DE TRANSPORTE DE CARGA ESPECIALIZADO:</strong></td>
@@ -221,7 +221,7 @@
                       <h6>DESTINATARIO</h6>  
                     </div>
                   </div>
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td><strong>13.- NOMBRE DE LA EMPRESA DESTINATARIA O SITIO DE DISPOSICIÓN FINAL:  </strong> <span t-field="o.contact_id"/> </td>
@@ -250,7 +250,7 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-12 text-left p-8" style="font-size: 10px; color: BLACK;">
                       (1) Clave otorgada por el Instituto de Ecología del Estado. (Única para cada manifiesto)<br/>
                       (2) En función de su posibilidad de comercialización e inserción en un sistema de mercado, como de su posibilidad técnica de ser recuperados. (RR: Residuos Reciclables y/o Residuos Reutilizables; RNV: Residuos No Valorizados).<br/>
                       (3) Indique Unidad de Medida del siguiente listado: Litros (Lts.), Kilogramos (Kgs.), Toneladas (Ton.), Metros Cúbicos (M3). 
@@ -262,7 +262,7 @@
                     <div class="col-2 text-left" style="page-break-inside: avoid;">
                       <img t-att-src="'/report/barcode/QR/' + str(o.generate_qr_code_text())" style="width:100px;height:100px;page-break-inside: avoid;" alt="Barcode"/>
                     </div>
-                    <div class="col-10 text-left" style="font-size: 8px; color: BLACK;">
+                    <div class="col-10 text-left" style="font-size: 10px; color: BLACK;">
                       <br/><br/><br/><br/><br/><span t-esc="o.generate_qr_code_text()"/>
                     </div>
                   </div>

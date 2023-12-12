@@ -35,7 +35,7 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-center" style="background-color: #486f9e;  font-size: 8px; color: white; border-radius:10px;">
+                    <div class="col-12 text-center" style="background-color: #486f9e;  font-size: 10px; color: white; border-radius:10px;">
                       <h6>GENERADOR</h6>  
                     </div>
                   </div>
@@ -59,11 +59,11 @@
                 
                 <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
                   <div class="row">
-                    <div class="col-12 text-center" style="background-color: #486f9e;  font-size: 8px; color: white; border-radius:10px;">
+                    <div class="col-12 text-center" style="background-color: #486f9e;  font-size: 10px; color: white; border-radius:10px;">
                       <h6>RESIDUO</h6>  
                     </div>
                   </div>
-                <table class="table text-center" style="font-size: 8px; color: BLACK;">
+                <table class="table text-center" style="font-size: 10px; color: BLACK;">
                   <thead>
                     <tr>
                       <th rowspan="2"><strong>5.- DESCRIPCION (Nombre del residuo y características CRETIB)</strong></th>
@@ -89,7 +89,7 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-12 text-left p-8" style="font-size: 10px; color: BLACK;">
                       <!--<div class="col-12 text-center font-weight-bold" style="height: 1px; background-color: #000; margin-top: 10px; margin-bottom: 10px;"></div>-->
                       <strong>6.- INSTRUCCIONES ESPECIALES E INFORMACION ADICIONAL PARA EL MANEJO SEGURO:</strong> 
                         <span t-field="o.instrucciones"/> 
@@ -100,16 +100,16 @@
 
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-12 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-12 text-left p-8" style="font-size: 10px; color: BLACK;">
                      <strong>7.- CERTIFICACION DEL GENERADOR:</strong> 
                      DECLARO QUE EL CONTENIDO DE ESTE LOTE ESTA TOTAL Y CORRECTAMENTE DESCRITO MEDIANTE EL NOMBRE DEL RESIDUO, BIEN EMPACADO, Y QUE SE HAN PREVISTO LAS CONDICIONES DE SEGURIDAD PARA SU TRANSPORTE POR VIA TERRESTRE DE ACUERDO A LA LEGISLACION NACIONAL VIGENTE.
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-4 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-4 text-left p-8" style="font-size: 10px; color: BLACK;">
                       NOMBRE Y FIRMA DEL RESPONSABLE: <br/>
                     </div>
-                    <div class="col-8 text-left p-8" style="font-size: 8px; color: BLACK;">
+                    <div class="col-8 text-left p-8" style="font-size: 10px; color: BLACK;">
                       <span t-field="o.nombre_7"/>    ___________________________________________ <br/>
                     </div>
                   </div>
@@ -122,7 +122,7 @@
                       <h6>TRANSPORTE</h6>  
                     </div>
                   </div>
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td colspan="2"><strong>8.- NOMBRE DE LA EMPRESA TRANSPORTISTA: </strong> <span t-field="o.emp_tralisol"/></td>
@@ -137,7 +137,7 @@
                     </tbody>
                   </table>
 
-                  <table class="table text-left" style="font-size: 8px; color: BLACK;">
+                  <table class="table text-left" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td colspan="2"><strong>9.- RECIBI LOS RESIDUOS DESCRITOS EN EL MANIFIESTO PARA SU TRANSPORTE.</strong></td>
@@ -175,7 +175,7 @@
                       <h6>DESTINATARIO</h6>  
                     </div>
                   </div>
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td><strong>12.- NOMBRE DE LA EMPRESA DESTINATARIA:  </strong> <span t-field="o.contact_id"/> </td>
@@ -185,7 +185,7 @@
                     </tbody>
                   </table>
 
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td>13.- RECIBI LOS RESIDUOS DESCRITOS EN EL MANIFIESTO.</td>
@@ -196,7 +196,7 @@
                     </tbody>
                   </table>
 
-                  <table class="table" style="font-size: 8px; color: BLACK;">
+                  <table class="table" style="font-size: 10px; color: BLACK;">
                     <tbody>
                       <tr>
                         <td>NOMBRE:  <span t-field="o.des_nombre"/></td>
@@ -212,7 +212,7 @@
                     <div class="col-2 text-left" style="page-break-inside: avoid;">
                       <img t-att-src="'/report/barcode/QR/' + str(o.generate_qr_code_text())" style="width:100px;height:100px" alt="Barcode"/>
                     </div>
-                    <div class="col-10 text-left" style="font-size: 8px; color: BLACK;">
+                    <div class="col-10 text-left" style="font-size: 10px; color: BLACK;">
                       <br/><br/><br/><br/><br/><span t-esc="o.generate_qr_code_text()"/>
                     </div>
                   </div>
