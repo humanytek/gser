@@ -90,6 +90,10 @@ class datosEmpleados (models.Model):
         string="Licencia",
         groups="hr.group_hr_user",
     )
+    licencia_1 = fields.Text(
+        string="Numero de Licencia",
+        groups="hr.group_hr_user",
+    )
     vigencia = fields.Date(
         string="Vigencia Licencia",
         groups="hr.group_hr_user",

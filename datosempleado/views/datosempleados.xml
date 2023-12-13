@@ -46,6 +46,7 @@
                 </group>
                 <group string="Vehículo">
                   <field name="licencia"/>
+                  <field name="licencia_1"/>
                   <field name="vigencia"/>
                   <field name="chofer_examen"/>
                   <field name="vigencia_exam"/>
