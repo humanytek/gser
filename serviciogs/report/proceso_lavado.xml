@@ -51,8 +51,14 @@
                   
                     <div class="row">
                         <div class="col-12">
-                          <h5>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.r1_no_economico"/> y el cual fue realizado en nuestras 
-                          instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
+                          <t t-if="o.r2_no_economico">
+                            <h5>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.r1_no_economico"/> y <span class="font-weight-bold" t-field="o.r2_no_economico"/> , el cual fue realizado en nuestras 
+                            instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
+                          </t>
+                          <t t-else="">
+                            <h5>Este Certificado ampara el lavado del tanque No.<span class="font-weight-bold" t-field="o.r1_no_economico"/>, el cual fue realizado en nuestras 
+                              instalaciones el día <span class="font-weight-bold" t-field="o.create_date"/> con el siguiente proceso de lavado.</h5>
+                          </t>
                         </div>
                     </div>
                     <div class="row">
