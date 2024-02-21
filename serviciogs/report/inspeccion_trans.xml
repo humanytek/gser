@@ -60,15 +60,30 @@
                         <div class="col-4">
                           <h5><span class="font-weight-bold" t-field="o.create_date"/></h5>
                           <h5><span class="font-weight-bold" t-field="o.producto_viaje"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.r1_no_economico"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.r1_no_economico"/></h5>
-                          <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
+                          <t t-if="o.r1_no_economico">
+                            <h5><span class="font-weight-bold" t-field="o.r1_no_economico"/></h5>
+                          </t>
+                          <t t-else="">
+                            <h5><br/></h5>
+                          </t>
+                          <t t-if="o.r2_no_economico">
+                            <h5><span class="font-weight-bold" t-field="o.r2_no_economico"/></h5>
+                          </t>
+                          <t t-else="">
+                            <h5><br/></h5>
+                          </t>
+                          <t t-if="o.conductor">
+                            <h5><span class="font-weight-bold" t-field="o.conductor"/></h5>
+                          </t>
+                          <t t-else="">
+                            <h5><br/></h5>
+                          </t>
                         </div>
                         <div class="col-6">
                           <h5><br/></h5>
                           <h5><br/></h5>
                           <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
-                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_1.license_plate"/><br/></h5>
+                          <h5>Placas: <span class="font-weight-bold" t-field="o.remolque_2.license_plate"/><br/></h5>
                           <h5><br/></h5>
                         </div>
                     </div>
