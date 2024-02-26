@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_button_ubicalo" model="ir.ui.view">
+        <field name="name">view.button.ubicalo.form</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_accept_driver_change']" position="after">
+                <button string="Ubicalo"
+                        class="btn btn-primary"
+                        type="object"
+                        name="button_ubicalo"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
