@@ -9,6 +9,12 @@
                 <xpath expr="//button[@name='button_process_edi_web_services']" position="attributes">
                     <attribute name="attrs">{'invisible': [('name', 'ilike', 'REMI')]}</attribute>
                 </xpath>
+                <xpath expr="//button[@name='l10n_mx_edi_update_sat_status']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('name', 'ilike', 'REMI')]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_retry_edi_documents_error']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('name', 'ilike', 'REMI')]}</attribute>
+                </xpath>
             </field>
         </record>
     </data>
