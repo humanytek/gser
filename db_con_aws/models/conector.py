@@ -28,7 +28,7 @@ class ConectorDatabase (models.Model):
         print("Conecta a tu instancia de base de datos RDS >>>>>>>>>>>>>>>>>>>>>>>>") 
         # Copia el archivo a un bucket de Amazon S3
         s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key, region_name=region_name)
-        s3.upload_file('/home/odoo/arieldata/test_orders_odoo.txt', 'odoofiles', 'orders_odoo.txt')
+        s3.upload_file('/home/odoo/arieldata/orders_odoo.txt', 'odoofiles', 'orders_odoo.txt')
         print("Copia el archivo a un bucket de Amazon S3 >>>>>>>>>>>>>>>>>>>>>>>>")
 
         querty_b = """WITH productos_activos AS (
