@@ -199,3 +199,5 @@ class proyecto_ruta (models.Model):
                 record.rendimiento_diesel = 2.3
             else:
                 record.rendimiento_diesel = 2.2
+            if record.carga_ruta == '6':
+                record.rendimiento_diesel = 2.7
