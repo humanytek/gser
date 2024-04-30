@@ -1,6 +1,6 @@
 from odoo import _, api, fields, models
 import subprocess
-import boto3
+#import boto3
 
 class ConectorDatabase (models.Model):
     _name="conector.database.aws"
