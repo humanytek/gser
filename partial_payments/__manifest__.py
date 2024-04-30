@@ -4,7 +4,7 @@
     "author": "Ricardo Aucapiña, Grupo serrano",
     "depends": ["account"],
     "data": [   
-        "views/partial_payment_view.xml",
+        #"views/partial_payment_view.xml",
         "security/ir.model.access.csv",
     ],
 }
