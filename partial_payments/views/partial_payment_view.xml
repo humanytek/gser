@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_account_payment_form_inherit" model="ir.ui.view">
+    <field name="name">account.payment.form.inherit</field>
+    <field name="model">account.bank.statement</field>
+    <field name="inherit_id" ref="account.view_bank_statement_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//form[1]/sheet[1]/group[1]" position="after">       
+          <group>
+              <field widget="boolean_toggle" name="is_compensation"/>
+              <field name="partner_id" invisible="1"/>
+              <!-- <field name="payment_id" invisible="1"/> -->
+              <field name="journal_id_payment" attrs="{'invisible': [('is_compensation', '=', False)]}"/>
+                <field name="invoice_payment_ids" attrs="{'invisible': [('is_compensation', '=', False)]}" domain="[('partner_id', '=', partner_id), ('move_type', 'in', ('out_invoice','in_invoice')), ('state', '=', 'posted'), ('payment_state', 'in', ('partial', 'not_paid', 'reversed'))]">
+                    <tree string="Facturas" editable="bottom">
+                        <field name="display_name" string="Factura"/>
+                        <field name="amount_total" string="Total" sum="Total"/>
+                        <field name="payments" string="Pagos" widget="monetary" sum="Total"/>
+                    </tree>
+                <field name="amount" invisible="0"/>    
+              </field>
+          </group>
+        </xpath>
+        <xpath expr="//header/button[@name='button_post']" position="after">
+          <button string="Pagar" states="posted" class="oe_highlight" name="button_partial_payment" type="object" />   
+        </xpath>
+    </field>
+  </record>
+</odoo>
+
