@@ -4,22 +4,22 @@ class campos_ajuste (models.Model):
     _inherit = "hr.employee"
 
     curp_mx = fields.Char(
-        string="CURP",
+        string="CURP UPGRADE",
         groups="hr.group_hr_user",
     )
 
     identification_id = fields.Char(
-        string="INE",
+        string="INE UPGRADE1",
         groups="hr.group_hr_user",
     )
 
     f_ine = fields.Char(
-        string="INE",
+        string="INE UPGRADE2",
         groups="hr.group_hr_user",
     )
 
     f_rfc = fields.Char(
-        string="RFC",
+        string="RFC UPGRADE",
         groups="hr.group_hr_user",
     )
 
