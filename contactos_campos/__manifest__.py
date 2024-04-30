@@ -18,6 +18,6 @@
         
         # # views
         'views/contactos_campos.xml',
-        'views/edi_campos.xml',        
+        #'views/edi_campos.xml',        
     ],
 }
