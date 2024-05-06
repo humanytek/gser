@@ -32,24 +32,30 @@ class ConectorDatabase (models.Model):
         print("Copia el archivo a un bucket de Amazon S3 >>>>>>>>>>>>>>>>>>>>>>>>")
 
         querty_b = """WITH productos_activos AS (
-            SELECT sq.product_id, sq.quantity, sq.location_id
-            FROM stock_quant sq
-            JOIN stock_location sl ON sq.location_id = sl.id
-            WHERE sl.usage = 'internal'
-        )
-        SELECT 
-            pp.product_tmpl_id, 
-            pt.default_code  AS reference, 
-            pt.name AS product_name, 
-            pa.quantity AS product_quantity,
-            pt.uom_id AS Unit_maesure,
-            pa.location_id as location_id
-        FROM 
-            product_product pp
-        JOIN 
-            productos_activos pa ON pp.id = pa.product_id
-        JOIN 
-            product_template pt ON pp.product_tmpl_id = pt.id;"""
+    SELECT 
+        sq.product_id, 
+        SUM(sq.quantity) AS total_quantity
+    FROM 
+        stock_quant sq
+    JOIN 
+        stock_location sl ON sq.location_id = sl.id
+    WHERE 
+        sl.usage = 'internal'
+    GROUP BY 
+        sq.product_id
+)
+SELECT 
+    pp.product_tmpl_id, 
+    pt.default_code AS reference, 
+    pt.name AS product_name, 
+    COALESCE(pa.total_quantity, 0) AS product_quantity,
+    pt.uom_id AS Unit_measure
+FROM 
+    product_product pp
+LEFT JOIN 
+    productos_activos pa ON pp.id = pa.product_id
+JOIN 
+    product_template pt ON pp.product_tmpl_id = pt.id;"""
 
         # Ejecutar el comando SQL
         subprocess.run(f'psql -c "{querty_b}" humanytek-gser-prod-4491709 > /home/odoo/arieldata/cant_prod.txt', shell=True)
