@@ -34,6 +34,7 @@ class ConectorDatabase (models.Model):
         querty_b = """WITH productos_activos AS (
     SELECT 
         sq.product_id, 
+        sq.location_id,
         SUM(sq.quantity) AS total_quantity
     FROM 
         stock_quant sq
@@ -42,20 +43,23 @@ class ConectorDatabase (models.Model):
     WHERE 
         sl.usage = 'internal'
     GROUP BY 
-        sq.product_id
+        sq.product_id, sq.location_id
 )
 SELECT 
     pp.product_tmpl_id, 
     pt.default_code AS reference, 
     pt.name AS product_name, 
     COALESCE(pa.total_quantity, 0) AS product_quantity,
-    pt.uom_id AS Unit_measure
+    pt.uom_id AS Unit_measure,
+    pa.location_id AS location_id
 FROM 
     product_product pp
 LEFT JOIN 
     productos_activos pa ON pp.id = pa.product_id
 JOIN 
-    product_template pt ON pp.product_tmpl_id = pt.id;"""
+    product_template pt ON pp.product_tmpl_id = pt.id
+WHERE
+    pp.active = TRUE;"""
 
         # Ejecutar el comando SQL
         subprocess.run(f'psql -c "{querty_b}" humanytek-gser-prod-4491709 > /home/odoo/arieldata/cant_prod.txt', shell=True)
