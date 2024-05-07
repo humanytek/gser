@@ -51,7 +51,8 @@ SELECT
     pt.name AS product_name, 
     COALESCE(pa.total_quantity, 0) AS product_quantity,
     pt.uom_id AS Unit_measure,
-    pa.location_id AS location_id
+    pa.location_id AS location_id,
+    pt.company_id AS company_id
 FROM 
     product_product pp
 LEFT JOIN 
