@@ -165,6 +165,12 @@ class servicio_externo_proyecto (models.Model):
         related ="project_id.caseta_efectivo",
         string ="Caseta Efectivo",
     )    
+    costo_agregado_km = fields.Float(
+        related ="project_id.costo_agregado_km",
+        string="Costo Agregado por Kilometro",
+    )
+    
+    print(costo_agregado_km)
     
     @api.depends("cantidad", "precio_ruta_litro")
     def _compute_subtotal(self):

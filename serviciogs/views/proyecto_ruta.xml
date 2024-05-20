@@ -30,6 +30,7 @@
                   <field name="diesel" required="1"/>
                   <field name="caseta_efectivo" required="1"/>
                   <field name="caseta_llave" required="1"/>
+                  <field name="costo_agregado_km" required="1"/>
                   <field name="gastos_operador" required="1"/>
                 </group>
                 <group string="Gastos Totales" required="1">

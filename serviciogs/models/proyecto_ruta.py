@@ -111,6 +111,10 @@ class proyecto_ruta (models.Model):
         compute='_compute_gastoT',
         string="Gasto Total",
     )
+    costo_agregado_km = fields.Float(
+        compute = '_compute_costo_km',
+        string="Costo Agregado por Kilometro",
+    )
     # Datos de origen
     recoge_en_origen = fields.Many2one(
         comodel_name='res.partner',
@@ -177,11 +181,15 @@ class proyecto_ruta (models.Model):
         string ="Ciudad destino:",
         readonly=True,
     )
-    # Datos Computados para el calculo de gastos
+    # Datos Computados para el calculo de gastos    
+    @api.depends("km_ruta")
+    def _compute_costo_km(self):
+        for record in self:
+            record.costo_agregado_km = (record.km_ruta * 4.5)
     @api.depends("diesel", "precio_diesel","caseta_llave","gastos_operador","caseta_efectivo")
     def _compute_gastoT(self):
         for record in self:
-            record.gasto_total = (record.diesel * record.precio_diesel) + record.caseta_llave + record.caseta_efectivo + record.gastos_operador
+            record.gasto_total = ((record.diesel * record.precio_diesel) + record.caseta_llave + record.caseta_efectivo + record.gastos_operador) + record.costo_agregado_km
     @api.depends("caseta_efectivo", "gastos_operador")
     def _compute_gastoopera(self):
         for record in self:
