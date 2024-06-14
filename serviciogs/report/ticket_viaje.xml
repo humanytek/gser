@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-  <template id="report_ticket_viaje">
+<?xml version="1.0"?>
+<t t-name="serviciogs.report_ticket_viaje">
     <t t-call="web.html_container">
       <t t-set="data_report_margin_top" t-value="12"/>
       <t t-set="data_report_header_spacing" t-value="0"/>
@@ -9,7 +8,7 @@
             <t t-call="web.basic_layout">
                 <div class="page" style="max-width:100mm">
                  <div class="row">
-                    <div class="col-12 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="120px" height="100px"/></div>
+                    <div class="col-12 text-center"><img t-att-src="image_data_uri(o.company_id.logo)" width="115px" height="95px"/></div>
                   </div>
                   <div class="row">
                     <div class="col-12 text-center font-weight-bold">
@@ -24,45 +23,85 @@
                     </div>
                   </div>
                   
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"/></div></div>
                   <div class="row">
                     <div class="col-9">
                       <div><span t-field="o.create_date"/></div>
                     </div>
-                    <div class="col-3">
-                      <div><h6 class="text-black text-right">FOLIO<br/><span t-field="o.id"/></h6></div>
+                  </div>
+                  
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"/></div></div>
+                  <div class="row">
+                    <div class="col-9">
+                      <div style="font-size: 13px;">FOLIO: <span t-field="o.id"/></div>
                     </div>
                   </div>
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                  
+                  
+                  
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"/></div></div>
 
                   <div class="row">
-                    <div class="col-12 font-weight-bold" >
+                    <div class="col-12 font-weight-bold">
                           <div>Cliente:<br/><span class="font-weight-normal" t-field="o.partner_id"/> </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-12 font-weight-bold" >
-                          <div>Conductor<br/><span class="font-weight-normal" t-field="o.conductor"/> </div>
+                    <div class="col-12 font-weight-bold">
+                          <div>Conductor:<br/><span class="font-weight-normal" t-field="o.conductor"/> </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-12 font-weight-bold" >
+                    <div class="col-12 font-weight-bold">
+                          <div>Tractor/Vehiculo:<br/><span class="font-weight-normal" t-field="o.vehiculo.no_economico"/> - <span class="font-weight-normal" t-field="o.vehiculo.license_plate"/></div> 
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
+                          <div>Remolque:<br/><span class="font-weight-normal" t-field="o.remolque_1.no_economico"/> - <span class="font-weight-normal" t-field="o.remolque_1.license_plate"/></div>
+                          <div t-if="o.remolque_2" >
+                            <div><span class="font-weight-normal" t-field="o.remolque_2.no_economico"/> - <span class="font-weight-normal" t-field="o.remolque_2.license_plate"/></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
                           <div>Ruta:<br/><span class="font-weight-normal" t-field="o.project_id"/> </div>
                     </div>
                   </div>
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  <!--<div class="row"><div class="col-xs-12"><div style="border-bottom: 55px solid black;"/></div></div>-->
                   <div class="row">
-                    <div class="col-12" >
+                    <div class="col-12">
                       <div class="row font-weight-bold">
-                          <div class="col-3">Kilometros:<br/><span class="font-weight-normal" t-field="o.km_viaje"/></div>
-                          <div class="col-3">Diesel:<br/><span class="font-weight-normal" t-field="o.diesel_viaje"/></div>
-                          <div class="col-3">Casetas Efectivo:<br/><span class="font-weight-normal" t-field="o.gasto_total_caseta_viaje"/></div>
-                          <div class="col-3">Gasto total operador:<br/><span class="font-weight-normal" t-field="o.gasto_total_op_viaje"/></div>
+                          <div class="col-5">Kilometros:<br/><span class="font-weight-normal" t-field="o.km_viaje"/></div>
+                          <!--<div class="col-5">Diesel:<br/><span class="font-weight-normal" t-field="o.diesel_viaje"/></div>-->
+                          <!--<div class="col-3">Casetas Efectivo:<br/><span class="font-weight-normal" t-field="o.gasto_total_caseta_viaje"/></div>
+                          <div class="col-3">Gasto total operador:<br/><span class="font-weight-normal" t-field="o.gasto_total_op_viaje"/></div>-->
                       </div>
                     </div>
                   </div>
+                  <!--<div class="row">
+                    <div class="col-12 font-weight-bold">
+                          <div>Kilometros:<br/><span class="font-weight-normal" t-field="o.km_viaje"/> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
+                          <div>Diesel:<br/><span class="font-weight-normal" t-field="o.gasto_total_caseta_viaje"/> </div>
+                    </div>
+                  </div>-->
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
+                          <div>Casetas Efectivo:<br/><span class="font-weight-normal" t-field="o.caseta_efectivo_1"/> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
+                          <div>Gasto total operador:<br/><span class="font-weight-normal" t-field="o.gasto_total_op_viaje"/> </div>
+                    </div>
+                  </div>
 
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"/></div></div>
 
                   <!--div class="row">
                     <div class="col-12"><h6>Cobro de casetas</h6></div>
@@ -79,60 +118,67 @@
                     </div>
                   </div-->
 
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"/></div></div>
                   
                   <div class="row texty-center">
-                    <div class="col-12"><h6>INFORMACIÓN DE RUTA</h6></div>
+                    <div class="col-12 font-weight-bold"><h6>INFORMACIÓN DE RUTA</h6></div>
                   </div>
 
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
-                  
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"/></div></div>
                   <div class="row">
-                    <div class="col-12 font-weight-bold" >
+                    <div class="col-12 font-weight-bold" style="font-size: 16px;">
+                          <div><span class="font-weight-normal" t-field="o.planned_date_begin"/> </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold">
                           <div>Origen<br/></div>
                     </div>
                   </div>   
 
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"/></div></div>
                   
                   <div class="row">
-                    <div class="col-12" >
+                    <div class="col-12">
                       <div class="row">
-                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_origen"/></h6></div>
-                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_origen"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6><span class="font-weight-normal" t-field="o.project_id.recoge_en_origen"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6><span class="font-weight-normal" t-field="o.project_id.direccion_origen"/></h6></div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
                   
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"/></div></div>
+                  <div class="row">
+                    <div class="col-12 font-weight-bold" style="font-size: 16px;">
+                          <div><span class="font-weight-normal" t-field="o.planned_date_end"/> </div>
+                    </div>
+                  </div>
                    <div class="row">
-                    <div class="col-12 font-weight-bold" >
+                    <div class="col-12 font-weight-bold">
                           <div>Destino<br/></div>
                     </div>
                   </div>            
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 5px solid black;"/></div></div>
                   
                   <div class="row">
-                    <div class="col-12" >
+                    <div class="col-12">
                       <div class="row">
-                        <div class="col-6 font-weight-bold"><h6>Dirección: <br/><span class="font-weight-normal"  t-field="o.project_id.direccion_destino"/></h6></div>
-                        <div class="col-6 font-weight-bold"><h6>Ciudad<br/><span class="font-weight-normal" t-field="o.project_id.ciudad_destino"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6><span class="font-weight-normal" t-field="o.project_id.entrega_destino"/></h6></div>
+                        <div class="col-6 font-weight-bold"><h6><span class="font-weight-normal" t-field="o.project_id.direccion_destino"/></h6></div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"></div></div></div>
+                  <div class="row"><div class="col-xs-12"><div style="border-bottom: 15px solid black;"/></div></div>
                   
-                  <div class="row text-center">
+                  <!--<div class="row text-center">
                     <div class="col-12">
                       <img t-att-src="'/report/barcode/QR/'+str(o.id)" style="width:80px;height:80px" alt="Barcode"/>
                     </div>
-                  </div>
+                  </div>-->
                  
                 </div>
             </t>
         </t>
     </t>
-  </template>
-</odoo>
+  </t>
