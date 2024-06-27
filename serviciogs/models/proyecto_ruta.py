@@ -92,8 +92,8 @@ class proyecto_ruta (models.Model):
     )
     diesel = fields.Float(
         compute='_compute_diesel',
-        string ='Diesel'
-   )
+        string ='Diesel',
+    )
     caseta_efectivo = fields.Float(
         string="Caseta Efectivo",
     )
@@ -106,6 +106,7 @@ class proyecto_ruta (models.Model):
     gasto_total_operador = fields.Float(
         compute='_compute_gastoopera',
         string="Gasto Total del Operador",
+        store=True,
     )
     gasto_total = fields.Float(
         compute='_compute_gastoT',
