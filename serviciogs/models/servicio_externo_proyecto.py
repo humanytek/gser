@@ -70,10 +70,12 @@ class servicio_externo_proyecto (models.Model):
     conductor = fields.Many2one(
         related ='vehiculo.conductor',
         string ="Conductor",
+        store=True,
     )
     gasto_total_op_viaje= fields.Float(
         related ='project_id.gasto_total_operador',
         string ="Gastos del operador",
+        store=True,
     )
 
     #gasto_total_caseta_viaje= fields.Float(
